@@ -1,5 +1,5 @@
 /* SIGNL — dark broadcast design system (2026 redesign)
-   Palette: #0C0C0C bg · #141414 panels · #F4F1EA ink · #FF4D00 signal orange
+   Palette: #0C0C0C bg · #141414 panels · #F4F1EA ink · brand gradient blue #006AFC → teal #03C9AB → green #2FE07E
    Type: Archivo (display) · Inter (UI/body) · Space Grotesk (numbers) */
 
 :root{
@@ -10,7 +10,10 @@
   --faint:#6F6B62;
   --line:#262626;
   --line-soft:#1D1D1D;
-  --orange:#FF4D00;
+  --orange:#03C9AB;
+  --blue:#019BFC;
+  --green:#2FE07E;
+  --grad:linear-gradient(92deg,#006AFC 0%,#019BFC 32%,#03C9AB 64%,#2FE07E 100%);
   --field:#101010;
   --field-line:#2E2E2E;
 }
@@ -47,7 +50,7 @@ h3{font-weight:700;font-size:1.28rem;line-height:1.25;letter-spacing:-.01em}
 p{color:var(--soft)}
 strong{color:var(--ink)}
 .lede{font-size:clamp(1.06rem,1.6vw,1.28rem);line-height:1.55;color:var(--soft);max-width:640px}
-.hl{color:var(--orange)}
+.hl{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 
 .label{
   display:inline-flex;align-items:center;gap:10px;
@@ -77,6 +80,8 @@ strong{color:var(--ink)}
   font-size:.58rem;letter-spacing:.3em;color:var(--faint);margin-top:5px;text-transform:uppercase;
 }
 .logo-text{display:block}
+.logo-img{height:38px;width:auto;display:block}
+.logo-img.foot{height:30px}
 .main-nav{display:none;gap:34px}
 .main-nav a{
   font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);
@@ -107,10 +112,10 @@ strong{color:var(--ink)}
   display:inline-flex;align-items:center;justify-content:center;gap:10px;
   font-family:'Archivo',sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
   font-size:.92rem;padding:16px 28px;border:1px solid var(--orange);
-  background:var(--orange);color:#0C0C0C;cursor:pointer;
+  background:var(--grad);border-color:transparent;color:#04150D;cursor:pointer;
   transition:background .15s,color .15s,border-color .15s;
 }
-.btn:hover{background:#FF6A26;border-color:#FF6A26;color:#0C0C0C}
+.btn:hover{background:linear-gradient(92deg,#2E8CFF 0%,#2FB9FC 32%,#14D8B8 64%,#4DE88F 100%);border-color:transparent;color:#04150D}
 .btn-ghost{background:transparent;color:var(--ink);border-color:#3D3D3D}
 .btn-ghost:hover{background:var(--ink);border-color:var(--ink);color:#0C0C0C}
 .btn-small{padding:11px 20px;font-size:.8rem}
@@ -301,7 +306,7 @@ input,select{
 input:focus,select:focus{outline:none;border-color:var(--orange)}
 input::placeholder{color:var(--faint)}
 select{
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23FF4D00' stroke-width='2'/%3E%3C/svg%3E");
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%2303C9AB' stroke-width='2'/%3E%3C/svg%3E");
   background-repeat:no-repeat;background-position:right 15px center;
 }
 .checks{display:flex;flex-wrap:wrap;gap:10px 22px}
