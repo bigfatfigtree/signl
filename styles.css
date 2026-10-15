@@ -377,7 +377,7 @@ select{
 /* ---------- footer ---------- */
 .site-footer{border-top:1px solid var(--line);background:#0A0A0A;padding:64px 0 0}
 .footer-grid{display:grid;gap:40px;padding-bottom:48px}
-@media(min-width:820px){.footer-grid{grid-template-columns:1.5fr 1fr 1fr}}
+@media(min-width:820px){.footer-grid{grid-template-columns:1.5fr 1fr 1fr 1fr}}
 .site-footer .logo{font-size:2.1rem}
 .footer-tag{margin-top:16px;max-width:330px;font-size:.95rem}
 .site-footer h4{
@@ -408,3 +408,13 @@ textarea{
 }
 textarea:focus{outline:none;border-color:var(--orange)}
 textarea::placeholder{color:var(--faint)}
+
+/* Legal pages */
+.legal{max-width:760px}
+.legal p{color:var(--ink-dim);margin:0 0 16px}
+.legal p strong{color:var(--ink)}
+.legal h3{font-family:'Archivo',sans-serif;font-weight:800;font-size:21px;margin:34px 0 10px;color:var(--ink)}
+.legal .updated{font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint)}
+.legal a{color:var(--blue);text-decoration:underline}
+.site-footer a:hover{color:var(--teal)}
+.footer-bottom a{color:inherit;text-decoration:underline}

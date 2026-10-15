@@ -1,3 +1,21 @@
+/* ---------- Analytics (GA4) ----------
+   To activate: create a free GA4 property for joinsignl.com at
+   analytics.google.com and paste the measurement ID (looks like
+   G-XXXXXXXXXX) between the quotes below, then push. Until then,
+   nothing loads and nothing is tracked. */
+var GA_ID = '';
+if (GA_ID) {
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  gtag('js', new Date());
+  gtag('config', GA_ID);
+}
+function trackEvent(name, params) { if (window.gtag) gtag('event', name, params || {}); }
+
 // Shared JS: mobile nav + application forms. Forms save locally and,
 // when wired with data-netlify, also submit to Netlify (real lead capture
 // once the site is deployed there); the Netlify attempt fails silently elsewhere.
@@ -40,6 +58,8 @@
           fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() }).catch(function () {});
         } catch (err) { /* not deployed on Netlify yet */ }
       }
+
+      trackEvent('form_submit', { form_name: form.getAttribute('name') });
 
       var wrap = form.closest('.form-wrap');
       var success = wrap ? wrap.querySelector('.form-success') : null;
