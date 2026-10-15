@@ -11,7 +11,8 @@ signl-site/
 ├── creators.html    For creators/everyday people: how it works, comp rules (comp = free meal/service, 48-hour post rule, FTC disclosure required, no-shows lose roster spot), 3 tiers (Neighbors 500–2k / Locals 2k–15k / Creators 15k+), application form
 ├── businesses.html  Full pricing (Roster $349/mo self-service, Hand-Holder $849/mo managed, 6-month minimums; add-ons: extra collabs $25–49, paid hero campaigns at 20% platform fee, Grand Opening Burst $1,500), category exclusivity, honest FAQ, founding-business application form
 ├── dashboard.html   SAMPLE business dashboard (clearly labeled "Sample data"): stat cards, CSS bar chart, recent-posts list using roster handles as illustrative sample activity
-├── styles.css       Shared styles. Brand: cream #FFF9F1, ink #16130E, vivid orange #FF5A1F, deep green #0E5941; Anton (display) + Inter (body) via Google Fonts; inline SVG icons only; avatars are initials in colored circles (no photos)
+├── styles.css       Shared styles. 2026 dark broadcast design: near-black #0C0C0C, panels #141414, off-white #F4F1EA, signal orange #FF4D00; Archivo (display) + Inter (body) + Space Grotesk (numbers) via Google Fonts; sharp corners, 1px rules, real photography (Pexels, credited in footer)
+├── assets/photos/   Real Pexels photography used across the pages (dark editorial set, selected Oct 2026)
 ├── app.js           Mobile nav toggle + demo form handling (saves submissions to localStorage, shows success state)
 └── README.md        This file
 ```

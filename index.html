@@ -7,29 +7,23 @@
 <meta name="description" content="SIGNL connects Hampton Roads businesses with local creators and everyday people who post about them. Comp a meal or service, get a tracked post within 48 hours.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap">
     <div class="header-in">
-      <a class="logo" href="index.html"><span class="logo-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="SIGNL logo mark">
-  <rect x="1" y="1" width="46" height="46" rx="11" fill="#16130E"/>
-  <rect x="10" y="28" width="5" height="9" rx="1.5" fill="#FF5A1F"/>
-  <rect x="18.2" y="22" width="5" height="15" rx="1.5" fill="#FF5A1F"/>
-  <rect x="26.4" y="16" width="5" height="21" rx="1.5" fill="#FF5A1F"/>
-  <rect x="34.6" y="10" width="5" height="27" rx="1.5" fill="#FF5A1F"/>
-</svg></span><span class="logo-text">SIGNL<small>Hampton Roads, VA</small></span></a>
+      <a class="logo" href="index.html"><span class="logo-text">SIGNL<small>Hampton Roads, VA</small></span><span class="logo-dot"></span></a>
       <nav class="main-nav" aria-label="Main">
         <a href="roster.html">The Local Bench</a>
         <a href="creators.html">For Creators</a>
         <a href="businesses.html">For Businesses</a>
         <a href="dashboard.html">Sample Dashboard</a>
       </nav>
-      <a class="btn btn-primary btn-small header-cta" href="businesses.html#apply">Get Started</a>
+      <a class="btn btn-small header-cta" href="businesses.html#apply">Get Started</a>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
@@ -47,58 +41,99 @@
 <main>
   <section class="hero">
     <div class="wrap">
-      <span class="eyebrow">Local creator marketing · Hampton Roads</span>
-      <h1>Get talked about by the people <span class="hl">Hampton Roads</span> actually <span class="hl-g">follows.</span></h1>
+      <span class="label">Local creator marketing · Hampton Roads</span>
+      <h1>Get talked about by the people <span class="hl">Hampton Roads</span> actually follows.</h1>
       <p class="lede">Real locals. Real posts. Real walk-ins. Local creators and everyday people visit your business, get comped a meal or service, and post about it within 48 hours — every post tracked, every visit accounted for.</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="businesses.html">I'm a business</a>
+        <a class="btn" href="businesses.html">I'm a business</a>
         <a class="btn btn-ghost" href="creators.html">I'm a creator</a>
       </div>
-      <p class="hero-note">Launching first in Hampton Roads, VA — Virginia Beach · Norfolk · Chesapeake · Hampton · Newport News</p>
+      <div class="hero-meta">
+        <span><b>Market 001</b> · Hampton Roads, VA</span>
+        <span>Virginia Beach</span>
+        <span>Norfolk</span>
+        <span>Chesapeake</span>
+        <span>Hampton</span>
+        <span>Newport News</span>
+      </div>
+    </div>
+    <div class="photo-band">
+      <img src="assets/photos/hero-restaurant-night.jpg" alt="A packed Hampton Roads restaurant at night, seen through the front windows">
+      <div class="band-cap">
+        <div class="wrap">
+          <div class="cap-big">Full rooms start<br>with local posts</div>
+          <div class="cap-small">Est. local reach per visit · tracked</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <div class="proof-strip">
-    <div class="wrap proof-grid">
-      <div class="proof-item"><div class="num">14</div><div class="lbl">Local creators at 5k+ followers, verified by hand</div></div>
-      <div class="proof-item"><div class="num">172k</div><div class="lbl">Followers on the largest local account in the market</div></div>
-      <div class="proof-item"><div class="num">~153k</div><div class="lbl">Small businesses in the Hampton Roads metro</div></div>
-      <div class="proof-item"><div class="num">48 hrs</div><div class="lbl">From creator visit to live, tracked post</div></div>
+  <div class="wrap">
+    <div class="stat-strip" style="border-left:1px solid var(--line);border-right:1px solid var(--line)">
+      <div class="stat-cell"><div class="stat-num">14</div><div class="stat-lbl">Local creators at 5k+ followers, verified by hand</div></div>
+      <div class="stat-cell"><div class="stat-num">172<em>k</em></div><div class="stat-lbl">Followers on the largest local account in the market</div></div>
+      <div class="stat-cell"><div class="stat-num">~153<em>k</em></div><div class="stat-lbl">Small businesses in the Hampton Roads metro</div></div>
+      <div class="stat-cell"><div class="stat-num">48<em>hr</em></div><div class="stat-lbl">From creator visit to live, tracked post</div></div>
     </div>
   </div>
 
-  <section>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Real locals <i>●</i> Real posts <i>●</i> Real walk-ins <i>●</i> Post live in 48 hours <i>●</i> No ad account <i>●</i> No agency retainer <i>●</i> </span>
+      <span>Real locals <i>●</i> Real posts <i>●</i> Real walk-ins <i>●</i> Post live in 48 hours <i>●</i> No ad account <i>●</i> No agency retainer <i>●</i> </span>
+    </div>
+  </div>
+
+  <section class="block">
     <div class="wrap">
-      <span class="eyebrow">How it works</span>
-      <h2>Three steps. No ad account. No agency retainer.</h2>
-      <div class="grid grid-3" style="margin-top:26px">
-        <div class="card">
-          <div class="step-num">01</div>
-          <h3 style="margin:10px 0 6px">You post a comp offer</h3>
+      <div class="sec-head">
+        <span class="label">How it works</span>
+        <h2>Three steps. No ad account. No agency retainer.</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">/ 01</div>
+          <h3>You post a comp offer</h3>
           <p>List what you're comping — dinner for two, a free cut and color, a detailing package. You set the value and how many visits you want. The comp is your only cost beyond the subscription; creators are never on anyone's payroll.</p>
         </div>
-        <div class="card">
-          <div class="step-num">02</div>
-          <h3 style="margin:10px 0 6px">Creators pick it &amp; visit</h3>
+        <div class="step">
+          <div class="step-num">/ 02</div>
+          <h3>Creators pick it &amp; visit</h3>
           <p>Local creators and everyday people from the roster claim your offer and come in like real customers — because they are. They experience the business, not a script.</p>
         </div>
-        <div class="card">
-          <div class="step-num">03</div>
-          <h3 style="margin:10px 0 6px">Post live in 48 hours</h3>
+        <div class="step">
+          <div class="step-num">/ 03</div>
+          <h3>Post live in 48 hours</h3>
           <p>Every visit carries a hard rule: post within 48 hours, with proper FTC disclosure, or lose your roster spot. Posts are tracked in your dashboard alongside offer redemptions, so you see exactly what you got.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section-alt">
+  <section class="block" style="padding-top:0;border-bottom:none">
     <div class="wrap">
-      <span class="eyebrow">Who posts about you</span>
-      <h2>Not just influencers. Neighbors.</h2>
-      <p class="lede">A 900-follower regular whose friends all live within ten miles can move more tables than a national account. Three tiers, one roster, all local.</p>
-      <div class="grid grid-3" style="margin-top:26px">
-        <div class="card tier-card">
-          <span class="tier-badge badge-neighbor">Neighbors</span>
+      <div class="split">
+        <div class="split-img"><img src="assets/photos/creator-cocktail-photo.jpg" alt="A local creator photographing a cocktail at a bar table"></div>
+        <div class="split-body">
+          <span class="label">The visit</span>
+          <h3 style="font-size:1.9rem;text-transform:uppercase;font-weight:800">They show up like customers. Because they are.</h3>
+          <p>No scripts, no staged shoots, no media kits. A creator claims your offer, walks in, orders, experiences the place — then posts it in their own voice to people who actually live here.</p>
+          <p style="margin-top:14px"><a href="roster.html" style="color:var(--orange);font-weight:600">Meet the verified local bench &rarr;</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Who posts about you</span>
+        <h2>Not just influencers. Neighbors.</h2>
+        <p class="lede">A 900-follower regular whose friends all live within ten miles can move more tables than a national account. Three tiers, one roster, all local.</p>
+      </div>
+      <div class="tiers">
+        <div class="tier-row">
+          <div class="tier-name">Neighbors</div>
           <div class="tier-range">500 – 2k followers</div>
           <ul>
             <li>Everyday people, not professional posters</li>
@@ -106,8 +141,8 @@
             <li>Small circles, all of them local</li>
           </ul>
         </div>
-        <div class="card tier-card">
-          <span class="tier-badge badge-local">Locals</span>
+        <div class="tier-row">
+          <div class="tier-name">Locals</div>
           <div class="tier-range">2k – 15k followers</div>
           <ul>
             <li>The local sweet spot: engaged hometown audiences</li>
@@ -115,8 +150,8 @@
             <li>Food, family, fitness, lifestyle regulars</li>
           </ul>
         </div>
-        <div class="card tier-card">
-          <span class="tier-badge badge-creator">Creators</span>
+        <div class="tier-row">
+          <div class="tier-name">Creators</div>
           <div class="tier-range">15k+ followers</div>
           <ul>
             <li>Established Hampton Roads creators</li>
@@ -125,20 +160,31 @@
           </ul>
         </div>
       </div>
-      <p style="margin-top:22px"><a href="roster.html"><strong>Meet the verified local bench &rarr;</strong></a></p>
     </div>
   </section>
 
-  <section>
+  <div class="photo-band flush">
+    <img src="assets/photos/bar-friends.jpg" alt="Friends laughing over cocktails at a local bar">
+    <div class="band-cap">
+      <div class="wrap">
+        <div class="cap-big">The audience is<br>already out tonight</div>
+        <div class="cap-small">Neighbors · Locals · Creators</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="block">
     <div class="wrap">
-      <span class="eyebrow">Pricing</span>
-      <h2>One flat subscription. The comp does the rest.</h2>
-      <div class="grid grid-2" style="margin-top:26px">
-        <div class="card price-card">
-          <span class="tier-badge badge-local">Self-Service</span>
+      <div class="sec-head">
+        <span class="label">Pricing</span>
+        <h2>One flat subscription. The comp does the rest.</h2>
+      </div>
+      <div class="price-grid">
+        <div class="price-panel">
+          <span class="tag">Self-Service</span>
           <h3>Roster</h3>
           <div class="price-tag">$349<span>/mo</span></div>
-          <p class="price-note">6-month minimum</p>
+          <div class="price-term">6-month minimum</div>
           <ul>
             <li>Browse the full local roster and send comp offers</li>
             <li>Up to 8 creator visits per month</li>
@@ -147,31 +193,32 @@
           </ul>
           <a class="btn btn-ghost btn-block" href="businesses.html">See full details</a>
         </div>
-        <div class="card price-card featured">
-          <span class="tier-badge badge-creator">Managed</span>
+        <div class="price-panel featured">
+          <span class="tag hot">Managed</span>
           <h3>Hand-Holder</h3>
           <div class="price-tag">$849<span>/mo</span></div>
-          <p class="price-note">6-month minimum</p>
+          <div class="price-term">6-month minimum</div>
           <ul>
             <li>A coordinator picks creators and schedules every visit</li>
             <li>Campaign calendar planned for you</li>
             <li>Content reuse rights for your own channels</li>
             <li>One hero creator feature per quarter + monthly report</li>
           </ul>
-          <a class="btn btn-green btn-block" href="businesses.html">See full details</a>
+          <a class="btn btn-block" href="businesses.html">See full details</a>
         </div>
       </div>
-      <p class="price-note" style="margin-top:16px">Add-ons available: extra creator collabs ($25–49 each) and a $1,500 Grand Opening Burst. Full pricing and honest FAQ on the <a href="businesses.html">business page</a>.</p>
+      <p style="margin-top:18px;font-size:.95rem">Add-ons available: extra creator collabs ($25–49 each) and a $1,500 Grand Opening Burst. Full pricing and honest FAQ on the <a href="businesses.html" style="color:var(--orange)">business page</a>.</p>
     </div>
   </section>
 
-  <section class="section-green cta-band">
+  <section class="cta-band">
     <div class="wrap">
+      <span class="label">Market 001 · Hampton Roads</span>
       <h2>Launching first in Hampton Roads</h2>
-      <p class="lede" style="margin:0 auto">Founding businesses and founding creators get in first — category spots are limited so your competitors can't buy the same roster.</p>
-      <div class="hero-ctas" style="justify-content:center">
-        <a class="btn btn-primary" href="businesses.html#apply">Apply as a founding business</a>
-        <a class="btn" style="background:#fff;color:var(--ink)" href="creators.html#apply">Apply as a creator</a>
+      <p class="lede">Founding businesses and founding creators get in first — category spots are limited so your competitors can't buy the same roster.</p>
+      <div class="hero-ctas">
+        <a class="btn" href="businesses.html#apply">Apply as a founding business</a>
+        <a class="btn btn-ghost" href="creators.html#apply">Apply as a creator</a>
       </div>
     </div>
   </section>
@@ -181,14 +228,8 @@
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <a class="logo" href="index.html"><span class="logo-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="SIGNL logo mark">
-  <rect x="1" y="1" width="46" height="46" rx="11" fill="#16130E"/>
-  <rect x="10" y="28" width="5" height="9" rx="1.5" fill="#FF5A1F"/>
-  <rect x="18.2" y="22" width="5" height="15" rx="1.5" fill="#FF5A1F"/>
-  <rect x="26.4" y="16" width="5" height="21" rx="1.5" fill="#FF5A1F"/>
-  <rect x="34.6" y="10" width="5" height="27" rx="1.5" fill="#FF5A1F"/>
-</svg></span><span class="logo-text">SIGNL</span></a>
-        <p style="margin-top:12px;max-width:340px">Local creator marketing for Hampton Roads. Real locals. Real posts. Real walk-ins.</p>
+        <a class="logo" href="index.html"><span class="logo-text">SIGNL</span><span class="logo-dot"></span></a>
+        <p class="footer-tag">Local creator marketing for Hampton Roads. Real locals. Real posts. Real walk-ins.</p>
       </div>
       <div>
         <h4>Platform</h4>
@@ -211,7 +252,8 @@
     </div>
     <div class="footer-bottom">
       <span>&copy; 2026 SIGNL. All rights reserved.</span>
-      <span>Launching first in Hampton Roads, VA.</span>
+      <span>Photos: Pexels</span>
+      <span>Launching first in Hampton Roads, VA</span>
     </div>
   </div>
 </footer>

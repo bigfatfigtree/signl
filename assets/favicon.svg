@@ -1,7 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="SIGNL logo mark">
-  <rect x="1" y="1" width="46" height="46" rx="11" fill="#16130E"/>
-  <rect x="10" y="28" width="5" height="9" rx="1.5" fill="#FF5A1F"/>
-  <rect x="18.2" y="22" width="5" height="15" rx="1.5" fill="#FF5A1F"/>
-  <rect x="26.4" y="16" width="5" height="21" rx="1.5" fill="#FF5A1F"/>
-  <rect x="34.6" y="10" width="5" height="27" rx="1.5" fill="#FF5A1F"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SIGNL">
+  <rect width="64" height="64" fill="#0C0C0C"/>
+  <text x="30" y="45" font-family="Archivo, Arial, sans-serif" font-size="38" font-weight="900" fill="#F4F1EA" text-anchor="middle">S</text>
+  <circle cx="50" cy="42" r="5" fill="#FF4D00"/>
 </svg>
