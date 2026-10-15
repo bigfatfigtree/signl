@@ -15,7 +15,7 @@
   document.querySelectorAll('form[data-lf-form]').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var key = 'lf_' + form.getAttribute('data-lf-form');
+      var key = 'signl_' + form.getAttribute('data-signl-form');
       var data = {};
       new FormData(form).forEach(function (value, name) {
         if (data[name]) {

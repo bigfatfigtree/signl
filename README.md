@@ -1,11 +1,11 @@
-# Locally Famous — MVP marketing / platform site
+# SIGNL — MVP marketing / platform site
 
-Standalone static site (plain HTML/CSS/JS, no build step) for **Locally Famous**, a local creator platform launching first in Hampton Roads, VA. Businesses subscribe; local creators and everyday people visit, get comped a meal/service, and post about it within 48 hours (tracked).
+Standalone static site (plain HTML/CSS/JS, no build step) for **SIGNL**, a local creator platform launching first in Hampton Roads, VA. Businesses subscribe; local creators and everyday people visit, get comped a meal/service, and post about it within 48 hours (tracked).
 
 ## Structure
 
 ```
-locallyfamous-site/
+signl-site/
 ├── index.html       Landing: hero ("Get talked about by the people Hampton Roads actually follows"), dual CTAs, how-it-works (3 steps), creator tiers, pricing summary, market proof strip, launch note
 ├── roster.html      "The Local Bench": the 14 verified Hampton Roads creators (source: ~/workspace/creator-count/hampton-roads-creator-roster-check.md, follower counts verified Oct 2026). Framed honestly as a verified bench — NOT signed-up members; founding roster invitations open at launch
 ├── creators.html    For creators/everyday people: how it works, comp rules (comp = free meal/service, 48-hour post rule, FTC disclosure required, no-shows lose roster spot), 3 tiers (Neighbors 500–2k / Locals 2k–15k / Creators 15k+), application form
@@ -19,27 +19,28 @@ locallyfamous-site/
 ## Preview locally
 
 ```bash
-cd ~/workspace/locallyfamous-site
+cd ~/workspace/signl-site
 python3 -m http.server 8000
 # open http://localhost:8000
 ```
 
 ## Brand-string locations (rename checklist)
 
-The brand name "Locally Famous" is deliberately kept in as few places as practical. To rename, search-and-replace `Locally Famous` (and the lowercase variants below) in these spots:
+The brand name "SIGNL" is deliberately kept in as few places as practical. To rename, search-and-replace `SIGNL` (and the lowercase variants below) in these spots:
 
 - **Every page (`index.html`, `roster.html`, `creators.html`, `businesses.html`, `dashboard.html`):**
   - `<title>` tag
-  - Header logo text (`Locally Famous.`) and footer logo text
+  - Header logo text (`SIGNL.`) and footer logo text
   - Footer tagline line ("Local creator marketing for Hampton Roads…") — tagline text itself doesn't contain the name, but sits under the logo
-  - Footer copyright line (`© 2026 Locally Famous.`)
+  - Footer copyright line (`© 2026 SIGNL.`)
   - `index.html` also has it in the `<meta name="description">`; other pages' meta descriptions vary (check each `<head>`)
 - **`README.md`:** title and intro paragraph.
-- **`app.js`:** no brand string in copy, but the localStorage key prefix is `lf_` and form keys are `lf_creator_applications` / `lf_business_applications` (`data-lf-form` attributes in `creators.html` / `businesses.html`) — rename the prefix if desired.
+- **`app.js`:** localStorage key prefix is `signl_` (`data-signl-form` attributes in `creators.html` / `businesses.html`).
+- **Brand (locked 2026-10-15):** SIGNL. Launch domain: joinsignl.com (to be registered). Brand string `SIGNL` appears in titles, logo, footers, copyright.
 - **`styles.css`:** only the top comment mentions the name.
 - Tagline "Real locals. Real posts. Real walk-ins." appears in `index.html` (hero), `creators.html` indirectly, and every page footer — change there if the tagline goes with the name.
 
-A quick `grep -rn "Locally Famous" .` in this folder finds every remaining occurrence.
+A quick `grep -rn "SIGNL" .` in this folder finds every remaining occurrence.
 
 ## Backend TODO (not built — MVP is front-end only)
 
