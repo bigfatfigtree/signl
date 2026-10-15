@@ -10,9 +10,9 @@
     });
   }
 
-  // Demo forms: any <form data-lf-form="key"> is saved to localStorage and
+  // Demo forms: any <form data-signl-form="key"> is saved to localStorage and
   // replaced by its sibling .form-success block.
-  document.querySelectorAll('form[data-lf-form]').forEach(function (form) {
+  document.querySelectorAll('form[data-signl-form]').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var key = 'signl_' + form.getAttribute('data-signl-form');
