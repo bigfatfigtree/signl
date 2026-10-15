@@ -40,7 +40,10 @@ section{padding:56px 0}
 /* Header */
 .site-header{position:sticky;top:0;z-index:50;background:rgba(255,249,241,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .header-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
-.logo{font-family:'Anton',sans-serif;font-size:1.35rem;text-transform:uppercase;color:var(--ink);letter-spacing:.02em;line-height:1}
+.logo{font-family:'Anton',sans-serif;font-size:1.5rem;text-transform:uppercase;color:var(--ink);letter-spacing:.02em;line-height:1;display:inline-flex;align-items:center;gap:10px}
+.logo-mark{display:inline-flex;flex:none}
+.logo-mark svg{width:34px;height:34px;display:block}
+.logo-text{display:flex;flex-direction:column;justify-content:center}
 .logo:hover{text-decoration:none}
 .logo .dot{color:var(--orange)}
 .logo small{display:block;font-family:'Inter',sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.18em;color:var(--green)}
