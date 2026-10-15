@@ -401,3 +401,10 @@ select{
 .feed-time{font-family:'Space Grotesk',monospace;font-size:.76rem;color:var(--faint);white-space:nowrap;padding-top:3px;min-width:78px}
 .feed-txt{font-size:.94rem;color:var(--soft)}
 .feed-txt strong{color:var(--ink)}
+
+textarea{
+  width:100%;background:var(--field);border:1px solid var(--field-line);color:var(--ink);
+  font-family:'Inter',sans-serif;font-size:1rem;padding:14px 15px;border-radius:0;resize:vertical;
+}
+textarea:focus{outline:none;border-color:var(--orange)}
+textarea::placeholder{color:var(--faint)}

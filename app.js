@@ -1,4 +1,6 @@
-// Shared JS: mobile nav + demo application forms (localStorage only — no backend yet).
+// Shared JS: mobile nav + application forms. Forms save locally and,
+// when wired with data-netlify, also submit to Netlify (real lead capture
+// once the site is deployed there); the Netlify attempt fails silently elsewhere.
 (function () {
   // Mobile nav toggle
   var toggle = document.querySelector('.nav-toggle');
@@ -29,6 +31,15 @@
       try { existing = JSON.parse(localStorage.getItem(key) || '[]'); } catch (err) { existing = []; }
       existing.push(data);
       try { localStorage.setItem(key, JSON.stringify(existing)); } catch (err) { /* storage unavailable */ }
+
+      if (form.hasAttribute('data-netlify') && form.getAttribute('name')) {
+        try {
+          var body = new URLSearchParams();
+          new FormData(form).forEach(function (v, n) { body.append(n, v); });
+          body.append('form-name', form.getAttribute('name'));
+          fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() }).catch(function () {});
+        } catch (err) { /* not deployed on Netlify yet */ }
+      }
 
       var wrap = form.closest('.form-wrap');
       var success = wrap ? wrap.querySelector('.form-success') : null;
