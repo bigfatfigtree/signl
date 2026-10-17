@@ -50,19 +50,32 @@ function trackEvent(name, params) { if (window.gtag) gtag('event', name, params 
       existing.push(data);
       try { localStorage.setItem(key, JSON.stringify(existing)); } catch (err) { /* storage unavailable */ }
 
+      var wrap = form.closest('.form-wrap');
+      var success = wrap ? wrap.querySelector('.form-success') : null;
+
+      function flagDeliveryIssue() {
+        if (success && !success.querySelector('.delivery-note')) {
+          var note = document.createElement('p');
+          note.className = 'delivery-note';
+          note.style.marginTop = '14px';
+          note.textContent = 'We could not confirm delivery to our inbox just now. Please also email your details to hello@joinsignl.com so we do not miss you.';
+          success.appendChild(note);
+        }
+      }
+
       if (form.hasAttribute('data-netlify') && form.getAttribute('name')) {
         try {
           var body = new URLSearchParams();
           new FormData(form).forEach(function (v, n) { body.append(n, v); });
           body.append('form-name', form.getAttribute('name'));
-          fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() }).catch(function () {});
-        } catch (err) { /* not deployed on Netlify yet */ }
+          fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() })
+            .then(function (r) { if (!r.ok) flagDeliveryIssue(); })
+            .catch(function () { flagDeliveryIssue(); });
+        } catch (err) { flagDeliveryIssue(); }
       }
 
       trackEvent('form_submit', { form_name: form.getAttribute('name') });
 
-      var wrap = form.closest('.form-wrap');
-      var success = wrap ? wrap.querySelector('.form-success') : null;
       form.style.display = 'none';
       if (success) {
         success.classList.add('show');
