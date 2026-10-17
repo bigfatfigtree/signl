@@ -369,6 +369,29 @@ select{
 }
 .pill.pending{border-color:#3A3A3A;color:var(--faint)}
 
+/* mock dashboard extras — sample panels embedded on creators/businesses pages */
+.console-grid.one{grid-template-columns:1fr;border-top:1px solid var(--line)}
+.code-chip{
+  font-family:'Space Grotesk',monospace;font-weight:700;letter-spacing:.16em;font-size:.92rem;
+  border:1px dashed var(--orange);color:var(--orange);padding:6px 12px;white-space:nowrap;
+}
+.todo-actions{display:flex;gap:8px;flex:none;flex-wrap:wrap}
+.mini-btn{
+  font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  padding:7px 13px;border:1px solid transparent;background:var(--grad);color:#04150D;white-space:nowrap;
+}
+.mini-btn.ghosty{background:transparent;border-color:#3A3A3A;color:var(--soft)}
+.dash-stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line-soft);margin-bottom:22px;background:#0B0B0B}
+.dash-stat{padding:18px 16px;border-right:1px solid var(--line-soft)}
+.dash-stat:last-child{border-right:none}
+.dash-stat .n{font-family:'Space Grotesk',monospace;font-weight:700;font-size:clamp(1.5rem,3vw,2rem);line-height:1;color:var(--ink)}
+.dash-stat .l{font-size:.64rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--soft);margin-top:8px;line-height:1.5}
+@media(max-width:560px){
+  .dash-stats{grid-template-columns:1fr}
+  .dash-stat{border-right:none;border-bottom:1px solid var(--line-soft)}
+  .dash-stat:last-child{border-bottom:none}
+}
+
 /* ---------- CTA band ---------- */
 .cta-band{padding:96px 0;border-bottom:1px solid var(--line)}
 .cta-band h2{font-size:clamp(2.4rem,6vw,4.6rem);max-width:920px;margin:16px 0 20px}
