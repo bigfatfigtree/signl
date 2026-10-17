@@ -67,9 +67,22 @@ A full, sourced comparison is at https://joinsignl.com/alternatives.html (compet
 - Collabstr (collabstr.com): a self-serve creator marketplace where brands search, negotiate and pay creators themselves; Pro is $249/month billed annually ($299 monthly) plus a 10% hiring fee (October 2026). SIGNL is a vetted local roster with verified in-person visits, tracked posts, and replacement visits when a post does not appear.
 - Grin (grin.co): an e-commerce creator platform for online stores, from $200/month plus 5 to 20 percent fees on wallet funding (October 2026). SIGNL is built for businesses people physically visit, not stores that ship.
 
+## Markets and service areas
+
+SIGNL is rolling out in eight founding markets. Each market is defined by the full city list below, and these lists are SIGNL's published metro definitions: the local audience percentage on a creator profile is the share of that creator's followers who live in the cities of their market, measured against these lists.
+
+- Hampton Roads, Virginia: Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Newport News, Hampton, Williamsburg, Poquoson, Yorktown.
+- Richmond, Virginia: Richmond, Petersburg, Colonial Heights, Hopewell, Ashland, Mechanicsville, Glen Allen, Midlothian, Chester, Bon Air, Tuckahoe, Lakeside, Highland Springs, Sandston, Powhatan, Goochland.
+- Washington DC metro: Washington DC, Arlington, Alexandria, Fairfax, Falls Church, Vienna, McLean, Tysons, Reston, Herndon, Ashburn, Leesburg, Manassas, Springfield, Annandale, Bethesda, Silver Spring, Rockville, Gaithersburg, Frederick, Chevy Chase, Takoma Park, College Park, Hyattsville, Greenbelt, Bowie.
+- Raleigh, North Carolina (the Triangle): Raleigh, Cary, Apex, Wake Forest, Garner, Holly Springs, Fuquay-Varina, Morrisville, Knightdale, Wendell, Zebulon, Rolesville, Clayton, Durham, Chapel Hill, Carrboro.
+- Charlotte, North Carolina: Charlotte, Concord, Gastonia, Rock Hill, SC, Fort Mill, SC, Huntersville, Cornelius, Davidson, Mooresville, Matthews, Mint Hill, Pineville, Indian Trail, Monroe, Waxhaw, Harrisburg, Kannapolis, Belmont, Mount Holly, Lake Wylie.
+- Baltimore, Maryland: Baltimore, Towson, Columbia, Annapolis, Glen Burnie, Dundalk, Ellicott City, Owings Mills, Catonsville, Essex, Randallstown, Pikesville, Severna Park, Pasadena, Bel Air, Aberdeen, Havre de Grace, Westminster, Eldersburg, Reisterstown, Parkville, Middle River.
+- Charlottesville, Virginia: Charlottesville, Crozet, Scottsville, Palmyra, Lake Monticello, Ruckersville, Stanardsville, Earlysville, Keswick, Gordonsville.
+- Roanoke, Virginia: Roanoke, Salem, Vinton, Cave Spring, Hollins, Daleville, Troutville, Fincastle, Rocky Mount.
+
 ## Launch cities
 
-- Rollout cities (founding rosters forming now): Hampton Roads, Virginia (Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Hampton, Newport News, Williamsburg); Richmond, Virginia; Washington, DC; Raleigh, North Carolina; Charlotte, North Carolina; Baltimore, Maryland; Charlottesville, Virginia; Roanoke, Virginia.
+- Rollout cities (founding rosters forming now): Hampton Roads, Virginia (Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Newport News, Hampton, Williamsburg, Poquoson, Yorktown); Richmond, Virginia; Washington, DC; Raleigh, North Carolina; Charlotte, North Carolina; Baltimore, Maryland; Charlottesville, Virginia; Roanoke, Virginia.
 - Beyond the rollout: cities are decided by signup counts. Creators sign up at https://joinsignl.com/creators.html, businesses at https://joinsignl.com/businesses.html, and anyone can register a city at https://joinsignl.com/cities.html — when a city opens, its early applicants become its founding roster.
 
 ## Key facts
