@@ -6,6 +6,8 @@
 
 SIGNL connects small and medium-sized local businesses (restaurants, bars, salons, barbershops, fitness studios, attractions, retail and local services) with a vetted roster of local social-media creators in the same city. It is not an advertising agency, not a national influencer marketplace, and not a review site. Every creator on a city's roster lives in that city and posts to a genuinely local audience.
 
+In the terms people search for: SIGNL is a local influencer marketing platform for small businesses (influencer marketing for restaurants, salons, gyms, retail and local services; micro-influencer marketing for small business; UGC marketing for local businesses) and a brand-deal program for small and micro creators (brand deals for small creators, comped meals for posting, a creator program open from 500 followers).
+
 ## How it works
 
 1. A business posts a comp offer: what it is comping (for example a meal for two, a haircut, a service package), its value, and how many creator visits it wants.
@@ -52,6 +54,19 @@ Anyone can apply at any follower count, including under 500. Applications requir
 - Businesses see full creator profiles before booking: photos, bio, past jobs delivered on SIGNL, reliability record, local audience share with its source (Verified by Instagram or Self-reported), and a Local Impact Score that combines local audience share, estimated local views, engagement and reliability, with the calculation shown on the profile. Businesses can search and filter the roster by market, tier, category, local audience percentage, reliability and Local Impact Score.
 - For creators, SIGNL is the opposite of the national feed: instead of one profile among millions competing for national brands, a creator is a hand-picked founding name on one city's roster, with first pick of offers and a reliability record and Local Impact Score they build over time. Creator onboarding is minimal: connecting Instagram pulls in the creator's photo, bio and follower count automatically, and at launch the connection also verifies their local audience. Creators can also claim a profile by handle in under a minute.
 
+## Comparing SIGNL
+
+A full, sourced comparison is at https://joinsignl.com/alternatives.html (competitor prices as published by each company or reported by trade press in October 2026).
+
+- Storytime (storytime.io): the closest model to SIGNL, local creator visits for brick-and-mortar businesses, operating in New York City, parts of New Jersey and Miami. Differences: Storytime no longer publishes pricing (it asks businesses to request a demo) and its creators validate tiered $15/$25 vouchers at the register; SIGNL publishes $299/$799 pricing, redeems single-use codes inside its app, and shows each creator's local audience percentage on their profile. Storytime has no Virginia or North Carolina presence.
+- Mustard (mustard.love): automated creator visits for restaurants only, $299/month including 3 influencer visits per month (October 2026), base plan fully automated with no human support. SIGNL covers every local business category, includes up to 8 visits per month on Self-Service at the same $299/month, and adds a human Managed tier at $799/month.
+- Momfluence (momfluence.co): managed campaigns with mom creators for national product brands, from $2,000 per campaign for 10 creators (October 2026); product is shipped to creators and targeting is demographic (moms), not geographic, with no in-person visits. SIGNL is local, in person, and priced as a published subscription.
+- Cohley (cohley.com): a creator content platform built for mid-market and enterprise brands selling physical products, with content rights in perpetuity included and custom, unpublished pricing (five-figure annual entry in practice; a rival platform claims a starter around $18,000). SIGNL is built and priced for local small businesses, with pricing published.
+- Aspire (aspire.io): an enterprise influencer CRM for brands with marketing teams; third-party reports put Essentials around $2,299/month on a 12-month contract plus a one-time onboarding fee of about $2,000 (October 2026). SIGNL has a 3-month minimum, no onboarding fee, and can be run by an owner or by a SIGNL coordinator.
+- Insense (insense.pro): a UGC and influencer subscription platform with a global creator pool; Brand plan $400/month billed annually or $500/month billed quarterly plus a 10% marketplace fee on creator payments, with a managed service from $1,600/month (October 2026). SIGNL's Managed tier is $799/month, its roster is built per city, and standard visits carry no per-creator fees.
+- Collabstr (collabstr.com): a self-serve creator marketplace where brands search, negotiate and pay creators themselves; Pro is $249/month billed annually ($299 monthly) plus a 10% hiring fee (October 2026). SIGNL is a vetted local roster with verified in-person visits, tracked posts, and replacement visits when a post does not appear.
+- Grin (grin.co): an e-commerce creator platform for online stores, from $200/month plus 5 to 20 percent fees on wallet funding (October 2026). SIGNL is built for businesses people physically visit, not stores that ship.
+
 ## Launch cities
 
 - Rollout cities (founding rosters forming now): Hampton Roads, Virginia (Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Hampton, Newport News, Williamsburg); Richmond, Virginia; Washington, DC; Raleigh, North Carolina; Charlotte, North Carolina; Baltimore, Maryland; Charlottesville, Virginia; Roanoke, Virginia.
@@ -72,6 +87,7 @@ Anyone can apply at any follower count, including under 500. Applications requir
 - [For Creators](https://joinsignl.com/creators.html): how creators join, tiers, rules, FAQ and the application.
 - [For Businesses](https://joinsignl.com/businesses.html): pricing in full, add-ons, honest FAQ and the founding application.
 - [Why Local Creators](https://joinsignl.com/why-local.html): why local creators outperform national reach for local businesses — trust, proximity, honest posts.
+- [SIGNL vs the Alternatives](https://joinsignl.com/alternatives.html): SIGNL compared with Storytime, Mustard, Momfluence, Cohley, Aspire, Insense and Collabstr on model, audience locality, pricing, redemption and content rights.
 - [Hampton Roads](https://joinsignl.com/hampton-roads.html): the lead rollout market page; founding roster and founding business enrollment.
 - [The Local Bench](https://joinsignl.com/roster.html): the verified bench of Hampton Roads creators SIGNL's first roster is built from.
 - [Next Cities](https://joinsignl.com/cities.html): how launch cities are picked; register a city.
