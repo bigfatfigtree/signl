@@ -1,6 +1,6 @@
 # SIGNL
 
-> SIGNL is a local creator marketing platform. Local businesses comp local creators and everyday people a free meal, service or experience, and the creators post honestly about it on social media within 48 hours. SIGNL launches city by city; its first market is Hampton Roads, Virginia. Website: https://joinsignl.com
+> SIGNL is a local creator marketing platform. Local businesses comp local creators and everyday people a free meal, service or experience, and the creators post honestly about it on social media within 48 hours. SIGNL is rolling out in a first wave of cities — Hampton Roads, Richmond, Washington DC, Raleigh, Charlotte, Baltimore, Charlottesville and Roanoke — with hand-picked founding creators and founding businesses forming in each one now. Anyone, in any city, can sign up as a founding creator. Website: https://joinsignl.com
 
 ## What SIGNL is
 
@@ -33,8 +33,8 @@ Anyone can apply at any follower count, including under 500. Applications requir
 
 ## Launch cities
 
-- City #1: Hampton Roads, Virginia — founding creator roster and founding business enrollment are open now. Hampton Roads includes Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Hampton, Newport News and Williamsburg.
-- City #2 and beyond: decided by signup counts. Creators and businesses in any city can apply or register their city at https://joinsignl.com/cities.html — when a city opens, its early applicants become its founding roster.
+- Rollout cities (founding rosters forming now): Hampton Roads, Virginia (Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Hampton, Newport News, Williamsburg); Richmond, Virginia; Washington, DC; Raleigh, North Carolina; Charlotte, North Carolina; Baltimore, Maryland; Charlottesville, Virginia; Roanoke, Virginia.
+- Beyond the rollout: cities are decided by signup counts. Creators sign up at https://joinsignl.com/creators.html, businesses at https://joinsignl.com/businesses.html, and anyone can register a city at https://joinsignl.com/cities.html — when a city opens, its early applicants become its founding roster.
 
 ## Key facts
 
@@ -50,7 +50,8 @@ Anyone can apply at any follower count, including under 500. Applications requir
 - [SIGNL home](https://joinsignl.com/): what SIGNL is, how it works, tiers, pricing, launch cities.
 - [For Creators](https://joinsignl.com/creators.html): how creators join, tiers, rules, FAQ and the application.
 - [For Businesses](https://joinsignl.com/businesses.html): pricing in full, add-ons, honest FAQ and the founding application.
-- [Hampton Roads — Launch City #1](https://joinsignl.com/hampton-roads.html): the founding market page; founding roster and founding business enrollment.
+- [Why Local Creators](https://joinsignl.com/why-local.html): why local creators outperform national reach for local businesses — trust, proximity, honest posts.
+- [Hampton Roads](https://joinsignl.com/hampton-roads.html): the lead rollout market page; founding roster and founding business enrollment.
 - [The Local Bench](https://joinsignl.com/roster.html): the verified bench of Hampton Roads creators SIGNL's first roster is built from.
 - [Next Cities](https://joinsignl.com/cities.html): how launch cities are picked; register a city.
 - [Sample Dashboard](https://joinsignl.com/dashboard.html): sample of the business results dashboard (sample data).
