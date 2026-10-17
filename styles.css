@@ -441,3 +441,31 @@ textarea::placeholder{color:var(--faint)}
 .legal a{color:var(--blue);text-decoration:underline}
 .site-footer a:hover{color:var(--teal)}
 .footer-bottom a{color:inherit;text-decoration:underline}
+
+/* ---------- why signl edge cards ---------- */
+.edge-grid{display:grid;gap:0;border:1px solid var(--line)}
+@media(min-width:920px){.edge-grid{grid-template-columns:1fr 1fr 1fr}}
+.edge-card{padding:30px 26px;background:var(--panel);border-top:1px solid var(--line)}
+.edge-card:first-child{border-top:none}
+@media(min-width:920px){
+  .edge-card{border-top:none;border-left:1px solid var(--line)}
+  .edge-card:nth-child(3n+1){border-left:none}
+  .edge-card:nth-child(n+4){border-top:1px solid var(--line)}
+}
+.edge-num{font-family:'Space Grotesk',monospace;color:var(--orange);font-size:.95rem;letter-spacing:.12em}
+.edge-card h3{font-size:1.12rem;text-transform:uppercase;font-weight:800;margin:12px 0 8px}
+.edge-card p{color:var(--soft);font-size:.96rem}
+
+/* ---------- old way vs signl way ---------- */
+.vs{border-top:1px solid var(--line)}
+.vs-row{display:grid;gap:6px;padding:24px 0;border-bottom:1px solid var(--line)}
+@media(min-width:820px){.vs-row{grid-template-columns:210px 1fr 1fr;gap:28px;align-items:start}}
+.vs-topic{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;font-size:1.02rem;padding-top:2px}
+.vs-old{color:var(--faint)}
+.vs-new{color:var(--ink)}
+.vs-head{display:none}
+@media(min-width:820px){
+  .vs-head{display:grid;grid-template-columns:210px 1fr 1fr;gap:28px;padding-bottom:14px}
+  .vs-head span{font-family:'Space Grotesk',monospace;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--faint)}
+  .vs-head span:last-child{color:var(--orange)}
+}

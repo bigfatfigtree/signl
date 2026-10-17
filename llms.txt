@@ -25,11 +25,22 @@ Anyone can apply at any follower count, including under 500. Applications requir
 
 ## Pricing for businesses
 
-- Self-Service: $299/month, 3-month minimum. Browse the local roster, send comp offers, up to 8 creator visits per month, post tracking and a results dashboard.
+- Self-Service: $299/month, 3-month minimum. Browse the local roster, send comp offers, up to 8 creator visits per month, post tracking and a results dashboard. At the full 8 visits, that is about $37 per creator visit.
+- Pricing is published on the website. There is no demo call or custom quote required to see it.
 - Managed: $799/month, 3-month minimum. A coordinator selects creators and schedules visits, campaign calendar planning, content reuse rights, one hero creator feature per quarter, monthly reporting.
 - Add-ons: extra creator visits $25–49 each; Grand Opening Burst $1,500 one-time; paid hero campaigns priced per campaign (platform coordination fee 20%).
 - There are no per-creator cash fees on standard visits; the business's only cost beyond the subscription is the comp it chooses to offer.
 - SIGNL guarantees tracked deliverables (posts within 48 hours of completed visits), never a specific number of creators.
+
+## How SIGNL is different
+
+- Local audience data is shown, not hidden: every creator profile displays the share of that creator's followers who live in the business's market, labeled by source (Verified by Instagram, or Self-reported; profiles without enough data say so).
+- Redemption runs inside the SIGNL app on a single-use code tied to the visit. The business's point of sale is never touched and staff never validate vouchers at the register.
+- Two ways to run it: Self-Service (automated, $299/month) or Managed (a human coordinator picks creators, books visits, chases posts and reports monthly, $799/month).
+- The roster includes a Neighbors tier of everyday local people (500 to 2,000 followers), not only professional influencers.
+- Every tracked post is saved to the business's content library with clear reuse rights.
+- Replacement guarantee: if a post does not appear within 48 hours of a completed visit, the business receives a replacement visit that does not count against its plan.
+- Honesty is a rule, not a slogan: posts must carry FTC disclosure and no business may require a positive post or review.
 
 ## Launch cities
 
