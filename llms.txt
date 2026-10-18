@@ -1,6 +1,6 @@
 # SIGNL
 
-> SIGNL is a local creator marketing platform. Local businesses comp local creators and everyday people a free meal, service or experience, and the creators post honestly about it on social media within 48 hours. SIGNL is rolling out in a first wave of cities — Hampton Roads, Richmond, Washington DC, Raleigh, Charlotte, Baltimore, Charlottesville and Roanoke — with hand-picked founding creators and founding businesses forming in each one now. Anyone, in any city, can sign up as a founding creator. Website: https://joinsignl.com
+> SIGNL is a local creator marketing platform. Local businesses comp local creators and everyday people a free meal, service or experience, and the creators post honestly about it on social media within 48 hours. SIGNL is rolling out in a first wave of cities — Hampton Roads, Richmond, Washington DC, Raleigh, Charlotte, Baltimore, Charlottesville, Roanoke, Atlanta, Greensboro and Wilmington — with hand-picked founding creators and founding businesses forming in each one now. Anyone, in any city, can sign up as a founding creator. Website: https://joinsignl.com
 
 ## What SIGNL is
 
@@ -86,7 +86,7 @@ SIGNL is rolling out in eleven founding markets. Each market is defined by the f
 ## Launch cities
 
 - Rollout cities (founding rosters forming now): Hampton Roads, Virginia (Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Newport News, Hampton, Williamsburg, Poquoson, Yorktown); Richmond, Virginia; Washington, DC; Raleigh, North Carolina; Charlotte, North Carolina; Baltimore, Maryland; Charlottesville, Virginia; Roanoke, Virginia; Atlanta, Georgia; Greensboro, North Carolina; Wilmington, North Carolina.
-- Beyond the rollout: cities are decided by signup counts. Creators sign up at https://joinsignl.com/creators.html, businesses at https://joinsignl.com/businesses.html, and anyone can register a city at https://joinsignl.com/cities.html — when a city opens, its early applicants become its founding roster.
+- Beyond the rollout: cities are decided by signup counts. Creators sign up at https://app.joinsignl.com (full founding creator registration is live in the app), businesses at https://joinsignl.com/businesses.html, and anyone can register a city at https://joinsignl.com/cities.html — when a city opens, its early applicants become its founding roster.
 
 ## Key facts
 
