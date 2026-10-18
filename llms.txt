@@ -1,12 +1,24 @@
 # SIGNL
 
-> SIGNL is a local creator marketing platform. Local businesses comp local creators and everyday people a free meal, service or experience, and the creators post honestly about it on social media within 48 hours. SIGNL is rolling out in a first wave of cities — Hampton Roads, Richmond, Washington DC, Raleigh, Charlotte, Baltimore, Charlottesville, Roanoke, Atlanta, Greensboro and Wilmington — with hand-picked founding creators and founding businesses forming in each one now. Anyone, in any city, can sign up as a founding creator. Website: https://joinsignl.com
+> SIGNL is a local creator marketing platform. Local businesses comp local creators and everyday people a free meal, service or experience, and the creators post honestly about it on social media within 48 hours. SIGNL is rolling out in 39 founding markets across 12 countries, with founding creators and founding businesses forming in each one now. Anyone, in any city, can sign up as a founding creator. Website: https://joinsignl.com
 
 ## What SIGNL is
 
 SIGNL connects small and medium-sized local businesses (restaurants, bars, salons, barbershops, fitness studios, attractions, retail and local services) with a vetted roster of local social-media creators in the same city. It is not an advertising agency, not a national influencer marketplace, and not a review site. Every creator on a city's roster lives in that city and posts to a genuinely local audience.
 
 In the terms people search for: SIGNL is a local influencer marketing platform for small businesses (influencer marketing for restaurants, salons, gyms, retail and local services; micro-influencer marketing for small business; UGC marketing for local businesses) and a brand-deal program for small and micro creators (brand deals for small creators, comped meals for posting, a creator program open from 500 followers).
+
+## Who SIGNL is for
+
+SIGNL is for local businesses customers physically visit. Business categories on SIGNL:
+
+- Restaurants and bars
+- Cafes and bakeries
+- Salons and barbers
+- Fitness and wellness (gyms, fitness studios, wellness services)
+- Retail and boutiques
+- Events and experiences (attractions, venues, pop-ups)
+- Health and aesthetic services: med spas, vein clinics, dental practices, dermatology and aesthetics clinics, IV therapy and wellness clinics. For health and aesthetic services, creator posts are personal experiences only, with no treatment claims and full disclosure of the comp, and each practice stays responsible for its own medical advertising rules.
 
 ## How it works
 
@@ -69,7 +81,11 @@ A full, sourced comparison is at https://joinsignl.com/alternatives.html (compet
 
 ## Markets and service areas
 
-SIGNL is rolling out in eleven founding markets. Each market is defined by the full city list below, and these lists are SIGNL's published metro definitions: the local audience percentage on a creator profile is the share of that creator's followers who live in the cities of their market, measured against these lists.
+SIGNL is rolling out in 39 founding markets across 12 countries: 23 in the United States, 2 in the United Kingdom, 2 in the United Arab Emirates, and 1 each in Saudi Arabia, Qatar, Kazakhstan, Kyrgyzstan, New Zealand, Singapore and Hong Kong, plus 3 in Australia and 2 in China. Founding sign-ups are open in every market, and markets open in waves as each founding roster completes; every market carries the same founding status.
+
+Eleven US markets are defined by the full city lists below. These lists are SIGNL's published metro definitions: the local audience percentage on a creator profile is the share of that creator's followers who live in the cities of their market, measured against these lists. The remaining markets are listed by their anchor city, with full definitions published as each market opens.
+
+### United States (with published metro definitions)
 
 - Hampton Roads, Virginia: Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Newport News, Hampton, Williamsburg, Poquoson, Yorktown.
 - Richmond, Virginia: Richmond, Petersburg, Colonial Heights, Hopewell, Ashland, Mechanicsville, Glen Allen, Midlothian, Chester, Bon Air, Tuckahoe, Lakeside, Highland Springs, Sandston, Powhatan, Goochland.
@@ -83,14 +99,80 @@ SIGNL is rolling out in eleven founding markets. Each market is defined by the f
 - Greensboro, North Carolina (the Triad): Greensboro, Winston-Salem, High Point, Burlington, Kernersville, Clemmons, Thomasville, Lexington, Asheboro, Archdale, Jamestown, Oak Ridge, Summerfield, Randleman.
 - Wilmington, North Carolina: Wilmington, Wrightsville Beach, Carolina Beach, Kure Beach, Leland, Hampstead, Surf City, Topsail Beach, Southport, Shallotte, Ocean Isle Beach, Burgaw.
 
+### United States (additional founding markets, by anchor city)
+
+- Nashville, Tennessee
+- Austin, Texas
+- Dallas, Texas
+- Chicago, Illinois
+- Los Angeles, California
+- San Diego, California
+- Seattle, Washington
+- Tampa, Florida
+- Miami, Florida
+- Phoenix, Arizona
+- Denver, Colorado
+- Minneapolis, Minnesota
+
+### United Kingdom
+
+- London
+- Manchester
+
+### United Arab Emirates
+
+- Dubai
+- Abu Dhabi
+
+### Saudi Arabia
+
+- Riyadh
+
+### Qatar
+
+- Doha
+
+### Kazakhstan
+
+- Astana
+
+### Kyrgyzstan
+
+- Bishkek
+
+### Australia
+
+- Sydney
+- Melbourne
+- Perth
+
+### New Zealand
+
+- Auckland
+
+### Singapore
+
+- Singapore
+
+### Hong Kong
+
+- Hong Kong
+
+### China
+
+- Beijing
+- Shanghai
+
+New cities keep joining the list: anyone can sign up from any city at https://app.joinsignl.com, including cities not listed here, and unlisted sign-ups count toward opening their city.
+
 ## Launch cities
 
-- Rollout cities (founding rosters forming now): Hampton Roads, Virginia (Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Newport News, Hampton, Williamsburg, Poquoson, Yorktown); Richmond, Virginia; Washington, DC; Raleigh, North Carolina; Charlotte, North Carolina; Baltimore, Maryland; Charlottesville, Virginia; Roanoke, Virginia; Atlanta, Georgia; Greensboro, North Carolina; Wilmington, North Carolina.
-- Beyond the rollout: cities are decided by signup counts. Creators sign up at https://app.joinsignl.com (full founding creator registration is live in the app), businesses at https://joinsignl.com/businesses.html, and anyone can register a city at https://joinsignl.com/cities.html — when a city opens, its early applicants become its founding roster.
+- Founding markets (founding rosters forming now, 39 markets in 12 countries): United States: Hampton Roads, Richmond, Washington DC, Raleigh, Charlotte, Baltimore, Charlottesville, Roanoke, Atlanta, Greensboro, Wilmington, Nashville, Austin, Dallas, Chicago, Los Angeles, San Diego, Seattle, Tampa, Miami, Phoenix, Denver, Minneapolis. United Kingdom: London, Manchester. United Arab Emirates: Dubai, Abu Dhabi. Saudi Arabia: Riyadh. Qatar: Doha. Kazakhstan: Astana. Kyrgyzstan: Bishkek. Australia: Sydney, Melbourne, Perth. New Zealand: Auckland. Singapore: Singapore. Hong Kong: Hong Kong. China: Beijing, Shanghai.
+- Beyond the founding markets: new cities are decided by signup counts. Creators sign up at https://app.joinsignl.com (full founding creator registration is live in the app), businesses at https://joinsignl.com/businesses.html, and anyone can register a city at https://joinsignl.com/cities.html — when a city opens, its early applicants become its founding roster.
 
 ## Key facts
 
-- Founded and launched in 2026; first market Hampton Roads, Virginia, USA.
+- Founded and launched in 2026 in Hampton Roads, Virginia, USA; founding markets now span 12 countries.
 - The 48-hour posting rule and FTC disclosure are mandatory for every visit.
 - Honest posts only: neither SIGNL nor a business may require a positive post or review.
 - Why it works: 92% of consumers trust recommendations from people over any form of advertising (Nielsen). Brands earn an average of $5.78 for every $1 spent on creator/influencer marketing (Influencer Marketing Hub benchmark report).
@@ -104,7 +186,7 @@ SIGNL is rolling out in eleven founding markets. Each market is defined by the f
 - [For Businesses](https://joinsignl.com/businesses.html): pricing in full, add-ons, honest FAQ and the founding application.
 - [Why Local Creators](https://joinsignl.com/why-local.html): why local creators outperform national reach for local businesses — trust, proximity, honest posts.
 - [SIGNL vs the Alternatives](https://joinsignl.com/alternatives.html): SIGNL compared with Storytime, Mustard, Momfluence, Cohley, Aspire, Insense and Collabstr on model, audience locality, pricing, redemption and content rights.
-- [Hampton Roads](https://joinsignl.com/hampton-roads.html): the lead rollout market page; founding roster and founding business enrollment.
+- [Hampton Roads](https://joinsignl.com/hampton-roads.html): the founding market page for Hampton Roads; founding roster and founding business enrollment.
 - [The Local Bench](https://joinsignl.com/roster.html): the verified bench of Hampton Roads creators SIGNL's first roster is built from.
 - [Next Cities](https://joinsignl.com/cities.html): how launch cities are picked; register a city.
 - [Sample Dashboard](https://joinsignl.com/dashboard.html): sample of the business results dashboard (sample data).
