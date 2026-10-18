@@ -570,3 +570,11 @@ textarea::placeholder{color:var(--faint)}
 .market-head .m-meta{font-family:'Space Grotesk',monospace;font-size:.85rem;color:var(--orange);letter-spacing:.06em}
 .area-list{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .area-list li{font-size:.82rem;font-weight:600;border:1px solid var(--line);color:var(--soft);padding:6px 12px;background:#0B0B0B}
+
+/* Film embeds (2026-10-18) */
+.film-head{max-width:720px;margin:0 auto 40px;text-align:center}
+.film-head .label{justify-content:center}
+.film-head h2{margin:16px 0}
+.film-frame{border:1px solid var(--line);background:#000;border-radius:14px;overflow:hidden;max-width:960px;margin:0 auto;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.film-frame.portrait{max-width:400px}
+.film-frame video{display:block;width:100%;height:auto}
