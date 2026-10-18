@@ -20,6 +20,56 @@ SIGNL is for local businesses customers physically visit. Business categories on
 - Events and experiences (attractions, venues, pop-ups)
 - Health and aesthetic services: med spas, vein clinics, dental practices, dermatology and aesthetics clinics, IV therapy and wellness clinics. For health and aesthetic services, creator posts are personal experiences only, with no treatment claims and full disclosure of the comp, and each practice stays responsible for its own medical advertising rules.
 
+## Business types SIGNL serves
+
+SIGNL serves every local business that runs on regulars. The full list of the 126 business types on the platform, grouped by category:
+
+### Restaurants & Dining
+
+Full-service restaurant, Chef-driven / fine dining, Brunch spot, Steakhouse, Seafood restaurant, Sushi / omakase, Ramen, Tacos / Mexican, BBQ, Pizza, Burgers, Fried chicken, Sandwich shop / deli, Food truck, Bakery, Donut shop, Ice cream / gelato, Dessert bar, Diner, Private chef / supper club
+
+### Cafes & Drinks To Go
+
+Coffee shop / roastery, Tea house, Juice / smoothie bar, Bubble tea shop
+
+### Bars & Nightlife
+
+Cocktail bar, Wine bar, Brewery / taproom, Winery / tasting room, Distillery, Sports bar, Rooftop bar, Speakeasy, Lounge, Live music venue, Comedy club, Karaoke bar
+
+### Beauty & Grooming
+
+Hair salon, Barbershop, Nail salon, Lash & brow studio, Makeup artist, Spray tan studio, Waxing studio, Blowout bar
+
+### Health & Aesthetics
+
+Med spa, IV therapy lounge, Dermatology / aesthetic clinic, Vein clinic, Dental practice, Orthodontics, Massage therapy, Chiropractic, Physical therapy / recovery, Cryotherapy, Float tank / sauna / cold plunge, Wellness clinic, Medical weight loss clinic
+
+### Fitness
+
+Boutique gym, CrossFit / HIIT studio, Yoga studio, Pilates studio, Barre studio, Spin studio, Boxing / martial arts, Climbing gym, Dance studio, Personal training studio, Indoor golf / golf simulator
+
+### Retail & Boutiques
+
+Clothing boutique, Sneaker / streetwear shop, Vintage / thrift store, Jewelry store, Eyewear boutique, Home goods / decor, Furniture showroom, Gift shop, Bookstore, Record store, Flower shop, Plant shop, Pet boutique / groomer, Bike shop, Surf / skate shop, Beauty supply store, Artisan / makers market
+
+### Experiences & Attractions
+
+Boat tour / charter, Fishing charter, Kayak / paddleboard rental, Boat / jet ski rental, Food tour, City / ghost tour, Museum / aquarium, Farm / pick-your-own, Cooking class, Art / pottery class, Photo studio, Podcast / content studio, Escape room, Axe throwing, Mini golf, Go-karts, Bowling, Arcade / barcade, Coworking space, Event venue
+
+### Hospitality
+
+Boutique hotel, Inn / bed & breakfast, Short-term rental host, Hotel restaurant, Hotel bar / pool day pass, Hotel spa
+
+### Events & Launches
+
+Grand opening, New menu / product launch, Happy hour relaunch, Seasonal / holiday pop-up, Ticketed tasting / event, Festival vendor
+
+### Visual Services
+
+Auto detailing / ceramic coating, Premium car wash, Tattoo / piercing studio, Photographer, Videographer, Wedding venue / planner, Real estate listing showcase, Landscaping, Home cleaning / organizing
+
+For health and aesthetic services, creator posts are personal experiences only, with no treatment claims and full disclosure of the comp, and each practice stays responsible for its own medical advertising rules.
+
 ## How it works
 
 1. A business posts a comp offer: what it is comping (for example a meal for two, a haircut, a service package), its value, and how many creator visits it wants.
