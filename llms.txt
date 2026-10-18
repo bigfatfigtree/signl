@@ -69,7 +69,7 @@ A full, sourced comparison is at https://joinsignl.com/alternatives.html (compet
 
 ## Markets and service areas
 
-SIGNL is rolling out in eight founding markets. Each market is defined by the full city list below, and these lists are SIGNL's published metro definitions: the local audience percentage on a creator profile is the share of that creator's followers who live in the cities of their market, measured against these lists.
+SIGNL is rolling out in eleven founding markets. Each market is defined by the full city list below, and these lists are SIGNL's published metro definitions: the local audience percentage on a creator profile is the share of that creator's followers who live in the cities of their market, measured against these lists.
 
 - Hampton Roads, Virginia: Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Newport News, Hampton, Williamsburg, Poquoson, Yorktown.
 - Richmond, Virginia: Richmond, Petersburg, Colonial Heights, Hopewell, Ashland, Mechanicsville, Glen Allen, Midlothian, Chester, Bon Air, Tuckahoe, Lakeside, Highland Springs, Sandston, Powhatan, Goochland.
@@ -79,10 +79,13 @@ SIGNL is rolling out in eight founding markets. Each market is defined by the fu
 - Baltimore, Maryland: Baltimore, Towson, Columbia, Annapolis, Glen Burnie, Dundalk, Ellicott City, Owings Mills, Catonsville, Essex, Randallstown, Pikesville, Severna Park, Pasadena, Bel Air, Aberdeen, Havre de Grace, Westminster, Eldersburg, Reisterstown, Parkville, Middle River.
 - Charlottesville, Virginia: Charlottesville, Crozet, Scottsville, Palmyra, Lake Monticello, Ruckersville, Stanardsville, Earlysville, Keswick, Gordonsville.
 - Roanoke, Virginia: Roanoke, Salem, Vinton, Cave Spring, Hollins, Daleville, Troutville, Fincastle, Rocky Mount.
+- Atlanta, Georgia: Atlanta, Decatur, Marietta, Sandy Springs, Roswell, Alpharetta, Johns Creek, Brookhaven, Dunwoody, Chamblee, Tucker, Norcross, Duluth, Smyrna, Vinings, Kennesaw, Woodstock, Acworth, East Point, College Park, Peachtree Corners, Snellville, Lawrenceville, Stockbridge.
+- Greensboro, North Carolina (the Triad): Greensboro, Winston-Salem, High Point, Burlington, Kernersville, Clemmons, Thomasville, Lexington, Asheboro, Archdale, Jamestown, Oak Ridge, Summerfield, Randleman.
+- Wilmington, North Carolina: Wilmington, Wrightsville Beach, Carolina Beach, Kure Beach, Leland, Hampstead, Surf City, Topsail Beach, Southport, Shallotte, Ocean Isle Beach, Burgaw.
 
 ## Launch cities
 
-- Rollout cities (founding rosters forming now): Hampton Roads, Virginia (Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Newport News, Hampton, Williamsburg, Poquoson, Yorktown); Richmond, Virginia; Washington, DC; Raleigh, North Carolina; Charlotte, North Carolina; Baltimore, Maryland; Charlottesville, Virginia; Roanoke, Virginia.
+- Rollout cities (founding rosters forming now): Hampton Roads, Virginia (Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Newport News, Hampton, Williamsburg, Poquoson, Yorktown); Richmond, Virginia; Washington, DC; Raleigh, North Carolina; Charlotte, North Carolina; Baltimore, Maryland; Charlottesville, Virginia; Roanoke, Virginia; Atlanta, Georgia; Greensboro, North Carolina; Wilmington, North Carolina.
 - Beyond the rollout: cities are decided by signup counts. Creators sign up at https://joinsignl.com/creators.html, businesses at https://joinsignl.com/businesses.html, and anyone can register a city at https://joinsignl.com/cities.html — when a city opens, its early applicants become its founding roster.
 
 ## Key facts
