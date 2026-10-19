@@ -1,4 +1,4 @@
-/* SIGNL v2 concept: LIGHT PREMIUM register.
+/* SIGNL v2 design system: LIGHT PREMIUM register.
    Base: warm off-white from the brand #F4F1EA family. Ink: #141414 family.
    The locked gradient (#006AFC -> #019BFC -> #03C9AB -> #2FE07E) is the accent system only.
    Type: Archivo (display) / Inter (body) / Space Grotesk (numbers). */
@@ -500,3 +500,50 @@ section.tint{background:var(--bg2);border-top:1px solid var(--line2);border-bott
 .hero-film .rail-chip{z-index:2}
 .hero-film .rail-cap{z-index:2;left:22px;right:22px;bottom:20px}
 .hero-film .rail-cap .rc-t{font-size:1.3rem}
+
+/* ---------- round 4: full-bleed video heroes + overlay header ---------- */
+.hero-video{
+  position:relative;min-height:100vh;min-height:100svh;
+  display:flex;align-items:flex-end;overflow:hidden;background:#0B0B0C;color:#fff;
+}
+.hv-media{position:absolute;inset:0}
+.hv-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hv-scrim{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(180deg,rgba(8,8,10,.36),rgba(8,8,10,0) 30%),
+    linear-gradient(0deg,rgba(8,8,10,.80),rgba(8,8,10,.36) 46%,rgba(8,8,10,0) 72%),
+    radial-gradient(760px 460px at 10% 92%,rgba(0,106,252,.22),transparent 62%);
+}
+.hv-in{position:relative;z-index:2;width:100%;padding:136px 0 52px}
+@media(min-width:900px){.hv-in{padding:170px 0 88px}}
+.hero-video .eyebrow{color:rgba(255,255,255,.88)}
+.hero-video h1{color:#fff;margin:22px 0 24px;max-width:940px;text-shadow:0 2px 34px rgba(0,0,0,.28)}
+.hero-video .lede{color:rgba(255,255,255,.90);max-width:640px;margin-bottom:36px}
+.hero-video .btn-ghost{
+  background:rgba(255,255,255,.10);color:#fff;border-color:rgba(255,255,255,.5);
+  box-shadow:none;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+}
+.hero-video .btn-ghost:hover{background:rgba(255,255,255,.20);box-shadow:none}
+.hero-video .hero-trust{color:rgba(255,255,255,.85);margin-top:36px}
+.hero-video .hv-note{margin-top:26px;max-width:620px;color:rgba(255,255,255,.84)}
+.rail-sec{padding:52px 0 4px}
+@media(min-width:900px){.rail-sec{padding:64px 0 8px}}
+.rail-sec .rail{margin-top:0}
+.site-head.over-hero{
+  position:absolute;top:0;left:0;right:0;
+  background:linear-gradient(180deg,rgba(8,8,10,.44),rgba(8,8,10,.14) 64%,rgba(8,8,10,0));
+  border-bottom-color:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;
+  transition:background .3s ease;
+}
+.site-head.over-hero .logo-img{filter:drop-shadow(0 2px 12px rgba(0,0,0,.40))}
+.site-head.over-hero .main-nav a{color:rgba(255,255,255,.90);text-shadow:0 1px 12px rgba(0,0,0,.4)}
+.site-head.over-hero .main-nav a:hover{color:#fff}
+.site-head.over-hero.scrolled{
+  position:fixed;background:rgba(250,247,241,.92);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom-color:var(--line2);
+}
+.site-head.over-hero.scrolled .logo-img{filter:none}
+.site-head.over-hero.scrolled .main-nav a{color:var(--ink2);text-shadow:none}
+.site-head.over-hero.scrolled .main-nav a:hover{color:var(--ink)}

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SIGNL Design Concept v2: For Businesses</title>
-<meta name="description" content="Design concept for the SIGNL businesses page. Not the live site.">
+<title>SIGNL · For Businesses</title>
+<meta name="description" content="Word of mouth, on a schedule. Local creators post about your business, every visit tracked, every result measured.">
 <meta name="robots" content="noindex">
 <link rel="icon" href="../assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,14 +14,7 @@
 </head>
 <body>
 
-<div class="preview-bar">
-  <div class="wrap">
-    <span><span class="pb-dot"></span>Design concept v2 · Businesses page · For approval only</span>
-    <a href="v2-concept.html">Back to the concept homepage</a>
-  </div>
-</div>
-
-<header class="site-head">
+<header class="site-head over-hero">
   <div class="wrap head-in">
     <a href="../index.html" aria-label="SIGNL home"><img class="logo-img" src="../assets/logo.png" alt="SIGNL"></a>
     <nav class="main-nav">
@@ -52,9 +45,15 @@
 
 <main>
 
-<!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="wrap">
+<!-- ============ HERO VIDEO ============ -->
+<section class="hero-video">
+  <div class="hv-media">
+    <video autoplay muted loop playsinline preload="metadata" poster="../assets/video/poster-jeff-open.jpg" aria-label="A woman opening a glass door with an open sign">
+      <source src="../assets/video/jeff-open-door-web.mp4" type="video/mp4">
+    </video>
+    <div class="hv-scrim"></div>
+  </div>
+  <div class="wrap hv-in">
     <span class="eyebrow">For businesses</span>
     <h1>Word of mouth, <span class="grad-text">on a schedule.</span></h1>
     <p class="lede">Your customers already trust local creators and their own neighbors more than any ad. Put your business in their feeds, with tracked posts, real redemptions, and a dashboard that shows exactly what you got for your money.</p>
@@ -66,18 +65,6 @@
       <span><i></i>Your kitchen. Their feed.</span>
       <span><i></i>Tracked posts</span>
       <span><i></i>48-hour rule</span>
-    </div>
-
-    <div class="hero-film reveal">
-      <video autoplay muted loop playsinline preload="metadata" poster="../assets/video/poster-jeff-open.jpg" aria-label="Concept footage: a woman opening a glass door with an open sign">
-        <source src="../assets/video/jeff-open-door-web.mp4" type="video/mp4">
-      </video>
-      <div class="rail-scrim"></div>
-      <span class="rail-chip">The open sign</span>
-      <div class="rail-cap">
-        <div class="rc-t">They show up like customers. Because they are.</div>
-        <div class="rc-s">Concept footage</div>
-      </div>
     </div>
   </div>
 </section>
@@ -107,7 +94,8 @@
           <div class="cc-name">Jordan Ellis</div>
           <div class="cc-handle">@jordaneats757</div>
           <div class="cc-chips">
-            <span class="chip market">Hampton Roads</span>
+            <span class="chip market">Virginia Beach</span>
+            <span class="chip">Oceanfront</span>
             <span class="chip">Sample</span>
           </div>
         </div>
@@ -140,7 +128,8 @@
           <div class="cc-name">Priya Nair</div>
           <div class="cc-handle">@priyaplates</div>
           <div class="cc-chips">
-            <span class="chip market">Hampton Roads</span>
+            <span class="chip market">Raleigh</span>
+            <span class="chip">Downtown</span>
             <span class="chip">Sample</span>
           </div>
         </div>
@@ -172,7 +161,8 @@
           <div class="cc-name">Sofia Grant</div>
           <div class="cc-handle">@sofiagetslocal</div>
           <div class="cc-chips">
-            <span class="chip market">Richmond</span>
+            <span class="chip market">Charlotte</span>
+            <span class="chip">South End</span>
             <span class="chip">Sample</span>
           </div>
         </div>
@@ -292,7 +282,7 @@
         <p>Founding businesses get hand-picked local creators, tracked posts, and a ROAS scoreboard from the first visit. Apply for a founding spot in your market.</p>
         <div class="hero-ctas">
           <a class="btn" href="../businesses.html#apply">Apply for a founding spot</a>
-          <a class="btn btn-ghost" href="v2-concept.html">Back to the concept homepage</a>
+          <a class="btn btn-ghost" href="v2-concept.html">Back to the homepage</a>
         </div>
       </div>
     </div>
@@ -379,6 +369,16 @@
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
   els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+
+<script>
+(function(){
+  var head = document.querySelector('.site-head.over-hero');
+  if (!head) return;
+  function onScroll(){ head.classList.toggle('scrolled', window.scrollY > 30); }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
 })();
 </script>
 </body>

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SIGNL Design Concept v2: For Creators</title>
-<meta name="description" content="Design concept for the SIGNL creators page. Not the live site.">
+<title>SIGNL · For Creators</title>
+<meta name="description" content="Local businesses comp you a meal or a service. You enjoy it, then post honestly about it within 48 hours. That is the job.">
 <meta name="robots" content="noindex">
 <link rel="icon" href="../assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,14 +14,7 @@
 </head>
 <body>
 
-<div class="preview-bar">
-  <div class="wrap">
-    <span><span class="pb-dot"></span>Design concept v2 · Creators page · For approval only</span>
-    <a href="v2-concept.html">Back to the concept homepage</a>
-  </div>
-</div>
-
-<header class="site-head">
+<header class="site-head over-hero">
   <div class="wrap head-in">
     <a href="../index.html" aria-label="SIGNL home"><img class="logo-img" src="../assets/logo.png" alt="SIGNL"></a>
     <nav class="main-nav">
@@ -52,9 +45,15 @@
 
 <main>
 
-<!-- ============ HERO ============ -->
-<section class="hero">
-  <div class="wrap">
+<!-- ============ HERO VIDEO ============ -->
+<section class="hero-video">
+  <div class="hv-media">
+    <video autoplay muted loop playsinline preload="metadata" poster="../assets/video/poster-jeff-talk.jpg" aria-label="A creator talking to camera in a cafe">
+      <source src="../assets/video/jeff-creator-talk-trim.mp4" type="video/mp4">
+    </video>
+    <div class="hv-scrim"></div>
+  </div>
+  <div class="wrap hv-in">
     <span class="eyebrow">For creators · Founding rosters forming now</span>
     <h1>Eat, experience, post. <span class="grad-text">That&rsquo;s the job.</span></h1>
     <p class="lede">Local businesses comp you a meal or a service. You enjoy it like a real customer, then post honestly about it within 48 hours. No scripts, no fake reviews, your actual experience, your actual voice.</p>
@@ -62,19 +61,7 @@
       <a class="btn" href="https://app.joinsignl.com">Claim your founding spot</a>
       <a class="btn btn-ghost" href="#platform">See the platform</a>
     </div>
-    <p style="margin-top:26px;max-width:620px;color:var(--ink2)">SIGNL is rolling out city by city, and we are hand-picking founding creators in 39 founding markets across 12 countries right now. Founders get first pick of their city&rsquo;s first businesses, and founding status never expires.</p>
-
-    <div class="hero-video-card reveal">
-      <video autoplay muted loop playsinline preload="metadata" poster="../assets/video/poster-jeff-talk.jpg" aria-label="Concept footage: a creator talking to camera in a cafe">
-        <source src="../assets/video/jeff-creator-talk-trim.mp4" type="video/mp4">
-      </video>
-      <div class="rail-scrim"></div>
-      <span class="rail-chip">To camera</span>
-      <div class="rail-cap">
-        <div class="rc-t">Shot on a phone. Posted like a regular.</div>
-        <div class="rc-s">Concept footage</div>
-      </div>
-    </div>
+    <p class="hv-note">SIGNL is rolling out city by city, and we are hand-picking founding creators in 39 founding markets across 12 countries right now. Founders get first pick of their city&rsquo;s first businesses, and founding status never expires.</p>
   </div>
 </section>
 
@@ -202,7 +189,7 @@
         <p>Sign up now to be a founding creator in your city: founders get first pick of their city&rsquo;s first businesses, and founding status never expires. Not in a rollout city yet? Apply anyway, your application starts your city&rsquo;s list, and cities get picked by signups.</p>
         <div class="hero-ctas">
           <a class="btn" href="https://app.joinsignl.com">Claim your founding spot</a>
-          <a class="btn btn-ghost" href="v2-concept.html">Back to the concept homepage</a>
+          <a class="btn btn-ghost" href="v2-concept.html">Back to the homepage</a>
         </div>
       </div>
     </div>
@@ -289,6 +276,16 @@
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
   els.forEach(function(el){ io.observe(el); });
+})();
+</script>
+
+<script>
+(function(){
+  var head = document.querySelector('.site-head.over-hero');
+  if (!head) return;
+  function onScroll(){ head.classList.toggle('scrolled', window.scrollY > 30); }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
 })();
 </script>
 </body>
