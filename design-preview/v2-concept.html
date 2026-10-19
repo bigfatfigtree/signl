@@ -25,12 +25,28 @@
   <div class="wrap head-in">
     <a href="../index.html" aria-label="SIGNL home"><img class="logo-img" src="../assets/logo.png" alt="SIGNL"></a>
     <nav class="main-nav">
-      <a href="../creators.html">For Creators</a>
-      <a href="../businesses.html">For Businesses</a>
+      <a href="v2-creators.html">For Creators</a>
+      <a href="v2-businesses.html">For Businesses</a>
       <a href="../why-local.html">Why Local</a>
       <a href="../roster.html">The Roster</a>
     </nav>
-    <a class="btn btn-small head-cta" href="https://app.joinsignl.com">Apply to Join</a>
+    <div class="head-actions">
+      <a class="btn btn-small head-cta" href="https://app.joinsignl.com">Apply to Join</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+        <svg class="nt-b" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="nt-x" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <nav class="wrap" aria-label="Mobile">
+      <a class="mn-link" href="v2-creators.html">Creators <span>&rarr;</span></a>
+      <a class="mn-link" href="v2-businesses.html">Businesses <span>&rarr;</span></a>
+      <a class="mn-link" href="../cities.html">Markets <span>&rarr;</span></a>
+      <a class="mn-link" href="../businesses.html">Pricing <span>&rarr;</span></a>
+      <a class="mn-link" href="../creator-faq.html">FAQ <span>&rarr;</span></a>
+      <a class="btn mn-apply" href="https://app.joinsignl.com">Apply to Join</a>
+    </nav>
   </div>
 </header>
 
@@ -54,36 +70,38 @@
 
     <div class="rail" aria-label="SIGNL films">
       <article class="rail-card reveal">
-        <video autoplay muted loop playsinline preload="metadata" poster="../assets/video/poster-c1.jpg" aria-label="SIGNL creator cut: dinner is free, the post is honest">
-          <source src="../assets/video/signl-c1-720.mp4" type="video/mp4">
+        <video autoplay muted loop playsinline preload="metadata" poster="../assets/video/poster-stock-creator-meal.jpg" aria-label="Stock clip: a creator photographing her meal with her phone">
+          <source src="../assets/video/stock-creator-meal.mp4" type="video/mp4">
         </video>
         <div class="rail-scrim"></div>
-        <span class="rail-chip">Creator cut</span>
+        <span class="rail-chip">Stock clip</span>
         <div class="rail-cap">
-          <div class="rc-t">Dinner&rsquo;s free. The post is honest.</div>
-          <div class="rc-s">The creator film, 20 seconds</div>
+          <div class="rc-t">Shot on a phone. Posted like a regular.</div>
+          <div class="rc-s">Creator-style stock footage</div>
         </div>
       </article>
 
       <article class="rail-card reveal">
-        <img class="fill" src="../assets/photos/hero-restaurant-night.jpg" alt="A full dining room at night">
+        <video autoplay muted loop playsinline preload="metadata" poster="../assets/video/poster-stock-restaurant-friends.jpg" aria-label="Stock clip: friends eating together at a restaurant table">
+          <source src="../assets/video/stock-restaurant-friends.mp4" type="video/mp4">
+        </video>
         <div class="rail-scrim"></div>
-        <span class="rail-chip">The visit</span>
+        <span class="rail-chip">Stock clip</span>
         <div class="rail-cap">
           <div class="rc-t">They show up like customers. Because they are.</div>
-          <div class="rc-s">No scripts, no staged shoots</div>
+          <div class="rc-s">Creator-style stock footage</div>
         </div>
       </article>
 
       <article class="rail-card reveal">
-        <video autoplay muted loop playsinline preload="metadata" poster="../assets/video/poster-b1.jpg" aria-label="SIGNL business cut: you need regulars, not rented reach">
-          <source src="../assets/video/signl-b1-720.mp4" type="video/mp4">
+        <video autoplay muted loop playsinline preload="metadata" poster="../assets/video/poster-stock-cocktails.jpg" aria-label="Stock clip: two cocktails set down on a marble bar">
+          <source src="../assets/video/stock-cocktails.mp4" type="video/mp4">
         </video>
         <div class="rail-scrim"></div>
-        <span class="rail-chip">Business cut</span>
+        <span class="rail-chip">Stock clip</span>
         <div class="rail-cap">
-          <div class="rc-t">You need regulars, not rented reach.</div>
-          <div class="rc-s">The business film, 20 seconds</div>
+          <div class="rc-t">Your kitchen. Their feed.</div>
+          <div class="rc-s">Creator-style stock footage</div>
         </div>
       </article>
 
@@ -138,8 +156,8 @@
       <div class="fan">
         <div class="phone left" aria-hidden="true">
           <div class="phone-screen">
-            <video autoplay muted loop playsinline preload="metadata" poster="../assets/video/poster-c1.jpg">
-              <source src="../assets/video/signl-c1-720.mp4" type="video/mp4">
+            <video autoplay muted loop playsinline preload="metadata" poster="../assets/video/poster-stock-creator-meal.jpg">
+              <source src="../assets/video/stock-creator-meal.mp4" type="video/mp4">
             </video>
             <div class="phone-notch"></div>
           </div>
@@ -169,8 +187,8 @@
         </div>
         <div class="phone right" aria-hidden="true">
           <div class="phone-screen">
-            <video autoplay muted loop playsinline preload="metadata" poster="../assets/video/poster-b1.jpg">
-              <source src="../assets/video/signl-b1-720.mp4" type="video/mp4">
+            <video autoplay muted loop playsinline preload="metadata" poster="../assets/video/poster-stock-salon-phone.jpg">
+              <source src="../assets/video/stock-salon-phone.mp4" type="video/mp4">
             </video>
             <div class="phone-notch"></div>
           </div>
@@ -532,6 +550,25 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var panel = document.getElementById('mobileNav');
+  if (!btn || !panel) return;
+  function close(){
+    panel.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+    btn.setAttribute('aria-label','Open menu');
+  }
+  btn.addEventListener('click', function(){
+    var open = panel.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  panel.addEventListener('click', function(e){ if (e.target.closest('a')) close(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
+})();
+</script>
 <script>
 (function(){
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;

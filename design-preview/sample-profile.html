@@ -11,36 +11,71 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="v2.css">
 <style>
-  .sp-wrap{max-width:880px;margin:0 auto;padding:28px 20px 80px}
-  .sp-back{display:inline-block;margin:18px 0 22px;font-weight:600}
-  .sp-card{background:#fff;border:1px solid rgba(20,20,20,.08);border-radius:26px;box-shadow:0 24px 60px rgba(60,45,20,.12);overflow:hidden}
-  .sp-hero{display:grid;grid-template-columns:220px 1fr;gap:0}
-  .sp-hero img{width:100%;height:100%;object-fit:cover;display:block;min-height:260px}
+  .sp-wrap{max-width:920px;margin:0 auto;padding:26px 20px 80px}
+  .sp-card{background:#fff;border:1px solid rgba(20,20,20,.08);border-radius:26px;box-shadow:0 24px 60px rgba(60,45,20,.12);overflow:hidden;margin-bottom:22px}
+  .sp-hero{display:grid;grid-template-columns:230px 1fr;gap:0}
+  .sp-hero img{width:100%;height:100%;object-fit:cover;display:block;min-height:280px}
   .sp-main{padding:28px 30px}
-  .sp-name{font-family:Archivo,sans-serif;font-weight:800;font-size:2rem;line-height:1.05}
+  .sp-name{font-family:Archivo,sans-serif;font-weight:800;font-size:2.05rem;line-height:1.05}
   .sp-handle{opacity:.65;font-weight:600;margin-top:4px}
-  .sp-chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 20px}
-  .sp-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:22px 30px;border-top:1px solid rgba(20,20,20,.07)}
-  .sp-stat .k{font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;opacity:.55}
-  .sp-stat .v{font-family:Archivo,sans-serif;font-weight:800;font-size:1.55rem;margin-top:4px}
-  .sp-local{display:flex;align-items:center;gap:18px;padding:24px 30px;border-top:1px solid rgba(20,20,20,.07)}
-  .sp-local .big{font-family:Archivo,sans-serif;font-weight:900;font-size:3rem;line-height:1;background:linear-gradient(92deg,#006AFC,#019BFC 30%,#03C9AB 65%,#2FE07E);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .sp-work{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:0 30px 8px}
+  .sp-chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 18px}
+  .sp-bio{line-height:1.62;opacity:.82}
+  .sp-local{display:flex;align-items:center;gap:20px;padding:24px 30px;border-top:1px solid rgba(20,20,20,.07);flex-wrap:wrap}
+  .sp-local .big{font-family:Archivo,sans-serif;font-weight:900;font-size:3.2rem;line-height:1;background:linear-gradient(92deg,#006AFC,#019BFC 30%,#03C9AB 65%,#2FE07E);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sp-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding:22px 30px;border-top:1px solid rgba(20,20,20,.07)}
+  .sp-stat .k{font-size:.76rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;opacity:.55}
+  .sp-stat .v{font-family:Archivo,sans-serif;font-weight:800;font-size:1.5rem;margin-top:4px}
+  .sp-stat .s{font-size:.84rem;opacity:.6;margin-top:2px}
+  .sp-sec{padding:24px 30px 4px;font-family:Archivo,sans-serif;font-weight:800;font-size:1.12rem}
+  .sp-body{padding:10px 30px 26px;line-height:1.62;opacity:.85}
+  .sp-work{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:14px 30px 26px}
   .sp-work img{width:100%;height:150px;object-fit:cover;border-radius:16px;display:block}
-  .sp-sec{padding:22px 30px 6px;font-family:Archivo,sans-serif;font-weight:800;font-size:1.05rem}
-  .sp-note{padding:16px 30px 30px;opacity:.75;line-height:1.55}
-  .sp-cta{margin:22px 30px 30px;padding:22px;border-radius:18px;background:#141414;color:#F4F1EA;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-  .sp-cta .btn{background:linear-gradient(92deg,#006AFC,#019BFC 30%,#03C9AB 65%,#2FE07E);color:#fff;padding:12px 22px;border-radius:999px;font-weight:700}
-  .sample-tag{display:inline-block;background:#141414;color:#F4F1EA;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
-  @media (max-width:680px){.sp-hero{grid-template-columns:1fr}.sp-hero img{min-height:200px}.sp-stats{grid-template-columns:1fr 1fr}.sp-work{grid-template-columns:1fr 1fr}}
+  .sp-quote{margin:6px 30px 26px;padding:20px 22px;border-radius:16px;background:#FAF7F1;border:1px solid rgba(20,20,20,.06);line-height:1.6}
+  .sp-quote .who{margin-top:10px;font-size:.88rem;font-weight:700}
+  .sp-quote .stars{color:#E8A33D;letter-spacing:2px}
+  .sp-links{display:flex;gap:10px;flex-wrap:wrap;padding:12px 30px 26px}
+  .sp-link-chip{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(20,20,20,.14);border-radius:999px;padding:9px 16px;font-weight:600;font-size:.9rem;background:#fff}
+  .sp-cta{margin:0 30px 30px;padding:22px;border-radius:18px;background:#141414;color:#F4F1EA;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  .sp-pad{padding:6px 30px 26px}
+  @media (max-width:680px){.sp-hero{grid-template-columns:1fr}.sp-hero img{min-height:210px}.sp-stats{grid-template-columns:1fr 1fr}.sp-work{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a href="../index.html" aria-label="SIGNL home"><img class="logo-img" src="../assets/logo.png" alt="SIGNL"></a>
+    <nav class="main-nav">
+      <a href="v2-creators.html">For Creators</a>
+      <a href="v2-businesses.html">For Businesses</a>
+      <a href="../why-local.html">Why Local</a>
+      <a href="../roster.html">The Roster</a>
+    </nav>
+    <div class="head-actions">
+      <a class="sp-back" href="v2-concept.html" style="font-weight:700;font-size:.9rem">&larr; Concept home</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+        <svg class="nt-b" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="nt-x" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <nav class="wrap" aria-label="Mobile">
+      <a class="mn-link" href="v2-creators.html">Creators <span>&rarr;</span></a>
+      <a class="mn-link" href="v2-businesses.html">Businesses <span>&rarr;</span></a>
+      <a class="mn-link" href="../cities.html">Markets <span>&rarr;</span></a>
+      <a class="mn-link" href="../businesses.html">Pricing <span>&rarr;</span></a>
+      <a class="mn-link" href="../creator-faq.html">FAQ <span>&rarr;</span></a>
+      <a class="btn mn-apply" href="https://app.joinsignl.com">Apply to Join</a>
+    </nav>
+  </div>
+</header>
+
 <div class="sp-wrap">
   <span class="sample-tag">Design preview · Placeholder profile</span>
-  <a class="sp-back" href="v2-concept.html">&larr; Back to the concept page</a>
 
-  <div class="sp-card">
+  <!-- HERO CARD -->
+  <div class="sp-card" style="margin-top:16px">
     <div class="sp-hero">
       <img src="../assets/photos/creator-cocktail-photo.jpg" alt="Sample creator photo">
       <div class="sp-main">
@@ -52,7 +87,7 @@
           <span class="chip">Locals tier</span>
           <span class="chip">Sample</span>
         </div>
-        <p style="line-height:1.6;opacity:.8">Placeholder bio. A real profile carries the creator's own words: what they post about, the neighborhoods they actually go to, and the kinds of places they love.</p>
+        <p class="sp-bio">About (placeholder). Chesapeake born, still here. I post the places my group chat actually argues about: taco trucks, cocktail bars doing something weird, and the brunch spots worth the wait. If I would not send my own friends, I do not post it.</p>
       </div>
     </div>
 
@@ -65,31 +100,82 @@
     </div>
 
     <div class="sp-stats">
-      <div class="sp-stat"><div class="k">Stacked audience</div><div class="v">6,240</div></div>
-      <div class="sp-stat"><div class="k">Local Impact Score</div><div class="v">63</div></div>
-      <div class="sp-stat"><div class="k">Momentum</div><div class="v">120</div></div>
+      <div class="sp-stat"><div class="k">Stacked audience</div><div class="v">6,240</div><div class="s">Instagram 4,180 · TikTok 2,060</div></div>
+      <div class="sp-stat"><div class="k">Local Impact Score</div><div class="v">63</div><div class="s">Local share, reliability, engagement</div></div>
+      <div class="sp-stat"><div class="k">Momentum</div><div class="v">120 pts</div><div class="s">Profile complete, posts on time</div></div>
+    </div>
+  </div>
+
+  <!-- TRACK RECORD -->
+  <div class="sp-card">
+    <div class="sp-sec">Track record <span class="sample-tag" style="margin-left:8px">Sample data</span></div>
+    <div class="sp-stats" style="border-top:none;padding-top:16px">
       <div class="sp-stat"><div class="k">Visits delivered</div><div class="v">4</div></div>
       <div class="sp-stat"><div class="k">On-time rate</div><div class="v">100%</div></div>
       <div class="sp-stat"><div class="k">Content views tracked</div><div class="v">31,480</div></div>
     </div>
+    <div class="sp-quote">
+      <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      "Showed up on a Friday like any other guest, posted Saturday morning, and we saw her table's code used nine times that weekend. Easiest yes on our calendar." (Placeholder quote.)
+      <div class="who">Harbor Table, a sample business · Hampton Roads</div>
+    </div>
+  </div>
 
+  <!-- BEST WORK -->
+  <div class="sp-card">
     <div class="sp-sec">Best work</div>
     <div class="sp-work">
       <img src="../assets/photos/cocktails-toast.jpg" alt="Sample work photo">
       <img src="../assets/photos/chef-flame.jpg" alt="Sample work photo">
       <img src="../assets/photos/street-night.jpg" alt="Sample work photo">
-    </div>
-
-    <div class="sp-sec">What a visit looks like</div>
-    <p class="sp-note">The Standard Visit: 1 post or reel plus 2 stories, honest and disclosed, live within 48 hours of the visit. This creator is open to comp visits and lists a paid rate of $150 for direct bookings.</p>
-
-    <div class="sp-cta">
-      <div><strong>Like this creator for your place?</strong><br><span style="opacity:.75">Sample call to action. Real profiles book through the app.</span></div>
-      <span class="btn">Book this creator</span>
+      <img src="../assets/photos/bar-friends.jpg" alt="Sample work photo">
+      <img src="../assets/photos/kitchen-line.jpg" alt="Sample work photo">
+      <img src="../assets/photos/cafe-window-night.jpg" alt="Sample work photo">
     </div>
   </div>
 
-  <p style="margin-top:22px;opacity:.65;line-height:1.6">Placeholder profile for design review. Jordan Ellis is not a real person, and every number on this page is a sample. Real SIGNL profiles live in the app and appear on marketing pages only with the creator's permission.</p>
+  <!-- VISIT TERMS -->
+  <div class="sp-card">
+    <div class="sp-sec">Visit terms <span class="sample-tag" style="margin-left:8px">Sample terms</span></div>
+    <div class="sp-body">
+      <p><strong>The Standard Visit.</strong> 1 post or reel plus 2 stories, honest and disclosed, live within 48 hours of the visit and up for at least 30 days. The post is tracked, and the business's plan sets the content rights before anyone accepts.</p>
+      <p style="margin-top:12px"><strong>Open to comp visits:</strong> Yes. <strong>Paid bookings:</strong> lists a rate of $150 for direct bookings (sample rate). Businesses can always stay comp-only, forever.</p>
+    </div>
+    <div class="sp-sec" style="padding-top:0">Their review pages</div>
+    <p class="sp-body" style="padding-bottom:0">A one-tap courtesy in the visit flow. Leaving an external review is always the creator's own choice, never required, never rewarded.</p>
+    <div class="sp-links">
+      <span class="sp-link-chip">Google reviews (sample)</span>
+      <span class="sp-link-chip">Yelp (sample)</span>
+      <span class="sp-link-chip">TripAdvisor (sample)</span>
+      <span class="sp-link-chip">Facebook (sample)</span>
+    </div>
+    <div class="sp-cta">
+      <div><strong>Like this creator for your place?</strong><br><span style="opacity:.75">Sample call to action. Real profiles book through the app.</span></div>
+      <a class="btn" href="https://app.joinsignl.com">Book this creator</a>
+    </div>
+  </div>
+
+  <p style="opacity:.65;line-height:1.6">Placeholder profile for design review. Jordan Ellis is not a real person, and every number on this page is a sample. Real SIGNL profiles live in the app and appear on marketing pages only with the creator's permission.</p>
 </div>
+
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var panel = document.getElementById('mobileNav');
+  if (!btn || !panel) return;
+  function close(){
+    panel.classList.remove('open');
+    btn.setAttribute('aria-expanded','false');
+    btn.setAttribute('aria-label','Open menu');
+  }
+  btn.addEventListener('click', function(){
+    var open = panel.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  panel.addEventListener('click', function(e){ if (e.target.closest('a')) close(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
+})();
+</script>
 </body>
 </html>
