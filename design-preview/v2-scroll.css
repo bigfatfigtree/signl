@@ -608,6 +608,7 @@ section.tint{background:var(--bg2);border-top:1px solid var(--line2);border-bott
 .sat-lbl{font-size:.64rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3)}
 .sat-code-v{font-family:'Space Grotesk',monospace;font-weight:700;font-size:1.16rem;letter-spacing:.08em;color:var(--ink);margin-top:4px}
 .sat-roas-v{font-family:'Space Grotesk',monospace;font-weight:700;font-size:1.9rem;line-height:1;margin-top:3px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sky-row{display:contents}
 .sky-cap{text-align:center;font-size:.92rem;color:var(--ink2);max-width:620px;margin:24px auto 0}
 .sky-cap strong{color:var(--ink)}
 @keyframes skyFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
@@ -618,9 +619,11 @@ section.tint{background:var(--bg2);border-top:1px solid var(--line2);border-bott
   .sky-sat{position:static;order:5;margin-top:28px;animation:none}
 }
 @media(max-width:760px){
-  .skyline{gap:10px;padding:14px 0 0}
-  .sky-phone{width:29vw;border-radius:34px;padding:7px}
-  .sky-phone.is-mid{width:33vw}
+  .skyline{flex-wrap:wrap;gap:0;padding:14px 0 12px}
+  .sky-row{display:flex;flex-wrap:nowrap;align-items:flex-end;justify-content:space-between;flex:0 0 100%;order:1;position:relative}
+  .sky-row::after{content:"";position:absolute;left:2%;right:2%;bottom:-8px;height:3px;border-radius:99px;background:var(--grad);box-shadow:0 14px 36px rgba(1,155,252,.35)}
+  .sky-row .sky-phone{flex:0 0 30%;width:auto;border-radius:34px;padding:7px}
+  .sky-row .sky-phone.is-mid{flex-basis:34%}
   .sky-screen{border-radius:27px}
   .sky-notch{width:50px;height:14px;top:7px}
   .sky-ui{padding:25px 9px 10px;gap:7px}
@@ -634,8 +637,8 @@ section.tint{background:var(--bg2);border-top:1px solid var(--line2);border-bott
   .sky-ui .pu-local .lbl{font-size:.5rem;margin-top:3px}
   .sky-ui .pu-row{padding:6px 8px;font-size:.52rem;border-radius:10px}
   .sky-ui .pu-btn{font-size:.56rem;padding:8px 6px}
-  .sky-sat{padding:11px 13px;border-radius:14px;margin-top:20px}
-  .sat-offer{width:172px}
+  .sky-sat{position:static;flex:0 0 100%;width:100%;order:5;padding:11px 13px;border-radius:14px;margin-top:14px;animation:none}
+  .sat-offer{width:100%;margin-top:26px}
   .sat-list li{font-size:.72rem}
   .sat-code-v{font-size:.95rem}
   .sat-roas-v{font-size:1.45rem}
