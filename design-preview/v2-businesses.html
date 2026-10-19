@@ -57,6 +57,7 @@
     <span class="eyebrow">For businesses</span>
     <h1>Word of mouth, <span class="grad-text">on a schedule.</span></h1>
     <p class="lede">Your customers already trust local creators and their own neighbors more than any ad. Put your business in their feeds, with tracked posts, real redemptions, and a dashboard that shows exactly what you got for your money.</p>
+    <p class="biz-rot"><span aria-hidden="true">Get more locals in your <span class="rot-slot"><span class="rot-word grad-text" id="rotWord">restaurant</span></span></span><span class="visually-hidden">Get more locals in your restaurant, hair salon, cafe, and more</span></p>
     <div class="hero-ctas">
       <a class="btn" href="../businesses.html#apply">Apply for a founding spot</a>
       <a class="btn btn-ghost" href="#platform">See the dashboard</a>
@@ -379,6 +380,23 @@
   function onScroll(){ head.classList.toggle('scrolled', window.scrollY > 30); }
   window.addEventListener('scroll', onScroll, {passive:true});
   onScroll();
+})();
+</script>
+<script>
+(function(){
+  var words = ["restaurant","hair salon","cafe","med spa","barbershop","boutique","gym","bakery","cocktail bar","coffee shop","brewery","nail salon","pizza place","food truck","yoga studio","pet groomer","tattoo studio","ice cream shop","wine bar","brunch spot"];
+  var el = document.getElementById("rotWord");
+  if (!el) return;
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var i = 0;
+  setInterval(function(){
+    el.classList.add("rot-out");
+    setTimeout(function(){
+      i = (i + 1) % words.length;
+      el.textContent = words[i];
+      el.classList.remove("rot-out");
+    }, 270);
+  }, 2200);
 })();
 </script>
 </body>

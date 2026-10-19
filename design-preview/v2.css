@@ -570,3 +570,89 @@ section.tint{background:var(--bg2);border-top:1px solid var(--line2);border-bott
   .hero-video .hero-trust{gap:10px 20px;margin-top:30px}
   .hero-video .hero-trust span{max-width:100%}
 }
+
+/* ---------- round 5b: skyline trio + satellites (SIGNL's own phone composition) ---------- */
+.skyline-zone{position:relative;padding:18px 0 4px}
+.skyline{
+  position:relative;display:flex;align-items:flex-end;justify-content:center;gap:26px;
+  max-width:1060px;margin:0 auto;padding:34px 10px 8px;
+}
+.skyline::after{
+  content:"";position:absolute;left:2%;right:2%;bottom:0;height:3px;border-radius:99px;
+  background:var(--grad);box-shadow:0 14px 36px rgba(1,155,252,.35);
+}
+.sky-phone{
+  flex:none;width:248px;aspect-ratio:9/18.6;border-radius:52px;background:#101010;
+  padding:11px;box-shadow:var(--sh-lg);position:relative;z-index:1;
+}
+.sky-phone.is-mid{width:292px;z-index:3}
+.sky-screen{position:relative;width:100%;height:100%;border-radius:42px;overflow:hidden;background:#0C0C0C}
+.sky-screen video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sky-notch{
+  position:absolute;top:11px;left:50%;transform:translateX(-50%);z-index:5;
+  width:86px;height:24px;border-radius:999px;background:#101010;
+}
+.sky-ui{background:#FBF9F4;position:absolute;inset:0;padding:44px 18px 18px;display:flex;flex-direction:column;gap:13px}
+.sky-sat{
+  position:absolute;z-index:6;background:var(--card);border:1px solid var(--line2);
+  border-radius:18px;box-shadow:var(--sh-md);padding:15px 17px;
+  animation:skyFloat 7s ease-in-out infinite;
+}
+.sat-offer{left:0;top:64px;width:206px}
+.sat-code{right:0;top:158px;animation-delay:1.4s}
+.sat-roas{right:26px;bottom:112px;animation-delay:2.8s}
+.sat-kicker{font-family:'Space Grotesk',monospace;font-size:.64rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3);margin-bottom:9px}
+.sat-list{list-style:none;display:grid;gap:7px}
+.sat-list li{font-size:.82rem;font-weight:600;color:var(--ink);padding-left:19px;position:relative;line-height:1.35}
+.sat-list li::before{content:"";position:absolute;left:0;top:.42em;width:9px;height:9px;border-radius:50%;background:var(--grad)}
+.sat-lbl{font-size:.64rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3)}
+.sat-code-v{font-family:'Space Grotesk',monospace;font-weight:700;font-size:1.16rem;letter-spacing:.08em;color:var(--ink);margin-top:4px}
+.sat-roas-v{font-family:'Space Grotesk',monospace;font-weight:700;font-size:1.9rem;line-height:1;margin-top:3px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sky-cap{text-align:center;font-size:.92rem;color:var(--ink2);max-width:620px;margin:24px auto 0}
+.sky-cap strong{color:var(--ink)}
+@keyframes skyFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media (prefers-reduced-motion: reduce){.sky-sat{animation:none}}
+@media(max-width:1019px){
+  .skyline{flex-wrap:wrap;padding-top:22px}
+  .skyline::after{display:none}
+  .sky-sat{position:static;order:5;margin-top:28px;animation:none}
+}
+@media(max-width:760px){
+  .skyline{gap:10px;padding:14px 0 0}
+  .sky-phone{width:29vw;border-radius:34px;padding:7px}
+  .sky-phone.is-mid{width:33vw}
+  .sky-screen{border-radius:27px}
+  .sky-notch{width:50px;height:14px;top:7px}
+  .sky-ui{padding:25px 9px 10px;gap:7px}
+  .sky-ui .pu-head{gap:7px}
+  .sky-ui .pu-head img{width:30px;height:30px}
+  .sky-ui .pu-name{font-size:.6rem}
+  .sky-ui .pu-handle{font-size:.5rem}
+  .sky-ui .pu-chip{font-size:.44rem;padding:4px 7px;letter-spacing:.09em}
+  .sky-ui .pu-local{padding:8px 9px;border-radius:12px}
+  .sky-ui .pu-local .big{font-size:1.2rem}
+  .sky-ui .pu-local .lbl{font-size:.5rem;margin-top:3px}
+  .sky-ui .pu-row{padding:6px 8px;font-size:.52rem;border-radius:10px}
+  .sky-ui .pu-btn{font-size:.56rem;padding:8px 6px}
+  .sky-sat{padding:11px 13px;border-radius:14px;margin-top:20px}
+  .sat-offer{width:172px}
+  .sat-list li{font-size:.72rem}
+  .sat-code-v{font-size:.95rem}
+  .sat-roas-v{font-size:1.45rem}
+  .sky-cap{margin-top:18px;text-align:left}
+}
+
+/* ---------- round 5b: rotating business-type line (businesses hero) ---------- */
+.biz-rot{
+  font-family:'Archivo',sans-serif;font-weight:800;letter-spacing:-.015em;line-height:1.2;
+  font-size:clamp(1.28rem,2.4vw,1.75rem);color:#fff;margin:-12px 0 30px;
+  text-shadow:0 2px 22px rgba(0,0,0,.30);
+}
+.rot-slot{display:inline-block;min-width:14ch;text-align:left;vertical-align:bottom}
+.rot-word{display:inline-block;transition:opacity .26s ease,transform .26s ease}
+.rot-word.rot-out{opacity:0;transform:translateY(9px)}
+.visually-hidden{
+  position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;
+  overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;
+}
+@media(max-width:760px){.biz-rot{margin:-6px 0 26px}}

@@ -5,7 +5,7 @@ Direction set by Jeff (2026-10-19): light premium register. Warm off-white base 
 brand #F4F1EA family, ink #141414 text, the locked gradient
 (#006AFC -> #019BFC -> #03C9AB -> #2FE07E) as the accent system only.
 Premium is the base register (restraint, disciplined spacing, layered soft shadows);
-the fun lives in media and motion (video rail, phone fan, staggered cards, reveal),
+the fun lives in media and motion (video rail, phone skyline, staggered cards, reveal),
 never in candy colors or visual noise. Borrowed from reference sites: structure and
 proof density only, never their styling.
 
@@ -42,7 +42,7 @@ App mapping: discovery list card (compact variant drops `.cc-track`), `/c/` publ
 profile hero (full variant), partner dashboard roster rows (data only, same fields).
 
 ### `.visit-card` (phone UI pattern, `.pu-*`) -> app visit + booking surfaces
-The center phone in the fan is the visit-card pattern: profile head (`.pu-head`),
+The center phone of the skyline trio is the visit-card pattern: profile head (`.pu-head`),
 status chip (`.pu-chip`), one hero stat block (`.pu-local`), stacked fact rows
 (`.pu-row`), one gradient action (`.pu-btn`). In the app this becomes: the creator's
 offer view (You get / You post / They can / They can't rows), the redemption credential
@@ -58,11 +58,21 @@ summary panels (visits used, posts delivered, ROAS block), and the plan card in 
 Rule: businesses get the same card geometry as creators, with the ink market chip
 replaced by plan state. One system, both sides of the marketplace.
 
+### The skyline trio + satellites (`.skyline`, `.sky-phone`, `.sky-sat`)
+SIGNL's own phone-showcase composition (named and set 2026-10-19, replacing the tilted
+fan, which was too close to a competitor's signature). Three phones stand perfectly
+upright on one shared gradient stage line: the center phone tallest and forward, the
+two side phones slightly lower and set back. No rotation, no fan angles, ever. Three
+small platform cards float beside the phones as satellites: an offer checklist
+mini-card (`.sat-offer`), a redemption code pill (`.sat-code`, "SGNL-XXXXXX"), and a
+ROAS chip (`.sat-roas`): the phone, plus the platform spilling out of it. On small
+screens the trio scales down as one unit and the satellites tuck underneath. Screen
+content is always a real component (creator-card or visit-card), never a screenshot.
+
 ### Supporting components
 - `.rail-card`: vertical media card (9:13.4), honest label chip (`.rail-chip`) instead of
-  engagement counts; ports to the app content library and post-delivery cards.
-- `.phone`: CSS device frame for any app-surface showcase; the screen content is always
-  a real component (creator-card or visit-card), never a screenshot.
+  engagement counts; on the homepage the chip carries the journey step ("Step 1" to
+  "Step 6"). Ports to the app content library and post-delivery cards.
 - `.stat-band`, `.move`, `.price-panel`, `.faq-item`, `.thesis-panel`, `.cta-panel`:
   marketing surfaces; the stat band and move cards port directly into the business
   dashboard and the partner dashboard as summary blocks.
