@@ -233,10 +233,21 @@ New cities keep joining the list: anyone can sign up from any city at https://ap
 
 - [SIGNL home](https://joinsignl.com/): what SIGNL is, how it works, tiers, pricing, launch cities.
 - [For Creators](https://joinsignl.com/creators.html): how creators join, tiers, rules, FAQ and the application.
+- [Get Comped](https://joinsignl.com/get-comped.html): how getting comped works for creators: free meals, services and experiences for honest posts within 48 hours, who qualifies by tier, and the rules.
+- [Creator FAQ](https://joinsignl.com/creator-faq.html): the deep creator FAQ: FTC disclosure rules, the 48-hour posting rule, why no business can require a positive post, paid cash campaigns for the Creators band, local audience percentage and Momentum referral points.
+- [Brand Deals With 500 Followers](https://joinsignl.com/brand-deals-small-following.html): why 500 followers is enough on SIGNL: the Neighbors tier, the local audience math, and how a small creator lands a first brand deal.
+- [Free Meals for Posting](https://joinsignl.com/free-meals-for-posting.html): how comped dining works step by step: the offer, the visit, the in-app redemption code, the 48-hour honest post.
 - [For Businesses](https://joinsignl.com/businesses.html): pricing in full, add-ons, honest FAQ and the founding application.
+- [Influencer Marketing for Restaurants, Cafes and Food Trucks](https://joinsignl.com/for-restaurants.html): how SIGNL works for restaurants and cafes, the dining business types covered, pricing and FAQ.
+- [Influencer Marketing for Bars, Breweries and Nightlife](https://joinsignl.com/for-nightlife.html): how SIGNL works for cocktail bars, breweries, wineries, live music venues and clubs, pricing and FAQ.
+- [Influencer Marketing for Salons, Barbershops and Beauty Studios](https://joinsignl.com/for-beauty.html): how SIGNL works for hair salons, barbershops, nail salons and beauty studios, pricing and FAQ.
+- [Influencer Marketing for Gyms and Fitness Studios](https://joinsignl.com/for-fitness.html): how SIGNL works for boutique gyms, yoga and Pilates studios, CrossFit boxes and climbing gyms, pricing and FAQ.
+- [Influencer Marketing for Experiences, Attractions, Hotels and Events](https://joinsignl.com/for-experiences.html): how SIGNL works for boat charters, tours, escape rooms, cooking classes, boutique hotels and event venues, pricing and FAQ.
+- [Creator Marketing for Med Spas, Vein Clinics and Aesthetic Practices](https://joinsignl.com/for-health-aesthetics.html): how SIGNL works for med spas, IV therapy lounges, vein clinics, dental practices and aesthetic clinics. Posts are personal experiences only, with no treatment claims and full disclosure, and each practice stays responsible for its own advertising rules.
 - [Why Local Creators](https://joinsignl.com/why-local.html): why local creators outperform national reach for local businesses — trust, proximity, honest posts.
 - [SIGNL vs the Alternatives](https://joinsignl.com/alternatives.html): SIGNL compared with Storytime, Mustard, Momfluence, Cohley, Aspire, Insense and Collabstr on model, audience locality, pricing, redemption and content rights.
 - [Hampton Roads](https://joinsignl.com/hampton-roads.html): the founding market page for Hampton Roads; founding roster and founding business enrollment.
+- Market pages: every founding market has its own page at https://joinsignl.com/markets/{market}.html : hampton-roads, richmond, washington-dc, raleigh, charlotte, baltimore, charlottesville, roanoke, atlanta, greensboro, wilmington, nashville, austin, dallas, chicago, los-angeles, san-diego, seattle, tampa, miami, phoenix, denver, minneapolis, london, manchester, dubai, abu-dhabi, riyadh, doha, astana, bishkek, sydney, melbourne, perth, auckland, singapore, hong-kong, beijing, shanghai. Each market page covers the founding roster for that market, creator tiers, how businesses join there, and a form to put an unlisted city on the board.
 - [The Local Bench](https://joinsignl.com/roster.html): the verified bench of Hampton Roads creators SIGNL's first roster is built from.
 - [Next Cities](https://joinsignl.com/cities.html): how launch cities are picked; register a city.
 - [Sample Dashboard](https://joinsignl.com/dashboard.html): sample of the business results dashboard (sample data).
