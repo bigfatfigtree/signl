@@ -1,0 +1,112 @@
+/* ---------- Analytics (GA4) ----------
+   To activate: create a free GA4 property for joinsignl.com at
+   analytics.google.com and paste the measurement ID (looks like
+   G-XXXXXXXXXX) between the quotes below, then push. Until then,
+   nothing loads and nothing is tracked. */
+var GA_ID = '';
+if (GA_ID) {
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { dataLayer.push(arguments); };
+  gtag('js', new Date());
+  gtag('config', GA_ID);
+}
+function trackEvent(name, params) { if (window.gtag) gtag('event', name, params || {}); }
+
+// Shared JS: mobile nav + application forms. Forms save locally and,
+// when wired with data-netlify, also submit to Netlify (real lead capture
+// once the site is deployed there); the Netlify attempt fails silently elsewhere.
+(function () {
+  // Mobile nav toggle
+  var toggle = document.querySelector('.nav-toggle');
+  var mobileNav = document.querySelector('.mobile-nav');
+  if (toggle && mobileNav) {
+    toggle.addEventListener('click', function () {
+      var open = mobileNav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+
+  // Demo forms: any <form data-signl-form="key"> is saved to localStorage and
+  // replaced by its sibling .form-success block.
+  document.querySelectorAll('form[data-signl-form]').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var key = 'signl_' + form.getAttribute('data-signl-form');
+      var data = {};
+      new FormData(form).forEach(function (value, name) {
+        if (data[name]) {
+          data[name] = Array.isArray(data[name]) ? data[name].concat(value) : [data[name], value];
+        } else {
+          data[name] = value;
+        }
+      });
+      data.submitted_at = new Date().toISOString();
+      var existing = [];
+      try { existing = JSON.parse(localStorage.getItem(key) || '[]'); } catch (err) { existing = []; }
+      existing.push(data);
+      try { localStorage.setItem(key, JSON.stringify(existing)); } catch (err) { /* storage unavailable */ }
+
+      var wrap = form.closest('.form-wrap');
+      var success = wrap ? wrap.querySelector('.form-success') : null;
+
+      function flagDeliveryIssue() {
+        if (success && !success.querySelector('.delivery-note')) {
+          var note = document.createElement('p');
+          note.className = 'delivery-note';
+          note.style.marginTop = '14px';
+          note.textContent = 'We could not confirm delivery to our inbox just now. Please also email your details to hello@joinsignl.com so we do not miss you.';
+          success.appendChild(note);
+        }
+      }
+
+      if (form.hasAttribute('data-netlify') && form.getAttribute('name')) {
+        try {
+          var body = new URLSearchParams();
+          new FormData(form).forEach(function (v, n) { body.append(n, v); });
+          body.append('form-name', form.getAttribute('name'));
+          fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() })
+            .then(function (r) { if (!r.ok) flagDeliveryIssue(); })
+            .catch(function () { flagDeliveryIssue(); });
+        } catch (err) { flagDeliveryIssue(); }
+      }
+
+      trackEvent('form_submit', { form_name: form.getAttribute('name') });
+
+      form.style.display = 'none';
+      if (success) {
+        success.classList.add('show');
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  });
+})();
+
+// Preview only: scroll reveal (same snippet proposed for the live refresh).
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll(
+    '.block .sec-head, .step, .tier-row, .faq-item, .edge-card, .price-panel, ' +
+    '.split, .prof, .audviz, .stat-strip, .film-frame, .thesis, .vs-row, ' +
+    '.bench-row, .rule, .market, .form-wrap, .cta-band .wrap, .photo-band'
+  );
+  if (!els.length) return;
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
+  var perParent = new Map();
+  els.forEach(function (el) {
+    el.classList.add('rv');
+    var p = el.parentNode;
+    var n = perParent.get(p) || 0;
+    perParent.set(p, n + 1);
+    el.style.setProperty('--rvd', Math.min(n * 70, 350) + 'ms');
+    io.observe(el);
+  });
+})();
