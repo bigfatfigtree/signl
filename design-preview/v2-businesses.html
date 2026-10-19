@@ -11,8 +11,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="v2.css">
+<script>if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver'in window){document.documentElement.classList.add('sx-on');}</script>
 </head>
 <body>
+<div class="sx-progress" aria-hidden="true"><i></i></div>
 
 <header class="site-head over-hero">
   <div class="wrap head-in">
@@ -435,19 +437,146 @@
 })();
 </script>
 <script>
+/* SIGNL scroll experience (round 6): progressive enhancement. Every effect is
+   gated on html.sx-on, armed in <head> only when motion is allowed and
+   IntersectionObserver exists. Otherwise this script changes nothing and the
+   page is the static design, fully visible. Transform/opacity only, native
+   scroll speed, no scroll-jacking, no snapping. */
 (function(){
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var els = document.querySelectorAll('.reveal');
-  if (reduce || !('IntersectionObserver' in window)) {
-    els.forEach(function(el){ el.classList.add('in'); });
-    return;
-  }
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+  if (!('IntersectionObserver' in window)) return;
+  var sx = document.documentElement.classList.contains('sx-on');
+
+  /* reveals with a gentle sibling stagger */
+  var els = [].slice.call(document.querySelectorAll('.reveal'));
+  els.forEach(function(el){
+    var sibs = [].slice.call(el.parentNode.children).filter(function(n){ return n.classList && n.classList.contains('reveal'); });
+    var i = sibs.indexOf(el); if (i < 0) i = 0;
+    el.style.transitionDelay = Math.min(i, 3) * 70 + 'ms';
+  });
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: .12 });
   els.forEach(function(el){ io.observe(el); });
+
+  /* section headlines: line-by-line rise (split on existing <br> line breaks) */
+  if (sx) [].slice.call(document.querySelectorAll('.sec-head h2')).forEach(function(h){
+    var groups = [[]];
+    [].slice.call(h.childNodes).forEach(function(n){
+      if (n.nodeName === 'BR') groups.push([]); else groups[groups.length - 1].push(n);
+    });
+    while (h.firstChild) h.removeChild(h.firstChild);
+    groups.forEach(function(g, gi){
+      if (!g.length && groups.length > 1) return;
+      var w = document.createElement('span'); w.className = 'rl';
+      var inn = document.createElement('span'); inn.className = 'rl-in';
+      inn.style.transitionDelay = (gi * 90) + 'ms';
+      g.forEach(function(n){ inn.appendChild(n); });
+      w.appendChild(inn); h.appendChild(w);
+    });
+    var host = h.closest('.sec-head'); if (host) host.classList.add('rl-host');
+    new IntersectionObserver(function(es, ob){
+      es.forEach(function(e){ if (e.isIntersecting) {
+        e.target.querySelectorAll('.rl').forEach(function(r){ r.classList.add('in'); });
+        ob.unobserve(e.target);
+      }});
+    }, { threshold: .3 }).observe(h);
+  });
+
+  /* creator cards: local-share bars (read the % before counters touch it) */
+  [].slice.call(document.querySelectorAll('.cc-local')).forEach(function(loc){
+    var big = loc.querySelector('.big'); if (!big) return;
+    var pct = parseFloat(big.textContent); if (isNaN(pct)) return;
+    var bar = document.createElement('div'); bar.className = 'cc-bar'; bar.setAttribute('aria-hidden', 'true');
+    bar.innerHTML = '<i></i>';
+    bar.style.setProperty('--w', Math.max(0, Math.min(100, pct)) + '%');
+    loc.appendChild(bar);
+    new IntersectionObserver(function(es, ob){
+      es.forEach(function(e){ if (e.isIntersecting) { bar.classList.add('go'); ob.disconnect(); } });
+    }, { threshold: .4 }).observe(loc);
+  });
+
+  /* count-ups: stat numbers, LOCAL % on creator cards, profile stats */
+  function prepNum(el){
+    var spots = [];
+    (function walk(n){
+      if (n.nodeType === 3 && /\d/.test(n.nodeValue)) spots.push(n);
+      else if (n.nodeType === 1) [].slice.call(n.childNodes).forEach(walk);
+    })(el);
+    if (!spots.length) return null;
+    var node = spots[0], raw = node.nodeValue;
+    var m = raw.match(/([\d][\d,]*\.?\d*)/); if (!m) return null;
+    return { el: el, node: node, pre: raw.slice(0, m.index), post: raw.slice(m.index + m[1].length),
+      target: parseFloat(m[1].replace(/,/g, '')), dec: (m[1].split('.')[1] || '').length,
+      comma: m[1].indexOf(',') >= 0, done: false };
+  }
+  function fmt(d, v){
+    var s = d.dec > 0 ? v.toFixed(d.dec) : String(Math.round(v));
+    if (d.comma) { var parts = s.split('.'); parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ','); s = parts.join('.'); }
+    return s;
+  }
+  function runCount(d){
+    if (d.done) return; d.done = true;
+    var t0 = null;
+    function step(ts){
+      if (!t0) t0 = ts;
+      var p = Math.min((ts - t0) / 900, 1), e = 1 - Math.pow(1 - p, 3);
+      d.node.nodeValue = d.pre + fmt(d, e * d.target) + d.post;
+      if (p < 1) requestAnimationFrame(step); else d.node.nodeValue = d.pre + fmt(d, d.target) + d.post;
+    }
+    requestAnimationFrame(step);
+  }
+  var counters = [];
+  [].slice.call(document.querySelectorAll('.stat-num, .cc-local .big, .sx-count')).forEach(function(el){
+    var d = prepNum(el); if (d) counters.push(d);
+  });
+  if (sx && counters.length) {
+    counters.forEach(function(d){ d.node.nodeValue = d.pre + fmt(d, 0) + d.post; });
+    var cio = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting) {
+        counters.forEach(function(d){ if (d.el === e.target) runCount(d); });
+        cio.unobserve(e.target);
+      }});
+    }, { threshold: .4 });
+    counters.forEach(function(d){ cio.observe(d.el); });
+  }
+
+  /* scroll-driven: progress bar, hero drift, skyline parallax (rAF, transforms only) */
+  var prog = document.querySelector('.sx-progress i');
+  var hv = document.querySelector('.hero-video');
+  var hvMedia = hv ? hv.querySelector('.hv-media video') : null;
+  var hvIn = hv ? hv.querySelector('.hv-in') : null;
+  var zone = document.querySelector('.skyline-zone');
+  var phones = zone ? [].slice.call(zone.querySelectorAll('.sky-phone')) : [];
+  var sats = zone ? [].slice.call(zone.querySelectorAll('.sky-sat')) : [];
+  var ticking = false;
+  function onScroll(){
+    ticking = false;
+    if (prog) {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = (max > 0 ? Math.min(window.scrollY / max, 1) * 100 : 0) + '%';
+    }
+    if (hv && window.scrollY < window.innerHeight * 1.2) {
+      var hp = Math.min(window.scrollY / window.innerHeight, 1);
+      if (hvMedia) hvMedia.style.transform = 'scale(' + (1 + hp * .06) + ')';
+      if (hvIn) hvIn.style.transform = 'translateY(' + (-30 * hp) + 'px)';
+    }
+    if (zone) {
+      var r = zone.getBoundingClientRect();
+      if (r.bottom > 0 && r.top < window.innerHeight) {
+        var zp = Math.max(0, Math.min(1, (window.innerHeight - r.top) / (window.innerHeight + r.height)));
+        var amp = window.innerWidth < 760 ? 9 : 25;
+        var pf = [.45, 1, .6], sf = [.8, .5, 1.1];
+        phones.forEach(function(ph, i){ ph.style.setProperty('--ph', ((zp - .5) * 2 * amp * (pf[i] || 0)).toFixed(1) + 'px'); });
+        if (window.innerWidth >= 1020) sats.forEach(function(st, i){ st.style.setProperty('--sat', ((zp - .5) * 2 * -amp * .6 * (sf[i] || 0)).toFixed(1) + 'px'); });
+      }
+    }
+  }
+  function req(){ if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }
+  if (sx && (prog || hv || zone)) {
+    window.addEventListener('scroll', req, { passive: true });
+    window.addEventListener('resize', req);
+    onScroll();
+  }
 })();
 </script>
 

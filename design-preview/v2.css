@@ -383,12 +383,10 @@ section.tint{background:var(--bg2);border-top:1px solid var(--line2);border-bott
 }
 .foot-bottom a{color:#B9B4A7;text-decoration:underline;text-underline-offset:3px}
 
-/* ---------- reveal ---------- */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,.8,.3,1)}
-.reveal.in{opacity:1;transform:none}
-.creator-grid .reveal:nth-child(2){transition-delay:.08s}
-.creator-grid .reveal:nth-child(3){transition-delay:.16s}
-.creator-grid .reveal:nth-child(4){transition-delay:.24s}
+/* ---------- reveal (scroll experience: default visible; JS arms .sx-on pre-paint) ---------- */
+.reveal{opacity:1;transform:none;transition:none}
+html.sx-on .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,.8,.3,1)}
+html.sx-on .reveal.in{opacity:1;transform:none}
 @media (prefers-reduced-motion: reduce){
   .reveal{opacity:1;transform:none;transition:none}
   html{scroll-behavior:auto}
@@ -713,3 +711,76 @@ section.tint{background:var(--bg2);border-top:1px solid var(--line2);border-bott
   font-size:clamp(1.9rem,4vw,3rem);color:var(--ink);
 }
 .roas-eq-cap{font-size:.9rem;color:var(--ink3);max-width:560px;margin:12px auto 0}
+
+/* ---------- round 6: scroll experience layer (progressive enhancement) ---------- */
+/* Everything below is gated on html.sx-on, which the arm script adds before first
+   paint only when motion is allowed and IntersectionObserver exists. No JS, JS
+   failure, or reduced motion = the static design, fully visible. */
+
+/* scroll-progress bar, fixed directly under the header */
+.sx-progress{position:fixed;top:76px;left:0;right:0;height:3px;z-index:59;pointer-events:none;display:none}
+html.sx-on .sx-progress{display:block}
+.sx-progress i{display:block;height:100%;width:0;background:var(--grad)}
+
+/* hero drift (transform only, set from JS on rAF) */
+html.sx-on .hv-media video{will-change:transform}
+html.sx-on .hv-in{will-change:transform}
+
+/* homepage: the six step cards become a sticky stack */
+html.sx-on .rail-sec .rail.rail-stack{display:block;overflow:visible;scroll-snap-type:none;padding:8px 4px 12vh;margin-top:0}
+html.sx-on .rail.rail-stack .rail-card{position:sticky;flex:none;width:min(600px,100%);margin:0 auto 26px;aspect-ratio:16/10.5;scroll-snap-align:none}
+html.sx-on .rail.rail-stack .rail-card:nth-child(1){top:120px;z-index:1}
+html.sx-on .rail.rail-stack .rail-card:nth-child(2){top:128px;z-index:2}
+html.sx-on .rail.rail-stack .rail-card:nth-child(3){top:136px;z-index:3}
+html.sx-on .rail.rail-stack .rail-card:nth-child(4){top:144px;z-index:4}
+html.sx-on .rail.rail-stack .rail-card:nth-child(5){top:152px;z-index:5}
+html.sx-on .rail.rail-stack .rail-card:nth-child(6){top:160px;z-index:6}
+html.sx-on .rail-stack .rail-card.reveal{opacity:1;transform:none;transition:none}
+html.sx-on .rail.rail-stack .rail-card:nth-child(3n+2){transform:none}
+@media(max-width:760px){html.sx-on .rail.rail-stack .rail-card{aspect-ratio:9/10.8}}
+
+/* creator cards: alternate gentle slide-in + local-share bars (injected by JS) */
+html.sx-on .creator-grid>.creator-card.reveal{transform:translateX(-30px)}
+html.sx-on .creator-grid>.creator-card.reveal:nth-child(even){transform:translateX(30px)}
+html.sx-on .creator-grid>.creator-card.reveal.in{transform:none}
+.cc-bar{margin-top:12px;height:6px;border-radius:99px;background:rgba(20,20,20,.10);overflow:hidden}
+.cc-bar i{display:block;height:100%;width:0;border-radius:99px;background:var(--grad);transition:width 1s cubic-bezier(.22,.8,.3,1)}
+.cc-bar.go i{width:var(--w)}
+
+/* creators page: sample screens slide in from alternating sides */
+html.sx-on .ui-grid>.ui-panel.reveal{transform:translateX(-30px)}
+html.sx-on .ui-grid>.ui-panel.reveal:nth-child(even){transform:translateX(30px)}
+html.sx-on .ui-grid>.ui-panel.reveal.in{transform:none}
+
+/* section headlines: line-by-line rise (lines wrapped by JS only under sx-on) */
+.rl{display:block;overflow:hidden}
+.rl-in{display:block;will-change:transform}
+html.sx-on .rl-in{transform:translateY(110%);transition:transform .85s cubic-bezier(.22,.8,.3,1)}
+html.sx-on .rl.in .rl-in{transform:none}
+html.sx-on .sec-head.rl-host.reveal{transform:none}
+
+/* skyline parallax hooks (JS sets --ph / --sat from section progress) */
+html.sx-on .sky-phone{transform:translateY(var(--ph,0px))}
+@media(min-width:1020px){html.sx-on .sky-sat{animation:none;transform:translateY(var(--sat,0px))}}
+
+/* businesses: the Local Multiplier beats become a sticky stack of cards */
+.mult-stack{padding-bottom:6vh}
+.mult-stack .mult-beat{background:var(--card);border:1px solid var(--line2);border-radius:24px;box-shadow:var(--sh-md);padding:30px 32px;margin-bottom:26px}
+.mult-stack .mult-beat:last-child{margin-bottom:0}
+html.sx-on .mult-stack .mult-beat{position:sticky}
+html.sx-on .mult-stack .mult-beat:nth-child(1){top:116px;z-index:1}
+html.sx-on .mult-stack .mult-beat:nth-child(2){top:126px;z-index:2}
+html.sx-on .mult-stack .mult-beat:nth-child(3){top:136px;z-index:3}
+html.sx-on .mult-stack .bar-track i{transform:scaleX(0);transform-origin:left center;transition:transform 1.1s cubic-bezier(.22,.8,.3,1) .15s}
+html.sx-on .mult-stack .mult-beat.in .bar-track i{transform:scaleX(1)}
+@media(max-width:760px){.mult-stack .mult-beat{padding:24px 22px}}
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1 !important;transform:none !important;transition:none !important}
+  html.sx-on .rail.rail-stack .rail-card{position:relative;top:auto !important}
+  html.sx-on .mult-stack .mult-beat{position:relative;top:auto !important}
+  html.sx-on .mult-stack .bar-track i{transform:none !important;transition:none !important}
+  html.sx-on .rl-in{transform:none !important;transition:none !important}
+  html.sx-on .sky-phone,html.sx-on .sky-sat{transform:none !important}
+  .sx-progress{display:none !important}
+}
