@@ -189,7 +189,8 @@
       <h2 style="margin:16px 0 14px">Somewhere else? Put your city on the board</h2>
       <p class="lede" style="margin-bottom:28px">Thirty seconds. Your city gets counted, you will be first to know when it opens, and first in line for its founding roster.</p>
       <div class="form-wrap">
-        <form name="city-request" data-netlify="true" data-signl-form="city_requests">
+        <form name="city-request" data-netlify="true" netlify-honeypot="bot-field" data-signl-form="city_requests">
+          <p style="display:none"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
           <div class="form-grid">
             <div>
               <label for="x-city">Your city</label>

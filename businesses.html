@@ -645,7 +645,8 @@
       <h2 style="margin:16px 0 14px">Apply for a founding spot</h2>
       <p class="lede" style="margin-bottom:28px">Founding spots are limited per category and trade area in every founding market. Markets open over the next 30 to 90 days as founding rosters complete. Apply now to join the founding business list: applications are reviewed in order, your category spot is held, and founding pricing stays locked while you remain subscribed.</p>
       <div class="form-wrap">
-        <form name="business-application" data-netlify="true" data-signl-form="business_applications">
+        <form name="business-application" data-netlify="true" netlify-honeypot="bot-field" data-signl-form="business_applications">
+          <p style="display:none"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
           <div class="form-grid">
             <div>
               <label for="b-biz">Business name</label>

@@ -359,7 +359,8 @@
       <p class="lede" style="margin-bottom:28px">SIGNL is launching city by city — Hampton Roads first. If you're a creator somewhere else, drop your city below. The loudest cities move up the list, and when we launch near you, you'll be the first to know.</p>
       <p style="margin-top:14px"><a href="cities.html" style="color:var(--teal);font-weight:600">See how cities get picked &rarr;</a></p>
       <div class="form-wrap">
-        <form name="city-request" data-netlify="true" data-signl-form="city_requests">
+        <form name="city-request" data-netlify="true" netlify-honeypot="bot-field" data-signl-form="city_requests">
+          <p style="display:none"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
           <div class="form-grid">
             <div>
               <label for="x-city">Your city</label>
