@@ -547,3 +547,20 @@ section.tint{background:var(--bg2);border-top:1px solid var(--line2);border-bott
 .site-head.over-hero.scrolled .logo-img{filter:none}
 .site-head.over-hero.scrolled .main-nav a{color:var(--ink2);text-shadow:none}
 .site-head.over-hero.scrolled .main-nav a:hover{color:var(--ink)}
+
+/* ---------- round 5: mobile hero alignment (<=760px) ---------- */
+@media(max-width:760px){
+  .hero-video{overflow-x:clip}
+  .hero-video .hv-in{padding:112px 23px 46px}
+  .hero-video h1{
+    font-size:clamp(2.35rem,10.5vw,4.6rem);
+    overflow-wrap:normal;word-break:normal;
+    max-width:100%;margin:20px 0 20px;
+  }
+  .hero-video .eyebrow{display:inline-flex;align-items:center;gap:10px;max-width:100%}
+  .hero-video .lede{font-size:1.05rem;line-height:1.58;max-width:36ch;text-align:left;margin-bottom:30px}
+  .hero-video .hv-note{max-width:36ch;text-align:left}
+  .hero-video .hero-ctas{gap:12px}
+  .hero-video .hero-trust{gap:10px 20px;margin-top:30px}
+  .hero-video .hero-trust span{max-width:100%}
+}
