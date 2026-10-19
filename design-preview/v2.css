@@ -299,22 +299,22 @@ section.tint{background:var(--bg2);border-top:1px solid var(--line2);border-bott
 
 /* ---------- thesis ---------- */
 .thesis-panel{
-  background:var(--card);border:1px solid var(--line2);border-radius:32px;box-shadow:var(--sh-md);
-  padding:52px 34px;
+  position:relative;overflow:hidden;
+  background:var(--card);border:1px solid var(--line2);border-radius:32px;box-shadow:var(--sh-lg);
+  padding:44px 34px;
 }
-@media(min-width:900px){.thesis-panel{padding:68px 64px}}
-.thesis-panel h2{max-width:800px;margin:16px 0 18px}
-.thesis-panel .lede{max-width:700px}
-.vs-grid{display:grid;gap:18px;margin-top:42px}
+.thesis-panel::after{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad)}
+@media(min-width:900px){.thesis-panel{padding:52px 56px}}
+.vs-grid{display:grid;gap:18px}
 @media(min-width:820px){.vs-grid{grid-template-columns:1fr 1fr}}
-.vs-card{border:1px solid var(--line);border-radius:22px;padding:26px 28px;background:var(--bg)}
-.vs-card.hot{background:var(--ink);border-color:var(--ink)}
+.vs-card{border:1px solid var(--line2);border-radius:22px;padding:26px 28px;background:#fff;box-shadow:var(--sh-md)}
+.vs-card.hot{border:1px solid transparent;background:linear-gradient(#fff,#fff) padding-box,var(--grad) border-box;box-shadow:var(--sh-lg)}
 .vs-card .vs-num{font-family:'Space Grotesk',monospace;font-weight:700;font-size:2.5rem;line-height:1;color:var(--ink3)}
 .vs-card.hot .vs-num{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .vs-card .vs-lbl{margin-top:9px;font-size:.94rem;color:var(--ink2)}
-.vs-card.hot .vs-lbl{color:#CFC9BC}
+.vs-card.hot .vs-lbl{color:var(--ink2)}
 .vs-card .vs-tag{font-size:.66rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-bottom:12px}
-.vs-card.hot .vs-tag{color:#9d988c}
+.vs-card.hot .vs-tag{color:var(--ink3)}
 .thesis-note{margin-top:20px;font-size:.8rem;color:var(--ink3);max-width:760px}
 
 /* ---------- pricing ---------- */
@@ -343,9 +343,11 @@ section.tint{background:var(--bg2);border-top:1px solid var(--line2);border-bott
 .faq-list{display:grid;gap:18px}
 @media(min-width:900px){.faq-list{grid-template-columns:1fr 1fr}}
 .faq-item{
-  background:var(--card);border:1px solid var(--line2);border-radius:24px;box-shadow:var(--sh-sm);
+  position:relative;overflow:hidden;
+  background:var(--card);border:1px solid var(--line2);border-radius:24px;box-shadow:var(--sh-md);
   padding:30px 30px 28px;
 }
+.faq-item::after{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad)}
 .faq-item .f-num{font-family:'Space Grotesk',monospace;font-size:.82rem;letter-spacing:.18em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700}
 .faq-item h3{margin:10px 0 9px;font-size:1.3rem}
 .faq-item p{font-size:.95rem}
