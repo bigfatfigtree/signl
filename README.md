@@ -9,7 +9,7 @@ signl-site/
 ├── index.html       Landing: hero ("Get talked about by the people Hampton Roads actually follows"), dual CTAs, how-it-works (3 steps), creator tiers, pricing summary, market proof strip, launch note
 ├── roster.html      "The Local Bench": the 14 verified Hampton Roads creators (source: ~/workspace/creator-count/hampton-roads-creator-roster-check.md, follower counts verified Oct 2026). Framed honestly as a verified bench — NOT signed-up members; founding roster invitations open at launch
 ├── creators.html    For creators/everyday people: how it works, comp rules (comp = free meal/service, 48-hour post rule, FTC disclosure required, no-shows lose roster spot), 3 tiers (Neighbors 500–2k / Locals 2k–15k / Creators 15k+), application form
-├── businesses.html  Full pricing (Roster $349/mo self-service, Hand-Holder $849/mo managed, 6-month minimums; add-ons: extra collabs $25–49, paid hero campaigns at 20% platform fee, Grand Opening Burst $1,500), category exclusivity, honest FAQ, founding-business application form
+├── businesses.html  Full pricing (Self-Service $299/mo for up to 8 creator visits, Growth $599/mo for up to 20 visits with repost and ad rights while the account is active, Managed $999/mo for up to 30 visits with a coordinator running everything; 3-month minimums; add-ons: extra collabs $25–49, paid hero campaigns at 20% platform fee, Grand Opening Burst $1,500), category exclusivity, honest FAQ, founding-business application form
 ├── dashboard.html   SAMPLE business dashboard (clearly labeled "Sample data"): stat cards, CSS bar chart, recent-posts list using roster handles as illustrative sample activity
 ├── styles.css       Shared styles. 2026 dark broadcast design: near-black #0C0C0C, panels #141414, off-white #F4F1EA, signal orange #FF4D00; Archivo (display) + Inter (body) + Space Grotesk (numbers) via Google Fonts; sharp corners, 1px rules, real photography (Pexels, credited in footer)
 ├── assets/photos/   Real Pexels photography used across the pages (dark editorial set, selected Oct 2026)
@@ -47,7 +47,7 @@ A quick `grep -rn "SIGNL" .` in this folder finds every remaining occurrence.
 
 - **Forms are demo-only:** creator and business applications save to the visitor's own `localStorage` and show a success state. Nothing is transmitted. Replace with real endpoints (form backend / API) before launch.
 - **Real auth:** business and creator accounts, login-gated dashboards.
-- **Payments:** Stripe subscriptions for the $349/$849 tiers (6-month minimum terms), add-on purchases.
+- **Payments:** Stripe subscriptions for the $299/$599/$999 tiers (3-month minimum terms), add-on purchases.
 - **Platform core:** roster management, offer claiming, visit verification, 48-hour post tracking (social API/manual review), redemption codes, real dashboard data.
 - **Deploy:** static hosting on Netlify, same pattern as the owner's other sites (Brackish / Beatwick / Fholio) — publish this folder as-is, no build command.
 - **Roster status:** the 14 creators on `roster.html` are verified to exist with the follower counts shown, but are **not members**. Update the page's "bench / invitations open" framing once founding invitations actually go out and creators opt in.
