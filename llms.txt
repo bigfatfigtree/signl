@@ -74,7 +74,7 @@ For health and aesthetic services, creator posts are personal experiences only, 
 
 1. A business posts a comp offer: what it is comping (for example a meal for two, a haircut, a service package), its value, and how many creator visits it wants.
 2. Creators on the local roster claim offers and visit like real customers.
-3. The creator posts about the visit — a story, post or reel — within 48 hours, with a clear disclosure that the visit was comped (FTC-compliant, e.g. #gifted). Posts must be honest; businesses cannot require positive posts or reviews.
+3. The creator posts about the visit, a story, post or reel, within 48 hours, with a clear disclosure that the visit was comped (FTC-compliant, e.g. #gifted). Posts must be honest; businesses cannot require positive posts or reviews.
 4. The platform tracks every visit and post. If a post does not appear within 48 hours, the business receives a replacement visit and the creator's roster standing is affected; repeat no-shows are removed.
 
 ## Creator tiers
@@ -219,7 +219,7 @@ New cities keep joining the list: anyone can sign up from any city at https://ap
 ## Launch cities
 
 - Founding markets (founding rosters forming now, 39 markets in 12 countries): United States: Hampton Roads, Richmond, Washington DC, Raleigh, Charlotte, Baltimore, Charlottesville, Roanoke, Atlanta, Greensboro, Wilmington, Nashville, Austin, Dallas, Chicago, Los Angeles, San Diego, Seattle, Tampa, Miami, Phoenix, Denver, Minneapolis. United Kingdom: London, Manchester. United Arab Emirates: Dubai, Abu Dhabi. Saudi Arabia: Riyadh. Qatar: Doha. Kazakhstan: Astana. Kyrgyzstan: Bishkek. Australia: Sydney, Melbourne, Perth. New Zealand: Auckland. Singapore: Singapore. Hong Kong: Hong Kong. China: Beijing, Shanghai.
-- Beyond the founding markets: new cities are decided by signup counts. Creators sign up at https://app.joinsignl.com (full founding creator registration is live in the app), businesses at https://joinsignl.com/businesses.html, and anyone can register a city at https://joinsignl.com/cities.html — when a city opens, its early applicants become its founding roster.
+- Beyond the founding markets: new cities are decided by signup counts. Creators sign up at https://app.joinsignl.com (full founding creator registration is live in the app), businesses at https://joinsignl.com/businesses.html, and anyone can register a city at https://joinsignl.com/cities.html, and when a city opens, its early applicants become its founding roster.
 
 ## Key facts
 
@@ -245,7 +245,7 @@ New cities keep joining the list: anyone can sign up from any city at https://ap
 - [Influencer Marketing for Gyms and Fitness Studios](https://joinsignl.com/for-fitness.html): how SIGNL works for boutique gyms, yoga and Pilates studios, CrossFit boxes and climbing gyms, pricing and FAQ.
 - [Influencer Marketing for Experiences, Attractions, Hotels and Events](https://joinsignl.com/for-experiences.html): how SIGNL works for boat charters, tours, escape rooms, cooking classes, boutique hotels and event venues, pricing and FAQ.
 - [Creator Marketing for Med Spas, Vein Clinics and Aesthetic Practices](https://joinsignl.com/for-health-aesthetics.html): how SIGNL works for med spas, IV therapy lounges, vein clinics, dental practices and aesthetic clinics. Posts are personal experiences only, with no treatment claims and full disclosure, and each practice stays responsible for its own advertising rules.
-- [Why Local Creators](https://joinsignl.com/why-local.html): why local creators outperform national reach for local businesses — trust, proximity, honest posts.
+- [Why Local Creators](https://joinsignl.com/why-local.html): why local creators outperform national reach for local businesses: trust, proximity, honest posts.
 - [SIGNL vs the Alternatives](https://joinsignl.com/alternatives.html): SIGNL compared with Storytime, Mustard, Momfluence, Cohley, Aspire, Insense and Collabstr on model, audience locality, pricing, redemption and content rights.
 - [Hampton Roads](https://joinsignl.com/hampton-roads.html): the founding market page for Hampton Roads; founding roster and founding business enrollment.
 - Market pages: every founding market has its own page at https://joinsignl.com/markets/{market}.html : hampton-roads, richmond, washington-dc, raleigh, charlotte, baltimore, charlottesville, roanoke, atlanta, greensboro, wilmington, nashville, austin, dallas, chicago, los-angeles, san-diego, seattle, tampa, miami, phoenix, denver, minneapolis, london, manchester, dubai, abu-dhabi, riyadh, doha, astana, bishkek, sydney, melbourne, perth, auckland, singapore, hong-kong, beijing, shanghai. Each market page covers the founding roster for that market, creator tiers, how businesses join there, and a form to put an unlisted city on the board.
