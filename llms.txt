@@ -83,7 +83,7 @@ A creator's tier is set by follower count and applies in every SIGNL city:
 
 - Neighbors (500–2,000 followers): everyday local people. Compensation: the comp only.
 - Locals (2,000–15,000 followers): regular local posters; the roster's sweet spot. Compensation: comp plus roster perks and priority access to new businesses.
-- Creators (15,000+ followers): established local creators. Compensation: comp plus eligibility for paid hero campaigns.
+- Headliners (15,000+ followers): established local creators. Compensation: comp plus eligibility for paid hero campaigns.
 
 Anyone can apply at any follower count, including under 500. Applications require the applicant's home city. Founding rosters are reviewed in application order.
 
@@ -235,7 +235,7 @@ New cities keep joining the list: anyone can sign up from any city at https://ap
 - [SIGNL home](https://joinsignl.com/): what SIGNL is, how it works, tiers, pricing, launch cities.
 - [For Creators](https://joinsignl.com/creators.html): how creators join, tiers, rules, FAQ and the application.
 - [Get Comped](https://joinsignl.com/get-comped.html): how getting comped works for creators: free meals, services and experiences for honest posts within 48 hours, who qualifies by tier, and the rules.
-- [Creator FAQ](https://joinsignl.com/creator-faq.html): the deep creator FAQ: FTC disclosure rules, the 48-hour posting rule, why no business can require a positive post, paid cash campaigns for the Creators band, local audience percentage and Momentum referral points.
+- [Creator FAQ](https://joinsignl.com/creator-faq.html): the deep creator FAQ: FTC disclosure rules, the 48-hour posting rule, why no business can require a positive post, paid cash campaigns for the Headliners band, local audience percentage and Momentum referral points.
 - [Brand Deals With 500 Followers](https://joinsignl.com/brand-deals-small-following.html): why 500 followers is enough on SIGNL: the Neighbors tier, the local audience math, and how a small creator lands a first brand deal.
 - [Free Meals for Posting](https://joinsignl.com/free-meals-for-posting.html): how comped dining works step by step: the offer, the visit, the in-app redemption code, the 48-hour honest post.
 - [For Businesses](https://joinsignl.com/businesses.html): pricing in full, add-ons, honest FAQ and the founding application.
