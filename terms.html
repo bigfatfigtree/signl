@@ -6,7 +6,7 @@
 <title>Terms of Use | SIGNL</title>
 <meta name="description" content="Terms for joinsignl.com and SIGNL founding applications: how creator visits, comp, posting, and business subscriptions work.">
 <link rel="canonical" href="https://joinsignl.com/terms.html">
-<meta name="theme-color" content="#0C0C0C">
+<meta name="theme-color" content="#FAF7F1">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SIGNL">
 <meta property="og:title" content="Terms of Use | SIGNL">
@@ -23,28 +23,33 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=8">
+<link rel="stylesheet" href="styles-v2.css?v=2">
 </head>
 <body>
-<header class="site-header">
-  <div class="wrap">
-    <div class="header-in">
-      <a class="logo" href="index.html"><img class="logo-img" src="assets/logo.png" alt="SIGNL"></a>
-      <nav class="main-nav" aria-label="Main">
-        <a href="creators.html">For Creators</a>
-        <a href="businesses.html">For Businesses</a>
-        <a href="why-local.html">Why Local</a>
-      </nav>
-      <a class="btn btn-small header-cta" href="https://app.joinsignl.com">Apply to Join</a>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
-    </div>
-    <nav class="mobile-nav" aria-label="Mobile">
+<header class="site-head">
+  <div class="wrap head-in">
+    <a href="index.html" aria-label="SIGNL home"><img class="logo-img" src="assets/logo.png" alt="SIGNL"></a>
+    <nav class="main-nav">
       <a href="creators.html">For Creators</a>
       <a href="businesses.html">For Businesses</a>
       <a href="why-local.html">Why Local</a>
-      <a href="https://app.joinsignl.com">Apply to Join</a>
+    </nav>
+    <div class="head-actions">
+      <a class="btn btn-small head-cta" href="https://app.joinsignl.com">Apply to Join</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+        <svg class="nt-b" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="nt-x" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <nav class="wrap" aria-label="Mobile">
+      <a class="mn-link" href="creators.html">Creators <span>&rarr;</span></a>
+      <a class="mn-link" href="businesses.html">Businesses <span>&rarr;</span></a>
+      <a class="mn-link" href="cities.html">Markets <span>&rarr;</span></a>
+      <a class="mn-link" href="businesses.html">Pricing <span>&rarr;</span></a>
+      <a class="mn-link" href="creator-faq.html">FAQ <span>&rarr;</span></a>
+      <a class="btn mn-apply" href="https://app.joinsignl.com">Apply to Join</a>
     </nav>
   </div>
 </header>
@@ -59,9 +64,9 @@
         <h3>Applications are not acceptance</h3>
         <p>Submitting a creator, business, or city-request application is an expression of interest, not acceptance, membership, or a contract. Founding applicants are reviewed in submission order; acceptance is confirmed by email from SIGNL. Founding status, once granted, does not by itself guarantee visits, bookings, or earnings.</p>
         <h3>How creator visits work</h3>
-        <p>On standard visits, a creator's compensation is the comped meal, service, or experience offered by the business — not cash. In exchange, the creator posts about the visit within 48 hours. Posts must be honest, and every post must carry a clear disclosure (for example, "comped" or #ad), as required by FTC guidelines. Creators who no-show or fail to post lose standing and may be removed from the roster.</p>
+        <p>On standard visits, a creator's compensation is the comped meal, service, or experience offered by the business, not cash. In exchange, the creator posts about the visit within 48 hours. Posts must be honest, and every post must carry a clear disclosure (for example, "comped" or #ad), as required by FTC guidelines. Creators who no-show or fail to post lose standing and may be removed from the roster.</p>
         <h3>How business subscriptions work</h3>
-        <p>Founding pricing shown on this site is locked for founding members' first term. Subscriptions carry a 3-month minimum term. SIGNL guarantees tracked deliverables — posts within 48 hours of completed visits, verified in your dashboard — not a specific number of creators, which no honest platform can promise. Businesses set the value of their own comp offers. Businesses may not require positive posts or reviews; honest posts are the product.</p>
+        <p>Founding pricing shown on this site is locked for founding members' first term. Subscriptions carry a 3-month minimum term. SIGNL guarantees tracked deliverables, posts within 48 hours of completed visits, verified in your dashboard, not a specific number of creators, which no honest platform can promise. Businesses set the value of their own comp offers. Businesses may not require positive posts or reviews; honest posts are the product.</p>
         <h3>Acceptable use</h3>
         <p>Don't submit false information, impersonate anyone, or use this site to harass creators or businesses. Don't attempt to arrange off-platform deals with roster creators introduced through SIGNL during an active subscription.</p>
         <h3>Intellectual property</h3>
@@ -74,12 +79,12 @@
     </div>
   </section>
 </main>
-<footer class="site-footer">
+<footer class="site-foot">
   <div class="wrap">
-    <div class="footer-grid">
+    <div class="foot-grid">
       <div>
-        <a class="logo" href="index.html"><img class="logo-img foot" src="assets/logo.png" alt="SIGNL"></a>
-        <p class="footer-tag">Local creator marketing, city by city. Real locals. Real posts. Real walk-ins.</p>
+        <a href="index.html"><img class="logo-img" src="assets/logo.png" alt="SIGNL"></a>
+        <p class="foot-tag">Local creator marketing, city by city. Real locals. Real posts. Real walk-ins.</p>
       </div>
       <div>
         <h4>Platform</h4>
@@ -106,18 +111,18 @@
         <h4>Connect</h4>
         <ul>
           <li><a href="mailto:hello@joinsignl.com">hello@joinsignl.com</a></li>
-          <li><a href="https://www.instagram.com/joinsignl" target="_blank" rel="noopener">Instagram — @joinsignl</a></li>
-          <li><a href="https://www.tiktok.com/@joinsignl" target="_blank" rel="noopener">TikTok — @joinsignl</a></li>
-          <li><a href="https://www.facebook.com/1341797289027364" target="_blank" rel="noopener">Facebook — SIGNL</a></li>
+          <li><a href="https://www.instagram.com/joinsignl" target="_blank" rel="noopener">Instagram · @joinsignl</a></li>
+          <li><a href="https://www.tiktok.com/@joinsignl" target="_blank" rel="noopener">TikTok · @joinsignl</a></li>
+          <li><a href="https://www.facebook.com/1341797289027364" target="_blank" rel="noopener">Facebook · SIGNL</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>
           <li><a href="terms.html">Terms of Use</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div class="foot-bottom">
       <span>&copy; 2026 SIGNL. All rights reserved.</span>
       <span>Photos: Pexels</span>
-      <span>Founding creators forming now — sign up in your city</span>
+      <span>Founding creators forming now, sign up in your city</span>
       <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
     </div>
   </div>

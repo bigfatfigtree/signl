@@ -988,3 +988,188 @@ section[id]{scroll-margin-top:96px}
 .form-success{display:none}
 .form-success.show{display:block}
 .form-success h3{font-size:1.4rem;margin-bottom:10px}
+
+/* ---------- fleet carry: legacy modules on the remaining pages ----------
+   The 2026-10-19 fleet graduation moved every remaining page (markets,
+   categories, creator-intent, comparison, legal, cities, roster, 404) onto
+   this stylesheet. Their content markup predates the v2 system, so the rules
+   below restyle those legacy class names with v2 tokens. Class names,
+   copy, forms and schema in the pages are unchanged. */
+
+/* legacy inline styles across the fleet reference the old token names
+   (--ink-dim, --soft, --faint in the old stylesheet; --teal was referenced
+   but never defined). Aliasing them here keeps every inline style working
+   in the light system without editing 59 files. */
+:root{
+  --ink-dim:#4E4B44;
+  --soft:#4E4B44;
+  --faint:#8B877B;
+  --teal:#0B8A6E;
+  --orange:#0B8A6E;
+}
+
+/* gradient accent spans (homepage and market heroes, 404) */
+.hl,.accent{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* eyebrow + title on the simple pages (privacy, terms, 404) */
+.kicker{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--ink2);
+}
+.kicker::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--grad);flex:none}
+.page-title{font-size:clamp(2.5rem,6vw,4.6rem);margin:20px 0 22px}
+.page-hero{padding:76px 0 56px;border-bottom:1px solid var(--line2)}
+
+/* tighter section rhythm where the legacy markup asks for it */
+section.block.tight{padding:60px 0}
+@media(min-width:920px){.price-grid.plans{grid-template-columns:1fr 1fr 1fr}}
+
+/* full-bleed photo band (why-local) */
+.photo-band{margin-top:64px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:relative}
+.photo-band.flush{margin-top:0}
+.photo-band img{width:100%;height:clamp(320px,58vh,560px);object-fit:cover;filter:saturate(.92) contrast(1.05)}
+.photo-band .band-cap{
+  position:absolute;left:0;right:0;bottom:0;
+  background:linear-gradient(transparent,rgba(5,5,5,.85));
+  padding:56px 0 20px;
+}
+.band-cap .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.band-cap .cap-big{font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;font-size:clamp(1.3rem,2.6vw,2rem);line-height:1.05;color:#fff}
+.band-cap .cap-small{font-family:'Space Grotesk',monospace;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:#E8E2D2}
+
+/* split photo block */
+.split{
+  display:grid;gap:0;background:var(--card);
+  border:1px solid var(--line2);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-md);
+}
+@media(min-width:920px){.split{grid-template-columns:1fr 1fr}}
+.split .split-img{min-height:300px}
+.split .split-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.92) contrast(1.05)}
+.split .split-body{padding:38px 30px;background:var(--card)}
+@media(min-width:920px){.split .split-body{padding:52px 48px}}
+.split .split-body h2,.split .split-body h3{margin:14px 0}
+
+/* bench / roster rows (roster.html, hidden page, reskinned for consistency) */
+.bench{border-top:1px solid var(--line2)}
+.bench-row{
+  display:grid;grid-template-columns:40px 1fr auto;gap:6px 16px;align-items:baseline;
+  padding:20px 10px;border-bottom:1px solid var(--line2);transition:background .12s;
+}
+@media(min-width:820px){
+  .bench-row{grid-template-columns:64px minmax(0,1.45fr) 170px minmax(0,1fr) auto;gap:28px;padding:24px 14px}
+}
+.bench-row:hover{background:var(--bg2)}
+.bench-num{font-family:'Space Grotesk',monospace;color:var(--ink3);font-size:.95rem}
+.bench-handle{
+  font-family:'Archivo',sans-serif;font-weight:800;letter-spacing:-.015em;
+  font-size:clamp(1.3rem,2.6vw,2rem);line-height:1.05;color:var(--ink);
+  word-break:normal;overflow-wrap:break-word;min-width:0;
+}
+.bench-row:hover .bench-handle{color:#006AFC}
+.bench-fol{font-family:'Space Grotesk',monospace;font-size:1.05rem;color:var(--ink);white-space:nowrap;text-align:right}
+@media(min-width:820px){.bench-fol{text-align:left}}
+.bench-fol small{display:block;font-family:'Inter',sans-serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);margin-top:2px}
+.bench-cat{color:var(--ink2);font-size:.95rem}
+@media(max-width:819px){
+  .bench-cat{grid-column:2}
+  .bench-row .tag{grid-column:2;justify-self:start}
+}
+
+/* closing CTA band (market and category pages) */
+.cta-band{padding:96px 0;border-bottom:1px solid var(--line2)}
+.cta-band h2{font-size:clamp(2.4rem,6vw,4.6rem);max-width:920px;margin:16px 0 20px}
+.cta-band .lede{margin:0 0 34px}
+
+/* legal prose (privacy, terms) */
+.legal{max-width:760px}
+.legal p{color:var(--ink2);margin:0 0 16px}
+.legal p strong{color:var(--ink)}
+.legal h3{font-family:'Archivo',sans-serif;font-weight:800;font-size:21px;margin:34px 0 10px;color:var(--ink)}
+.legal .updated{font-family:'Space Grotesk',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3)}
+.legal a{color:#006AFC;text-decoration:underline}
+
+/* why-SIGNL edge cards (why-local) */
+.edge-grid{
+  display:grid;gap:0;background:var(--card);
+  border:1px solid var(--line2);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-md);
+}
+@media(min-width:920px){.edge-grid{grid-template-columns:1fr 1fr 1fr}}
+.edge-card{padding:30px 26px;background:var(--card);border-top:1px solid var(--line2)}
+.edge-card:first-child{border-top:none}
+@media(min-width:920px){
+  .edge-card{border-top:none;border-left:1px solid var(--line2)}
+  .edge-card:nth-child(3n+1){border-left:none}
+  .edge-card:nth-child(n+4){border-top:1px solid var(--line2)}
+}
+.edge-num{
+  font-family:'Space Grotesk',monospace;font-size:.95rem;letter-spacing:.12em;
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.edge-card h3{font-size:1.12rem;text-transform:uppercase;font-weight:800;margin:12px 0 8px}
+.edge-card p{color:var(--ink2);font-size:.96rem}
+.edge-card.wide{grid-column:1/-1}
+
+/* audience concentration visual (why-local, brand-deals): the old dark
+   dot-map panel restated as a light card. The SVG dots are brand-gradient
+   and warm gray, so they read unchanged on white. */
+.audviz{
+  background:var(--card);border:1px solid var(--line2);border-radius:var(--r-lg);
+  overflow:hidden;box-shadow:var(--sh-md);margin-top:44px;
+}
+.audviz-grid{display:grid}
+@media(min-width:920px){.audviz-grid{grid-template-columns:1fr 1fr}}
+.aud-panel{padding:30px 28px 26px}
+.aud-panel + .aud-panel{border-top:1px solid var(--line2)}
+@media(min-width:920px){.aud-panel + .aud-panel{border-top:none;border-left:1px solid var(--line2)}}
+.aud-panel.hot{background:var(--bg2)}
+.aud-tag{
+  font-family:'Space Grotesk',monospace;font-size:.74rem;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--ink3);
+}
+.aud-big{
+  font-family:'Space Grotesk',monospace;font-weight:700;line-height:1;
+  font-size:clamp(2.7rem,5.4vw,4rem);color:var(--ink);margin:12px 0 4px;
+}
+.aud-panel.hot .aud-big{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.aud-sub{font-size:.95rem;color:var(--ink2);margin-bottom:18px}
+.aud-panel svg{width:100%;height:auto;display:block}
+.aud-cap{margin-top:16px;font-size:.94rem;color:var(--ink2);max-width:420px}
+.aud-math{display:grid;border-top:1px solid var(--line2)}
+@media(min-width:820px){.aud-math{grid-template-columns:1fr auto 1fr;align-items:stretch}}
+.aud-math-cell{padding:26px 28px}
+.aud-math-vs{
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Archivo',sans-serif;font-weight:900;text-transform:uppercase;font-size:1rem;color:var(--ink3);
+  padding:0 6px;
+}
+@media(max-width:819px){.aud-math-vs{padding:2px 28px;justify-content:flex-start}}
+.aud-math-num{
+  font-family:'Space Grotesk',monospace;font-weight:700;font-size:clamp(2.4rem,5vw,3.6rem);line-height:1;
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.aud-math-num.dim{background:none;-webkit-background-clip:initial;background-clip:initial;color:var(--ink3)}
+.aud-math-lbl{margin-top:8px;font-size:.9rem;color:var(--ink2);max-width:340px}
+.aud-punch{
+  border-top:1px solid var(--line2);padding:22px 28px 4px;
+  font-family:'Archivo',sans-serif;font-weight:800;text-transform:uppercase;
+  font-size:clamp(1.05rem,2.2vw,1.4rem);letter-spacing:.01em;color:var(--ink);
+}
+.aud-note{padding:8px 28px 24px;font-size:.78rem;color:var(--ink3);max-width:860px}
+.aud-ring{animation:ringpulse 5.5s ease-in-out infinite}
+@keyframes ringpulse{0%,100%{opacity:.95}50%{opacity:.35}}
+@media (prefers-reduced-motion: reduce){.aud-ring{animation:none}}
+
+/* market lists (cities, hampton-roads) */
+.area-jump{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:20px}
+.area-jump a{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#006AFC}
+.markets{border-top:1px solid var(--line2)}
+.market{padding:28px 0;border-bottom:1px solid var(--line2)}
+.market-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.market-head h3{font-size:1.45rem;text-transform:uppercase;font-weight:800}
+.market-head .m-meta{
+  font-family:'Space Grotesk',monospace;font-size:.85rem;letter-spacing:.06em;
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+/* .slim is a semantic hook on one audviz instance; it carried no rules in
+   the legacy stylesheet either and needs none here. */
+.audviz.slim{}
