@@ -3,53 +3,90 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sample Business Dashboard — SIGNL</title>
-<meta name="description" content="Sample view of the business dashboard: creator visits, live posts, estimated local reach and offer redemptions. Sample data for illustration only.">
+<title>Sample Business Dashboard | SIGNL</title>
+<meta name="description" content="Sample view of the SIGNL Business Home: creator visits, the visit pipeline, posts ranked by tracked redemptions, and the SIGNL ROAS Score. Sample data for illustration only.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=8">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles-v2.css?v=5">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
 <link rel="canonical" href="https://joinsignl.com/dashboard.html">
-<meta name="theme-color" content="#0C0C0C">
+<meta name="theme-color" content="#FAF7F1">
 <meta name="robots" content="noindex">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SIGNL">
-<meta property="og:title" content="Sample Business Dashboard — SIGNL">
-<meta property="og:description" content="Sample view of the business dashboard: creator visits, live posts, estimated local reach and offer redemptions. Sample data for illustration only.">
+<meta property="og:title" content="Sample Business Dashboard | SIGNL">
+<meta property="og:description" content="Sample view of the SIGNL Business Home: creator visits, the visit pipeline, posts ranked by tracked redemptions, and the SIGNL ROAS Score. Sample data for illustration only.">
 <meta property="og:url" content="https://joinsignl.com/dashboard.html">
 <meta property="og:image" content="https://joinsignl.com/assets/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Sample Business Dashboard — SIGNL">
-<meta name="twitter:description" content="Sample view of the business dashboard: creator visits, live posts, estimated local reach and offer redemptions. Sample data for illustration only.">
+<meta name="twitter:title" content="Sample Business Dashboard | SIGNL">
+<meta name="twitter:description" content="Sample view of the SIGNL Business Home: creator visits, the visit pipeline, posts ranked by tracked redemptions, and the SIGNL ROAS Score. Sample data for illustration only.">
 <meta name="twitter:image" content="https://joinsignl.com/assets/og-image.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
+<script>if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver'in window){document.documentElement.classList.add('sx-on');}</script>
+<style>
+/* Sample home components (page scoped, built on the v2 tokens) */
+.dh-metrics{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:24px 0}
+@media(min-width:900px){.dh-metrics{grid-template-columns:repeat(4,1fr)}}
+.dh-metric{background:var(--card);border:1px solid var(--line2);border-radius:var(--r-md);box-shadow:var(--sh-sm);padding:18px 20px 20px;position:relative;overflow:hidden}
+.dh-metric::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--grad)}
+.dh-metric .m-lbl{font-size:.68rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--ink3)}
+.dh-metric .m-num{font-family:'Space Grotesk',monospace;font-weight:700;font-size:1.9rem;line-height:1.1;margin:7px 0 4px;color:var(--ink)}
+.dh-metric .m-sub{font-size:.83rem;color:var(--ink2);line-height:1.45}
+.dh-attn{display:flex;gap:14px;align-items:flex-start;background:#FBF2DC;border:1px solid #EAD9A4;border-radius:var(--r-md);padding:18px 20px;margin:0 0 24px}
+.dh-attn .a-ico{flex:none;width:30px;height:30px;border-radius:50%;background:#D9932C;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:'Archivo',sans-serif;font-size:1rem}
+.dh-attn strong{color:var(--ink)}
+.dh-attn p{font-size:.94rem;color:var(--ink2);line-height:1.55}
+.dh-grid{display:grid;gap:22px}
+@media(min-width:960px){.dh-grid{grid-template-columns:1fr 1fr}.dh-grid .dh-wide{grid-column:1/-1}}
+.dh-panel{background:var(--card);border:1px solid var(--line2);border-radius:var(--r-lg);box-shadow:var(--sh-md);padding:26px;position:relative}
+.dh-panel h3{margin-bottom:4px}
+.dh-panel .sub{font-size:.9rem;color:var(--ink3);margin-bottom:16px;line-height:1.5}
+.dh-funnel{display:grid;gap:10px}
+@media(min-width:760px){.dh-funnel{grid-template-columns:repeat(5,1fr)}}
+.dh-stage{background:var(--bg);border:1px solid var(--line2);border-radius:16px;padding:16px}
+.dh-stage .n{font-family:'Space Grotesk',monospace;font-weight:700;font-size:1.7rem;color:var(--ink);line-height:1.1}
+.dh-stage .l{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2);margin-top:3px}
+.dh-stage .d{font-size:.8rem;color:var(--ink3);margin-top:4px;line-height:1.45}
+.dh-stage.hot{background:var(--grad-soft);border-color:var(--line)}
+.row-ava{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none}
+.pace-track{height:10px;border-radius:99px;background:var(--bg2);overflow:hidden;margin:12px 0 6px}
+.pace-track i{display:block;height:100%;background:var(--grad);border-radius:99px}
+.dh-note{font-size:.88rem;color:var(--ink3);margin-top:22px;line-height:1.6}
+</style>
 </head>
 <body>
+<div class="sx-progress" aria-hidden="true"><i></i></div>
 
-<header class="site-header">
-  <div class="wrap">
-    <div class="header-in">
-      <a class="logo" href="index.html"><img class="logo-img" src="assets/logo.png" alt="SIGNL"></a>
-      <nav class="main-nav" aria-label="Main">
-        <a href="creators.html">For Creators</a>
-        <a href="businesses.html">For Businesses</a>
-        <a href="why-local.html">Why Local</a>
-      </nav>
-      <a class="btn btn-small header-cta" href="https://app.joinsignl.com">Apply to Join</a>
-      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
-    </div>
-    <nav class="mobile-nav" aria-label="Mobile">
+<header class="site-head">
+  <div class="wrap head-in">
+    <a href="index.html" aria-label="SIGNL home"><img class="logo-img" src="assets/logo.png" alt="SIGNL"></a>
+    <nav class="main-nav">
       <a href="creators.html">For Creators</a>
       <a href="businesses.html">For Businesses</a>
       <a href="why-local.html">Why Local</a>
-      <a href="https://app.joinsignl.com">Apply to Join</a>
+    </nav>
+    <div class="head-actions">
+      <a class="btn btn-small head-cta" href="https://app.joinsignl.com">Apply to Join</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+        <svg class="nt-b" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="nt-x" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <nav class="wrap" aria-label="Mobile">
+      <a class="mn-link" href="creators.html">Creators <span>&rarr;</span></a>
+      <a class="mn-link" href="businesses.html">Businesses <span>&rarr;</span></a>
+      <a class="mn-link" href="cities.html">Markets <span>&rarr;</span></a>
+      <a class="mn-link" href="businesses.html">Pricing <span>&rarr;</span></a>
+      <a class="mn-link" href="creator-faq.html">FAQ <span>&rarr;</span></a>
+      <a class="btn mn-apply" href="https://app.joinsignl.com">Apply to Join</a>
     </nav>
   </div>
 </header>
@@ -57,144 +94,161 @@
 <main>
   <section class="block tight">
     <div class="wrap">
-      <span class="label">Business dashboard</span>
-      <h2 style="margin:16px 0 14px">What you'd see every month</h2>
-      <p class="lede" style="margin-bottom:30px">This is the view every business gets: visits, posts, reach and redemptions, tracked in one place from day one.</p>
+      <span class="eyebrow">Business home · Sample</span>
+      <h2 style="margin:16px 0 14px">Good morning, Harbor Table.</h2>
+      <p class="lede" style="margin-bottom:26px">Here is what your local creator program is moving this month: what is happening, what needs you, and what is bringing people through the door.</p>
 
-      <div class="sample-banner"><strong>Sample data</strong>The business, numbers and activity below are illustrative examples only, shown so you can see how the dashboard works.</div>
+      <div class="sample-banner"><strong>Sample data</strong>Harbor Table is a sample business and every number on this page is illustrative, shown so you can see the home screen a business gets. The creators pictured are the site's sample personas.</div>
 
-      <div class="console-head">
-        <div class="biz">Harbor Lights Seafood</div>
-        <div class="meta">Virginia Beach · <b>Managed plan</b> · October 2026 (sample)</div>
-      </div>
-
-      <div class="stat-grid">
-        <div class="stat-box">
-          <div class="stat-num">7</div>
-          <div class="stat-lbl">Creator visits booked</div>
-          <div class="stat-delta">of 8 monthly allowance</div>
-          <div class="progress"><span style="width:88%"></span></div>
+      <div class="dh-metrics">
+        <div class="dh-metric">
+          <div class="m-lbl">Creator visits</div>
+          <div class="m-num">22</div>
+          <div class="m-sub">of 30 on the Managed plan · 8 remaining this month</div>
         </div>
-        <div class="stat-box">
-          <div class="stat-num">6</div>
-          <div class="stat-lbl">Posts live</div>
-          <div class="stat-delta">1 pending inside 48-hr window</div>
+        <div class="dh-metric">
+          <div class="m-lbl">Posts live</div>
+          <div class="m-num">19</div>
+          <div class="m-sub">100% on time so far · 3 on the 48h clock now</div>
         </div>
-        <div class="stat-box">
-          <div class="stat-num">48.2k</div>
-          <div class="stat-lbl">Estimated local reach</div>
-          <div class="stat-delta">+38% vs September — across all live posts</div>
+        <div class="dh-metric">
+          <div class="m-lbl">Local reach</div>
+          <div class="m-num">31.4k</div>
+          <div class="m-sub">Sample figure · local views across live posts</div>
         </div>
-        <div class="stat-box">
-          <div class="stat-num">132</div>
-          <div class="stat-lbl">Offer redemptions</div>
-          <div class="stat-delta">+52 this week · tracked offer code, in-store</div>
+        <div class="dh-metric">
+          <div class="m-lbl">SIGNL ROAS Score</div>
+          <div class="m-num">6.29x</div>
+          <div class="m-sub">All-in 5.06x · register tally is the floor, media value is labeled</div>
         </div>
       </div>
 
-      <div class="console-grid">
-        <div class="console-panel">
-          <h3>Posts live per week</h3>
-          <p class="sub">Sample data — live posts published by visiting creators, last 6 weeks.</p>
-          <div class="chart" aria-hidden="true">
-            <div class="bar" style="height:34%"><span>2</span></div>
-            <div class="bar" style="height:51%"><span>3</span></div>
-            <div class="bar" style="height:34%"><span>2</span></div>
-            <div class="bar" style="height:68%"><span>4</span></div>
-            <div class="bar" style="height:51%"><span>3</span></div>
-            <div class="bar hot" style="height:85%"><span>5</span></div>
-          </div>
-          <div class="chart-labels" aria-hidden="true">
-            <div>Wk 1</div><div>Wk 2</div><div>Wk 3</div><div>Wk 4</div><div>Wk 5</div><div>Wk 6</div>
+      <div class="dh-attn">
+        <div class="a-ico">!</div>
+        <p><strong>3 items need your attention.</strong> Approve one paid booking: Priya Nair at her listed rate of $250 (you pay $257.50, she keeps $242.50). Confirm two visit windows for this weekend. Report last night's register tally so creator codes get credited. Paid visits are always optional: the creator sets the rate, SIGNL holds the payment, and it releases within 48 hours of the post proof landing.</p>
+      </div>
+
+      <div class="dh-grid">
+        <div class="dh-panel dh-wide">
+          <h3>Visit pipeline</h3>
+          <p class="sub">Every collaboration, from offer to verified post. A Standard Visit is 1 post or reel plus 2 stories, honest and disclosed, posted within 48 hours of the visit.</p>
+          <div class="dh-funnel">
+            <div class="dh-stage"><div class="n">31</div><div class="l">Invited</div><div class="d">Offers out to the roster now</div></div>
+            <div class="dh-stage"><div class="n">22</div><div class="l">Claimed</div><div class="d">Visits booked this month</div></div>
+            <div class="dh-stage"><div class="n">7</div><div class="l">Visit set</div><div class="d">Windows confirmed, waiting on the day</div></div>
+            <div class="dh-stage hot"><div class="n">3</div><div class="l">48h clock</div><div class="d">Visited, posts due inside 48 hours</div></div>
+            <div class="dh-stage"><div class="n">19</div><div class="l">Live</div><div class="d">Posts up and tracked this month</div></div>
           </div>
         </div>
 
-        <div class="console-panel">
-          <h3>Recent creator posts</h3>
-          <p class="sub">Sample data — illustrative activity using handles from the verified local bench.</p>
-          <div>
-            <div class="post-row">
-              <div class="post-ini">BB</div>
-              <div class="post-meta">
-                <strong>@bacon_and_beauty</strong>
-                <span>Reel · visited Oct 12 · est. reach 18.4k</span>
-              </div>
-              <span class="pill">Live</span>
+        <div class="dh-panel">
+          <h3>Content that is working</h3>
+          <p class="sub">Your top creator posts, ranked by tracked register redemptions, not likes.</p>
+          <div class="post-row">
+            <img class="row-ava" src="assets/photos/sample-portrait-jordan.jpg" alt="Sample creator photo">
+            <div class="post-meta">
+              <strong>Jordan Ellis · @jordaneats757</strong>
+              <span>Reel · 43 redemptions · 6,240 stacked, 58% local</span>
+            </div>
+            <span class="pill">Invite again</span>
+          </div>
+          <div class="post-row">
+            <img class="row-ava" src="assets/photos/sample-portrait-priya.jpg" alt="Sample creator photo">
+            <div class="post-meta">
+              <strong>Priya Nair · @priyaplates</strong>
+              <span>Reel · 33 redemptions · 18,900 stacked, 71% local</span>
+            </div>
+            <span class="pill">Paid eligible</span>
+          </div>
+          <div class="post-row">
+            <img class="row-ava" src="assets/photos/sample-portrait-sofia.jpg" alt="Sample creator photo">
+            <div class="post-meta">
+              <strong>Sofia Grant · @sofiagetslocal</strong>
+              <span>Post + stories · 27 redemptions · 42,500 stacked, 36% local</span>
+            </div>
+            <span class="pill">Live</span>
+          </div>
+          <div class="post-row">
+            <img class="row-ava" src="assets/photos/sample-portrait-marcus.jpg" alt="Sample creator photo">
+            <div class="post-meta">
+              <strong>Marcus Lee · @marcusbitesrva</strong>
+              <span>Post · 19 redemptions · 3,180 stacked, 44% local</span>
+            </div>
+            <span class="pill">Live</span>
+          </div>
+          <p class="dh-note" style="margin-top:14px">Redemptions are counted when a guest uses the creator's code at your register and your team reports the tally. That is tracked spend, never an estimate.</p>
+        </div>
+
+        <div class="dh-panel">
+          <h3>Next visits</h3>
+          <p class="sub">Upcoming and in progress.</p>
+          <div class="post-row">
+            <img class="row-ava" src="assets/photos/sample-portrait-jordan.jpg" alt="Sample creator photo">
+            <div class="post-meta">
+              <strong>Jordan Ellis</strong>
+              <span>Today · 6:30 PM · Dinner for two</span>
+            </div>
+            <span class="pill">Confirmed</span>
+          </div>
+          <div class="post-row">
+            <img class="row-ava" src="assets/photos/sample-portrait-priya.jpg" alt="Sample creator photo">
+            <div class="post-meta">
+              <strong>Priya Nair</strong>
+              <span>Post due in 17h 22m · visited last night</span>
+            </div>
+            <span class="pill pending">48h clock</span>
+          </div>
+          <div class="post-row">
+            <img class="row-ava" src="assets/photos/sample-portrait-sofia.jpg" alt="Sample creator photo">
+            <div class="post-meta">
+              <strong>Sofia Grant</strong>
+              <span>Friday · 12:00 PM · Brunch</span>
+            </div>
+            <span class="pill">Claimed</span>
+          </div>
+          <div class="post-row">
+            <img class="row-ava" src="assets/photos/sample-portrait-marcus.jpg" alt="Sample creator photo">
+            <div class="post-meta">
+              <strong>Marcus Lee</strong>
+              <span>Saturday · Tasting menu for two</span>
+            </div>
+            <span class="pill">Visit set</span>
+          </div>
+          <h3 style="margin-top:22px">Plan pace</h3>
+          <p class="sub" style="margin-bottom:0">Managed plan · October · On track</p>
+          <div class="pace-track"><i style="width:73%"></i></div>
+          <p class="dh-note" style="margin-top:6px">22 of 30 creator visits booked. 8 visits remaining, renews Nov 1, founding pricing locked while you stay subscribed.</p>
+        </div>
+
+        <div class="dh-panel dh-wide">
+          <h3>Best local signals</h3>
+          <p class="sub">The creators moving your register, ranked by Local Impact Score and tracked redemptions. Follower count alone never ranks anyone here.</p>
+          <div class="dh-funnel" style="grid-template-columns:1fr">
+            <div class="post-row" style="padding-top:4px">
+              <img class="row-ava" src="assets/photos/sample-portrait-priya.jpg" alt="Sample creator photo">
+              <div class="post-meta"><strong>Priya Nair · Headliners</strong><span>Local Impact 74 · 71% local audience</span></div>
+              <span class="pill">33 redemptions</span>
             </div>
             <div class="post-row">
-              <div class="post-ini">SV</div>
-              <div class="post-meta">
-                <strong>@summerinvb</strong>
-                <span>Story + post · visited Oct 10 · est. reach 11.7k</span>
-              </div>
-              <span class="pill">Live</span>
+              <img class="row-ava" src="assets/photos/sample-portrait-jordan.jpg" alt="Sample creator photo">
+              <div class="post-meta"><strong>Jordan Ellis · Locals</strong><span>Local Impact 63 · 58% local audience</span></div>
+              <span class="pill">43 redemptions</span>
             </div>
             <div class="post-row">
-              <div class="post-ini">MS</div>
-              <div class="post-meta">
-                <strong>@macspecialz</strong>
-                <span>Review post · visited Oct 8 · est. reach 13.9k</span>
-              </div>
-              <span class="pill">Live</span>
+              <img class="row-ava" src="assets/photos/sample-portrait-sofia.jpg" alt="Sample creator photo">
+              <div class="post-meta"><strong>Sofia Grant · Headliners</strong><span>Local Impact 58 · 36% local audience</span></div>
+              <span class="pill">27 redemptions</span>
             </div>
             <div class="post-row">
-              <div class="post-ini">MA</div>
-              <div class="post-meta">
-                <strong>@myactivechild</strong>
-                <span>Family visit · visited Oct 14 · post due within 48 hrs</span>
-              </div>
-              <span class="pill pending">Pending</span>
+              <img class="row-ava" src="assets/photos/sample-portrait-marcus.jpg" alt="Sample creator photo">
+              <div class="post-meta"><strong>Marcus Lee · Locals</strong><span>Local Impact 47 · 44% local audience</span></div>
+              <span class="pill">19 redemptions</span>
             </div>
           </div>
-          <p style="font-size:.9rem;color:var(--faint);margin-top:16px">Every post is tracked from the moment it goes live. If a post misses the 48-hour window, the visit is replaced — see the <a href="businesses.html" style="color:var(--orange)">business FAQ</a>.</p>
         </div>
       </div>
 
-      <div class="console-grid" style="margin-top:26px">
-        <div class="console-panel">
-          <h3>Top posts this month</h3>
-          <p class="sub">Sample data — ranked by tracked redemptions driven in-store.</p>
-          <div>
-            <div class="post-row">
-              <div class="post-ini">1</div>
-              <div class="post-meta">
-                <strong>@bacon_and_beauty</strong>
-                <span>Reel · 18.4k reach · 41 redemptions</span>
-              </div>
-              <span class="pill">Top post</span>
-            </div>
-            <div class="post-row">
-              <div class="post-ini">2</div>
-              <div class="post-meta">
-                <strong>@macspecialz</strong>
-                <span>Review post · 13.9k reach · 33 redemptions</span>
-              </div>
-              <span class="pill">Live</span>
-            </div>
-            <div class="post-row">
-              <div class="post-ini">3</div>
-              <div class="post-meta">
-                <strong>@summerinvb</strong>
-                <span>Story + post · 11.7k reach · 27 redemptions</span>
-              </div>
-              <span class="pill">Live</span>
-            </div>
-          </div>
-          <p style="font-size:.9rem;color:var(--faint);margin-top:16px">See exactly which creators move your register — then invite the best ones back.</p>
-        </div>
-
-        <div class="console-panel">
-          <h3>Live activity</h3>
-          <p class="sub">Sample data — every event in your account, as it happens.</p>
-          <div>
-            <div class="feed-row"><div class="feed-time">Today 12:40p</div><div class="feed-txt"><strong>Offer code redeemed</strong> in-store — 3rd redemption today</div></div>
-            <div class="feed-row"><div class="feed-time">Today 9:15a</div><div class="feed-txt"><strong>@myactivechild</strong> checked in — 48-hr post clock started</div></div>
-            <div class="feed-row"><div class="feed-time">Yesterday</div><div class="feed-txt"><strong>@macspecialz</strong>'s post crossed 10k reach</div></div>
-            <div class="feed-row"><div class="feed-time">Yesterday</div><div class="feed-txt">New visit booked — <strong>@iheartfoodvb</strong>, Friday 6p</div></div>
-            <div class="feed-row"><div class="feed-time">Monday</div><div class="feed-txt"><strong>@summerinvb</strong>'s story drove 9 tracked redemptions in one evening</div></div>
-          </div>
-        </div>
-      </div>
+      <p class="dh-note">How to read this page: the register tally is tracked from creator codes and is a floor, since it counts only guests who used a code. Media value is a stated model and is labeled wherever it appears. Usage rights on every delivered post follow your plan, and no creator is ever required to post positively.</p>
     </div>
   </section>
 
@@ -202,7 +256,7 @@
     <div class="wrap">
       <span class="label">Your turn</span>
       <h2>Want this view for your business?</h2>
-      <p class="lede">Founding businesses get the dashboard from day one — every visit, post and redemption, tracked.</p>
+      <p class="lede">Founding businesses get the dashboard from day one: every visit, post and redemption, tracked.</p>
       <div class="hero-ctas">
         <a class="btn" href="businesses.html#apply">Apply as a founding business</a>
       </div>
@@ -210,12 +264,12 @@
   </section>
 </main>
 
-<footer class="site-footer">
+<footer class="site-foot">
   <div class="wrap">
-    <div class="footer-grid">
+    <div class="foot-grid">
       <div>
-        <a class="logo" href="index.html"><img class="logo-img foot" src="assets/logo.png" alt="SIGNL"></a>
-        <p class="footer-tag">Local creator marketing, city by city. Real locals. Real posts. Real walk-ins.</p>
+        <a href="index.html"><img class="logo-img" src="assets/logo.png" alt="SIGNL"></a>
+        <p class="foot-tag">Local creator marketing, city by city. Real locals. Real posts. Real walk-ins.</p>
       </div>
       <div>
         <h4>Platform</h4>
@@ -242,18 +296,19 @@
         <h4>Connect</h4>
         <ul>
           <li><a href="mailto:hello@joinsignl.com">hello@joinsignl.com</a></li>
-          <li><a href="https://www.instagram.com/joinsignl" target="_blank" rel="noopener">Instagram — @joinsignl</a></li>
-          <li><a href="https://www.tiktok.com/@joinsignl" target="_blank" rel="noopener">TikTok — @joinsignl</a></li>
-          <li><a href="https://www.facebook.com/1341797289027364" target="_blank" rel="noopener">Facebook — SIGNL</a></li>
+          <li><a href="https://www.instagram.com/joinsignl" target="_blank" rel="noopener">Instagram · @joinsignl</a></li>
+          <li><a href="https://www.tiktok.com/@joinsignl" target="_blank" rel="noopener">TikTok · @joinsignl</a></li>
+          <li><a href="https://www.facebook.com/1341797289027364" target="_blank" rel="noopener">Facebook · SIGNL</a></li>
           <li><a href="privacy.html">Privacy Policy</a></li>
           <li><a href="terms.html">Terms of Use</a></li>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div class="foot-bottom">
       <span>&copy; 2026 SIGNL. All rights reserved.</span>
       <span>Photos: Pexels</span>
       <span>Dashboard figures on this page are sample data</span>
+      <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
     </div>
   </div>
 </footer>
