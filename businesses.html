@@ -62,6 +62,19 @@
 .show-col h3{margin:20px 0 12px;text-align:center}
 .show-col .check-list{margin:0 auto 16px;max-width:300px}
 .show-col .show-link{display:block;text-align:center;font-weight:700}
+
+/* Hero proof band: the hero lede, repurposed below the hero (page scoped, v2 tokens) */
+.proofband{background:#0C0C0C;color:#fff;padding:66px 0 60px;overflow:hidden}
+.pb-statement{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(1.85rem,5.6vw,3.3rem);letter-spacing:-.022em;line-height:1.1;text-align:center;max-width:920px;margin:0 auto;color:#fff}
+.pb-ticker{margin-top:40px;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.pb-track{display:flex;width:max-content;animation:pb-scroll 42s linear infinite}
+.pb-seq{display:flex;align-items:center;flex-shrink:0}
+.pb-item{font-family:'Space Grotesk',monospace;font-weight:700;font-size:.86rem;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;padding:0 20px;color:rgba(255,255,255,.92)}
+.pb-dot{width:7px;height:7px;border-radius:50%;background:var(--grad);flex-shrink:0}
+@keyframes pb-scroll{to{transform:translateX(-50%)}}
+.pb-lede{max-width:680px;margin:38px auto 0;text-align:center;color:rgba(255,255,255,.55);font-size:1rem;line-height:1.65}
+@media (prefers-reduced-motion: reduce){.pb-track{animation:none;width:auto;justify-content:center}.pb-seq{flex-wrap:wrap;justify-content:center;flex-shrink:1}.pb-seq.dup{display:none}}
+@media(max-width:560px){.proofband{padding:52px 0 48px}.pb-item{font-size:.78rem;padding:0 14px}.pb-lede{font-size:.95rem}}
 </style>
 </head>
 <body>
@@ -106,7 +119,6 @@
   <div class="wrap hv-in">
     <span class="eyebrow">For businesses</span>
     <h1>Word of mouth, <span class="grad-text">on a schedule.</span></h1>
-    <p class="lede">Your customers already trust local creators and their own neighbors more than any ad. Put your business in their feeds, with tracked posts, real redemptions, and a dashboard that shows exactly what you got for your money.</p>
     <p class="biz-rot"><span aria-hidden="true">Get more locals in your <span class="rot-slot"><span class="rot-word grad-text" id="rotWord">restaurant</span></span></span><span class="visually-hidden">Get more locals in your restaurant, hair salon, cafe, and more</span></p>
     <div class="hero-ctas">
       <a class="btn" href="#apply">Apply for a founding spot</a>
@@ -117,6 +129,18 @@
       <span><i></i>Tracked posts</span>
       <span><i></i>48-hour rule</span>
     </div>
+  </div>
+</section>
+
+<section class="proofband" aria-label="What businesses get">
+  <div class="wrap">
+    <p class="pb-statement">Tracked posts. Real redemptions. <span class="grad-text">Nothing taken on faith.</span></p>
+  </div>
+  <div class="pb-ticker" aria-hidden="true">
+    <div class="pb-track"><div class="pb-seq"><span class="pb-item">Tracked posts</span><i class="pb-dot"></i><span class="pb-item">Real redemptions</span><i class="pb-dot"></i><span class="pb-item">A dashboard that shows what you got</span><i class="pb-dot"></i><span class="pb-item">Tracked posts</span><i class="pb-dot"></i><span class="pb-item">Real redemptions</span><i class="pb-dot"></i><span class="pb-item">A dashboard that shows what you got</span><i class="pb-dot"></i><span class="pb-item">Tracked posts</span><i class="pb-dot"></i><span class="pb-item">Real redemptions</span><i class="pb-dot"></i><span class="pb-item">A dashboard that shows what you got</span><i class="pb-dot"></i><span class="pb-item">Tracked posts</span><i class="pb-dot"></i><span class="pb-item">Real redemptions</span><i class="pb-dot"></i><span class="pb-item">A dashboard that shows what you got</span><i class="pb-dot"></i></div><div class="pb-seq dup" aria-hidden="true"><span class="pb-item">Tracked posts</span><i class="pb-dot"></i><span class="pb-item">Real redemptions</span><i class="pb-dot"></i><span class="pb-item">A dashboard that shows what you got</span><i class="pb-dot"></i><span class="pb-item">Tracked posts</span><i class="pb-dot"></i><span class="pb-item">Real redemptions</span><i class="pb-dot"></i><span class="pb-item">A dashboard that shows what you got</span><i class="pb-dot"></i><span class="pb-item">Tracked posts</span><i class="pb-dot"></i><span class="pb-item">Real redemptions</span><i class="pb-dot"></i><span class="pb-item">A dashboard that shows what you got</span><i class="pb-dot"></i><span class="pb-item">Tracked posts</span><i class="pb-dot"></i><span class="pb-item">Real redemptions</span><i class="pb-dot"></i><span class="pb-item">A dashboard that shows what you got</span><i class="pb-dot"></i></div></div>
+  </div>
+  <div class="wrap">
+    <p class="pb-lede">Your customers already trust local creators and their own neighbors more than any ad. Put your business in their feeds, with tracked posts, real redemptions, and a dashboard that shows exactly what you got for your money.</p>
   </div>
 </section>
 
