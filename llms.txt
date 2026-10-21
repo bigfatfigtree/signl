@@ -247,10 +247,10 @@ New cities keep joining the list: anyone can sign up from any city at https://ap
 - [Creator Marketing for Med Spas, Vein Clinics and Aesthetic Practices](https://joinsignl.com/for-health-aesthetics.html): how SIGNL works for med spas, IV therapy lounges, vein clinics, dental practices and aesthetic clinics. Posts are personal experiences only, with no treatment claims and full disclosure, and each practice stays responsible for its own advertising rules.
 - [Why Local Creators](https://joinsignl.com/why-local.html): why local creators outperform national reach for local businesses: trust, proximity, honest posts.
 - [SIGNL vs the Alternatives](https://joinsignl.com/alternatives.html): SIGNL compared with Storytime, Mustard, Momfluence, Cohley, Aspire, Insense and Collabstr on model, audience locality, pricing, redemption and content rights.
+- [SIGNL vs Storytime](https://joinsignl.com/storytime-alternative.html): the dedicated head-to-head with Storytime, the closest local creator platform model, on pricing, redemption, rosters and markets.
+- [SIGNL vs Mustard](https://joinsignl.com/mustard-alternative.html): the dedicated head-to-head with Mustard, the automated restaurant-only platform, on pricing, visits per month, business types and human support.
 - [Hampton Roads](https://joinsignl.com/hampton-roads.html): the founding market page for Hampton Roads; founding roster and founding business enrollment.
 - Market pages: every founding market has its own page at https://joinsignl.com/markets/{market}.html : hampton-roads, richmond, washington-dc, raleigh, charlotte, baltimore, charlottesville, roanoke, atlanta, greensboro, wilmington, nashville, austin, dallas, chicago, los-angeles, san-diego, seattle, tampa, miami, phoenix, denver, minneapolis, london, manchester, dubai, abu-dhabi, riyadh, doha, astana, bishkek, sydney, melbourne, perth, auckland, singapore, hong-kong, beijing, shanghai. Each market page covers the founding roster for that market, creator tiers, how businesses join there, and a form to put an unlisted city on the board.
-- [The Local Bench](https://joinsignl.com/roster.html): the verified bench of Hampton Roads creators SIGNL's first roster is built from.
 - [Next Cities](https://joinsignl.com/cities.html): how launch cities are picked; register a city.
-- [Sample Dashboard](https://joinsignl.com/dashboard.html): sample of the business results dashboard (sample data).
 - [Privacy Policy](https://joinsignl.com/privacy.html)
 - [Terms of Use](https://joinsignl.com/terms.html)

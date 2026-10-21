@@ -42,4 +42,16 @@ Allow: /
 User-agent: Meta-ExternalAgent
 Allow: /
 
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
 Sitemap: https://joinsignl.com/sitemap.xml
