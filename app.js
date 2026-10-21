@@ -3,7 +3,7 @@
    analytics.google.com and paste the measurement ID (looks like
    G-XXXXXXXXXX) between the quotes below, then push. Until then,
    nothing loads and nothing is tracked. */
-var GA_ID = '';
+var GA_ID = 'G-0V1YPFCTSD';
 if (GA_ID) {
   var s = document.createElement('script');
   s.async = true;
