@@ -74,7 +74,7 @@ p{color:var(--ink2)}
 }
 .head-in{display:flex;align-items:center;justify-content:space-between;gap:22px;height:76px}
 .logo-img{height:42px;width:auto}
-.main-nav{display:none;gap:34px}
+.main-nav{display:none;gap:20px}
 .main-nav a{font-size:.8rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--ink2);padding:6px 0}
 .main-nav a:hover{color:var(--ink)}
 @media(min-width:920px){.main-nav{display:flex}.head-cta{display:inline-flex}}
