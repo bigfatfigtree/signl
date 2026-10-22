@@ -16,9 +16,10 @@ if (GA_ID) {
 }
 function trackEvent(name, params) { if (window.gtag) gtag('event', name, params || {}); }
 
-// Shared JS: mobile nav + application forms. Forms save locally and,
-// when wired with data-netlify, also submit to Netlify (real lead capture
-// once the site is deployed there); the Netlify attempt fails silently elsewhere.
+// Shared JS: mobile nav + application forms. Forms submit to Netlify
+// (real lead capture on the deployed site). Success is shown only after
+// Netlify confirms the submission; a failure keeps the form in place and
+// shows a clear retry message. Nothing is mirrored to localStorage.
 (function () {
   // Mobile nav toggle
   var toggle = document.querySelector('.nav-toggle');
@@ -30,57 +31,63 @@ function trackEvent(name, params) { if (window.gtag) gtag('event', name, params 
     });
   }
 
-  // Demo forms: any <form data-signl-form="key"> is saved to localStorage and
-  // replaced by its sibling .form-success block.
+  // Netlify forms: any <form data-signl-form="key" data-netlify name="...">
+  // posts to Netlify. The success block appears only on a confirmed OK
+  // response; otherwise the visitor gets an error state and can retry.
   document.querySelectorAll('form[data-signl-form]').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var key = 'signl_' + form.getAttribute('data-signl-form');
-      var data = {};
-      new FormData(form).forEach(function (value, name) {
-        if (data[name]) {
-          data[name] = Array.isArray(data[name]) ? data[name].concat(value) : [data[name], value];
-        } else {
-          data[name] = value;
-        }
-      });
-      data.submitted_at = new Date().toISOString();
-      var existing = [];
-      try { existing = JSON.parse(localStorage.getItem(key) || '[]'); } catch (err) { existing = []; }
-      existing.push(data);
-      try { localStorage.setItem(key, JSON.stringify(existing)); } catch (err) { /* storage unavailable */ }
+      if (form.getAttribute('data-sending') === '1') return;
 
       var wrap = form.closest('.form-wrap');
       var success = wrap ? wrap.querySelector('.form-success') : null;
+      var btn = form.querySelector('button[type="submit"], button:not([type])');
+      var btnText = btn ? btn.textContent : '';
 
-      function flagDeliveryIssue() {
-        if (success && !success.querySelector('.delivery-note')) {
-          var note = document.createElement('p');
-          note.className = 'delivery-note';
-          note.style.marginTop = '14px';
-          note.textContent = 'We could not confirm delivery to our inbox just now. Please also email your details to hello@joinsignl.com so we do not miss you.';
-          success.appendChild(note);
+      var error = wrap ? wrap.querySelector('.form-error') : null;
+      if (!error && wrap) {
+        error = document.createElement('p');
+        error.className = 'form-error';
+        error.setAttribute('role', 'alert');
+        error.style.cssText = 'display:none;margin-top:14px;color:#B3261E;font-weight:600';
+        wrap.appendChild(error);
+      }
+      function showError() {
+        if (error) {
+          error.textContent = 'Something went wrong sending that just now. Your answers are still in the form: please press send again, or email hello@joinsignl.com and we will take it from there.';
+          error.style.display = 'block';
+        }
+        form.removeAttribute('data-sending');
+        if (btn) { btn.disabled = false; btn.textContent = btnText; }
+      }
+      function showSuccess() {
+        if (error) error.style.display = 'none';
+        form.style.display = 'none';
+        if (success) {
+          success.classList.add('show');
+          success.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
       }
 
-      if (form.hasAttribute('data-netlify') && form.getAttribute('name')) {
-        try {
-          var body = new URLSearchParams();
-          new FormData(form).forEach(function (v, n) { body.append(n, v); });
-          body.append('form-name', form.getAttribute('name'));
-          fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() })
-            .then(function (r) { if (!r.ok) flagDeliveryIssue(); })
-            .catch(function () { flagDeliveryIssue(); });
-        } catch (err) { flagDeliveryIssue(); }
+      if (!form.hasAttribute('data-netlify') || !form.getAttribute('name')) {
+        showError();
+        return;
       }
 
-      trackEvent('form_submit', { form_name: form.getAttribute('name') });
+      form.setAttribute('data-sending', '1');
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
+      if (error) error.style.display = 'none';
 
-      form.style.display = 'none';
-      if (success) {
-        success.classList.add('show');
-        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
+      var body = new URLSearchParams();
+      new FormData(form).forEach(function (v, n) { body.append(n, v); });
+      body.append('form-name', form.getAttribute('name'));
+      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() })
+        .then(function (r) {
+          if (!r.ok) { showError(); return; }
+          trackEvent('form_submit', { form_name: form.getAttribute('name') });
+          showSuccess();
+        })
+        .catch(function () { showError(); });
     });
   });
 })();
