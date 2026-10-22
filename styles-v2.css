@@ -9,7 +9,7 @@
   --card:#FFFFFF;
   --ink:#141414;
   --ink2:#4E4B44;
-  --ink3:#8B877B;
+  --ink3:#6E6A5E;
   --line:#E7E0D1;
   --line2:#EFE9DB;
   --grad:linear-gradient(94deg,#006AFC 0%,#019BFC 32%,#03C9AB 66%,#2FE07E 100%);
@@ -373,14 +373,14 @@ section.tint{background:var(--bg2);border-top:1px solid var(--line2);border-bott
 @media(min-width:860px){.foot-grid{grid-template-columns:1.5fr 1fr 1fr 1fr}}
 .site-foot .logo-img{height:46px}
 .foot-tag{margin-top:16px;font-size:.94rem;max-width:320px;color:#9d988c}
-.site-foot h4{font-size:.7rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#7b766a;margin-bottom:16px;font-family:'Inter',sans-serif}
+.site-foot h4{font-size:.7rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#A8A294;margin-bottom:16px;font-family:'Inter',sans-serif}
 .site-foot ul{list-style:none}
 .site-foot li{padding:5px 0}
 .site-foot li a{color:#B9B4A7}
 .site-foot li a:hover{color:#fff}
 .foot-bottom{
   border-top:1px solid #26241F;padding:20px 0 28px;display:flex;flex-wrap:wrap;gap:8px 30px;justify-content:space-between;
-  font-family:'Space Grotesk',monospace;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:#7b766a;
+  font-family:'Space Grotesk',monospace;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:#A8A294;
 }
 .foot-bottom a{color:#B9B4A7;text-decoration:underline;text-underline-offset:3px}
 
@@ -1174,3 +1174,8 @@ section.block.tight{padding:60px 0}
 /* .slim is a semantic hook on one audviz instance; it carried no rules in
    the legacy stylesheet either and needs none here. */
 .audviz.slim{}
+
+/* ---------- accessibility: skip link + visible focus ---------- */
+.skip-link{position:absolute;left:-9999px;top:0;z-index:300;background:#141414;color:#fff;padding:12px 20px;border-radius:0 0 12px 0;font-weight:600;font-size:.95rem;text-decoration:none}
+.skip-link:focus{left:0}
+:focus-visible{outline:3px solid #006AFC;outline-offset:2px}
