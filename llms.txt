@@ -284,7 +284,29 @@ New cities keep joining the list: anyone can sign up from any city at https://ap
 - [SIGNL vs Storytime](https://joinsignl.com/storytime-alternative.html): the dedicated head-to-head with Storytime, the closest local creator platform model, on pricing, redemption, rosters and markets.
 - [SIGNL vs Mustard](https://joinsignl.com/mustard-alternative.html): the dedicated head-to-head with Mustard, the automated restaurant-only platform, on pricing, visits per month, business types and human support.
 - [Hampton Roads](https://joinsignl.com/hampton-roads.html): the founding market page for Hampton Roads; founding roster and founding business enrollment.
+- [Raleigh, the Triangle](https://joinsignl.com/raleigh.html): the founding city page for Raleigh and the Triangle, a first-wave launch market; founding roster and founding business enrollment.
+- [Washington DC](https://joinsignl.com/washington-dc.html): the founding city page for Washington DC, a first-wave launch market; founding roster and founding business enrollment.
+- [Nashville](https://joinsignl.com/nashville.html): the founding city page for Nashville; founding roster and founding business enrollment.
+- [Austin](https://joinsignl.com/austin.html): the founding city page for Austin; founding roster and founding business enrollment.
+- [Dallas](https://joinsignl.com/dallas.html): the founding city page for Dallas; founding roster and founding business enrollment.
+- [Chicago](https://joinsignl.com/chicago.html): the founding city page for Chicago; founding roster and founding business enrollment.
+- [Charlotte](https://joinsignl.com/charlotte.html): the founding city page for Charlotte; founding roster and founding business enrollment.
+- [Atlanta](https://joinsignl.com/atlanta.html): the founding city page for Atlanta; founding roster and founding business enrollment.
+- [Tampa](https://joinsignl.com/tampa.html): the founding city page for Tampa; founding roster and founding business enrollment.
+- [Denver](https://joinsignl.com/denver.html): the founding city page for Denver; founding roster and founding business enrollment.
+- [San Diego](https://joinsignl.com/san-diego.html): the founding city page for San Diego; founding roster and founding business enrollment.
+- [Los Angeles](https://joinsignl.com/los-angeles.html): the founding city page for Los Angeles; founding roster and founding business enrollment.
+- [Seattle](https://joinsignl.com/seattle.html): the founding city page for Seattle; founding roster and founding business enrollment.
 - Market pages: every founding market has its own page at https://joinsignl.com/markets/{market}.html : hampton-roads, richmond, washington-dc, raleigh, charlotte, baltimore, charlottesville, roanoke, atlanta, greensboro, wilmington, nashville, austin, dallas, chicago, los-angeles, san-diego, seattle, tampa, miami, phoenix, denver, minneapolis, london, manchester, dubai, abu-dhabi, riyadh, doha, astana, bishkek, sydney, melbourne, perth, auckland, singapore, hong-kong, beijing, shanghai. Each market page covers the founding roster for that market, creator tiers, how businesses join there, and a form to put an unlisted city on the board.
 - [Next Cities](https://joinsignl.com/cities.html): how launch cities are picked; register a city.
+- [Orlando](https://joinsignl.com/orlando.html): a city-on-the-board page for Orlando, not yet a founding market; creator and business sign-ups there count toward opening the city.
+- [New Orleans](https://joinsignl.com/new-orleans.html): a city-on-the-board page for New Orleans, not yet a founding market; creator and business sign-ups there count toward opening the city.
+- [Houston](https://joinsignl.com/houston.html): a city-on-the-board page for Houston, not yet a founding market; creator and business sign-ups there count toward opening the city.
+- [Cincinnati](https://joinsignl.com/cincinnati.html): a city-on-the-board page for Cincinnati, not yet a founding market; creator and business sign-ups there count toward opening the city.
+- [Pittsburgh](https://joinsignl.com/pittsburgh.html): a city-on-the-board page for Pittsburgh, not yet a founding market; creator and business sign-ups there count toward opening the city.
+- [Philadelphia](https://joinsignl.com/philadelphia.html): a city-on-the-board page for Philadelphia, not yet a founding market; creator and business sign-ups there count toward opening the city.
+- [San Antonio](https://joinsignl.com/san-antonio.html): a city-on-the-board page for San Antonio, not yet a founding market; creator and business sign-ups there count toward opening the city.
+- [Oklahoma City](https://joinsignl.com/oklahoma-city.html): a city-on-the-board page for Oklahoma City, not yet a founding market; creator and business sign-ups there count toward opening the city.
+- [Las Vegas](https://joinsignl.com/las-vegas.html): a city-on-the-board page for Las Vegas, not yet a founding market; creator and business sign-ups there count toward opening the city.
 - [Privacy Policy](https://joinsignl.com/privacy.html)
 - [Terms of Use](https://joinsignl.com/terms.html)
