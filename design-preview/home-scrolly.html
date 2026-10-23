@@ -17,18 +17,13 @@
 </script>
 <style>
 /* ============ home-scrolly concept (page scoped, built on the v2 tokens) ============ */
-.pv-bar{background:#141414;color:#fff;font-size:.82rem;padding:9px 0}
-.pv-bar .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
-.pv-bar b{font-family:'Space Grotesk',monospace;letter-spacing:.12em;text-transform:uppercase;font-size:.68rem;color:#2FE07E}
-.pv-bar a{color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px}
 
-/* ---------- hero ---------- */
-.hs-hero{padding:132px 0 84px;position:relative;overflow:hidden}
-@media(max-width:700px){.hs-hero{padding:112px 0 64px}}
-.hs-grid{display:grid;gap:54px;align-items:center}
-@media(min-width:1020px){.hs-grid{grid-template-columns:1.04fr .96fr;gap:64px}}
+/* ---------- hero (full-bleed video, mirrors creators/businesses previews) ---------- */
 .hs-cat{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(1.7rem,3.2vw,2.5rem);letter-spacing:-.024em;line-height:1.08;margin:20px 0 14px}
-.hs-sentence{font-size:clamp(1.05rem,1.5vw,1.24rem);line-height:1.6;color:var(--ink2);max-width:560px;margin-bottom:32px}
+.hero-video .hs-cat{margin:-8px 0 18px;font-size:clamp(1.7rem,3.6vw,3rem)}
+.hero-video .stat-chips{margin-top:32px}
+.hero-video .stat-chip{background:rgba(10,10,12,.45);border-color:rgba(255,255,255,.25);color:rgba(255,255,255,.88);box-shadow:none;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.hero-video .stat-chip .n{color:#fff}
 .stat-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:34px}
 .stat-chip{display:inline-flex;align-items:baseline;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:9px 16px;box-shadow:var(--sh-sm);font-size:.86rem;font-weight:600;color:var(--ink2)}
 .stat-chip .n{font-family:'Space Grotesk',monospace;font-weight:700;font-size:1.02rem;color:var(--ink)}
@@ -41,16 +36,20 @@
 .duo-card p{font-size:.94rem;line-height:1.55;color:var(--ink2)}
 .duo-card p b{color:var(--ink)}
 
-/* hero phone + loop card */
-.hs-visual{position:relative;max-width:340px;margin:0 auto;width:100%}
-.hs-phone{margin:0 auto}
-.loop-card{position:relative;margin:-58px auto 0;width:min(288px,92%);background:var(--card);border:1px solid var(--line2);border-radius:20px;box-shadow:var(--sh-lg);padding:16px 18px 14px;z-index:4}
-@media(min-width:1020px){.loop-card{position:absolute;left:-64px;bottom:34px;margin:0;width:264px}}
-.loop-card .lk{font-family:'Space Grotesk',monospace;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink3);margin-bottom:10px}
-.loop-row{display:flex;align-items:center;gap:10px;padding:5px 0;font-size:.88rem;font-weight:600;color:var(--ink)}
-.loop-row i{width:8px;height:8px;border-radius:50%;background:var(--grad);flex:none}
-.loop-row span{margin-left:auto;font-family:'Space Grotesk',monospace;font-size:.72rem;color:var(--ink3);font-weight:500}
-.loop-chips{display:flex;gap:8px;margin-top:11px}
+/* hero loop strip: the four steps from the old loop card, as a slim glass strip */
+.loop-strip{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:30px;max-width:880px;background:rgba(10,10,12,.52);border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:13px 18px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.loop-strip .lk{font-family:'Space Grotesk',monospace;font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#8CF5C8}
+.loop-steps{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;font-size:.88rem;font-weight:600;color:#fff}
+.loop-steps>span{display:inline-flex;align-items:center;gap:8px}
+.loop-steps i{width:7px;height:7px;border-radius:50%;background:var(--grad);flex:none}
+.loop-steps .arr{display:inline;color:rgba(255,255,255,.45);font-weight:400}
+.loop-steps .dim{color:rgba(255,255,255,.62);font-weight:500}
+.loop-chips{display:flex;gap:8px;margin-left:auto}
+@media(max-width:700px){.loop-chips{margin-left:0}}
+/* value cards overlapping the hero's foot */
+.hs-overlap{position:relative;z-index:6;margin-top:-64px}
+@media(max-width:700px){.hs-overlap{margin-top:-40px}}
+.hs-overlap .hs-duo{margin-top:0;max-width:880px}
 .loop-chip{font-size:.64rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:999px;padding:5px 11px}
 .loop-chip.comp{background:var(--grad);color:#fff}
 .loop-chip.paid{background:#141414;color:#fff}
@@ -133,14 +132,7 @@
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<div class="pv-bar">
-  <div class="wrap">
-    <span><b>Design preview</b>&nbsp; Homepage concept: the scrolly story</span>
-    <a href="../index.html">See the live homepage &rarr;</a>
-  </div>
-</div>
-
-<header class="site-head">
+<header class="site-head over-hero">
   <div class="wrap head-in">
     <a href="../index.html" aria-label="SIGNL home"><img class="logo-img" src="../assets/logo.png" alt="SIGNL"></a>
     <nav class="main-nav">
@@ -177,56 +169,58 @@
 <main id="main">
 
 <!-- ============ FIRST SCREEN ============ -->
-<section class="hs-hero">
-  <div class="wrap hs-grid">
-    <div>
+<section class="hero-video">
+  <div class="hv-media">
+    <video class="js-hero-video" data-io muted loop playsinline preload="metadata" poster="../assets/video/poster-smiling-friends.jpg" aria-label="Friends smiling and laughing together at a local business">
+      <source src="../assets/video/hero-smiling-friends.mp4" type="video/mp4">
+    </video>
+    <div class="hv-scrim"></div>
+  </div>
+  <div class="wrap hv-in">
       <span class="eyebrow">Local creator marketing · Founding markets forming now</span>
       <h1>Get talked about by the people <span class="grad-text">your city</span> actually follows.</h1>
       <p class="hs-cat"><span class="grad-text">Influencer marketing, but local.</span></p>
-      <p class="hs-sentence">Local businesses comp or pay creators who live in your city to visit and post honestly, and every visit is tracked.</p>
+      <p class="lede">Local businesses comp or pay creators who live in your city to visit and post honestly, and every visit is tracked.</p>
       <div class="hero-ctas">
         <a class="btn" href="https://app.joinsignl.com/?src=home-v2">I&rsquo;m a creator</a>
         <a class="btn btn-ghost" href="../businesses.html">I&rsquo;m a business</a>
       </div>
-      <div class="hs-duo">
-        <div class="duo-card biz">
-          <div class="k">For businesses</div>
-          <p><b>Creators your neighbors already follow.</b> They visit, they post, and every visit is tracked.</p>
-        </div>
-        <div class="duo-card cre">
-          <div class="k">For creators</div>
-          <p><b>Get comped or paid by businesses near you.</b> Free always, and 500 followers is enough to start.</p>
-        </div>
-      </div>
-      <div class="stat-chips">
-        <span class="stat-chip"><span class="n">37</span> founding markets</span>
-        <span class="stat-chip"><span class="n">8</span> countries</span>
-        <span class="stat-chip"><span class="n">500</span> followers is enough</span>
-      </div>
+    <div class="stat-chips">
+      <span class="stat-chip"><span class="n">37</span> founding markets</span>
+      <span class="stat-chip"><span class="n">8</span> countries</span>
+      <span class="stat-chip"><span class="n">500</span> followers is enough</span>
     </div>
-    <div class="hs-visual">
-      <div class="phone hs-phone" aria-hidden="true">
-        <div class="phone-screen">
-          <video data-io muted loop playsinline preload="metadata" poster="../assets/video/poster-smiling-friends.jpg" aria-label="Friends smiling and laughing together at a local business">
-            <source src="../assets/video/hero-smiling-friends.mp4" type="video/mp4">
-          </video>
-          <div class="phone-notch"></div>
-        </div>
+    <div class="loop-strip" aria-label="How a SIGNL visit works">
+      <span class="lk">How a visit works</span>
+      <div class="loop-steps">
+        <span><i></i>A business makes an offer</span><span class="arr">&rarr;</span>
+        <span><i></i>A local creator visits</span><span class="arr">&rarr;</span>
+        <span><i></i>They post it honestly<span class="dim">48 hrs</span></span><span class="arr">&rarr;</span>
+        <span><i></i>The visit is tracked</span>
       </div>
-      <div class="loop-card" aria-label="How a SIGNL visit works">
-        <div class="lk">How a visit works</div>
-        <div class="loop-row"><i></i>A business makes an offer<span>Step 1</span></div>
-        <div class="loop-row"><i></i>A local creator visits<span>Step 2</span></div>
-        <div class="loop-row"><i></i>They post it honestly<span>48 hrs</span></div>
-        <div class="loop-row"><i></i>The visit is tracked<span>Step 4</span></div>
-        <div class="loop-chips">
-          <span class="loop-chip comp">Comped</span>
-          <span class="loop-chip paid">Or paid</span>
-        </div>
+      <div class="loop-chips">
+        <span class="loop-chip comp">Comped</span>
+        <span class="loop-chip paid">Or paid</span>
       </div>
     </div>
   </div>
 </section>
+
+<!-- value props, overlapping the hero's foot -->
+<div class="hs-overlap">
+  <div class="wrap">
+    <div class="hs-duo">
+      <div class="duo-card biz">
+        <div class="k">For businesses</div>
+        <p><b>Creators your neighbors already follow.</b> They visit, they post, and every visit is tracked.</p>
+      </div>
+      <div class="duo-card cre">
+        <div class="k">For creators</div>
+        <p><b>Get comped or paid by businesses near you.</b> Free always, and 500 followers is enough to start.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- ============ THE STORY ============ -->
 <section aria-label="How SIGNL works, told as a story">
@@ -475,6 +469,14 @@
       var open = mobileNav.classList.toggle('open');
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
+  }
+
+  /* overlay header: transparent over the hero, solid once scrolled (mirrors the sibling previews) */
+  var head = document.querySelector('.site-head.over-hero');
+  if (head) {
+    var onScrollHead = function(){ head.classList.toggle('scrolled', window.scrollY > 30); };
+    window.addEventListener('scroll', onScrollHead, { passive: true });
+    onScrollHead();
   }
 
   /* video governor: only the video in view plays, everything else paused.
