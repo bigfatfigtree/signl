@@ -1,0 +1,120 @@
+{
+  "updated": "October 22, 2026",
+  "updatedISO": "2026-10-22",
+  "boards": {
+    "city": {
+      "state": "forming",
+      "unit": "Founding signups",
+      "entries": [
+        {
+          "name": "Orlando",
+          "count": 0
+        },
+        {
+          "name": "New Orleans",
+          "count": 0
+        },
+        {
+          "name": "Houston",
+          "count": 0
+        },
+        {
+          "name": "Cincinnati",
+          "count": 0
+        },
+        {
+          "name": "Pittsburgh",
+          "count": 0
+        },
+        {
+          "name": "Philadelphia",
+          "count": 0
+        },
+        {
+          "name": "San Antonio",
+          "count": 0
+        },
+        {
+          "name": "Oklahoma City",
+          "count": 0
+        },
+        {
+          "name": "Las Vegas",
+          "count": 0
+        }
+      ]
+    },
+    "roster": {
+      "state": "live",
+      "unit": "Approved founding creators",
+      "entries": [
+        {
+          "name": "Hampton Roads",
+          "count": 5
+        },
+        {
+          "name": "Richmond",
+          "count": 3
+        },
+        {
+          "name": "Raleigh",
+          "count": 0
+        },
+        {
+          "name": "Washington DC",
+          "count": 0
+        }
+      ]
+    },
+    "campus": {
+      "state": "forming",
+      "unit": "Student creators signed",
+      "entries": [
+        {
+          "name": "VCU",
+          "count": 0
+        },
+        {
+          "name": "NC State",
+          "count": 0
+        },
+        {
+          "name": "UNC-Chapel Hill",
+          "count": 0
+        },
+        {
+          "name": "Duke",
+          "count": 0
+        },
+        {
+          "name": "NC Central",
+          "count": 0
+        },
+        {
+          "name": "Old Dominion",
+          "count": 0
+        },
+        {
+          "name": "Norfolk State",
+          "count": 0
+        },
+        {
+          "name": "George Mason",
+          "count": 0
+        },
+        {
+          "name": "George Washington",
+          "count": 0
+        },
+        {
+          "name": "Howard",
+          "count": 0
+        },
+        {
+          "name": "American",
+          "count": 0
+        }
+      ]
+    }
+  }
+}
