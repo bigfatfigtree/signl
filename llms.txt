@@ -128,7 +128,7 @@ A full, sourced comparison is at https://joinsignl.com/alternatives.html (compet
 - Cohley (cohley.com): a creator content platform built for mid-market and enterprise brands selling physical products, with content rights in perpetuity included and custom, unpublished pricing (five-figure annual entry in practice; a rival platform claims a starter around $18,000). SIGNL is built and priced for local small businesses, with pricing published.
 - Aspire (aspire.io): an enterprise influencer CRM for brands with marketing teams; third-party reports put Essentials around $2,299/month on a 12-month contract plus a one-time onboarding fee of about $2,000 (October 2026). SIGNL has a 3-month minimum, no onboarding fee, and can be run by an owner or by a SIGNL coordinator.
 - Insense (insense.pro): a UGC and influencer subscription platform with a global creator pool; Brand plan $400/month billed annually or $500/month billed quarterly plus a 10% marketplace fee on creator payments, with a managed service from $1,600/month (October 2026). SIGNL's Managed tier is $999/month, its roster is built per city, and standard visits carry no per-creator fees.
-- Collabstr (collabstr.com): a self-serve creator marketplace where brands search, negotiate and pay creators themselves; Pro is $249/month billed annually ($299 monthly) plus a 10% hiring fee (October 2026). SIGNL is a vetted local roster with verified in-person visits, tracked posts, and replacement visits when a post does not appear.
+- Collabstr (collabstr.com): a self-serve creator marketplace where brands search, negotiate and pay creators themselves; Pro is $249/month billed annually ($299 monthly) plus a 10% hiring fee (October 2026). SIGNL is a vetted local roster with in-person visits, tracked posts, and replacement visits when a post does not appear.
 - Grin (grin.co): an e-commerce creator platform for online stores, from $200/month plus 5 to 20 percent fees on wallet funding (October 2026). SIGNL is built for businesses people physically visit, not stores that ship.
 
 ## Learn: guides for businesses and creators
@@ -239,7 +239,7 @@ New cities keep joining the list: anyone can sign up from any city at https://ap
 - The 48-hour posting rule and FTC disclosure are mandatory for every visit.
 - Honest posts only: neither SIGNL nor a business may require a positive post or review.
 - Why it works: 92% of consumers trust recommendations from people over any form of advertising (Nielsen). Brands earn an average of $5.78 for every $1 spent on creator/influencer marketing (Influencer Marketing Hub benchmark report).
-- Hampton Roads supply, verified by SIGNL in October 2026: at least 14 local creators with 5,000+ followers post about local food, lifestyle and businesses (largest: 172,000 followers), plus a long tail of 1,000–5,000-follower local accounts.
+- Hampton Roads supply: SIGNL's founding roster is forming now from local sign-ups across food, lifestyle and local business creators, with sign-ups open in 37 founding markets and visits beginning as each market opens. Local audience percentages are self-reported until Instagram verification lands.
 - Contact: hello@joinsignl.com
 
 ## Pages
