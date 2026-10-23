@@ -166,7 +166,7 @@ Seven US markets are defined by the full city lists below. These lists are SIGNL
 
 ### United States (with published metro definitions)
 
-- Virginia Beach, Virginia (all of Hampton Roads): Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Newport News, Hampton, Williamsburg, Poquoson, Yorktown.
+- Virginia Beach (Hampton Roads): Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Newport News, Hampton, Williamsburg, Poquoson, Yorktown.
 - Richmond, Virginia: Richmond, Petersburg, Colonial Heights, Hopewell, Ashland, Mechanicsville, Glen Allen, Midlothian, Chester, Bon Air, Tuckahoe, Lakeside, Highland Springs, Sandston, Powhatan, Goochland.
 - Washington DC metro: Washington DC, Arlington, Alexandria, Fairfax, Falls Church, Vienna, McLean, Tysons, Reston, Herndon, Ashburn, Leesburg, Manassas, Springfield, Annandale, Bethesda, Silver Spring, Rockville, Gaithersburg, Frederick, Chevy Chase, Takoma Park, College Park, Hyattsville, Greenbelt, Bowie.
 - Raleigh, North Carolina (the Triangle): Raleigh, Cary, Apex, Wake Forest, Garner, Holly Springs, Fuquay-Varina, Morrisville, Knightdale, Wendell, Zebulon, Rolesville, Clayton, Durham, Chapel Hill, Carrboro.
@@ -229,7 +229,7 @@ New cities keep joining the list: anyone can sign up from any city at https://ap
 
 ## Launch cities
 
-- Founding markets (founding rosters forming now, 37 markets in 8 countries): United States: Virginia Beach (all of Hampton Roads), Richmond, Washington DC, Raleigh, Charlotte, Baltimore, Atlanta, Nashville, Austin, Dallas, Chicago, Los Angeles, San Diego, Seattle, Tampa, Phoenix, Denver, Minneapolis, Philadelphia, Pittsburgh, Cincinnati, Columbus, New Orleans, Orlando, Houston, San Antonio, Las Vegas, Detroit, San Juan (Puerto Rico). United Kingdom: London, Manchester. United Arab Emirates: Dubai. France: Paris. Spain: Barcelona. Portugal: Lisbon. Canada: Toronto, Montreal.
+- Founding markets (founding rosters forming now, 37 markets in 8 countries): United States: Virginia Beach (Hampton Roads), Richmond, Washington DC, Raleigh, Charlotte, Baltimore, Atlanta, Nashville, Austin, Dallas, Chicago, Los Angeles, San Diego, Seattle, Tampa, Phoenix, Denver, Minneapolis, Philadelphia, Pittsburgh, Cincinnati, Columbus, New Orleans, Orlando, Houston, San Antonio, Las Vegas, Detroit, San Juan (Puerto Rico). United Kingdom: London, Manchester. United Arab Emirates: Dubai. France: Paris. Spain: Barcelona. Portugal: Lisbon. Canada: Toronto, Montreal.
 - Launch wave: Virginia Beach, Richmond, Raleigh and Washington DC open first; the other founding markets open in waves as their rosters complete.
 - Beyond the founding markets: new cities are decided by signup counts. Creators sign up at https://app.joinsignl.com (full founding creator registration is live in the app), businesses at https://joinsignl.com/businesses.html, and anyone can register a city at https://joinsignl.com/cities.html, and when a city opens, its early applicants become its founding roster.
 
