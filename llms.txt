@@ -1,6 +1,6 @@
 # SIGNL
 
-> SIGNL is a local creator marketing platform. Local businesses comp local creators and everyday people a free meal, service or experience, and the creators post honestly about it on social media within 48 hours. SIGNL is rolling out in 39 founding markets across 12 countries, with founding creators and founding businesses forming in each one now. Anyone, in any city, can sign up as a founding creator. Website: https://joinsignl.com
+> SIGNL is a local creator marketing platform. Local businesses comp local creators and everyday people a free meal, service or experience, and the creators post honestly about it on social media within 48 hours. SIGNL is rolling out in 37 founding markets across 8 countries, with founding creators and founding businesses forming in each one now. Anyone, in any city, can sign up as a founding creator. Website: https://joinsignl.com
 
 ## What SIGNL is
 
@@ -160,23 +160,19 @@ For creators:
 
 ## Markets and service areas
 
-SIGNL is rolling out in 39 founding markets across 12 countries: 23 in the United States, 2 in the United Kingdom, 2 in the United Arab Emirates, and 1 each in Saudi Arabia, Qatar, Kazakhstan, Kyrgyzstan, New Zealand, Singapore and Hong Kong, plus 3 in Australia and 2 in China. Founding sign-ups are open in every market, and markets open in waves as each founding roster completes; every market carries the same founding status.
+SIGNL is rolling out in 37 founding markets across 8 countries: 29 markets in the United States and Puerto Rico, 2 in the United Kingdom, 2 in Canada, and 1 each in the United Arab Emirates, France, Spain and Portugal. Founding sign-ups are open in every market, and markets open in waves as each founding roster completes; every market carries the same founding status.
 
-Eleven US markets are defined by the full city lists below. These lists are SIGNL's published metro definitions: the local audience percentage on a creator profile is the share of that creator's followers who live in the cities of their market, measured against these lists. The remaining markets are listed by their anchor city, with full definitions published as each market opens.
+Seven US markets are defined by the full city lists below. These lists are SIGNL's published metro definitions: the local audience percentage on a creator profile is the share of that creator's followers who live in the cities of their market, measured against these lists. The remaining markets are listed by their anchor city, with full definitions published as each market opens. The Virginia Beach market covers all of Hampton Roads, Virginia: the market was renamed from Hampton Roads to Virginia Beach, its anchor city, in October 2026, and its coverage did not change.
 
 ### United States (with published metro definitions)
 
-- Hampton Roads, Virginia: Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Newport News, Hampton, Williamsburg, Poquoson, Yorktown.
+- Virginia Beach, Virginia (all of Hampton Roads): Virginia Beach, Norfolk, Chesapeake, Portsmouth, Suffolk, Newport News, Hampton, Williamsburg, Poquoson, Yorktown.
 - Richmond, Virginia: Richmond, Petersburg, Colonial Heights, Hopewell, Ashland, Mechanicsville, Glen Allen, Midlothian, Chester, Bon Air, Tuckahoe, Lakeside, Highland Springs, Sandston, Powhatan, Goochland.
 - Washington DC metro: Washington DC, Arlington, Alexandria, Fairfax, Falls Church, Vienna, McLean, Tysons, Reston, Herndon, Ashburn, Leesburg, Manassas, Springfield, Annandale, Bethesda, Silver Spring, Rockville, Gaithersburg, Frederick, Chevy Chase, Takoma Park, College Park, Hyattsville, Greenbelt, Bowie.
 - Raleigh, North Carolina (the Triangle): Raleigh, Cary, Apex, Wake Forest, Garner, Holly Springs, Fuquay-Varina, Morrisville, Knightdale, Wendell, Zebulon, Rolesville, Clayton, Durham, Chapel Hill, Carrboro.
 - Charlotte, North Carolina: Charlotte, Concord, Gastonia, Rock Hill, SC, Fort Mill, SC, Huntersville, Cornelius, Davidson, Mooresville, Matthews, Mint Hill, Pineville, Indian Trail, Monroe, Waxhaw, Harrisburg, Kannapolis, Belmont, Mount Holly, Lake Wylie.
 - Baltimore, Maryland: Baltimore, Towson, Columbia, Annapolis, Glen Burnie, Dundalk, Ellicott City, Owings Mills, Catonsville, Essex, Randallstown, Pikesville, Severna Park, Pasadena, Bel Air, Aberdeen, Havre de Grace, Westminster, Eldersburg, Reisterstown, Parkville, Middle River.
-- Charlottesville, Virginia: Charlottesville, Crozet, Scottsville, Palmyra, Lake Monticello, Ruckersville, Stanardsville, Earlysville, Keswick, Gordonsville.
-- Roanoke, Virginia: Roanoke, Salem, Vinton, Cave Spring, Hollins, Daleville, Troutville, Fincastle, Rocky Mount.
 - Atlanta, Georgia: Atlanta, Decatur, Marietta, Sandy Springs, Roswell, Alpharetta, Johns Creek, Brookhaven, Dunwoody, Chamblee, Tucker, Norcross, Duluth, Smyrna, Vinings, Kennesaw, Woodstock, Acworth, East Point, College Park, Peachtree Corners, Snellville, Lawrenceville, Stockbridge.
-- Greensboro, North Carolina (the Triad): Greensboro, Winston-Salem, High Point, Burlington, Kernersville, Clemmons, Thomasville, Lexington, Asheboro, Archdale, Jamestown, Oak Ridge, Summerfield, Randleman.
-- Wilmington, North Carolina: Wilmington, Wrightsville Beach, Carolina Beach, Kure Beach, Leland, Hampstead, Surf City, Topsail Beach, Southport, Shallotte, Ocean Isle Beach, Burgaw.
 
 ### United States (additional founding markets, by anchor city)
 
@@ -188,10 +184,20 @@ Eleven US markets are defined by the full city lists below. These lists are SIGN
 - San Diego, California
 - Seattle, Washington
 - Tampa, Florida
-- Miami, Florida
 - Phoenix, Arizona
 - Denver, Colorado
 - Minneapolis, Minnesota
+- Philadelphia, Pennsylvania
+- Pittsburgh, Pennsylvania
+- Cincinnati, Ohio
+- Columbus, Ohio
+- New Orleans, Louisiana
+- Orlando, Florida
+- Houston, Texas
+- San Antonio, Texas
+- Las Vegas, Nevada
+- Detroit, Michigan
+- San Juan, Puerto Rico
 
 ### United Kingdom
 
@@ -201,57 +207,35 @@ Eleven US markets are defined by the full city lists below. These lists are SIGN
 ### United Arab Emirates
 
 - Dubai
-- Abu Dhabi
 
-### Saudi Arabia
+### France
 
-- Riyadh
+- Paris
 
-### Qatar
+### Spain
 
-- Doha
+- Barcelona
 
-### Kazakhstan
+### Portugal
 
-- Astana
+- Lisbon
 
-### Kyrgyzstan
+### Canada
 
-- Bishkek
-
-### Australia
-
-- Sydney
-- Melbourne
-- Perth
-
-### New Zealand
-
-- Auckland
-
-### Singapore
-
-- Singapore
-
-### Hong Kong
-
-- Hong Kong
-
-### China
-
-- Beijing
-- Shanghai
+- Toronto
+- Montreal
 
 New cities keep joining the list: anyone can sign up from any city at https://app.joinsignl.com, including cities not listed here, and unlisted sign-ups count toward opening their city.
 
 ## Launch cities
 
-- Founding markets (founding rosters forming now, 39 markets in 12 countries): United States: Hampton Roads, Richmond, Washington DC, Raleigh, Charlotte, Baltimore, Charlottesville, Roanoke, Atlanta, Greensboro, Wilmington, Nashville, Austin, Dallas, Chicago, Los Angeles, San Diego, Seattle, Tampa, Miami, Phoenix, Denver, Minneapolis. United Kingdom: London, Manchester. United Arab Emirates: Dubai, Abu Dhabi. Saudi Arabia: Riyadh. Qatar: Doha. Kazakhstan: Astana. Kyrgyzstan: Bishkek. Australia: Sydney, Melbourne, Perth. New Zealand: Auckland. Singapore: Singapore. Hong Kong: Hong Kong. China: Beijing, Shanghai.
+- Founding markets (founding rosters forming now, 37 markets in 8 countries): United States: Virginia Beach (all of Hampton Roads), Richmond, Washington DC, Raleigh, Charlotte, Baltimore, Atlanta, Nashville, Austin, Dallas, Chicago, Los Angeles, San Diego, Seattle, Tampa, Phoenix, Denver, Minneapolis, Philadelphia, Pittsburgh, Cincinnati, Columbus, New Orleans, Orlando, Houston, San Antonio, Las Vegas, Detroit, San Juan (Puerto Rico). United Kingdom: London, Manchester. United Arab Emirates: Dubai. France: Paris. Spain: Barcelona. Portugal: Lisbon. Canada: Toronto, Montreal.
+- Launch wave: Virginia Beach, Richmond, Raleigh and Washington DC open first; the other founding markets open in waves as their rosters complete.
 - Beyond the founding markets: new cities are decided by signup counts. Creators sign up at https://app.joinsignl.com (full founding creator registration is live in the app), businesses at https://joinsignl.com/businesses.html, and anyone can register a city at https://joinsignl.com/cities.html, and when a city opens, its early applicants become its founding roster.
 
 ## Key facts
 
-- Founded and launched in 2026 in Hampton Roads, Virginia, USA; founding markets now span 12 countries.
+- Founded and launched in 2026 in Hampton Roads, Virginia, USA; founding markets now span 8 countries.
 - The 48-hour posting rule and FTC disclosure are mandatory for every visit.
 - Honest posts only: neither SIGNL nor a business may require a positive post or review.
 - Why it works: 92% of consumers trust recommendations from people over any form of advertising (Nielsen). Brands earn an average of $5.78 for every $1 spent on creator/influencer marketing (Influencer Marketing Hub benchmark report).
