@@ -77,6 +77,8 @@ For health and aesthetic services, creator posts are personal experiences only, 
 3. The creator posts about the visit: 1 post or reel plus 1 story that shares the post, live within 48 hours, with a clear disclosure that the visit was comped (FTC-compliant, e.g. #gifted). Posts must be honest; businesses cannot require positive posts or reviews.
 4. The platform tracks every visit and post. If a post does not appear within 48 hours, the business receives a replacement visit and the creator's roster standing is affected; repeat no-shows are removed.
 
+Local reach: SIGNL ranks creators by local reach — the share of a creator's audience that actually lives in the market — not by follower count. We don't rank you by followers. We rank you by how much of your audience actually lives here. Local reach is the number businesses look at first on a creator's profile, and it is why a smaller creator whose audience is concentrated in the city can be worth more to a local business than a much larger creator whose followers are spread across the country.
+
 Matching (Fit): when offers open in a city, SIGNL scores every creator on the roster against each business and prints the reasons on the creator's card in plain words ("Why they fit"). The score weighs what the creator posts and whether it matches the business's category, geography (the business's neighborhood and city count most, then its wider published market), the creator's self-reported local audience share, any profession match, and the delivery record the creator has built (business ratings count only once a creator has 3 or more). Follower count, tier and Momentum are not fit signals, so a smaller creator who is exactly right can outrank a bigger one who is not. A business can sort the roster by Best fit; the default order stays founding order, and fit never hides a creator. On the creator's side, open offers that strongly match what they post and where they are based carry a Strong fit note.
 
 ## Creator tiers
@@ -102,6 +104,7 @@ Anyone can apply at any follower count, including under 500. Applications requir
 
 ## How SIGNL is different
 
+- Ranked by local reach, not followers: SIGNL ranks creators by local reach (the share of a creator's audience that actually lives in the market). We don't rank you by followers. We rank you by how much of your audience actually lives here.
 - Local audience data is shown, not hidden: every creator profile displays the share of that creator's followers who live in the business's market, labeled by source (Self-reported today; when the Instagram connection activates, figures verified from the creator's own Instagram data will be labeled Verified by Instagram; profiles without enough data say so).
 - Redemption runs inside the SIGNL app on a single-use code tied to the visit. The business's point of sale is never touched and staff never validate vouchers at the register.
 - Three ways to run it: Self-Service (automated, $299/month), Growth ($599/month, up to 20 visits a month), or Managed (a human coordinator picks creators, books visits, chases posts and reports monthly, $999/month).
