@@ -378,7 +378,7 @@ section.tint{background:var(--bg2);border-top:1px solid var(--line2);border-bott
 @media(min-width:860px){.foot-grid{grid-template-columns:1.5fr 1fr 1fr 1fr}}
 .site-foot .logo-img{height:46px}
 .foot-tag{margin-top:16px;font-size:.94rem;max-width:320px;color:#9d988c}
-.site-foot h4{font-size:.7rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#8FD3AC;margin-bottom:16px;font-family:'Manrope',sans-serif}
+.site-foot .foot-h{font-size:.7rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#8FD3AC;margin:0 0 16px;font-family:'Manrope',sans-serif}
 .site-foot ul{list-style:none}
 .site-foot li{padding:5px 0}
 .site-foot li a{color:#A9B8AC}
@@ -1009,9 +1009,9 @@ section[id]{scroll-margin-top:96px}
 :root{
   --ink-dim:#4E4B44;
   --soft:#4E4B44;
-  --faint:#8B877B;
-  --teal:#0B8A6E;
-  --orange:#0B8A6E;
+  --faint:#6E6A5E;
+  --teal:#0E7A4A;
+  --orange:#0E7A4A;
 }
 
 /* gradient accent spans (homepage and market heroes, 404) */
@@ -1266,6 +1266,16 @@ section.block.tight{padding:60px 0}
 .plan-featured .p-tag{color:#A9E8C9}
 .plan-featured .price-tag{color:#A9E8C9}
 .plan-featured .price-tag span{color:rgba(255,255,255,.55)}
+.price-panel.featured .price-tag span{color:#23402F}
+.form-wrap .form-hint{color:var(--ink3)}
+.form-wrap .form-success p{color:var(--ink2)}
+.tier-stats{display:grid;grid-template-columns:repeat(3,1fr);max-width:600px;margin:26px 0 4px;border-top:1px solid rgba(11,13,12,.16);padding-top:22px}
+.tier-stats .ts-col{padding:0 20px}
+.tier-stats .ts-col:first-child{padding-left:0}
+.tier-stats .ts-col + .ts-col{border-left:1px solid rgba(11,13,12,.16)}
+.tier-stats .ts-num{font-size:clamp(1.45rem,4.6vw,2rem);font-weight:800;letter-spacing:-.01em;color:var(--ink);line-height:1.05;white-space:nowrap}
+.tier-stats .ts-lab{font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#3E5C48;margin-top:7px}
+@media(max-width:560px){.tier-stats .ts-col{padding:0 12px}.tier-stats .ts-col:first-child{padding-left:0}}
 .plan-featured .price-term{color:rgba(255,255,255,.62)}
 .plan-featured li{color:rgba(255,255,255,.78);border-bottom-color:rgba(255,255,255,.14)}
 .plan-featured li strong{color:#fff}
