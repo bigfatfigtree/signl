@@ -599,6 +599,42 @@ html.sx-on .reveal.in{opacity:1;transform:none}
   width:86px;height:24px;border-radius:999px;background:#101010;
 }
 .sky-ui{background:#FBF9F4;position:absolute;inset:0;padding:44px 18px 18px;display:flex;flex-direction:column;gap:13px}
+/* In-the-app mock: the current Discover deck, mirrored from the live app
+   (black topbar, Cards|List toggle + Later chip, deck card with cover
+   photo / tier pill / local-reach hero, Later + Invite dock). */
+.sky-deck{background:var(--bg);position:absolute;inset:0;padding:40px 12px 12px;display:flex;flex-direction:column;gap:9px}
+.mk-top{background:var(--black);border-radius:12px;padding:8px 12px;display:flex;align-items:center}
+.mk-top img{height:13px;width:auto}
+.mk-chrome{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.mk-toggle{display:inline-flex;gap:5px}
+.mk-tog{font-size:.52rem;font-weight:800;letter-spacing:.04em;padding:5px 11px;border-radius:999px;background:#fff;border:1.5px solid var(--line2);color:var(--ink)}
+.mk-tog.on{background:var(--black);color:var(--mint);border-color:var(--black)}
+.mk-laterchip{font-size:.52rem;font-weight:800;padding:5px 11px;border-radius:999px;background:#fff;border:1.5px solid var(--line2);color:var(--ink);white-space:nowrap}
+.mk-subrow{display:contents}
+.mk-counts{font-size:.56rem;font-weight:700;color:var(--ink3)}
+.mk-sample-row{display:flex}
+.mk-sample-pill{background:rgba(11,13,12,.85);color:#fff;font-size:.5rem;font-weight:700;letter-spacing:.02em;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.mk-stack{position:relative}
+.mk-behind{position:absolute;left:5px;right:5px;top:8px;bottom:-8px;transform:scale(.985);opacity:.5;filter:saturate(.75);background:#fff;border-radius:18px;box-shadow:var(--sh-md);overflow:hidden;z-index:0}
+.mk-behind-photo{position:relative;height:62%;background:var(--bg2)}
+.mk-behind-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.mk-dcard{background:#fff;border-radius:18px;box-shadow:var(--sh-md);overflow:hidden;text-align:left;position:relative;z-index:1}
+.mk-photo{position:relative;aspect-ratio:4/3.3;background:var(--bg2)}
+.mk-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.mk-tier{position:absolute;left:9px;top:9px;background:var(--black);color:var(--mint);font-size:.5rem;font-weight:800;letter-spacing:.02em;padding:4px 9px;border-radius:999px}
+.mk-body{padding:11px 13px 13px}
+.mk-name{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.02rem;line-height:1.1;letter-spacing:-.02em;color:var(--ink)}
+.mk-handle{color:var(--ink3);font-weight:600;font-size:.6rem;margin-top:1px}
+.mk-local{display:flex;align-items:baseline;gap:6px;margin-top:7px}
+.mk-pct{font-family:'Manrope',sans-serif;font-size:1.6rem;font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--ink)}
+.mk-local-lbl{font-size:.48rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--mint-deep)}
+.mk-chips{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
+.mk-chips span{font-size:.46rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:999px;background:var(--bg2);color:var(--ink2);border:1px solid var(--line)}
+.mk-meta{display:flex;flex-wrap:wrap;gap:3px 6px;margin-top:8px;color:var(--ink2);font-weight:600;font-size:.58rem;line-height:1.45}
+.mk-meta span+span::before{content:"\00B7  ";color:var(--ink3)}
+.mk-dock{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:9px;background:rgba(250,252,250,.88);border:1.5px solid var(--line2);border-radius:999px;padding:5px 7px;box-shadow:var(--sh-md)}
+.mk-pass{height:32px;display:inline-flex;align-items:center;border-radius:999px;padding:0 17px;border:1.5px solid var(--line);background:#fff;color:var(--ink);font-size:.62rem;font-weight:800;box-shadow:var(--sh-sm)}
+.mk-go{min-height:32px;display:inline-flex;align-items:center;padding:0 24px;border-radius:999px;background:var(--mint);color:var(--black);font-size:.66rem;font-weight:800;box-shadow:var(--sh-sm)}
 .sky-sat{
   position:absolute;z-index:6;background:var(--card);border:1px solid var(--line2);
   border-radius:18px;box-shadow:var(--sh-md);padding:15px 17px;
@@ -633,16 +669,33 @@ html.sx-on .reveal.in{opacity:1;transform:none}
   .sky-screen{border-radius:27px}
   .sky-notch{width:50px;height:14px;top:7px}
   .sky-ui{padding:25px 9px 10px;gap:7px}
-  .sky-ui .pu-head{gap:7px}
-  .sky-ui .pu-head img{width:30px;height:30px}
-  .sky-ui .pu-name{font-size:.6rem}
-  .sky-ui .pu-handle{font-size:.5rem}
-  .sky-ui .pu-chip{font-size:.44rem;padding:4px 7px;letter-spacing:.09em}
-  .sky-ui .pu-local{padding:8px 9px;border-radius:12px}
-  .sky-ui .pu-local .big{font-size:1.2rem}
-  .sky-ui .pu-local .lbl{font-size:.5rem;margin-top:3px}
-  .sky-ui .pu-row{padding:6px 8px;font-size:.52rem;border-radius:10px}
-  .sky-ui .pu-btn{font-size:.56rem;padding:8px 6px}
+  .sky-deck{padding:19px 7px 8px;gap:3px}
+  .mk-top{padding:3px 8px;border-radius:8px}
+  .mk-top img{height:7px}
+  .mk-toggle{display:none}
+  .mk-chrome{justify-content:flex-end}
+  .mk-laterchip{font-size:.38rem;padding:3px 8px}
+  .mk-subrow{display:flex;align-items:center;justify-content:space-between;gap:5px}
+  .mk-counts{font-size:.37rem}
+  .mk-sample-pill{font-size:.35rem;padding:3px 7px}
+  .mk-sample-geo{display:none}
+  .mk-behind{left:3px;right:3px;top:5px;bottom:-5px;border-radius:12px}
+  .mk-dcard{border-radius:12px}
+  .mk-photo{aspect-ratio:4/1.55}
+  .mk-photo img{object-position:50% 18%}
+  .mk-tier{font-size:.36rem;padding:3px 6px;left:6px;top:6px}
+  .mk-body{padding:5px 8px 5px}
+  .mk-name{font-size:.55rem}
+  .mk-handle{font-size:.4rem}
+  .mk-local{gap:4px;margin-top:2px}
+  .mk-pct{font-size:.85rem}
+  .mk-local-lbl{font-size:.32rem}
+  .mk-chips{display:none}
+  .mk-meta{font-size:.38rem;margin-top:3px;gap:2px 4px;line-height:1.35}
+  .mk-meta span:nth-child(2),.mk-meta span:nth-child(4){display:none}
+  .mk-dock{gap:5px;padding:2px 4px}
+  .mk-pass{height:20px;padding:0 10px;font-size:.43rem}
+  .mk-go{min-height:20px;padding:0 13px;font-size:.45rem}
   .sky-sat{position:static;flex:0 0 100%;width:100%;order:5;padding:11px 13px;border-radius:14px;margin-top:14px;animation:none}
   .sat-offer{width:100%;margin-top:26px}
   .sat-list li{font-size:.72rem}
