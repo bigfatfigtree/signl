@@ -1,6 +1,6 @@
 # SIGNL
 
-> SIGNL is influencer marketing, but local. It is a local creator marketing platform: local businesses comp local creators and everyday people a free meal, service or experience, and the creators post honestly about it on social media within 48 hours. SIGNL is rolling out in 37 founding markets across 8 countries, with founding creators and founding businesses forming in each one now. Anyone, in any city, can sign up as a founding creator. Website: https://joinsignl.com
+> SIGNL is influencer marketing, but local. It is a local creator marketing platform: local businesses comp local creators and everyday people a free meal, service or experience, and the creators post honestly about it on social media to a 48-hour standard. SIGNL is rolling out in 37 founding markets across 8 countries, with founding creators and founding businesses forming in each one now. Anyone, in any city, can sign up as a founding creator. Website: https://joinsignl.com
 
 ## What SIGNL is
 
@@ -74,8 +74,8 @@ For health and aesthetic services, creator posts are personal experiences only, 
 
 1. A business posts a comp offer: what it is comping (for example a meal for two, a haircut, a service package), its value, and how many creator visits it wants.
 2. Creators on the local roster claim offers and visit like real customers.
-3. The creator posts about the visit: 1 post or reel plus 1 story that shares the post, live within 48 hours, with a clear disclosure that the visit was comped (FTC-compliant, e.g. #gifted). Posts must be honest; businesses cannot require positive posts or reviews.
-4. The platform tracks every visit and post. If a post does not appear within 48 hours, the business receives a replacement visit and the creator's roster standing is affected; repeat no-shows are removed.
+3. The creator posts about the visit: 1 post or reel plus 1 story that shares the post, posted to a 48-hour standard (48 hours is the standard creators are held to and rewarded for; one week is the outside limit), with a clear disclosure that the visit was comped (FTC-compliant, e.g. #gifted). Posts must be honest; businesses cannot require positive posts or reviews.
+4. The platform tracks every visit and post. If a week passes with no post, the business receives a replacement visit and the creator's roster standing is affected; repeat no-shows are removed.
 
 Local reach: SIGNL ranks creators by local reach — the share of a creator's audience that actually lives in the market — not by follower count. We don't rank you by followers. We rank you by how much of your audience actually lives here. Local reach is the number businesses look at first on a creator's profile, and it is why a smaller creator whose audience is concentrated in the city can be worth more to a local business than a much larger creator whose followers are spread across the country.
 
@@ -107,7 +107,7 @@ Anyone can apply at any follower count, including under 500. Applications requir
 - Content rights follow the visit, never the plan: on a comp visit, the business can share the delivered post natively, with the creator credited, and nothing more. On a paid visit, the business can also repost the post on its own channels and run it as an ad for 6 months from the post date. The creator always owns their content.
 - One plan covers every location: SIGNL never charges per location. Plans scale with creator visits per month (8 on Self-Service, 20 on Growth, 30 on Managed), and a multi-location business runs all of its locations on one plan, using its visits across them. Most multi-location businesses pick a higher tier only because they want more creator visits each month, not because of their location count.
 - There are no per-creator cash fees on standard visits; the business's only cost beyond the subscription is the comp it chooses to offer. The two costs stay separate: the subscription buys the service (roster access, scheduling, tracking, the delivery guarantee), and the comp is the business's own product, provided by the business at its own cost, not retail (a $100 dinner costs a restaurant its food cost, not $100). The business sets the comp and its ceiling on every offer. SIGNL never touches comp money: no pass-through, no markup.
-- SIGNL guarantees tracked deliverables (posts within 48 hours of completed visits), never a specific number of creators.
+- SIGNL's Visit Guarantee stands behind tracked deliverables, never a specific number of creators: creators post to a 48-hour standard, and a visit with no post inside a week is replaced.
 
 ## How SIGNL is different
 
@@ -118,7 +118,7 @@ Anyone can apply at any follower count, including under 500. Applications requir
 - Three ways to run it: Self-Service (automated, $299/month), Growth ($599/month, up to 20 visits a month), or Managed (a human coordinator picks creators, books visits, chases posts and reports monthly, $999/month).
 - The roster includes a Neighbors tier of everyday local people (500 to 2,000 followers), not only professional influencers.
 - Every tracked post is saved to the business's content library with clear reuse rights.
-- Replacement guarantee: if a post does not appear within 48 hours of a completed visit, the business receives a replacement visit that does not count against its plan.
+- Replacement guarantee: if a week passes with no post after a completed visit, the business receives a replacement visit that does not count against its plan.
 - Honesty is a rule, not a slogan: posts must carry FTC disclosure and no business may require a positive post or review.
 
 ## Local on purpose: SIGNL vs national influencer platforms
@@ -126,7 +126,7 @@ Anyone can apply at any follower count, including under 500. Applications requir
 - SIGNL is a local platform by design, not a national platform with a location filter. It builds one vetted roster per city; national influencer platforms (the enterprise class: tools built for national DTC and e-commerce brands) treat creators as global inventory ranked by total follower count.
 - Audience concentration is the core math. A local business's customers live within about 10 miles of its door. Illustrative example: a national creator with 200,000 followers spread across the US has only a few hundred followers (about 300) within driving distance of any one local business, while a SIGNL local creator with 2,000 followers and a 70% local audience has about 1,400 or more within driving distance. The smaller, concentrated audience is worth more to a local business.
 - National platforms are priced and contracted for marketing departments: reported enterprise pricing runs around $2,299/month with 12-month contracts at the platform end, and agency starters are claimed in five figures, with pricing typically hidden behind demo calls and custom quotes. SIGNL publishes its pricing: $299/month Self-Service, $599/month Growth or $999/month Managed, 3-month minimum.
-- National platforms are built for brands that ship products to creators' homes; SIGNL is built for businesses people physically visit. Comps redeem inside the SIGNL app on a single-use code, the business's point of sale is never touched, and a tracked post is due within 48 hours of the visit.
+- National platforms are built for brands that ship products to creators' homes; SIGNL is built for businesses people physically visit. Comps redeem inside the SIGNL app on a single-use code, the business's point of sale is never touched, and a tracked post is due to a 48-hour standard after the visit, with one week as the outside limit.
 - Content rights: national creator-content platforms commonly take perpetual usage rights in every asset. SIGNL saves every delivered post to the business's content library with clear, visit-based reuse rights, and creators always post in their own voice with no required positive take.
 - Businesses see full creator profiles before booking: photos, bio, past jobs delivered on SIGNL, reliability record, local audience share with its source (Self-reported today; Verified by Instagram once the Instagram connection activates), and a Local Impact Score that combines local audience share, estimated local views, engagement and reliability, with the calculation shown on the profile. Businesses can search and filter the roster by market, tier, category, local audience percentage, reliability and Local Impact Score.
 - For creators, SIGNL is the opposite of the national feed: instead of one profile among millions competing for national brands, a creator is a hand-picked founding name on one city's roster, with first pick of offers and a reliability record and Local Impact Score they build over time. Creator onboarding is minimal: creators enter their photo, bio and follower counts when they apply, and their local audience percentage is self-reported and labeled that way; when the Instagram connection activates, it will verify that local audience from the creator's own Instagram data. Creators can also claim a profile by handle in under a minute.
@@ -250,7 +250,7 @@ New cities keep joining the list: anyone can sign up from any city at https://ap
 ## Key facts
 
 - Founded and launched in 2026 in Hampton Roads, Virginia, USA; founding markets now span 8 countries.
-- The 48-hour posting rule and FTC disclosure are mandatory for every visit.
+- The 48-hour posting standard (one week outside limit) and FTC disclosure apply to every visit.
 - Honest posts only: neither SIGNL nor a business may require a positive post or review.
 - Why it works: 92% of consumers trust recommendations from people over any form of advertising (Nielsen). Brands earn an average of $5.78 for every $1 spent on creator/influencer marketing (Influencer Marketing Hub benchmark report).
 - Hampton Roads supply: SIGNL's founding roster is forming now from local sign-ups across food, lifestyle and local business creators, with sign-ups open in 37 founding markets and visits beginning as each market opens. Local audience percentages are self-reported until Instagram verification lands.
@@ -266,7 +266,7 @@ New cities keep joining the list: anyone can sign up from any city at https://ap
 - [Get Paid to Post in Raleigh](https://joinsignl.com/get-paid-to-post-raleigh.html): Raleigh and Triangle creators list their own paid rate from $50 and keep 97 percent when a business books them, with comped visits as the other lane. Founding signups open, market not live yet.
 - [Brand Deals in Washington DC](https://joinsignl.com/brand-deals-washington-dc.html): brand deals for Washington DC metro creators from 500 followers: comped meals, services and experiences, or a booking at your own rate. Founding signups open, market not live yet.
 - [Get Comped](https://joinsignl.com/get-comped.html): how getting comped works for creators: free meals, services and experiences for honest posts within 48 hours, who qualifies by tier, and the rules.
-- [Creator FAQ](https://joinsignl.com/creator-faq.html): the deep creator FAQ: FTC disclosure rules, the 48-hour posting rule, why no business can require a positive post, paid cash campaigns for the Headliners band, local audience percentage and Momentum referral points.
+- [Creator FAQ](https://joinsignl.com/creator-faq.html): the deep creator FAQ: FTC disclosure rules, the 48-hour posting standard, why no business can require a positive post, paid cash campaigns for the Headliners band, local audience percentage and Momentum referral points.
 - [Brand Deals With 500 Followers](https://joinsignl.com/brand-deals-small-following.html): why 500 followers is enough on SIGNL: the Neighbors tier, the local audience math, and how a small creator lands a first brand deal.
 - [Free Meals for Posting](https://joinsignl.com/free-meals-for-posting.html): how comped dining works step by step: the offer, the visit, the in-app redemption code, the 48-hour honest post.
 - [Creator Moms](https://joinsignl.com/for-moms.html): comped visits for creator moms: local family restaurants, bakeries, salons and attractions, offers that state how many people the comp covers and whether kids are welcome, flexible timing, free for creators.

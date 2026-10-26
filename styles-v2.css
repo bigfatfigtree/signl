@@ -1296,3 +1296,4 @@ section.block.tight{padding:60px 0}
 
 /* lane rows: one sentence + one short fragment line, never a paragraph */
 .lane-row .lsub{display:block;margin-top:3px;font-size:.88rem;color:var(--ink3)}
+.fnote{font-size:.84rem;color:var(--ink3);line-height:1.6;max-width:680px;margin-top:12px}
