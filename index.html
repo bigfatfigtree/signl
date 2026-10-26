@@ -108,6 +108,20 @@
 
 /* ---------- lanes / pricing / tiers ---------- */
 
+/* pricing split by audience: creator $0 block, then business plans */
+.aud-block{margin-top:54px}
+.aud-block .price-grid{margin-top:26px}
+.zero-panel{background:var(--card);border:1px solid var(--line2);border-radius:22px;box-shadow:var(--sh-sm);padding:28px 26px;margin-top:26px}
+.zero-flex{display:flex;gap:36px;align-items:center}
+.zero-big{font-family:'Manrope',sans-serif;font-weight:800;font-size:clamp(3.6rem,9vw,5.4rem);line-height:.95;letter-spacing:-.03em;color:var(--ink);flex:none}
+.zero-rows{list-style:none;flex:1}
+.zero-rows li{padding:10px 0 10px 22px;border-bottom:1px solid var(--line2);color:var(--ink2);font-size:.98rem;line-height:1.5;position:relative}
+.zero-rows li:last-child{border-bottom:none;padding-bottom:2px}
+.zero-rows li::before{content:"";position:absolute;left:0;top:1.18em;width:11px;height:2px;border-radius:2px;background:var(--grad)}
+.zero-rows li strong{color:var(--ink)}
+.zero-panel .btn{margin-top:24px}
+@media(max-width:640px){.zero-flex{flex-direction:column;align-items:flex-start;gap:10px}}
+
 .tier-grid{display:grid;gap:14px;margin-top:8px}
 @media(min-width:860px){.tier-grid{grid-template-columns:repeat(3,1fr)}}
 .tier-card{background:var(--card);border:1px solid var(--line2);border-radius:22px;padding:26px 24px;box-shadow:var(--sh-sm)}
@@ -428,7 +442,23 @@
         </div>
       </div>
     </div>
-    <div class="price-grid" style="margin-top:38px">
+    <div class="aud-block">
+      <span class="eyebrow">For creators</span>
+      <article class="zero-panel">
+        <div class="zero-flex">
+          <div class="zero-big">$0</div>
+          <ul class="zero-rows">
+            <li><strong>Free to sign up.</strong> Always.</li>
+            <li><strong>Comped visits are free.</strong> No fee on a comped meal, service, or experience.</li>
+            <li><strong>Paid deals: you keep 97%.</strong> The only creator cost is 3% on a paid booking, taken from the payout.</li>
+          </ul>
+        </div>
+        <a class="btn" href="https://app.joinsignl.com/?src=home-v2">Claim your founding spot</a>
+      </article>
+    </div>
+    <div class="aud-block">
+      <span class="eyebrow">For businesses</span>
+    <div class="price-grid">
       <article class="price-panel">
         <div class="p-name">Self-Service</div>
         <div class="p-tag">You run it</div>
@@ -475,7 +505,9 @@
         <a class="btn btn-ghost" href="businesses.html#apply">Apply for Founding Managed</a>
       </article>
     </div>
-    <p class="price-note">Founding businesses join now, activate at market open.</p>
+    <p class="price-note" style="margin-top:22px">Paid bookings: creators set their own rate from $50 and keep 97%. You pay the rate plus 3%.</p>
+    <p class="price-note" style="margin-top:10px">Founding businesses join now, activate at market open.</p>
+    </div>
   </div>
 </section>
 

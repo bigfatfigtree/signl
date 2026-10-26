@@ -91,6 +91,12 @@ A creator's tier is set by follower count and applies in every SIGNL city:
 
 Anyone can apply at any follower count, including under 500. Applications require the applicant's home city. Founding rosters are reviewed in application order.
 
+## Pricing for creators
+
+- Free to join: SIGNL costs creators $0. Creators never pay to join, to list, or to get booked. Businesses pay the platform.
+- Comped visits are free: there is no fee on a comped meal, service, or experience.
+- Paid bookings: the creator sets their own rate (minimum $50) and keeps 97 percent of it. The only creator cost is 3 percent of a paid booking, taken from the payout. The fee is 6 percent total, split evenly: the business pays the rate plus 3 percent. Payment is held by SIGNL until the post is live.
+
 ## Pricing for businesses
 
 - Self-Service: $299/month, 3-month minimum. Browse the local roster, send comp offers, up to 8 creator visits per month, post tracking and a results dashboard. At the full 8 visits, that is about $37 per creator visit.
