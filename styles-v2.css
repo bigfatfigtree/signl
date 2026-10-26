@@ -15,7 +15,7 @@
   --mint:#A9E8C9;
   --mint-b:#B9F1D6;
   --mint-pale:#E3F5EA;
-  --mint-deep:#0E7A4A;
+  --mint-deep:#006AFC;
   --black:#0B0D0C;
   --grad:#A9E8C9;
   --grad-soft:#E3F5EA;
@@ -1064,8 +1064,8 @@ section[id]{scroll-margin-top:96px}
   --ink-dim:#4E4B44;
   --soft:#4E4B44;
   --faint:#6E6A5E;
-  --teal:#0E7A4A;
-  --orange:#0E7A4A;
+  --teal:#006AFC;
+  --orange:#006AFC;
 }
 
 /* gradient accent spans (homepage and market heroes, 404) */
@@ -1356,7 +1356,7 @@ section.block.tight{padding:60px 0}
 .spine-grid{display:grid;gap:26px;margin-top:6px}
 @media(min-width:900px){.spine-grid{grid-template-columns:repeat(3,1fr);gap:36px}}
 .spine-cell{border-top:2px solid var(--ink);padding-top:15px}
-.spine-k{display:flex;align-items:center;gap:9px;font-family:'Space Grotesk',monospace;font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#0E7A4A;margin-bottom:10px}
+.spine-k{display:flex;align-items:center;gap:9px;font-family:'Space Grotesk',monospace;font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#006AFC;margin-bottom:10px}
 .spine-k::before{content:"";width:14px;height:2px;border-radius:2px;background:var(--grad);flex:none}
 .spine-cell p{font-size:1rem;line-height:1.65;color:var(--ink2)}
 .spine-stack{display:grid;gap:30px;margin-top:6px;max-width:880px}
