@@ -108,8 +108,7 @@
 .std-card p{color:rgba(255,255,255,.68);font-size:.94rem;line-height:1.6}
 
 /* ---------- lanes / pricing / tiers ---------- */
-.price-line{margin-top:30px;font-size:1.02rem;color:var(--ink2);max-width:760px}
-.price-line .n{font-family:'Space Grotesk',monospace;font-weight:700;color:var(--ink);font-size:1.14rem}
+
 .tier-grid{display:grid;gap:14px;margin-top:8px}
 @media(min-width:860px){.tier-grid{grid-template-columns:repeat(3,1fr)}}
 .tier-card{background:var(--card);border:1px solid var(--line2);border-radius:22px;padding:26px 24px;box-shadow:var(--sh-sm)}
@@ -417,18 +416,65 @@
         <span class="tg" aria-hidden="true"></span>
         <div>
           <div class="lname">Comped visits</div>
-          <p>A business comps a meal, service, or experience; the creator posts honestly within 48 hours, and the business can share the post natively.</p>
+          <p>A business comps a meal, service, or experience; the creator posts 1 post or reel plus 1 story that shares it, within 48 hours.</p>
         </div>
       </div>
       <div class="lane-row off">
         <span class="tg" aria-hidden="true"></span>
         <div>
           <div class="lname">Paid bookings</div>
-          <p>Creators set their own rate from $50 and keep 97%, the business pays the rate plus 3%, money held until the post is live, including repost and 6-month ad use, never guaranteed.</p>
+          <p>Creators set their own rate from $50 and keep 97%; the business pays the rate plus 3%.<span class="lsub">Held until the post is live, with repost and 6-month ad use. Never guaranteed.</span></p>
         </div>
       </div>
     </div>
-    <p class="price-line">Business plans <span class="n">$299 / $599 / $999</span> a month. About <span class="n">$37 per creator visit</span> on Self-Service. Founding businesses join now, activate at market open.</p>
+    <div class="price-grid" style="margin-top:38px">
+      <article class="price-panel">
+        <div class="p-name">Self-Service</div>
+        <div class="p-tag">You run it</div>
+        <div class="price-tag">$299<span>/mo</span></div>
+        <div class="price-term">3-month minimum term, then month to month</div>
+        <ul>
+          <li>Browse the local roster by tier and category</li>
+          <li>Send comp offers directly to creators</li>
+          <li>Up to 8 creator visits per month</li>
+          <li><strong>About $37 per creator visit</strong> at the full 8 visits</li>
+          <li>Post tracking and results dashboard</li>
+          <li>Every delivered post saved to your content library</li>
+          <li>Runs in minutes a week</li>
+        </ul>
+        <a class="btn btn-ghost" href="businesses.html#apply">Apply for Founding Self-Service</a>
+      </article>
+      <article class="price-panel plan-featured">
+        <div class="p-name">Growth</div>
+        <div class="p-tag">More visits a month</div>
+        <div class="price-tag">$599<span>/mo</span></div>
+        <div class="price-term">3-month minimum term, then month to month</div>
+        <ul>
+          <li>Everything in Self-Service, at bigger scale</li>
+          <li>Up to 20 creator visits per month</li>
+          <li><strong>About $30 per creator visit</strong> at the full 20 visits</li>
+          <li>Every delivered post saved to your content library</li>
+          <li>Post tracking and results dashboard</li>
+        </ul>
+        <a class="btn" href="businesses.html#apply">Apply for Founding Growth</a>
+      </article>
+      <article class="price-panel">
+        <div class="p-name">Managed</div>
+        <div class="p-tag">Run for you</div>
+        <div class="price-tag">$999<span>/mo</span></div>
+        <div class="price-term">3-month minimum term, then month to month</div>
+        <ul>
+          <li>Everything in Growth, plus a coordinator</li>
+          <li>Coordinator picks creators and schedules visits</li>
+          <li>Up to 30 creator visits per month</li>
+          <li>Campaign calendar for slow days and launches</li>
+          <li>One hero creator feature per quarter</li>
+          <li>Monthly results report in plain English</li>
+        </ul>
+        <a class="btn btn-ghost" href="businesses.html#apply">Apply for Founding Managed</a>
+      </article>
+    </div>
+    <p class="price-note">Founding businesses join now, activate at market open.</p>
   </div>
 </section>
 

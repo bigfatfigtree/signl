@@ -1225,3 +1225,64 @@ section.block.tight{padding:60px 0}
 /* dark-surface accents: gradient text becomes solid mint over video/black */
 .hero-video .grad-text,.chapter .grad-text,.ch-head .grad-text,.ch-title .grad-text,.hero .grad-text{color:#A9E8C9}
 .chapter .eyebrow::before,.hero-video .eyebrow::before{color:#A9E8C9}
+
+/* ============ 2026-10-25 fix pass (Jeff's production screenshots) ============
+   1) Mobile menu: the redesign block above put the panel on black, but the
+      link color stayed --ink (black on black = invisible labels). Links now
+      read white on the black panel, arrows in light mint, hairlines ghosted.
+   2) Header: the CTA pill wrapped to two lines on the businesses page and
+      crowded the bar at phone widths. CTA is nowrap; at <=560px the bar
+      slims (logo, gaps, toggle) so logo + CTA + toggle never collide.
+   3) Plan cards: one strict comparison component. Feature rows are single
+      text runs (no floats/space-between inside), strong text is white on
+      the black featured card (it was --ink on black = an invisible half
+      sentence), taglines read deep mint on white cards (they were pale
+      mint), CTAs are full-width, centered, pinned to the card bottom, and
+      the desktop row stretches to equal heights.
+   4) Accent text: every background-clip:text accent used var(--grad),
+      which is now the pale mint solid, so accents on LIGHT surfaces
+      rendered pale mint on white (washed out / invisible). They now clip
+      to deep mint on light surfaces; dark surfaces keep pale mint. */
+.mobile-nav{border-top:1px solid rgba(255,255,255,.14)}
+.mobile-nav a.mn-link{color:#fff;border-bottom-color:rgba(255,255,255,.14)}
+.mobile-nav a.mn-link span{color:#8FD3AC}
+.mobile-nav a.mn-link:active{color:#A9E8C9}
+
+.head-cta{white-space:nowrap;flex:none}
+@media(max-width:560px){
+  .head-in{gap:12px;height:68px}
+  .logo-img{height:34px}
+  .head-actions{gap:9px}
+  .site-head .btn-small{padding:10px 17px;font-size:.82rem}
+  .nav-toggle{width:40px;height:40px;border-radius:11px}
+  .sx-progress{top:68px}
+}
+
+.price-panel{height:100%}
+.price-panel .p-tag{background:none;-webkit-background-clip:initial;background-clip:initial;color:var(--mint-deep)}
+.price-panel li strong{color:var(--ink)}
+.price-panel .btn{width:100%;text-align:center;text-wrap:balance}
+.plan-featured .p-name{color:#fff}
+.plan-featured .p-tag{color:#A9E8C9}
+.plan-featured .price-tag{color:#A9E8C9}
+.plan-featured .price-tag span{color:rgba(255,255,255,.55)}
+.plan-featured .price-term{color:rgba(255,255,255,.62)}
+.plan-featured li{color:rgba(255,255,255,.78);border-bottom-color:rgba(255,255,255,.14)}
+.plan-featured li strong{color:#fff}
+.plan-featured .btn{background:#A9E8C9;color:#0B0D0C;box-shadow:none}
+
+.pu-local .big,.cc-local .big,.cc-link a,.move .m-num,.vs-card.hot .vs-num,
+.step-num,.score-num,.roas-num,.sat-roas-v,.mult-num em,.edge-num,
+.aud-panel.hot .aud-big,.aud-math-num,.market-head .m-meta,.tx-link{background-color:var(--mint-deep)}
+.hl,.accent{background-color:var(--mint-deep)}
+.hero-video .hl,.hero-video .accent,.chapter .hl,.chapter .accent,
+.field-black .hl,.field-black .accent,.cta-panel .hl,.cta-panel .accent,
+.final-cta .hl,.final-cta .accent{background-color:#A9E8C9}
+.pu-btn{color:#0B0D0C;box-shadow:0 10px 22px -10px rgba(11,13,12,.45)}
+
+/* wrapped eyebrows/labels: marker aligns to the first line, not the middle */
+.eyebrow,.label,.kicker{align-items:flex-start}
+.label::before,.kicker::before{margin-top:4px}
+
+/* lane rows: one sentence + one short fragment line, never a paragraph */
+.lane-row .lsub{display:block;margin-top:3px;font-size:.88rem;color:var(--ink3)}
