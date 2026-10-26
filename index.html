@@ -189,7 +189,7 @@
 <!-- ============ FIRST SCREEN ============ -->
 <section class="hero-video">
   <div class="hv-media">
-    <video class="js-hero-video" data-io muted loop playsinline preload="metadata" poster="assets/video/poster-smiling-friends.jpg" aria-label="Friends smiling and laughing together at a local business">
+    <video class="js-hero-video" data-io autoplay muted loop playsinline preload="metadata" poster="assets/video/poster-smiling-friends.jpg" aria-label="Friends smiling and laughing together at a local business">
       <source src="assets/video/hero-smiling-friends.mp4" type="video/mp4">
     </video>
     <div class="hv-scrim"></div>
@@ -244,7 +244,7 @@
 <section aria-label="How SIGNL works, told as a story">
 
   <article class="chapter">
-    <video data-io muted loop playsinline preload="none" poster="assets/video/poster-kitchen-pass.jpg" aria-label="Finished plates lined up at a kitchen pass, ready to serve">
+    <video data-io autoplay muted loop playsinline preload="none" poster="assets/video/poster-kitchen-pass.jpg" aria-label="Finished plates lined up at a kitchen pass, ready to serve">
       <source src="assets/video/kitchen-pass.mp4" type="video/mp4">
     </video>
     <div class="ch-scrim"></div>
@@ -256,7 +256,7 @@
   </article>
 
   <article class="chapter">
-    <video data-io muted loop playsinline preload="none" poster="assets/video/poster-cafe-exterior.jpg" aria-label="The front of a neighborhood cafe">
+    <video data-io autoplay muted loop playsinline preload="none" poster="assets/video/poster-cafe-exterior.jpg" aria-label="The front of a neighborhood cafe">
       <source src="assets/video/cafe-exterior.mp4" type="video/mp4">
     </video>
     <div class="ch-scrim"></div>
@@ -268,7 +268,7 @@
   </article>
 
   <article class="chapter">
-    <video data-io muted loop playsinline preload="none" poster="assets/video/poster-jeff-talk.jpg" aria-label="A creator filming a video in a cafe">
+    <video data-io autoplay muted loop playsinline preload="none" poster="assets/video/poster-jeff-talk.jpg" aria-label="A creator filming a video in a cafe">
       <source src="assets/video/jeff-creator-talk-trim.mp4" type="video/mp4">
     </video>
     <div class="ch-scrim"></div>
@@ -280,7 +280,7 @@
   </article>
 
   <article class="chapter">
-    <video data-io muted loop playsinline preload="none" poster="assets/video/poster-server-bowls.jpg" aria-label="A server carrying bowls of food through a busy restaurant">
+    <video data-io autoplay muted loop playsinline preload="none" poster="assets/video/poster-server-bowls.jpg" aria-label="A server carrying bowls of food through a busy restaurant">
       <source src="assets/video/server-bowls.mp4" type="video/mp4">
     </video>
     <div class="ch-scrim"></div>
@@ -321,7 +321,7 @@
         <div class="sky-row">
         <div class="sky-phone is-side" aria-hidden="true">
           <div class="sky-screen">
-            <video data-io muted loop playsinline preload="metadata" poster="assets/video/poster-pov-comped-dinner.jpg" aria-label="Point of view: a local spot comped your dinner, one honest post is the job">
+            <video data-io autoplay muted loop playsinline preload="metadata" poster="assets/video/poster-pov-comped-dinner.jpg" aria-label="Point of view: a local spot comped your dinner, one honest post is the job">
               <source src="assets/video/signl-pov-comped-dinner.mp4" type="video/mp4">
             </video>
             <div class="sky-notch"></div>
@@ -352,7 +352,7 @@
         </div>
         <div class="sky-phone is-side" aria-hidden="true">
           <div class="sky-screen">
-            <video data-io muted loop playsinline preload="metadata" poster="assets/video/poster-kitchen-pass.jpg" aria-label="Finished plates lined up at a kitchen pass, ready to serve">
+            <video data-io autoplay muted loop playsinline preload="metadata" poster="assets/video/poster-kitchen-pass.jpg" aria-label="Finished plates lined up at a kitchen pass, ready to serve">
               <source src="assets/video/kitchen-pass.mp4" type="video/mp4">
             </video>
             <div class="sky-notch"></div>
@@ -624,12 +624,27 @@
     /* posters stay up, nothing autoplays */
     return;
   }
+  /* iOS/WebKit hardening (2026-10-25): muted + inline set as PROPERTIES
+     before play; rejected play() calls queue for a one-gesture retry.
+     Posters carry the frame whenever playback stays blocked. */
+  vids.forEach(function(v){ v.muted = true; v.defaultMuted = true; v.playsInline = true; });
+  var blockedVids = [];
+  var unlockArmed = false;
+  function vidInView(v){ var r = v.getBoundingClientRect(); return r.bottom > 0 && r.top < window.innerHeight && r.right > 0 && r.left < window.innerWidth; }
+  function armUnlock(){
+    if (unlockArmed) return; unlockArmed = true;
+    var unlock = function(){ blockedVids.slice().forEach(function(v){ if (vidInView(v)) { tryPlay(v); } }); };
+    ['pointerdown','touchstart','keydown'].forEach(function(ev){ document.addEventListener(ev, unlock, { passive: true }); });
+  }
+  function tryPlay(v){
+    var p = v.play();
+    if (p && p.catch) { p.catch(function(){ if (blockedVids.indexOf(v) < 0) { blockedVids.push(v); } armUnlock(); }); }
+  }
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(entry){
       var v = entry.target;
       if (entry.isIntersecting) {
-        var p = v.play();
-        if (p && p.catch) { p.catch(function(){}); }
+        tryPlay(v);
       } else {
         v.pause();
       }

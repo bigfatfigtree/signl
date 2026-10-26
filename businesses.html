@@ -58,6 +58,21 @@
 @media(max-width:820px){.dash-card{right:50%;transform:translateX(50%);top:auto;bottom:34svh;width:min(320px,86vw)}}
 @media(max-width:700px){.chapter{height:168svh}.chapter-in{padding-bottom:7svh}}
 @media(max-width:820px){.chapter.tall{height:215svh}}
+/* Chapter 04 on phones: the sample card stacks IN FLOW above the chapter
+   text (it used to float at bottom:34svh, right over the Chapter 04 pill).
+   Pin becomes a flex column: card first with clear air under the header,
+   text block anchored to the bottom, guaranteed gap between them. */
+@media(max-width:820px){
+  .chapter.tall .chapter-pin{display:flex;flex-direction:column}
+  .chapter.tall .dash-card{position:relative;right:auto;bottom:auto;top:auto;transform:none;flex:none;width:min(320px,86vw);margin:max(84px,11svh) auto 0}
+  .chapter.tall .chapter-in{height:auto;flex:1;padding-top:18px;padding-bottom:6svh}
+}
+@media(max-width:820px) and (max-height:740px){
+  .chapter.tall .dash-card{padding:14px 16px 12px;margin-top:78px}
+  .chapter.tall .dash-row{padding:6px 0}
+  .chapter.tall .dash-card .dc-note{font-size:.66rem;line-height:1.45}
+  .chapter.tall .ch-title{font-size:2.05rem}
+}
 @media (prefers-reduced-motion: reduce){
   .chapter{height:auto}
   .chapter.tall{height:auto}
@@ -140,7 +155,7 @@
 <main id="main">
 <section class="hero-video">
   <div class="hv-media">
-    <video class="js-hero-video" muted loop playsinline preload="metadata" poster="assets/video/poster-jeff-cafe.jpg" aria-label="A woman walking into a warm cafe">
+    <video class="js-hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/video/poster-jeff-cafe.jpg" aria-label="A woman walking into a warm cafe">
       <source src="assets/video/jeff-hero-cafe-enter.mp4" type="video/mp4">
     </video>
     <div class="hv-scrim"></div>
@@ -165,7 +180,7 @@
 
 <section class="chapter" data-chapter>
   <div class="chapter-pin">
-    <video class="js-ch-video" muted loop playsinline preload="none" poster="assets/video/poster-kitchen-pass.jpg" aria-label="Finished plates lined up at a kitchen pass, ready to serve" data-src="assets/video/kitchen-pass.mp4"></video>
+    <video class="js-ch-video" autoplay muted loop playsinline preload="none" poster="assets/video/poster-kitchen-pass.jpg" aria-label="Finished plates lined up at a kitchen pass, ready to serve" data-src="assets/video/kitchen-pass.mp4"></video>
     <div class="chapter-scrim"></div>
     <div class="wrap chapter-in">
       <span class="ch-kick ch-anim"><i></i>Chapter 01 · The offer</span>
@@ -177,7 +192,7 @@
 
 <section class="chapter" data-chapter>
   <div class="chapter-pin">
-    <video class="js-ch-video" muted loop playsinline preload="none" poster="assets/video/poster-jeff-smile-man-v.jpg" aria-label="A local creator arriving with a smile" data-src="assets/video/jeff-smile-man-v.mp4"></video>
+    <video class="js-ch-video" autoplay muted loop playsinline preload="none" poster="assets/video/poster-jeff-smile-man-v.jpg" aria-label="A local creator arriving with a smile" data-src="assets/video/jeff-smile-man-v.mp4"></video>
     <div class="chapter-scrim"></div>
     <div class="wrap chapter-in">
       <span class="ch-kick ch-anim"><i></i>Chapter 02 · The visit</span>
@@ -189,7 +204,7 @@
 
 <section class="chapter" data-chapter>
   <div class="chapter-pin">
-    <video class="js-ch-video" muted loop playsinline preload="none" poster="assets/video/poster-stock-creator-meal.jpg" aria-label="A creator filming their meal at a local restaurant" data-src="assets/video/stock-creator-meal.mp4"></video>
+    <video class="js-ch-video" autoplay muted loop playsinline preload="none" poster="assets/video/poster-stock-creator-meal.jpg" aria-label="A creator filming their meal at a local restaurant" data-src="assets/video/stock-creator-meal.mp4"></video>
     <div class="chapter-scrim"></div>
     <div class="wrap chapter-in">
       <span class="ch-kick ch-anim"><i></i>Chapter 03 · The post</span>
@@ -201,7 +216,7 @@
 
 <section class="chapter tall" data-chapter>
   <div class="chapter-pin">
-    <video class="js-ch-video" muted loop playsinline preload="none" poster="assets/video/poster-cafe-exterior.jpg" aria-label="The storefront of a warm, inviting local cafe" data-src="assets/video/cafe-exterior.mp4"></video>
+    <video class="js-ch-video" autoplay muted loop playsinline preload="none" poster="assets/video/poster-cafe-exterior.jpg" aria-label="The storefront of a warm, inviting local cafe" data-src="assets/video/cafe-exterior.mp4"></video>
     <div class="chapter-scrim"></div>
     <div class="dash-card" role="img" aria-label="Sample business dashboard showing tracked posts, register tallies and modeled media value">
       <div class="dc-kick">Business Home · Sample</div>
@@ -762,11 +777,30 @@
     document.querySelectorAll('.reveal').forEach(function(el){ rio.observe(el); });
 
     if (!reduceMotion) {
+      /* iOS/WebKit hardening (2026-10-25): set the muted + inline PROPERTIES
+         (not just attributes) before every play; if play() is rejected (Low
+         Power Mode, data saver, gesture-gated policies), queue the video and
+         retry the on-screen ones on the first user gesture. Posters carry
+         the frame whenever playback stays blocked. */
+      var blockedVids = [];
+      var unlockArmed = false;
+      function vidInView(v){ var r = v.getBoundingClientRect(); return r.bottom > 0 && r.top < window.innerHeight && r.right > 0 && r.left < window.innerWidth; }
+      function armUnlock(){
+        if (unlockArmed) return; unlockArmed = true;
+        var unlock = function(){ blockedVids.slice().forEach(function(v){ if (vidInView(v)) { tryPlay(v); } }); };
+        ['pointerdown','touchstart','keydown'].forEach(function(ev){ document.addEventListener(ev, unlock, { passive: true }); });
+      }
+      function tryPlay(v){
+        if (!v) return;
+        v.muted = true; v.defaultMuted = true; v.playsInline = true;
+        var p = v.play();
+        if (p && p.catch) { p.catch(function(){ if (blockedVids.indexOf(v) < 0) { blockedVids.push(v); } armUnlock(); }); }
+      }
       var heroVideo = document.querySelector('.js-hero-video');
       if (heroVideo) {
         var hio = new IntersectionObserver(function(es){
           es.forEach(function(e){
-            if (e.isIntersecting) { heroVideo.play().catch(function(){}); }
+            if (e.isIntersecting) { tryPlay(heroVideo); }
             else { heroVideo.pause(); }
           });
         }, { threshold: .12 });
@@ -785,7 +819,7 @@
                 if (src) { var s = document.createElement('source'); s.src = src; s.type = 'video/mp4'; video.appendChild(s); video.load(); }
                 loaded.add(video);
               }
-              video.play().catch(function(){});
+              tryPlay(video);
             }
           } else {
             chapter.classList.remove('on');

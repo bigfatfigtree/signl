@@ -105,7 +105,7 @@
 <main id="main">
 <section class="hero-video">
   <div class="hv-media">
-    <video class="js-hero-video" muted loop playsinline preload="metadata" poster="assets/video/poster-stock-restaurant-friends.jpg" aria-label="Friends sharing a meal and filming it at a local restaurant">
+    <video class="js-hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/video/poster-stock-restaurant-friends.jpg" aria-label="Friends sharing a meal and filming it at a local restaurant">
       <source src="assets/video/stock-restaurant-friends.mp4" type="video/mp4">
     </video>
     <div class="hv-scrim"></div>
@@ -127,7 +127,7 @@
 
 <section class="chapter" data-chapter>
   <div class="chapter-pin">
-    <video class="js-ch-video" muted loop playsinline preload="none" poster="assets/video/poster-jeff-open-door-v.jpg" aria-label="A creator opening the door of a local business" data-src="assets/video/jeff-open-door-v.mp4"></video>
+    <video class="js-ch-video" autoplay muted loop playsinline preload="none" poster="assets/video/poster-jeff-open-door-v.jpg" aria-label="A creator opening the door of a local business" data-src="assets/video/jeff-open-door-v.mp4"></video>
     <div class="chapter-scrim"></div>
     <div class="wrap chapter-in">
       <span class="ch-kick ch-anim"><i></i>Chapter 01 · The offer</span>
@@ -139,7 +139,7 @@
 
 <section class="chapter" data-chapter>
   <div class="chapter-pin">
-    <video class="js-ch-video" muted loop playsinline preload="none" poster="assets/video/poster-pov-comped-dinner.jpg" aria-label="Point of view: a creator arriving at a local spot that comped their dinner" data-src="assets/video/signl-pov-comped-dinner.mp4"></video>
+    <video class="js-ch-video" autoplay muted loop playsinline preload="none" poster="assets/video/poster-pov-comped-dinner.jpg" aria-label="Point of view: a creator arriving at a local spot that comped their dinner" data-src="assets/video/signl-pov-comped-dinner.mp4"></video>
     <div class="chapter-scrim"></div>
     <div class="wrap chapter-in">
       <span class="ch-kick ch-anim"><i></i>Chapter 02 · The visit</span>
@@ -151,7 +151,7 @@
 
 <section class="chapter" data-chapter>
   <div class="chapter-pin">
-    <video class="js-ch-video" muted loop playsinline preload="none" poster="assets/video/poster-jeff-talk.jpg" aria-label="A creator filming a video in a cafe" data-src="assets/video/jeff-creator-talk-trim.mp4"></video>
+    <video class="js-ch-video" autoplay muted loop playsinline preload="none" poster="assets/video/poster-jeff-talk.jpg" aria-label="A creator filming a video in a cafe" data-src="assets/video/jeff-creator-talk-trim.mp4"></video>
     <div class="chapter-scrim"></div>
     <div class="wrap chapter-in">
       <span class="ch-kick ch-anim"><i></i>Chapter 03 · The post</span>
@@ -163,7 +163,7 @@
 
 <section class="chapter" data-chapter>
   <div class="chapter-pin">
-    <video class="js-ch-video" muted loop playsinline preload="none" poster="assets/video/poster-smiling-friends.jpg" aria-label="Friends smiling and laughing together at a local business" data-src="assets/video/hero-smiling-friends.mp4"></video>
+    <video class="js-ch-video" autoplay muted loop playsinline preload="none" poster="assets/video/poster-smiling-friends.jpg" aria-label="Friends smiling and laughing together at a local business" data-src="assets/video/hero-smiling-friends.mp4"></video>
     <div class="chapter-scrim"></div>
     <div class="wrap chapter-in">
       <span class="ch-kick ch-anim"><i></i>Chapter 04 · The record</span>
@@ -441,11 +441,30 @@
     document.querySelectorAll('.reveal').forEach(function(el){ rio.observe(el); });
 
     if (!reduceMotion) {
+      /* iOS/WebKit hardening (2026-10-25): set the muted + inline PROPERTIES
+         (not just attributes) before every play; if play() is rejected (Low
+         Power Mode, data saver, gesture-gated policies), queue the video and
+         retry the on-screen ones on the first user gesture. Posters carry
+         the frame whenever playback stays blocked. */
+      var blockedVids = [];
+      var unlockArmed = false;
+      function vidInView(v){ var r = v.getBoundingClientRect(); return r.bottom > 0 && r.top < window.innerHeight && r.right > 0 && r.left < window.innerWidth; }
+      function armUnlock(){
+        if (unlockArmed) return; unlockArmed = true;
+        var unlock = function(){ blockedVids.slice().forEach(function(v){ if (vidInView(v)) { tryPlay(v); } }); };
+        ['pointerdown','touchstart','keydown'].forEach(function(ev){ document.addEventListener(ev, unlock, { passive: true }); });
+      }
+      function tryPlay(v){
+        if (!v) return;
+        v.muted = true; v.defaultMuted = true; v.playsInline = true;
+        var p = v.play();
+        if (p && p.catch) { p.catch(function(){ if (blockedVids.indexOf(v) < 0) { blockedVids.push(v); } armUnlock(); }); }
+      }
       var heroVideo = document.querySelector('.js-hero-video');
       if (heroVideo) {
         var hio = new IntersectionObserver(function(es){
           es.forEach(function(e){
-            if (e.isIntersecting) { heroVideo.play().catch(function(){}); }
+            if (e.isIntersecting) { tryPlay(heroVideo); }
             else { heroVideo.pause(); }
           });
         }, { threshold: .12 });
@@ -464,7 +483,7 @@
                 if (src) { var s = document.createElement('source'); s.src = src; s.type = 'video/mp4'; video.appendChild(s); video.load(); }
                 loaded.add(video);
               }
-              video.play().catch(function(){});
+              tryPlay(video);
             }
           } else {
             chapter.classList.remove('on');
