@@ -15,6 +15,16 @@ the script stamps the config name into every `[data-sig-name]` /
 panel). To rename: change `name` in SIG_CONFIG. The literal "Sig" text in
 index.html is only the no-JS / pre-load fallback and is overwritten on init.
 
+## The face (2026-10-27)
+
+Sig's face is the axolotl (Jeff's pick). The image is referenced in ONE
+place: `avatar` in `window.SIG_CONFIG` (`assets/agent/sig-avatar.webp`,
+256x256, tight crop of the source art so the face + gill fan read at
+44/32/26px). Every avatar slot (panel header, message rows, FAB, sheet
+head) renders from that config value; the static `sigx-ava` spans in
+index.html carry the same `<img>` so the face shows pre-JS too. To change
+the face: replace that one file.
+
 ## Design choice (locked for v1)
 
 GUIDED, not open chat. Scripted flows + tappable chips; free-text input

@@ -3,6 +3,9 @@
    ----------------------------------------------------------------------------
    RENAME THE AGENT: edit SIG_CONFIG.name below. That is the ONLY place the
    name lives; every label, greeting and button reads it from the config.
+   THE FACE: SIG_CONFIG.avatar below is the ONLY place the avatar image is
+   referenced; every Sig avatar on the page (panel, messages, floating
+   button, sheet head) renders from it. Swap that one file to change the face.
    ----------------------------------------------------------------------------
    The agent is a scripted guide. Every answer comes from the locked SIGNL
    playbook baked into ANSWERS / FLOWS in this file. Free text is resolved
@@ -20,7 +23,8 @@ window.SIG_CONFIG = {
     pricing: "pricing.html",
     cities: "cities.html"
   },
-  samplePhoto: "assets/photos/sample-portrait-jordan.jpg"
+  samplePhoto: "assets/photos/sample-portrait-jordan.jpg",
+  avatar: "assets/agent/sig-avatar.webp"
 };
 
 (function () {
@@ -407,9 +411,15 @@ window.SIG_CONFIG = {
     if (html != null) n.innerHTML = html;
     return n;
   }
+  function avatarImg() {
+    var img = el("img", "sigx-ava-img");
+    img.src = CFG.avatar;
+    img.alt = "";
+    return img;
+  }
   function avatar(cls) {
     var a = el("span", "sigx-ava " + (cls || ""));
-    a.textContent = NAME.charAt(0);
+    a.appendChild(avatarImg());
     a.setAttribute("aria-hidden", "true");
     return a;
   }
@@ -647,7 +657,7 @@ window.SIG_CONFIG = {
     if (!homeSlot) return;
     /* the name lives in SIG_CONFIG only: stamp it into every static slot */
     document.querySelectorAll("[data-sig-name]").forEach(function (n) { n.textContent = NAME; });
-    document.querySelectorAll("[data-sig-initial]").forEach(function (n) { n.textContent = NAME.charAt(0); });
+    document.querySelectorAll("[data-sig-initial]").forEach(function (n) { n.innerHTML = ""; n.appendChild(avatarImg()); });
     buildPanel();
     homeSlot.innerHTML = ""; /* drop the no-JS fallback now that the live panel exists */
     homeSlot.appendChild(panel);
