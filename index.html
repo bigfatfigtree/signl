@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles-v2.css?v=8">
+<link rel="stylesheet" href="assets/agent/sig-agent.css?v=1">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
 <link rel="canonical" href="https://joinsignl.com/">
@@ -193,9 +194,9 @@
   </div>
   <div class="wrap hv-in">
       <span class="eyebrow">Local creator marketing · Founding markets forming now</span>
-      <h1>Get talked about by <span class="grad-text">your city.</span></h1>
+      <h1>Local businesses <span class="grad-text">book</span> local creators.</h1>
       <p class="hs-cat"><span class="grad-text">Influencer marketing, but local.</span></p>
-      <p class="lede">Local businesses comp or pay local creators to visit and post honestly. Every visit is tracked.</p>
+      <p class="lede">Browse creators by local reach, how much of their audience actually lives in your city. Comp the visit or pay their listed rate, and every visit is tracked to the post.</p>
       <div class="hero-ctas">
         <a class="btn" href="https://app.joinsignl.com/?src=home-v2">I&rsquo;m a creator</a>
         <a class="btn btn-ghost" href="businesses.html">I&rsquo;m a business</a>
@@ -231,6 +232,36 @@
     </div>
   </div>
 </div>
+
+<!-- ============ MEET SIG (homepage guide agent) ============ -->
+<section class="sigx-section" id="meet-sig" aria-label="Meet Sig, the SIGNL guide">
+  <div class="wrap">
+    <div class="sigx-grid">
+      <div>
+        <span class="eyebrow">Your SIGNL guide</span>
+        <h2>Meet <span class="grad-text" data-sig-name>Sig</span>. Watch SIGNL work.</h2>
+        <p class="lede">Sig shows you SIGNL the way it actually works, on either side of the table: a business finding a local creator, or a creator claiming a founding spot. Every answer comes from the playbook.</p>
+        <div class="sigx-doors">
+          <div class="sigx-doorline">
+            <div class="k">For businesses</div>
+            <p>Discover ranked by local reach, the two-tap invite, and a visit tracked to the post.</p>
+          </div>
+          <div class="sigx-doorline">
+            <div class="k">For creators</div>
+            <p>The claim steps, the two lanes, and how Momentum gets you booked more.</p>
+          </div>
+        </div>
+        <p class="sigx-honest">Sig is a guided tour, not a person. It only ever says what the SIGNL playbook says.</p>
+      </div>
+      <div data-sig-panel>
+        <div class="sigx-fallback">
+          <p><b>Meet Sig, the SIGNL guide.</b> The live walkthrough needs JavaScript. Until then, start here:</p>
+          <p><a href="businesses.html">I run a business</a> · <a href="https://app.joinsignl.com/?src=home-v2">I am a creator</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ============ THE PROBLEM, SOLVED: BUSINESSES ============ -->
 <section class="sec" style="padding-top:72px;padding-bottom:72px">
@@ -702,5 +733,26 @@
   });
 })();
 </script>
+
+<!-- ============ SIG: floating entry + sheet ============ -->
+<button class="sigx-fab" type="button" data-sig-fab aria-haspopup="dialog">
+  <span class="sigx-ava" data-sig-initial aria-hidden="true">S</span>
+  <span>Ask <span data-sig-name>Sig</span></span>
+</button>
+<div class="sigx-sheet" data-sig-sheet hidden role="dialog" aria-modal="true" aria-label="Chat with the SIGNL guide">
+  <div class="sigx-backdrop"></div>
+  <div class="sigx-sheet-card">
+    <div class="sigx-sheet-head">
+      <span class="sigx-ava" data-sig-initial aria-hidden="true">S</span>
+      <div class="sigx-who">
+        <div class="sigx-name" data-sig-name>Sig</div>
+        <div class="sigx-role">SIGNL guide · Guided tour</div>
+      </div>
+      <button class="sigx-close" type="button" aria-label="Close">&times;</button>
+    </div>
+    <div class="sigx-sheet-slot" data-sig-sheet-slot></div>
+  </div>
+</div>
+<script src="assets/agent/sig-agent.js?v=1" defer></script>
 </body>
 </html>
