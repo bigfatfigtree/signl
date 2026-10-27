@@ -52,6 +52,7 @@ window.SIG_CONFIG = {
     costBoth: "For businesses: founding plans run $199 to $699 a month, with $100 off the first month and a 3-month minimum. For creators: free to join, and the only cost is 3% on a paid booking. Pick a door and I will walk you through your side in full.",
     localReach: "Local reach is the share of a creator's audience that actually lives in the market. A creator with 6,240 followers and 58% local reach puts roughly 3,600 neighbors in front of a business. A national account with a million followers might have 200 people in the same city. SIGNL ranks on the local number.",
     deliverable: "A comped visit is 1 post or reel, plus 1 story that shares the post. 48 hours is the standard the creator is held to, and one week is the hard deadline. A post inside the week counts as delivered.",
+    ugc: "Yes, in effect, and the local part is the point. Generic UGC is content from anyone, anywhere, often people who have never visited. On SIGNL, local creators your customers already follow post to their own audiences, right here in your city. Any post can be licensed for your own channels and ads: a paid booking includes one standard license, 90 days of repost and ad use, and a comped post can be licensed at the creator's listed fee, with the creator approving each use and keeping 97%. Until it is licensed, a comped post is native share only.",
     rights: "Rights follow the visit, never the plan. A comped visit is native share only: the business can reshare the post natively with credit, with no ad use. A paid booking includes one standard license: 90 days of repost and paid ad use, agreed inside the booking terms. To license a comped post, the business pays the creator's listed licensing fee, the creator approves each use, and the creator keeps 97%. Nothing is ever perpetual.",
     guarantee: "That is covered by the Visit Guarantee. If a week passes with no post, the visit does not count against the plan and it is replaced. The visit itself is made good, never a cash refund.",
     rollover: "Unused visits roll into the next month, then expire. One month of carry, maximum.",
@@ -294,6 +295,7 @@ window.SIG_CONFIG = {
     }
     if (has("never post", "no post", "not post", "doesn't post", "doesnt post", "won't post", "no-show", "no show", "ghost")) return "guarantee";
     if (has("roll", "unused", "expire", "carry over")) return "rollover";
+    if (has("ugc", "user-generated", "user generated")) return "ugc";
     if (has("license", "licence", "licensing", " ad ", "ads", "advertis", "rights", "repost", "reuse", "re-use")) return "rights";
     if (has("momentum")) return "momentum";
     if (has("local reach")) return "localReach";
@@ -334,6 +336,7 @@ window.SIG_CONFIG = {
     costBoth: { ctas: CTA_BOTH },
     localReach: { ctas: CTA_BOTH },
     deliverable: { ctas: CTA_BOTH },
+    ugc: { ctas: CTA_BIZ.concat([{ label: "See how it works", href: "businesses.html#ugc" }]) },
     rights: { ctas: CTA_BOTH },
     guarantee: { ctas: CTA_BIZ },
     rollover: { ctas: CTA_BIZ },
@@ -374,6 +377,11 @@ window.SIG_CONFIG = {
     if ((creatorSide && signupVerb) || creatorSelf ||
         anyIn(q, ["claim my profile", "claim my spot", "claim your spot"])) {
       return { kind: "creatorSignup" };
+    }
+    /* 1.5 · UGC: businesses ask in the buzzword; answer it precisely,
+       with the Apply door attached, never a dead end or an email line */
+    if (anyIn(q, ["ugc", "user generated", "user-generated"])) {
+      return { kind: "answer", key: "ugc" };
     }
     /* 2 · business signup: explicit join language, or a plain statement of
        who they are ("I own a restaurant in Nashville") */
