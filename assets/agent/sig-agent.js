@@ -56,7 +56,7 @@ window.SIG_CONFIG = {
     momentum: "Momentum is SIGNL's on-time score for creators. Post inside 48 hours and you earn +20 Momentum. It builds badges and priority in business invites, so the creators who deliver on time get booked more.",
     paidHow: "Creators set their own rate, from $50. The business pays the rate plus 3%, the money is held until the post is live, and the creator keeps 97%. A paid booking also includes one standard license: 90 days of repost and ad use.",
     isLive: "SIGNL is built and rolling out now. Founding creator rosters are forming across 37 markets, founding businesses are joining the founding list, and markets activate as their rosters fill, Nashville first. Founding enrollment is open today.",
-    contact: "You can reach the team any time at hello@joinsignl.com.",
+    contact: "Fastest route is right here: pick your side below and I will take you straight to the page that does the job. If you would rather write to a human, the team reads hello@joinsignl.com.",
     bizSummary: "Short version: browse Discover, where creators are ranked by local reach. Tap a creator, tap Invite, and the offer opens prefilled from their tier. They visit with a code, post within the standard, and the visit is tracked to the post. Take the business door and I will walk each step.",
     creSummary: "Short version: claim your spot, link your handle, finish your profile. From 500 followers you are bookable, ranked on local reach, with two ways to earn: comped experiences, or paid bookings at your own rate where you keep 97%. Take the creator door and I will walk each step."
   };
@@ -295,8 +295,10 @@ window.SIG_CONFIG = {
     if (has("local reach")) return "localReach";
     if (has("cities", "city", "market", "nashville", "where")) return "cities";
     if (has("tier", "follower", "how big", "audience size", "to join")) return "tiers";
-    if (has("story", "deliver", "what do i post", "what gets posted", "have to post")) return "deliverable";
+    if (has("story", "deliver", "what do i post", "what gets posted", "have to post", "comped", "comp visit", "free visit", "free meal")) return "deliverable";
     if (has("cost", "price", "pricing", "plan", "how much", "fee", "expensive")) {
+      if (has("business")) return "costBusiness";
+      if (has("creator")) return "costCreator";
       if (state.door === "creator") return "costCreator";
       if (state.door === "business") return "costBusiness";
       return "costBoth";
@@ -304,9 +306,94 @@ window.SIG_CONFIG = {
     if (has("rate", "paid", " pay ", "97", "earn", "money")) return "paidHow";
     if (has("free")) return "costCreator";
     if (has("live", "launch", "open now", "is it real", "when")) return "isLive";
-    if (has("contact", "human", "email", "help", "support")) return "contact";
-    if (has("invite", "find creator", "discover", "browse", "book a creator")) return "bizSummary";
-    if (has("claim", "sign up", "signup", "join", "creator")) return "creSummary";
+    /* signup, invite and contact intents are handled by routeText BEFORE
+       this resolver runs: a doable job must land on its flow and its link,
+       never on a summary line or an email address. */
+    return null;
+  }
+
+  /* ---------------- intent router (typed questions) ---------------------- */
+  /* Checked before the keyword resolver. Every route ends in a guided step
+     or an answer WITH its action links; the email address exists only as a
+     secondary line inside the contact answer. */
+  var CTA_BIZ = [{ label: "Apply for founding", href: CFG.links.businessApply, primary: true }];
+  var CTA_CRE = [{ label: "Claim your spot", href: CFG.links.creatorClaim, primary: true }];
+  var CTA_BOTH = [
+    { label: "Apply for founding", href: CFG.links.businessApply, primary: true },
+    { label: "Claim your spot", href: CFG.links.creatorClaim }
+  ];
+  /* action links (and cards) attached to plain answers, whichever path
+     reaches them: typed question, chip, or flow detour */
+  var ANSWER_ACTIONS = {
+    costBusiness: { card: "plans", ctas: CTA_BIZ.concat([{ label: "See full pricing", href: CFG.links.pricing }]) },
+    costCreator: { ctas: CTA_CRE },
+    costBoth: { ctas: CTA_BOTH },
+    localReach: { ctas: CTA_BOTH },
+    deliverable: { ctas: CTA_BOTH },
+    rights: { ctas: CTA_BOTH },
+    guarantee: { ctas: CTA_BIZ },
+    rollover: { ctas: CTA_BIZ },
+    cities: { ctas: [{ label: "See the cities", href: CFG.links.cities, primary: true }].concat(CTA_CRE) },
+    tiers: { ctas: CTA_CRE },
+    momentum: { card: "momentum", ctas: CTA_CRE },
+    paidHow: { ctas: CTA_CRE },
+    isLive: { ctas: CTA_BOTH },
+    bizSummary: { ctas: CTA_BIZ },
+    creSummary: { ctas: CTA_CRE },
+    contact: { chips: "fallback" }
+  };
+  var FALLBACK_CHIPS = [
+    { label: "I'm a business", act: "door", door: "business", primary: true },
+    { label: "I'm a creator", act: "door", door: "creator", primary: true },
+    { label: "Sign up as a creator", act: "route", route: { kind: "creatorSignup" } },
+    { label: "What does it cost?", act: "answer", key: "costBoth" },
+    { label: "How do creators get paid?", act: "answer", key: "paidHow" }
+  ];
+
+  function anyIn(q, list) {
+    for (var i = 0; i < list.length; i++) if (q.indexOf(list[i]) > -1) return true;
+    return false;
+  }
+  function routeText(raw) {
+    var q = " " + raw.toLowerCase().replace(/['\u2019]/g, "") + " ";
+    var signupVerb = anyIn(q, ["sign up", "signup", "sign-up", "join", "register", "claim",
+      "get started", "become a", "sign me up", "enroll", "how do i start", "how to start"]);
+    var creatorSide = anyIn(q, ["creator", "influencer"]);
+    var bizWord = anyIn(q, ["business", "restaurant", "cafe", "coffee shop", "salon", "barber",
+      "gym", "boutique", "store", "shop", "brewery", "food truck", "company"]);
+    var bizIdentity = anyIn(q, ["i own", "i run a ", "i run my", "im a business", "i am a business",
+      "business owner", "restaurant owner", "for my business"]);
+    var creatorSelf = anyIn(q, ["im a creator", "i am a creator"]);
+
+    /* 1 · creator signup: Jeff's failing query ("help me sign up as a
+       creator") and every variant land here, never on the contact line */
+    if ((creatorSide && signupVerb) || creatorSelf ||
+        anyIn(q, ["claim my profile", "claim my spot", "claim your spot"])) {
+      return { kind: "creatorSignup" };
+    }
+    /* 2 · business signup: explicit join language, or a plain statement of
+       who they are ("I own a restaurant in Nashville") */
+    if ((bizWord && signupVerb) || bizIdentity) return { kind: "businessSignup" };
+    /* 3 · signup with no side named: ask, with both doors as one tap */
+    if (signupVerb || anyIn(q, ["sign me up", "get started", "how do i join", "how to join"])) {
+      return { kind: "whichSide" };
+    }
+    /* 4 · the two-tap invite: land on the invite step itself */
+    if (q.indexOf("invite") > -1 &&
+        anyIn(q, ["how", "creator", "two tap", "two-tap", "work", "send", "book"])) {
+      return { kind: "invite" };
+    }
+    /* 5 · genuine contact asks only; the answer leads with the doors and
+       keeps the email as a secondary line */
+    if (anyIn(q, ["contact", "email", "e-mail", "human", "real person",
+        "talk to someone", "phone number", "reach the team", "support"])) {
+      return { kind: "answer", key: "contact" };
+    }
+    /* 6 · city availability: the cities answer carries its own links */
+    if (anyIn(q, ["my city", "my area", "near me", "open in", "nashville open",
+        "which cities", "what cities", "cities are", "markets"])) {
+      return { kind: "answer", key: "cities" };
+    }
     return null;
   }
 
@@ -353,7 +440,7 @@ window.SIG_CONFIG = {
       chain = chain.then(function () { return sayAsync(text); })
         .then(function (b) { lastBubble = b; });
     });
-    chain.then(function () {
+    return chain.then(function () {
       if (stepDef.card && CARDS[stepDef.card] && lastBubble) {
         var wrap = el("div", "sigx-cardwrap");
         wrap.innerHTML = CARDS[stepDef.card]();
@@ -403,7 +490,53 @@ window.SIG_CONFIG = {
   }
   function showAnswer(key) {
     if (!ANSWERS[key]) return;
-    sayAsync(ANSWERS[key]).then(afterAnswer);
+    var extras = ANSWER_ACTIONS[key] || {};
+    sayAsync(ANSWERS[key]).then(function (bubble) {
+      if (extras.card && CARDS[extras.card] && bubble) {
+        var wrap = el("div", "sigx-cardwrap");
+        wrap.innerHTML = CARDS[extras.card]();
+        bubble.appendChild(wrap); scrollLog();
+      }
+      if (extras.ctas) renderCtas(extras.ctas);
+      if (extras.chips === "fallback") renderChips(FALLBACK_CHIPS);
+      else if (extras.chips) renderChips(extras.chips);
+      else afterAnswer();
+    });
+  }
+  function runRoute(route) {
+    if (!route) return;
+    if (route.kind === "creatorSignup") {
+      state.door = "creator"; state.step = 0;
+      sayAsync("Let's get you set up. Claiming is free and takes minutes: link your handle, get your tier, finish your profile. Here is the whole path, and the button takes you straight to step one.")
+        .then(function () { return sayStep(FLOWS.creator[0]); })
+        .then(function () { renderCtas(CTA_CRE); });
+    } else if (route.kind === "businessSignup") {
+      state.door = "business";
+      sayAsync("Founding enrollment for businesses is open, and applying takes minutes. Founding plans run $199 to $699 a month with $100 off the first month, and you keep the founding rate while the plan stays active. The button takes you straight to the application.")
+        .then(function () {
+          renderCtas(CTA_BIZ.concat([{ label: "See full pricing", href: CFG.links.pricing }]));
+          renderChips([
+            { label: "Walk me through it", act: "door", door: "business" },
+            { label: "See the plans", act: "answer", key: "costBusiness" },
+            { label: "I'm a creator", act: "door", door: "creator" },
+            { label: "Start over", act: "restart" }
+          ]);
+        });
+    } else if (route.kind === "whichSide") {
+      sayAsync("Signing up is quick on both sides, and the doors are different. Which one are you?")
+        .then(function () {
+          renderChips([
+            { label: "I'm a creator", act: "route", route: { kind: "creatorSignup" }, primary: true },
+            { label: "I'm a business", act: "route", route: { kind: "businessSignup" }, primary: true },
+            { label: "Start over", act: "restart" }
+          ]);
+        });
+    } else if (route.kind === "invite") {
+      sayAsync("Here is the invite itself, the exact two taps:")
+        .then(function () { runStep("business", 2); });
+    } else if (route.kind === "answer") {
+      showAnswer(route.key);
+    }
   }
   function runStep(door, idx) {
     state.door = door; state.step = idx;
@@ -425,6 +558,7 @@ window.SIG_CONFIG = {
   function onChip(c) {
     echoUser(c.label);
     if (c.act === "door") { startDoor(c.door); }
+    else if (c.act === "route") { runRoute(c.route); }
     else if (c.act === "step") { runStep(state.door || "business", c.step); }
     else if (c.act === "answer") { showAnswer(c.key); }
     else if (c.act === "restart") { setTimeout(restart, reduceMotion ? 30 : 250); }
@@ -471,11 +605,14 @@ window.SIG_CONFIG = {
       if (!q) return;
       input.value = "";
       echoUser(q);
+      var route = routeText(q);
+      if (route) { runRoute(route); return; }
       var key = resolveText(q);
       if (key) { showAnswer(key); }
       else {
-        sayAsync("That one sits outside my playbook, and I would rather show you than guess. Here is what I can walk you through:")
-          .then(afterAnswer);
+        /* never a dead end: the two doors plus the three commonest jobs */
+        sayAsync("I want to point you at the right thing, not a dead end. Pick a side, or tap one of the common jobs:")
+          .then(function () { renderChips(FALLBACK_CHIPS); });
       }
     });
     panel.appendChild(form);

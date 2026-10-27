@@ -22,6 +22,33 @@ resolves by keyword against the same locked answer set, with a graceful
 "here's what I can show you" fallback to the two doors. An open LLM mouth on
 the public homepage could misspeak on price or rights; this cannot.
 
+## Intent router (v2, 2026-10-27)
+
+Jeff caught v1 answering "Help me sign up as a creator" with the bare
+contact email: the keyword `help` hit the contact branch before signup was
+ever checked. v2 puts an intent router (`routeText`) in FRONT of the keyword
+resolver, ordered: (1) creator signup (side word + join verb, self-ID, or a
+claim phrase) → creator flow step 0 (the claiming-steps card) with the
+"Claim your spot" CTA attached; (2) business signup (business word + join
+verb, or owner identity like "I own a restaurant") → founding pitch line +
+"Apply for founding" CTA + walkthrough chips; (3) bare signup → a
+which-side question whose chips are the two routes; (4) invite questions →
+business flow step 2, the invite step itself; (5) genuine contact asks only
+→ the contact answer, which now LEADS with the two doors and keeps
+hello@joinsignl.com as a secondary line; (6) city availability → the cities
+answer with its links.
+
+Every plain answer also carries action links via `ANSWER_ACTIONS` (plans
+card + Apply on business cost, Claim on creator answers, both CTAs on
+shared topics, cities links on markets), whichever path reaches it: typed
+question, chip, or flow detour. The cost resolver now reads an explicit
+side in the question ("cost for a business") before falling back to the
+current door. Unmatched input gets the two doors plus the three commonest
+jobs as chips (Sign up as a creator / What does it cost? / How do creators
+get paid?). The email address is never a standalone answer anymore.
+QA: 19-question typed battery at 390px, 19/19 (DOM href assertions +
+screenshots), run 2026-10-27.
+
 ## Flow maps
 
 Business door (5 steps, each with an embedded app-pattern card):
