@@ -37,6 +37,8 @@
 .chapter-pin video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .chapter-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.45),rgba(10,10,10,.05) 40%,rgba(10,10,10,.82) 88%)}
 .chapter-in{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:8svh}
+.hero-film.business-film{aspect-ratio:16/9;margin-top:0}
+.film-note{margin-top:12px;font-size:.86rem;color:#5F7265}
 .ch-kick{display:inline-flex;align-items:center;gap:10px;font-family:'Space Grotesk',monospace;font-weight:700;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#fff;background:rgba(12,12,12,.45);border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:7px 14px;width:max-content;max-width:100%}
 .ch-kick i{width:8px;height:8px;border-radius:50%;background:var(--grad);flex-shrink:0}
 .ch-title{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(2.35rem,7vw,4.4rem);letter-spacing:-.022em;line-height:1.03;color:#fff;margin:20px 0 16px;max-width:15em}
@@ -173,6 +175,18 @@
       <span><i></i>Tracked posts</span>
       <span><i></i>48-hour standard</span>
     </div>
+  </div>
+</section>
+
+<section class="block" style="padding-top:38px;padding-bottom:0">
+  <div class="wrap">
+    <div class="hero-film business-film reveal">
+      <video class="js-hero-video" autoplay muted loop playsinline controls preload="metadata" poster="assets/video/poster-business-story.jpg" aria-label="The SIGNL business story film: why national influencer marketing was never built for local businesses, and how local creators fill the room">
+        <source src="assets/video/signl-business-story-landscape.mp4" type="video/mp4">
+      </video>
+      <span class="rail-chip">The business film &middot; 0:56</span>
+    </div>
+    <p class="film-note">The SIGNL story in 56 seconds. Sound on for the narration; every app screen in the film is the real thing.</p>
   </div>
 </section>
 
