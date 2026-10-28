@@ -79,11 +79,34 @@ function trackEvent(name, params) { if (window.gtag) gtag('event', name, params 
       if (error) error.style.display = 'none';
 
       var body = new URLSearchParams();
-      new FormData(form).forEach(function (v, n) { body.append(n, v); });
+      var payload = {};
+      new FormData(form).forEach(function (v, n) { body.append(n, v); payload[n] = v; });
       body.append('form-name', form.getAttribute('name'));
-      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() })
-        .then(function (r) {
-          if (!r.ok) { showError(); return; }
+
+      function postNetlify() {
+        return fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() })
+          .then(function (r) { if (!r.ok) throw new Error('netlify ' + r.status); });
+      }
+      // Safety net (2026-10-28): a real founding application was lost
+      // when the Netlify POST failed in the visitor's browser and the
+      // form had no second path. Business applications now fall back
+      // to the app API, which stores the application itself and emails
+      // the team; success on either path is a real, recorded success.
+      function postFallback() {
+        return fetch('https://app.joinsignl.com/api/founding-application', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        }).then(function (r) { if (!r.ok) throw new Error('fallback ' + r.status); });
+      }
+      var isBusinessApplication = form.getAttribute('data-signl-form') === 'business_applications';
+      postNetlify()
+        .catch(function () { return postNetlify(); })
+        .catch(function () {
+          if (!isBusinessApplication) throw new Error('primary path failed');
+          return postFallback();
+        })
+        .then(function () {
           trackEvent('form_submit', { form_name: form.getAttribute('name') });
           showSuccess();
         })
