@@ -21,6 +21,22 @@ function trackEvent(name, params) { if (window.gtag) gtag('event', name, params 
 // Netlify confirms the submission; a failure keeps the form in place and
 // shows a clear retry message. Nothing is mirrored to localStorage.
 (function () {
+  // Founding-application language carry (Spanish layers S3,
+  // 2026-10-28): negocios.html links to the application form
+  // with ?lang=es. The signal is kept in sessionStorage (so it
+  // survives the jump to the #apply anchor and any in-session
+  // navigation) and written into the form's hidden lang field,
+  // so it rides both the Netlify Forms payload and the API
+  // fallback payload; the application is then recorded as
+  // Spanish and the team answers in Spanish.
+  try {
+    var langParam = new URLSearchParams(window.location.search).get('lang');
+    if (langParam === 'es') sessionStorage.setItem('signl_form_lang', 'es');
+    if (sessionStorage.getItem('signl_form_lang') === 'es') {
+      document.querySelectorAll('input[name="lang"]').forEach(function (input) { input.value = 'es'; });
+    }
+  } catch (e) { /* storage or URL parsing unavailable: the form simply submits without a language */ }
+
   // Mobile nav toggle
   var toggle = document.querySelector('.nav-toggle');
   var mobileNav = document.querySelector('.mobile-nav');
