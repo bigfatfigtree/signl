@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://joinsignl.com/</loc><lastmod>2026-10-26</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://joinsignl.com/</loc><lastmod>2026-10-28</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://joinsignl.com/"/><xhtml:link rel="alternate" hreflang="es" href="https://joinsignl.com/es.html"/><xhtml:link rel="alternate" hreflang="x-default" href="https://joinsignl.com/"/></url>
+  <url><loc>https://joinsignl.com/es.html</loc><lastmod>2026-10-28</lastmod><xhtml:link rel="alternate" hreflang="es" href="https://joinsignl.com/es.html"/><xhtml:link rel="alternate" hreflang="en" href="https://joinsignl.com/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://joinsignl.com/"/></url>
   <url><loc>https://joinsignl.com/creators.html</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://joinsignl.com/businesses.html</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://joinsignl.com/businesses.html</loc><lastmod>2026-10-28</lastmod><xhtml:link rel="alternate" hreflang="en" href="https://joinsignl.com/businesses.html"/><xhtml:link rel="alternate" hreflang="es" href="https://joinsignl.com/negocios.html"/><xhtml:link rel="alternate" hreflang="x-default" href="https://joinsignl.com/businesses.html"/></url>
+  <url><loc>https://joinsignl.com/negocios.html</loc><lastmod>2026-10-28</lastmod><xhtml:link rel="alternate" hreflang="es" href="https://joinsignl.com/negocios.html"/><xhtml:link rel="alternate" hreflang="en" href="https://joinsignl.com/businesses.html"/><xhtml:link rel="alternate" hreflang="x-default" href="https://joinsignl.com/businesses.html"/></url>
   <url><loc>https://joinsignl.com/pricing.html</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://joinsignl.com/why-local.html</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://joinsignl.com/alternatives.html</loc><lastmod>2026-10-26</lastmod></url>

@@ -6,6 +6,10 @@
 
 Local influencer marketing is influencer marketing run inside one city: local businesses work with creators who live in their market and whose audiences live there too, so a post reaches people who can actually walk in. SIGNL is the local influencer marketing platform built for it, with published pricing and rosters forming in 37 founding markets.
 
+## ¿Qué es el marketing de influencers local?
+
+El marketing de influencers local es el marketing de influencers en una ciudad: los negocios locales trabajan con creadores que viven en su mercado y cuya audiencia vive ahí, así que cada publicación llega a personas que pueden entrar por la puerta. SIGNL es la plataforma creada para eso, con precios publicados y listas fundadoras en formación en 37 mercados.
+
 ## The problem SIGNL solves
 
 For businesses: local businesses spend on ads that reach everyone except the people who live nearby, and influencer marketing was built for national brands: too expensive, too scattered, impossible to prove. SIGNL puts creators who actually live in your market inside your business, posting to the neighbors who follow them; every visit is tracked, and a visit with no post does not count and is replaced. The impact: your business in the feeds of people who can actually walk in this week, real local content you can reuse, and numbers that show what came back.
@@ -294,6 +298,8 @@ New cities keep joining the list: anyone can sign up from any city at https://ap
 - [Creator Dads](https://joinsignl.com/for-dads.html): comped visits for creator dads at sports bars, BBQ joints, breweries, barbershops and family spots, written for everyday posters, not full-time influencers.
 - [Food Creators](https://joinsignl.com/for-foodies.html): comped meals for food creators at local restaurants, cafes, bakeries and bars, honest posts within 48 hours, Local Impact Score and first in line for paid campaigns at the Headliners band.
 - [For Businesses](https://joinsignl.com/businesses.html): pricing in full, add-ons, honest FAQ and the founding application.
+- [SIGNL en español](https://joinsignl.com/es.html): la plataforma en español: qué es SIGNL, cómo funciona, las visitas cortesía, las reservas pagadas donde el creador se queda con el 97%, y cómo unirse como creador o negocio fundador.
+- [SIGNL para negocios en español](https://joinsignl.com/negocios.html): marketing de influencers local para negocios hispanohablantes: planes fundadores de $199, $349 y $699 al mes con $100 de descuento el primer mes, la Garantía de Visita y preguntas frecuentes en español.
 - [Pricing](https://joinsignl.com/pricing.html): pricing for both sides on one page: free for creators always, paid bookings keep 97%; business plans $199/$349/$699 a month, no per-location charge, 3-month minimum, the worked money-flow example and the pricing FAQ.
 - [Influencer Marketing for Restaurants, Cafes and Food Trucks](https://joinsignl.com/for-restaurants.html): how SIGNL works for restaurants and cafes, the dining business types covered, pricing and FAQ.
 - [Influencer Marketing for Bars, Breweries and Nightlife](https://joinsignl.com/for-nightlife.html): how SIGNL works for cocktail bars, breweries, wineries, live music venues and clubs, pricing and FAQ.
