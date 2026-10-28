@@ -15,15 +15,20 @@ the script stamps the config name into every `[data-sig-name]` /
 panel). To rename: change `name` in SIG_CONFIG. The literal "Sig" text in
 index.html is only the no-JS / pre-load fallback and is overwritten on init.
 
-## The face (2026-10-27)
+## The face (V4, 2026-10-28; supersedes the 2026-10-27 axolotl note)
 
-Sig's face is the axolotl (Jeff's pick). The image is referenced in ONE
-place: `avatar` in `window.SIG_CONFIG` (`assets/agent/sig-avatar.webp`,
-256x256, tight crop of the source art so the face + gill fan read at
-44/32/26px). Every avatar slot (panel header, message rows, FAB, sheet
-head) renders from that config value; the static `sigx-ava` spans in
-index.html carry the same `<img>` so the face shows pre-JS too. To change
-the face: replace that one file.
+Sig's face is the V4 rendered character, the same one the app ships.
+The still image is referenced in ONE place: `avatar` in
+`window.SIG_CONFIG` (`assets/sig-v4/head-idle.webp`, the tight
+head crop, so he reads at 44/32/26px). Every avatar slot (panel
+header, message rows, FAB, sheet head) renders from that config
+value; the static `sigx-ava` spans in index.html carry the same
+`<img>` so the face shows pre-JS too. The Meet Sig section also
+carries his living face: the idle loop over the hero still
+(`assets/sig-v4/hero.webp` poster; `idle.webm` / `idle.mp4`
+attached lazily by the inline loader in index.html; reduced motion
+keeps the still). The old `assets/agent/sig-avatar.webp` (axolotl)
+is retired and no longer referenced by the homepage.
 
 ## Design choice (locked for v1)
 

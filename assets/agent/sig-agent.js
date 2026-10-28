@@ -24,7 +24,7 @@ window.SIG_CONFIG = {
     cities: "cities.html"
   },
   samplePhoto: "assets/photos/sample-portrait-jordan.jpg",
-  avatar: "assets/agent/sig-avatar.webp"
+  avatar: "assets/sig-v4/head-idle.webp"
 };
 
 (function () {
