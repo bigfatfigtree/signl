@@ -1431,3 +1431,4 @@ section.block.tight{padding:60px 0}
 @keyframes mn-panel{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.mobile-nav.open .mn-profile,.mobile-nav.open nav{animation:none}}
 .mobile-nav .mn-apply{width:auto}
+body:has(.mobile-nav.open) .sigx-fab{opacity:0;pointer-events:none;transition:opacity .2s ease}
