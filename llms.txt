@@ -93,7 +93,7 @@ For health and aesthetic services, creator posts are personal experiences only, 
 3. The creator posts about the visit: 1 post or reel plus 1 story that shares the post, posted to a 48-hour standard (48 hours is the standard creators are held to and rewarded for; one week is the outside limit), with a clear disclosure that the visit was comped (FTC-compliant, e.g. #gifted). Posts must be honest; businesses cannot require positive posts or reviews.
 4. The platform tracks every visit and post. If a week passes with no post, the business receives a replacement visit and the creator's roster standing is affected; repeat no-shows are removed.
 
-Local reach: SIGNL ranks creators by local reach — the share of a creator's audience that actually lives in the market — not by follower count. We don't rank you by followers. We rank you by how much of your audience actually lives here. Local reach is the number businesses look at first on a creator's profile, and it is why a smaller creator whose audience is concentrated in the city can be worth more to a local business than a much larger creator whose followers are spread across the country.
+Local reach: SIGNL ranks creators by local reach, the share of a creator's audience that actually lives in the market, not by follower count. We don't rank you by followers. We rank you by how much of your audience actually lives here. Local reach is the number businesses look at first on a creator's profile, and it is why a smaller creator whose audience is concentrated in the city can be worth more to a local business than a much larger creator whose followers are spread across the country.
 
 Matching (Fit): when offers open in a city, SIGNL scores every creator on the roster against each business and prints the reasons on the creator's card in plain words ("Why they fit"). The score weighs what the creator posts and whether it matches the business's category, geography (the business's neighborhood and city count most, then its wider published market), the creator's self-reported local audience share, any profession match, and the delivery record the creator has built (business ratings count only once a creator has 3 or more). Follower count, tier and Momentum are not fit signals, so a smaller creator who is exactly right can outrank a bigger one who is not. A business can sort the roster by Best fit; the default order stays founding order, and fit never hides a creator. On the creator's side, open offers that strongly match what they post and where they are based carry a Strong fit note.
 
@@ -138,6 +138,18 @@ Anyone can apply at any follower count, including under 500. Applications requir
 - Every tracked post is saved to the business's content library with clear reuse rights.
 - Replacement guarantee: if a week passes with no post after a completed visit, the business receives a replacement visit that does not count against its plan.
 - Honesty is a rule, not a slogan: posts must carry FTC disclosure and no business may require a positive post or review.
+
+## The pains SIGNL answers, in their words
+
+- Creators: "Paid when the post goes live, not Net 90." On paid bookings the business pays up front and SIGNL holds the money until the post is live, then releases it. No invoices, no chasing. If the visit or post never lands, the business is refunded in full.
+- Creators: one defined deliverable, no endless revisions. Every visit is 1 post or reel plus 1 story that shares it, agreed in a written brief before the visit, in the creator's own voice.
+- Creators: your content is licensed for 90 days, never taken in perpetuity. Paid bookings include one standard license (90 days of repost and ad use). Comped posts are native share only; licensing one is a separate request the creator approves, at a fee the creator lists, and the creator keeps 97 percent of it.
+- Creators: you set your own rate (from $50) and keep 97 percent of it. Joining and comped visits are always free.
+- Businesses: "Where is their follower base?" Every creator is ranked by local audience share, the share of their followers who live in the business's market, shown on their card before the business chooses. Reach in other cities does not count.
+- Businesses: you can tell it worked, at the level that is provable. Comps redeem on a single-use in-app code at the register, every visit and live post is tracked, and results report at day 7, 14 and 30. SIGNL does not promise revenue it cannot measure.
+- Businesses: a creator who does not post does not burn your visit. The Visit Guarantee replaces any visit with no post inside a week, and creators post to a 48-hour standard.
+- Businesses: published pricing, $199 / $349 / $699 a month at founding rates, no sales call and no quote-only pricing.
+- Businesses: you choose, creators do not pitch you. No freebie negotiations land in your inbox.
 
 ## Local on purpose: SIGNL vs national influencer platforms
 
@@ -302,6 +314,7 @@ New cities keep joining the list: anyone can sign up from any city at https://ap
 - [College Creators](https://joinsignl.com/for-students.html): comped meals, coffee and experiences near campus for college creators, posts that fit between classes, and a campus badge on the profile when the creator names their school at sign-up.
 - [Creator Dads](https://joinsignl.com/for-dads.html): comped visits for creator dads at sports bars, BBQ joints, breweries, barbershops and family spots, written for everyday posters, not full-time influencers.
 - [Food Creators](https://joinsignl.com/for-foodies.html): comped meals for food creators at local restaurants, cafes, bakeries and bars, honest posts within 48 hours, Local Impact Score and first in line for paid campaigns at the Headliners band.
+- [Musicians](https://joinsignl.com/musicians.html): local musicians join SIGNL as creators in the Music category and get booked by venues and brands: paid bookings at their own rate (they keep 97 percent, payment held until the post is live) or comped experiences, with the Standard Visit post about the night. Businesses book local musicians for live music nights, openings and events through the same booking system and founding plans.
 - [For Businesses](https://joinsignl.com/businesses.html): pricing in full, add-ons, honest FAQ and the founding application.
 - [SIGNL en español](https://joinsignl.com/es.html): la plataforma en español: qué es SIGNL, cómo funciona, las visitas cortesía, las reservas pagadas donde el creador se queda con el 97%, y cómo unirse como creador o negocio fundador.
 - [SIGNL para negocios en español](https://joinsignl.com/negocios.html): marketing de influencers local para negocios hispanohablantes: planes fundadores de $199, $349 y $699 al mes con $100 de descuento el primer mes, la Garantía de Visita y preguntas frecuentes en español.
