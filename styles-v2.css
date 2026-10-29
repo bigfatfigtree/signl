@@ -1365,68 +1365,69 @@ section.block.tight{padding:60px 0}
 .spine-echo{font-size:.98rem;line-height:1.6;color:var(--ink2);max-width:660px;margin:4px 0 12px}
 
 
-/* ============ 2026-10-28 mobile nav, mint profile card (Jeff, v4) ============
-   Modeled on Jeff's reference: a soft rounded card in SIGNL mint with
-   black text, floating over a lightly dimmed page. Sig sits at the top
-   like a profile (tap him to open Ask Sig, app.js); below him, clean
-   icon rows. Slides in from the right. Desktop untouched: the >=920px
+/* ============ 2026-10-28 mobile nav, white profile panel (Jeff, v5) ============
+   Built exactly on Jeff's reference screenshot: a white rounded panel
+   tucked into the top-right corner, about three-fifths of the screen
+   wide and nearly full length. Sig at the top like a profile photo,
+   name under him, then plain line-icon rows in black, with the sign-in
+   row pinned at the bottom the way the reference pins Log out.
+   Tap Sig to open Ask Sig (app.js). Desktop untouched: the >=920px
    rules above still hide the panel and the toggle. */
 .mobile-nav{
   position:fixed;top:76px;right:0;bottom:0;left:0;
   width:auto;border:none;border-radius:0;box-shadow:none;
-  background:rgba(7,9,8,.35);
+  background:rgba(7,9,8,.30);
   -webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px);
-  overflow-y:auto;
+  overflow:hidden;
 }
 @media(max-width:560px){.mobile-nav{top:68px}}
+.mobile-nav.open{display:flex;flex-direction:column;align-items:flex-end}
 .mn-profile,.mobile-nav nav{
-  width:min(322px,88vw);margin-left:auto;margin-right:10px;
-  background:#A9E8C9;
-  box-shadow:0 24px 48px -18px rgba(0,0,0,.45);
+  width:min(242px,62vw);margin-right:8px;
+  background:#fff;
+  box-shadow:0 24px 60px -20px rgba(0,0,0,.35);
 }
 .mn-profile{
-  margin-top:10px;border:none;border-radius:28px 28px 0 0;
-  padding:18px 18px 10px;cursor:pointer;text-align:left;font:inherit;
-  display:flex;align-items:center;gap:12px;width:min(322px,88vw);
+  margin-top:8px;border:none;border-radius:26px 26px 0 0;
+  padding:22px 22px 4px;cursor:pointer;text-align:left;font:inherit;
+  display:flex;flex-direction:column;align-items:flex-start;gap:0;
 }
 .mn-profile img{
   width:54px;height:54px;flex:none;border-radius:50%;object-fit:cover;
-  background:#0B0D0C;border:2px solid rgba(255,255,255,.75);
+  background:#0B0D0C;border:none;margin-bottom:10px;
 }
-.mn-profile-txt{display:flex;flex-direction:column;line-height:1.18}
-.mn-profile-txt b{font-size:1.12rem;font-weight:800;color:#0B0D0C}
-.mn-profile-txt i{font-style:normal;font-size:.83rem;font-weight:600;color:rgba(11,13,12,.62)}
-.mn-profile-go{
-  margin-left:auto;width:34px;height:34px;flex:none;border-radius:50%;
-  background:rgba(255,255,255,.65);color:#0B0D0C;font-size:1rem;
-  display:flex;align-items:center;justify-content:center;
-}
+.mn-profile-txt{display:flex;flex-direction:column;line-height:1.25}
+.mn-profile-txt b{font-size:1.06rem;font-weight:700;color:#0B0D0C}
+.mn-profile-txt i{font-style:normal;font-size:.78rem;font-weight:500;color:rgba(11,13,12,.45)}
+.mn-profile-go{display:none}
 .mobile-nav nav{
-  max-width:none;border-radius:0 0 28px 28px;
-  padding:6px 12px 16px;
-  display:flex;flex-direction:column;gap:2px;
+  flex:1;max-width:none;border-radius:0 0 26px 26px;
+  margin-bottom:10px;padding:12px 22px 20px;
+  display:flex;flex-direction:column;gap:0;
 }
 .mobile-nav a.mn-link{
-  display:flex;align-items:center;justify-content:flex-start;gap:12px;
-  min-height:52px;padding:11px 12px;
-  background:transparent;border:none;border-radius:16px;box-shadow:none;
-  color:#0B0D0C;font-size:1rem;font-weight:700;text-align:left;
+  display:flex;align-items:center;justify-content:flex-start;gap:13px;
+  min-height:44px;padding:10px 0;
+  background:transparent;border:none;border-radius:0;box-shadow:none;
+  color:#0B0D0C;font-size:.95rem;font-weight:600;text-align:left;
 }
 .mobile-nav a.mn-link span{display:none}
 .mobile-nav a.mn-link::before{
-  content:"";flex:none;width:38px;height:38px;border-radius:12px;
-  background-color:rgba(255,255,255,.55);
+  content:"";flex:none;width:24px;height:24px;border-radius:0;
+  background-color:transparent;
   background-repeat:no-repeat;background-position:center;background-size:21px;
 }
-.mobile-nav a.mn-link:active{background:rgba(255,255,255,.5);color:#0B0D0C}
-.mobile-nav a.mn-link[href$="creators.html"]::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B0D0C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='8' r='3.6'/%3E%3Cpath d='M5 19.2c1.3-3.1 3.9-4.6 7-4.6s5.7 1.5 7 4.6'/%3E%3C/svg%3E")}
-.mobile-nav a.mn-link[href$="businesses.html"]::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B0D0C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4.5 9.5 6 4h12l1.5 5.5'/%3E%3Cpath d='M4.5 9.5h15'/%3E%3Cpath d='M5.5 9.5V19h13V9.5'/%3E%3Cpath d='M9.5 19v-4.5h5V19'/%3E%3C/svg%3E")}
-.mobile-nav a.mn-link[href$="why-local.html"]::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B0D0C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 21s-6.2-5.4-6.2-10.2a6.2 6.2 0 1 1 12.4 0C18.2 15.6 12 21 12 21z'/%3E%3Ccircle cx='12' cy='10.6' r='2.3'/%3E%3C/svg%3E")}
-.mobile-nav a.mn-link[href$="cities.html"]::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B0D0C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 4 3.5 6v14L9 18l6 2 5.5-2V4L15 6 9 4z'/%3E%3Cpath d='M9 4v14'/%3E%3Cpath d='M15 6v14'/%3E%3C/svg%3E")}
-.mobile-nav a.mn-link[href$="pricing.html"]::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B0D0C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.5 12.5v-9h9L21 12l-8.5 8.5z'/%3E%3Ccircle cx='8' cy='8' r='1.5'/%3E%3C/svg%3E")}
-.mobile-nav a.mn-link[href$="creator-faq.html"]::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B0D0C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='8.8'/%3E%3Cpath d='M9.6 9.4a2.5 2.5 0 1 1 3.3 2.4c-.8.3-.9 1-.9 1.7'/%3E%3Ccircle cx='12' cy='17' r='.5' fill='%230B0D0C'/%3E%3C/svg%3E")}
-.mobile-nav a.mn-link[href$="learn/"]::before,.mobile-nav a.mn-link[href$="learn/index.html"]::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B0D0C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 6.2C10 4.8 7.4 4.2 4.5 4.2v13.6c2.9 0 5.5.6 7.5 2 2-1.4 4.6-2 7.5-2V4.2c-2.9 0-5.5.6-7.5 2z'/%3E%3Cpath d='M12 6.2v13.6'/%3E%3C/svg%3E")}
-.mobile-nav.open .mn-profile,.mobile-nav.open nav{animation:mn-card .3s ease both}
-@keyframes mn-card{from{opacity:0;transform:translateX(48px)}to{opacity:1;transform:none}}
+.mobile-nav a.mn-link:active{background:transparent;color:#0B0D0C;opacity:.55}
+.mobile-nav a.mn-link[href$="creators.html"]::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B0D0C' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='8' r='3.6'/%3E%3Cpath d='M5 19.2c1.3-3.1 3.9-4.6 7-4.6s5.7 1.5 7 4.6'/%3E%3C/svg%3E")}
+.mobile-nav a.mn-link[href$="businesses.html"]::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B0D0C' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4.5 9.5 6 4h12l1.5 5.5'/%3E%3Cpath d='M4.5 9.5h15'/%3E%3Cpath d='M5.5 9.5V19h13V9.5'/%3E%3Cpath d='M9.5 19v-4.5h5V19'/%3E%3C/svg%3E")}
+.mobile-nav a.mn-link[href$="why-local.html"]::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B0D0C' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 21s-6.2-5.4-6.2-10.2a6.2 6.2 0 1 1 12.4 0C18.2 15.6 12 21 12 21z'/%3E%3Ccircle cx='12' cy='10.6' r='2.3'/%3E%3C/svg%3E")}
+.mobile-nav a.mn-link[href$="cities.html"]::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B0D0C' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 4 3.5 6v14L9 18l6 2 5.5-2V4L15 6 9 4z'/%3E%3Cpath d='M9 4v14'/%3E%3Cpath d='M15 6v14'/%3E%3C/svg%3E")}
+.mobile-nav a.mn-link[href$="pricing.html"]::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B0D0C' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.5 12.5v-9h9L21 12l-8.5 8.5z'/%3E%3Ccircle cx='8' cy='8' r='1.5'/%3E%3C/svg%3E")}
+.mobile-nav a.mn-link[href$="creator-faq.html"]::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B0D0C' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='8.8'/%3E%3Cpath d='M9.6 9.4a2.5 2.5 0 1 1 3.3 2.4c-.8.3-.9 1-.9 1.7'/%3E%3Ccircle cx='12' cy='17' r='.5' fill='%230B0D0C'/%3E%3C/svg%3E")}
+.mobile-nav a.mn-link[href$="learn/"]::before,.mobile-nav a.mn-link[href$="learn/index.html"]::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B0D0C' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 6.2C10 4.8 7.4 4.2 4.5 4.2v13.6c2.9 0 5.5.6 7.5 2 2-1.4 4.6-2 7.5-2V4.2c-2.9 0-5.5.6-7.5 2z'/%3E%3Cpath d='M12 6.2v13.6'/%3E%3C/svg%3E")}
+.mobile-nav a.mn-signin{margin-top:auto}
+.mobile-nav a.mn-signin::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B0D0C' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 4h5v16h-5'/%3E%3Cpath d='M3 12h11'/%3E%3Cpath d='M10.5 8 14.5 12l-4 4'/%3E%3C/svg%3E")}
+.mobile-nav.open .mn-profile,.mobile-nav.open nav{animation:mn-panel .28s ease both}
+@keyframes mn-panel{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.mobile-nav.open .mn-profile,.mobile-nav.open nav{animation:none}}
 .mobile-nav .mn-apply{width:auto}
