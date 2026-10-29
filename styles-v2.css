@@ -1364,29 +1364,43 @@ section.block.tight{padding:60px 0}
 .spine-line{font-size:1.02rem;line-height:1.6;font-weight:600;color:var(--ink);max-width:700px;margin-top:16px}
 .spine-echo{font-size:.98rem;line-height:1.6;color:var(--ink2);max-width:660px;margin:4px 0 12px}
 
-/* ============ 2026-10-28 mobile nav condense (Jeff) ============
-   The open menu is no longer a full-width black sheet spreading across
-   the screen. It is a drawer that slides out of the right edge: flush
-   to the right side of the screen, running from under the header bar
-   to the bottom of the screen, and every row keeps its word and arrow
-   together at the right (the old justify-content:space-between threw
-   the arrows to the far edge of the screen). Desktop is untouched:
-   the >=920px rules above still hide the panel and the toggle. */
+/* ============ 2026-10-28 mobile nav, signal stack (Jeff, v3) ============
+   No panel, no box. The page dims and blurs, and each destination
+   arrives as its own black pill growing out of the right edge of the
+   screen, cascading in one after another. Word and arrow stay grouped
+   inside the pill. Tapping the dimmed page closes it (app.js).
+   Desktop is untouched: the >=920px rules above still hide the
+   panel and the toggle. */
 .mobile-nav{
-  position:fixed;top:76px;right:0;bottom:0;left:auto;
-  width:min(320px,86vw);
-  border:none;border-left:1px solid rgba(255,255,255,.16);border-radius:0;
-  box-shadow:-24px 0 48px -16px rgba(0,0,0,.55);
+  position:fixed;top:76px;right:0;bottom:0;left:0;
+  width:auto;border:none;border-radius:0;box-shadow:none;
+  background:rgba(7,9,8,.48);
+  -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);
   overflow-y:auto;
 }
 @media(max-width:560px){.mobile-nav{top:68px}}
-.mobile-nav.open{animation:mn-in .22s ease both}
-@keyframes mn-in{from{transform:translateX(100%)}to{transform:translateX(0)}}
-.mobile-nav nav{width:auto;max-width:none;margin:0;padding:14px 20px 12px}
-.mobile-nav a.mn-link{
-  justify-content:flex-end;gap:10px;text-align:right;
-  padding:13px 0;min-height:44px;
-  border-bottom:1px solid rgba(255,255,255,.09);
+.mobile-nav nav{
+  width:auto;max-width:none;margin:0;padding:18px 0 12px;
+  display:flex;flex-direction:column;align-items:flex-end;gap:10px;
 }
-.mobile-nav a.mn-link:last-child{border-bottom:none}
+.mobile-nav a.mn-link{
+  display:inline-flex;align-items:center;justify-content:flex-start;gap:10px;
+  background:#0B0D0C;color:#fff;
+  font-size:1.05rem;font-weight:800;text-align:left;
+  padding:14px 20px 14px 26px;min-height:48px;
+  border:none;border-radius:999px 0 0 999px;
+  box-shadow:0 14px 30px -12px rgba(0,0,0,.55);
+}
+.mobile-nav a.mn-link span{color:#A9E8C9}
+.mobile-nav a.mn-link:active{color:#A9E8C9}
+.mobile-nav.open a.mn-link{animation:mn-pill .38s cubic-bezier(.22,.9,.3,1) both}
+.mobile-nav.open a.mn-link:nth-child(1){animation-delay:.02s}
+.mobile-nav.open a.mn-link:nth-child(2){animation-delay:.07s}
+.mobile-nav.open a.mn-link:nth-child(3){animation-delay:.12s}
+.mobile-nav.open a.mn-link:nth-child(4){animation-delay:.17s}
+.mobile-nav.open a.mn-link:nth-child(5){animation-delay:.22s}
+.mobile-nav.open a.mn-link:nth-child(6){animation-delay:.27s}
+.mobile-nav.open a.mn-link:nth-child(7){animation-delay:.32s}
+@keyframes mn-pill{from{opacity:0;transform:translateX(56px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.mobile-nav.open a.mn-link{animation:none}}
 .mobile-nav .mn-apply{width:auto}

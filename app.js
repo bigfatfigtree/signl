@@ -45,6 +45,13 @@ function trackEvent(name, params) { if (window.gtag) gtag('event', name, params 
       var open = mobileNav.classList.toggle('open');
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
+    // Signal-stack menu: tapping the dimmed page (not a pill) closes it.
+    mobileNav.addEventListener('click', function (e) {
+      if (e.target === mobileNav || e.target === mobileNav.querySelector('nav')) {
+        mobileNav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
   }
 
   // Netlify forms: any <form data-signl-form="key" data-netlify name="...">
