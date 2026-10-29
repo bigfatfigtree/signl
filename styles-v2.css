@@ -1363,3 +1363,28 @@ section.block.tight{padding:60px 0}
 .spine-stack .spine-cell p{font-size:1.08rem}
 .spine-line{font-size:1.02rem;line-height:1.6;font-weight:600;color:var(--ink);max-width:700px;margin-top:16px}
 .spine-echo{font-size:.98rem;line-height:1.6;color:var(--ink2);max-width:660px;margin:4px 0 12px}
+
+/* ============ 2026-10-28 mobile nav condense (Jeff) ============
+   The open menu is no longer a full-width black sheet spreading across
+   the screen. It is a compact card anchored to the right edge under the
+   header, and every row keeps its word and arrow together at the right
+   (the old justify-content:space-between threw the arrows to the far
+   edge of the screen). Desktop is untouched: the >=920px rules above
+   still hide the panel and the toggle. */
+.mobile-nav{
+  position:absolute;top:calc(100% + 8px);right:12px;left:auto;
+  width:min(300px,calc(100vw - 24px));
+  border:1px solid rgba(255,255,255,.16);border-radius:18px;
+  box-shadow:0 24px 48px -16px rgba(0,0,0,.55);
+  overflow:hidden;
+}
+.mobile-nav.open{animation:mn-in .18s ease both}
+@keyframes mn-in{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.mobile-nav nav{width:auto;max-width:none;margin:0;padding:8px 16px 12px}
+.mobile-nav a.mn-link{
+  justify-content:flex-end;gap:10px;text-align:right;
+  padding:13px 0;min-height:44px;
+  border-bottom:1px solid rgba(255,255,255,.09);
+}
+.mobile-nav a.mn-link:last-child{border-bottom:none}
+.mobile-nav .mn-apply{width:auto}

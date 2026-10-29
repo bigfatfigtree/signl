@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles-v2.css?v=8">
+<link rel="stylesheet" href="styles-v2.css?v=9">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
 <link rel="canonical" href="https://joinsignl.com/creators.html">
@@ -176,7 +176,7 @@
 
 <section class="chapter" data-chapter>
   <div class="chapter-pin">
-    <video class="js-ch-video" autoplay muted loop playsinline preload="none" poster="assets/video/poster-pov-comped-dinner.jpg" aria-label="Point of view: a creator arriving at a local spot that comped their dinner" data-src="assets/video/signl-pov-comped-dinner.mp4"></video>
+    <video class="js-ch-video" autoplay muted loop playsinline preload="none" poster="assets/video/poster-jeff-shop-enter-v.jpg" aria-label="A creator walking into a local shop" data-src="assets/video/jeff-shop-enter-v.mp4"></video>
     <div class="chapter-scrim"></div>
     <div class="wrap chapter-in">
       <span class="ch-kick ch-anim"><i></i>Chapter 02 · The visit</span>
@@ -505,34 +505,40 @@
         var p = v.play();
         if (p && p.catch) { p.catch(function(){ if (blockedVids.indexOf(v) < 0) { blockedVids.push(v); } armUnlock(); }); }
       }
-      var heroVideo = document.querySelector('.js-hero-video');
-      if (heroVideo) {
+      /* Govern EVERY .js-hero-video (hero + the creator story film), not
+         just the first one: play on screen, pause off screen. */
+      var heroVideos = document.querySelectorAll('.js-hero-video');
+      if (heroVideos.length) {
         var hio = new IntersectionObserver(function(es){
           es.forEach(function(e){
-            if (e.isIntersecting) { tryPlay(heroVideo); }
-            else { heroVideo.pause(); }
+            if (e.isIntersecting) { tryPlay(e.target); }
+            else { e.target.pause(); }
           });
         }, { threshold: .12 });
-        hio.observe(heroVideo);
+        heroVideos.forEach(function(v){ hio.observe(v); });
       }
       var loaded = new WeakSet();
+      function loadVideo(video){
+        if (!video || loaded.has(video)) return;
+        var src = video.getAttribute('data-src');
+        if (src) { var s = document.createElement('source'); s.src = src; s.type = 'video/mp4'; video.appendChild(s); video.load(); }
+        loaded.add(video);
+        /* The autoplay attribute would start a freshly loaded video even
+           while its chapter is still off screen (iOS honors the
+           declarative path). Loading never starts playback: the pin
+           observer is the only place chapter playback begins. */
+        video.pause();
+      }
+      /* Chapter text animation + lazy activation only. Playback is NOT
+         decided here: it belongs to the pin observer below. */
       var vio = new IntersectionObserver(function(es){
         es.forEach(function(e){
-          var video = e.target.querySelector('.js-ch-video');
           var chapter = e.target;
           if (e.intersectionRatio >= .38) {
             chapter.classList.add('on');
-            if (video) {
-              if (!loaded.has(video)) {
-                var src = video.getAttribute('data-src');
-                if (src) { var s = document.createElement('source'); s.src = src; s.type = 'video/mp4'; video.appendChild(s); video.load(); }
-                loaded.add(video);
-              }
-              tryPlay(video);
-            }
+            loadVideo(chapter.querySelector('.js-ch-video'));
           } else {
             chapter.classList.remove('on');
-            if (video && loaded.has(video)) { video.pause(); }
           }
         });
       }, { threshold: [0, .38, .6] });
@@ -540,16 +546,31 @@
       var lio = new IntersectionObserver(function(es){
         es.forEach(function(e){
           if (e.isIntersecting) {
-            var video = e.target.querySelector('.js-ch-video');
-            if (video && !loaded.has(video)) {
-              var src = video.getAttribute('data-src');
-              if (src) { var s = document.createElement('source'); s.src = src; s.type = 'video/mp4'; video.appendChild(s); video.load(); loaded.add(video); }
-            }
+            loadVideo(e.target.querySelector('.js-ch-video'));
             lio.unobserve(e.target);
           }
         });
       }, { rootMargin: '120% 0px 120% 0px' });
       document.querySelectorAll('[data-chapter]').forEach(function(ch){ lio.observe(ch); });
+      /* Playback governor (2026-10-28): a chapter video plays only while
+         its sticky pin fills at least half the screen, and starting one
+         pauses every other chapter video. Two chapter videos can never
+         be moving at once during the scroll handoff. */
+      var chVideos = document.querySelectorAll('.js-ch-video');
+      var pio = new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          var video = e.target.querySelector('.js-ch-video');
+          if (!video) return;
+          if (e.intersectionRatio >= .5) {
+            loadVideo(video);
+            chVideos.forEach(function(other){ if (other !== video && !other.paused) { other.pause(); } });
+            tryPlay(video);
+          } else if (loaded.has(video)) {
+            video.pause();
+          }
+        });
+      }, { threshold: [0, .5] });
+      document.querySelectorAll('.chapter-pin').forEach(function(pin){ pio.observe(pin); });
     } else {
       document.querySelectorAll('[data-chapter]').forEach(function(ch){ ch.classList.add('on'); });
     }
