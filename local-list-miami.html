@@ -126,9 +126,12 @@
       root.innerHTML = cats.map(function (cat) {
         return '<h2 style="margin-top:30px">' + esc(cat.name) + '</h2><div class="ll-grid">' + cat.creators.map(function (c) {
           return '<div class="ll-card">' +
-            '<div class="ll-handle">@' + esc(c.handle) + (c.charter ? '<span class="ll-seal">CHARTER CREATOR</span>' : '') + '</div>' +
+            '<div class="ll-handle">@' + esc(c.handle) + (c.charter ? '<span class="ll-seal">CHARTER CREATOR</span>' : '') + (c.primaryPlatformLabel ? '<span style="font-weight:600;font-size:.8rem;color:#5F7265;margin-left:8px">' + esc(c.primaryPlatformLabel) + '</span>' : '') + '</div>' +
             (c.localAudiencePct === null || c.localAudiencePct === undefined ? '<div class="ll-local-lbl" style="margin-top:6px">Local reach not reported yet</div>' : '<div class="ll-local">' + esc(c.localAudiencePct) + '%</div><div class="ll-local-lbl">of their audience is local</div>') +
             (c.neighborhood ? '<div class="ll-local-lbl" style="margin-top:6px">' + esc(c.neighborhood) + '</div>' : '') +
+            (c.streets && c.streets.length ? '<div class="ll-local-lbl" style="margin-top:6px">My streets: ' + c.streets.map(esc).join(', ') + '</div>' : '') +
+            (c.levelName ? '<div class="ll-local-lbl" style="margin-top:6px">Level ' + c.level + ' · ' + esc(c.levelName) + '</div>' : '') +
+            (c.portfolioSample ? '<div class="ll-local-lbl" style="margin-top:6px"><a href="' + esc(c.portfolioSample) + '" target="_blank" rel="noopener">Portfolio sample</a> · not a SIGNL visit</div>' : '') +
             '<div class="ll-cats">' + (c.categories || []).map(function (x) { return '<span class="ll-chip">' + esc(x) + '</span>'; }).join("") + '</div>' +
             '<a class="ll-view" href="https://app.joinsignl.com/c/' + encodeURIComponent(c.handle) + '">View their SIGNL page</a>' +
             '</div>';
