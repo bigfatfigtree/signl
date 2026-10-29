@@ -1366,21 +1366,23 @@ section.block.tight{padding:60px 0}
 
 /* ============ 2026-10-28 mobile nav condense (Jeff) ============
    The open menu is no longer a full-width black sheet spreading across
-   the screen. It is a compact card anchored to the right edge under the
-   header, and every row keeps its word and arrow together at the right
-   (the old justify-content:space-between threw the arrows to the far
-   edge of the screen). Desktop is untouched: the >=920px rules above
-   still hide the panel and the toggle. */
+   the screen. It is a drawer that slides out of the right edge: flush
+   to the right side of the screen, running from under the header bar
+   to the bottom of the screen, and every row keeps its word and arrow
+   together at the right (the old justify-content:space-between threw
+   the arrows to the far edge of the screen). Desktop is untouched:
+   the >=920px rules above still hide the panel and the toggle. */
 .mobile-nav{
-  position:absolute;top:calc(100% + 8px);right:12px;left:auto;
-  width:min(300px,calc(100vw - 24px));
-  border:1px solid rgba(255,255,255,.16);border-radius:18px;
-  box-shadow:0 24px 48px -16px rgba(0,0,0,.55);
-  overflow:hidden;
+  position:fixed;top:76px;right:0;bottom:0;left:auto;
+  width:min(320px,86vw);
+  border:none;border-left:1px solid rgba(255,255,255,.16);border-radius:0;
+  box-shadow:-24px 0 48px -16px rgba(0,0,0,.55);
+  overflow-y:auto;
 }
-.mobile-nav.open{animation:mn-in .18s ease both}
-@keyframes mn-in{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
-.mobile-nav nav{width:auto;max-width:none;margin:0;padding:8px 16px 12px}
+@media(max-width:560px){.mobile-nav{top:68px}}
+.mobile-nav.open{animation:mn-in .22s ease both}
+@keyframes mn-in{from{transform:translateX(100%)}to{transform:translateX(0)}}
+.mobile-nav nav{width:auto;max-width:none;margin:0;padding:14px 20px 12px}
 .mobile-nav a.mn-link{
   justify-content:flex-end;gap:10px;text-align:right;
   padding:13px 0;min-height:44px;
