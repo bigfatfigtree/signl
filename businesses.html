@@ -569,6 +569,73 @@
   </div>
 </section>
 
+<section id="last-ad">
+  <div class="wrap">
+    <h2>Your last ad, <span class="grad-text">graded</span></h2>
+    <p>Tell us about the last promo you paid for. You get your own receipt back, restated plainly, and the same dollars priced at founding rates. What the money buys, never a projected result.</p>
+    <div class="form-wrap">
+      <div class="form-grid fgroup">
+        <div>
+          <label for="la-type">What was it?</label>
+          <select id="la-type">
+            <option>An influencer post</option>
+            <option>A boosted social post</option>
+            <option>Radio</option>
+            <option>Print or a magazine ad</option>
+            <option>A coupon mailer</option>
+            <option>A discount deal site</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div>
+          <label for="la-cost">What did it cost? ($)</label>
+          <input id="la-cost" type="number" min="1" placeholder="For example: 400">
+        </div>
+        <div>
+          <label for="la-point">What can you point to from it?</label>
+          <select id="la-point">
+            <option>Nothing I can point to</option>
+            <option>A busy spell, maybe</option>
+            <option>Some new regulars</option>
+            <option>Sales I can track</option>
+          </select>
+        </div>
+      </div>
+      <p style="margin-top:14px"><button class="btn" type="button" onclick="gradeLastAdSite()">Grade it</button></p>
+      <div id="la-result" style="margin-top:14px"></div>
+    </div>
+  </div>
+</section>
+<script>
+// Your Last Ad, Graded (Build -32): the same arithmetic the app
+// founding page runs (founding Self-Service: $199/mo, 5 visits,
+// first month $99 with the founding credit). The panel prices
+// what the money buys. It never projects an outcome and never
+// quotes a SIGNL statistic.
+function gradeLastAdSite() {
+  var out = document.getElementById("la-result");
+  var type = document.getElementById("la-type").value;
+  var point = document.getElementById("la-point").value;
+  var cost = Math.round(Number(document.getElementById("la-cost").value) || 0);
+  if (!(cost > 0)) { out.innerHTML = "<p>Enter what it cost and we will grade it.</p>"; return; }
+  var verdicts = {
+    "Nothing I can point to": "Grade: unproven. Not because the ad was bad, because nothing about it could be counted.",
+    "A busy spell, maybe": "Grade: a feeling. Busy is good, but a feeling is not a number you can renew on.",
+    "Some new regulars": "Grade: promising, still uncounted. Regulars are the prize. The open questions are how many, and whether they came back.",
+    "Sales I can track": "Grade: counted. That puts you ahead of most local ads. SIGNL counts it per creator, per visit, automatically."
+  };
+  var months = Math.floor(cost / 199);
+  var same = months >= 1
+    ? "The same $" + cost + " covers " + months + " month" + (months === 1 ? "" : "s") + " of the founding Self-Service plan: " + (months * 5) + " creator visits, and your first month is $99 with the founding credit."
+    : "The founding Self-Service plan is $199 a month for 5 creator visits, and the first month is $99 with the founding credit. Your $" + cost + " is most of a first month of tracked visits.";
+  out.innerHTML = "<p><strong>Your last ad, restated:</strong> $" + cost + " on " + type.toLowerCase() + ". What you can point to from it: " + point.toLowerCase() + ".</p>"
+    + "<p><strong>" + (verdicts[point] || verdicts["Nothing I can point to"]) + "</strong></p>"
+    + "<p>" + same + "</p>"
+    + "<p>What the money buys on SIGNL: creator visits from your market's roster, the Visit Guarantee on every visit (a creator who does not post does not burn the visit), and a receipt for every visit: a check-in, a verified post, and code redemptions counted at your register. This is what the money buys, priced. It is not a projection of results.</p>"
+    + "<p><a class='btn' href='#apply'>Apply for a founding spot</a></p>";
+}
+</script>
+
 <section class="final-cta" id="apply">
   <div class="wrap">
     <h2>Apply for a <span class="grad-text">founding spot</span></h2>

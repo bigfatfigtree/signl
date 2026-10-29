@@ -129,6 +129,7 @@
             '<div class="ll-handle">@' + esc(c.handle) + (c.charter ? '<span class="ll-seal">CHARTER CREATOR</span>' : '') + '</div>' +
             (c.localAudiencePct === null || c.localAudiencePct === undefined ? '<div class="ll-local-lbl" style="margin-top:6px">Local reach not reported yet</div>' : '<div class="ll-local">' + esc(c.localAudiencePct) + '%</div><div class="ll-local-lbl">of their audience is local</div>') +
             (c.neighborhood ? '<div class="ll-local-lbl" style="margin-top:6px">' + esc(c.neighborhood) + '</div>' : '') +
+            (c.streets && c.streets.length ? '<div class="ll-local-lbl" style="margin-top:6px">My streets: ' + c.streets.map(esc).join(', ') + '</div>' : '') +
             '<div class="ll-cats">' + (c.categories || []).map(function (x) { return '<span class="ll-chip">' + esc(x) + '</span>'; }).join("") + '</div>' +
             '<a class="ll-view" href="https://app.joinsignl.com/c/' + encodeURIComponent(c.handle) + '">View their SIGNL page</a>' +
             '</div>';
