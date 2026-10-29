@@ -45,13 +45,24 @@ function trackEvent(name, params) { if (window.gtag) gtag('event', name, params 
       var open = mobileNav.classList.toggle('open');
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
-    // Signal-stack menu: tapping the dimmed page (not a pill) closes it.
+    // Mint-card menu: tapping the dimmed page (not the card) closes it.
     mobileNav.addEventListener('click', function (e) {
-      if (e.target === mobileNav || e.target === mobileNav.querySelector('nav')) {
+      if (e.target === mobileNav) {
         mobileNav.classList.remove('open');
         toggle.setAttribute('aria-expanded', 'false');
       }
     });
+    // Sig profile at the top of the menu opens the Ask Sig sheet where
+    // the page mounts one; elsewhere it simply closes the menu.
+    var mnProfile = mobileNav.querySelector('.mn-profile');
+    if (mnProfile) {
+      mnProfile.addEventListener('click', function () {
+        mobileNav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        var fab = document.querySelector('.sigx-fab');
+        if (fab) fab.click();
+      });
+    }
   }
 
   // Netlify forms: any <form data-signl-form="key" data-netlify name="...">
