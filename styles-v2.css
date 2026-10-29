@@ -1432,3 +1432,19 @@ section.block.tight{padding:60px 0}
 @media(prefers-reduced-motion:reduce){.mobile-nav.open .mn-profile,.mobile-nav.open nav{animation:none}}
 .mobile-nav .mn-apply{width:auto}
 body:has(.mobile-nav.open) .sigx-fab{opacity:0;pointer-events:none;transition:opacity .2s ease}
+
+/* ============ 2026-10-29 mobile nav scrolled fix (Jeff) ============
+   Bug: on the hero pages the header gains .scrolled past 30px, and
+   .site-head.over-hero.scrolled carries backdrop-filter:blur(14px).
+   A non-none backdrop-filter makes the header the containing block
+   for fixed-position descendants, so .mobile-nav (top:68px;bottom:0)
+   re-anchored to the 68px-tall header and collapsed to height 0:
+   the menu "opened" invisibly until the user scrolled back to top,
+   where the header has no backdrop-filter. Fix: while the menu is
+   open, drop the header's backdrop-filter (the existing body:has
+   pattern). Nothing visual is lost: the scrolled header background
+   is solid #0B0D0C, so the blur painted nothing anyway, and the
+   menu's own dim backdrop stays. */
+body:has(.mobile-nav.open) .site-head{
+  backdrop-filter:none;-webkit-backdrop-filter:none;
+}
