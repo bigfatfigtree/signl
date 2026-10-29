@@ -85,7 +85,7 @@
       </div>
     </div>
     <div class="photo-band">
-      <img src="assets/photos/bar-friends.jpg" alt="Two friends toasting with cocktails at a bar on a night out">
+      <img src="assets/photos/musician-live-pub.jpg" alt="A musician playing live in a pub">
       <div class="band-cap">
         <div class="wrap">
           <div class="cap-big">Live nights.<br>Local crowds.</div>
@@ -191,8 +191,28 @@
       <p style="margin-top:22px">Founding business plans run $199, $349 or $699 a month with $100 off the first month. <a href="businesses.html" class="tx-link">See how businesses use SIGNL &rarr;</a></p>
     </div>
   </section>
-  <section class="block">
+  <!-- ============ MUSIC CITIES PATTERN ============
+       Shared band for music-first cities. Every city is ONE self-contained
+       block between the CITY BLOCK START and END comments, with four slots:
+         1. City eyebrow (the .label line, "SIGNL in <City>")
+         2. Headline (one accent word wrapped in .hl)
+         3. Two doors: Door one "Book the bench" -> businesses.html, and
+            Door two "Join the bench" -> the app claim link carrying that
+            market's ?src= param
+         4. Closing line (the .lede paragraph at the end of the block)
+       The fine-print step rides inside the block. To add a city when its
+       market launches: copy the whole Nashville block, paste it directly
+       below the last CITY BLOCK END comment (still inside this section),
+       and fill the four slots.
+       ============ MUSIC CITIES PATTERN ============ -->
+  <section class="block music-cities">
     <div class="wrap">
+      <div class="sec-head">
+        <span class="label">Music cities</span>
+        <p class="lede" style="margin-top:16px">Where a city runs on live music, the rooms that win book it like a system: a bench, a rotation, and proof every night worked. Each music-first city gets its own bench here as it launches.</p>
+      </div>
+      <!-- CITY BLOCK START: Nashville -->
+      <div class="music-city" data-city="Nashville">
       <div class="sec-head">
         <span class="label">SIGNL in Nashville</span>
         <h2>Broadway has tourists. You have <span class="hl">Tuesday</span>.</h2>
@@ -218,6 +238,8 @@
         </div>
       </div>
       <p class="lede" style="margin-top:26px">Nashville runs on music. Now the whole city can <span class="hl">book</span> like it.</p>
+      </div>
+      <!-- CITY BLOCK END: Nashville. The next music city's block goes directly below this line, inside this section. -->
     </div>
   </section>
   <section class="block">
