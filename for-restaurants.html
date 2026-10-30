@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles-v2.css?v=10">
+<link rel="stylesheet" href="styles-v2.css?v=11">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
 <link rel="canonical" href="https://joinsignl.com/for-restaurants.html">
@@ -78,22 +78,33 @@
        SIGNL SEGMENT LANDING TEMPLATE: copy this six-block structure for
        every segment page. The page carries the whole pitch; outreach
        only delivers the link.
-       BLOCK 1: HERO: the segment's worst pain, in their words, and
-         the answer in one breath. Primary CTA goes to the application.
+       VISUAL LAYER (2026-10-29, part of the template): every block
+       carries real Pexels photography. Photos are atmosphere only,
+       never presented as SIGNL creators or as SIGNL results.
+       BLOCK 1: HERO: full-bleed photo hero (.hero-photo); the photo
+         carries the top of the page and the headline sits on it over
+         a scrim. The segment's worst pain, in their words, and the
+         answer in one breath. Primary CTA goes to the application.
        BLOCK 2: THE PLAY: the segment's named play, and how a
-         founding month works.
-       BLOCK 3: WHAT YOU GET: the mechanism list, locked facts only.
+         founding month works. Each step card carries its own photo
+         (.step-photo); the step's words are the caption.
+       BLOCK 3: WHAT YOU GET: the mechanism list, locked facts only,
+         with a tall photo side panel (.get-photo) beside the grid.
+       PHOTO BAND: full-width photo (.photo-band) between What You
+         Get and Price Lock; at most one line of the page's own copy.
        BLOCK 4: PRICE LOCK: founding pricing, $100 first-month
          credit, rate held while the plan stays active, nothing due
          now, pay when your market activates, 3-month minimum.
        BLOCK 5: THE APPLICATION: the conversion. One button:
          "Lock my founding price", into the app with ?src=<segment>.
+         A small supporting photo (.cta-photo) sits beside the copy.
        BLOCK 6: SEGMENT FAQ: the segment's real questions. Visible
          text must match the FAQPage schema exactly.
        ================================================================ -->
   <!-- BLOCK 1: HERO -->
-  <section class="hero">
-    <div class="wrap">
+  <section class="hero hero-photo">
+    <div class="hp-media"><img src="assets/photos/dining-room-busy.jpg" alt="A busy independent restaurant, guests at every table, servers moving through the room" width="1600" height="1067" fetchpriority="high"></div>
+    <div class="wrap hp-in">
       <span class="label">For businesses · Restaurants and dining</span>
       <h1>Tuesday sits empty. <span class="hl">Your ads prove nothing.</span></h1>
       <p class="lede">Your slowest night sits half empty while boosted posts spend money you cannot trace to a single table. SIGNL sends local creators whose audiences actually live in your city, on the nights you choose, and counts every customer who comes in on their code: at your register, on pickup, on delivery.</p>
@@ -103,15 +114,6 @@
         <a class="btn btn-ghost" href="#play">See the play</a>
       </div>
       <p class="fnote">Founding signup locks your price and holds your category spot in application order. Nothing is due now; you pay when your market activates.</p>
-    </div>
-    <div class="photo-band">
-      <img src="assets/photos/chef-flame.jpg" alt="A chef working a flaming pan on a restaurant line">
-      <div class="band-cap">
-        <div class="wrap">
-          <div class="cap-big">Your kitchen.<br>Their feed.</div>
-          <div class="cap-small">Tracked posts · 48-hour standard</div>
-        </div>
-      </div>
     </div>
   </section>
   <!-- BLOCK 2: THE PLAY -->
@@ -124,16 +126,19 @@
       </div>
       <div class="steps">
         <div class="step">
+          <figure class="step-photo"><img src="assets/photos/cafe-counter-night.jpg" alt="Guests at a cafe counter on a weeknight" width="1200" height="750" loading="lazy"></figure>
           <div class="step-num">/ 01</div>
           <h3>Pick your night and your moments</h3>
           <p>Start with your slowest night. Then name the moments around it: a new menu drop, a reopening, a game day, a tourist weekend. Your first month plans itself around the nights you actually need filled.</p>
         </div>
         <div class="step">
+          <figure class="step-photo"><img src="assets/photos/table-phone-photo.jpg" alt="A guest photographing the spread on their table" width="1200" height="800" loading="lazy"></figure>
           <div class="step-num">/ 02</div>
           <h3>Your bench visits and posts</h3>
           <p>Local creators claim the night, visit like real guests, and redeem in the app on a single-use code, so your register and your point of sale are never touched. The post lands to a 48-hour standard*: one post, plus one story that shares it, honest words, full disclosure.</p>
         </div>
         <div class="step">
+          <figure class="step-photo"><img src="assets/photos/register-tap.jpg" alt="A customer paying at the counter" width="1200" height="800" loading="lazy"></figure>
           <div class="step-num">/ 03</div>
           <h3>The receipt proves it</h3>
           <p>Every customer who comes in on a creator's code is counted, in the dining room, on pickup, on delivery. A return code counts who came back within 30 days. Your results read against your own usual night, so you can see what the play moved.</p>
@@ -153,6 +158,8 @@
         <span class="label">What you get</span>
         <h2>Built for a dining room, not a media plan</h2>
       </div>
+      <div class="get-wrap">
+      <div class="get-steps">
       <div class="steps">
         <div class="step">
           <div class="step-num">/ 01</div>
@@ -169,8 +176,6 @@
           <h3>Comp it, or book it paid</h3>
           <p>Comp a meal, a service, or an experience, or book a creator paid at their own listed rate. On paid bookings the creator keeps 97 percent, and the money is held safely until the post is live, then paid the day it posts.</p>
         </div>
-      </div>
-      <div class="steps">
         <div class="step">
           <div class="step-num">/ 04</div>
           <h3>Codes that count every door</h3>
@@ -187,8 +192,20 @@
           <p>No business on SIGNL can require a positive post, ever. Creators post their real experience, and the paid partnership disclosure line is built into the visit checklist, so the legal line is handled for you.</p>
         </div>
       </div>
+      </div>
+      <figure class="get-photo"><img src="assets/photos/chef-flame-panel.jpg" alt="A chef working a flaming pan on the line" width="800" height="1200" loading="lazy"></figure>
+      </div>
     </div>
   </section>
+  <!-- PHOTO BAND -->
+  <div class="photo-band">
+    <img src="assets/photos/street-dining-night.jpg" alt="Diners at sidewalk tables on a warm night" width="1600" height="1000" loading="lazy">
+    <div class="band-cap">
+      <div class="wrap">
+        <div class="cap-big">One standing night, a bench of locals posting about it, and a receipt that shows what it brought in.</div>
+      </div>
+    </div>
+  </div>
   <section class="block">
     <div class="wrap">
       <div class="sec-head">
@@ -281,7 +298,8 @@
   </section>
   <!-- BLOCK 5: THE APPLICATION -->
   <section class="cta-band">
-    <div class="wrap">
+    <div class="wrap cta-flex">
+      <div>
       <span class="label">Founding application</span>
       <h2>Two minutes. Price locked. Nothing due.</h2>
       <p class="lede">The application asks your category, your neighborhood, your slowest night, and what a normal one of those nights looks like. That last answer becomes your baseline, the number your first receipt is read against. No call, no deck, nothing to schedule.</p>
@@ -289,6 +307,8 @@
         <a class="btn" href="https://app.joinsignl.com/?src=restaurants">Lock my founding price</a>
         <a class="btn btn-ghost" href="businesses.html">See the full business page</a>
       </div>
+      </div>
+      <figure class="cta-photo"><img src="assets/photos/kitchen-line-cta.jpg" alt="Two chefs working the line during service" width="1000" height="666" loading="lazy"></figure>
     </div>
   </section>
   <!-- BLOCK 6: SEGMENT FAQ -->

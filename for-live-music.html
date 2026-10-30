@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles-v2.css?v=10">
+<link rel="stylesheet" href="styles-v2.css?v=11">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
 <link rel="canonical" href="https://joinsignl.com/for-live-music.html">
@@ -76,10 +76,18 @@
 <main id="main">
   <!-- SIGNL SEGMENT LANDING TEMPLATE (see for-restaurants.html for the full template notes)
        BLOCK 1: HERO · BLOCK 2: THE PLAY · BLOCK 3: WHAT YOU GET ·
-       BLOCK 4: PRICE LOCK · BLOCK 5: THE APPLICATION · BLOCK 6: SEGMENT FAQ -->
+       BLOCK 4: PRICE LOCK · BLOCK 5: THE APPLICATION · BLOCK 6: SEGMENT FAQ
+       VISUAL LAYER (part of the template): full-bleed photo hero
+       (.hero-photo), a photo on every play step (.step-photo), a photo
+       side panel beside What You Get (.get-photo), a full-width photo
+       band (.photo-band) before Price Lock with at most one line of
+       the page's own copy, and a small photo (.cta-photo) beside the
+       application. Real Pexels photography only, never presented as
+       SIGNL creators or SIGNL results. -->
   <!-- BLOCK 1: HERO -->
-  <section class="hero">
-    <div class="wrap">
+  <section class="hero hero-photo">
+    <div class="hp-media"><img src="assets/photos/band-live-room.jpg" alt="A band playing live in a small room" width="1600" height="1067" fetchpriority="high"></div>
+    <div class="wrap hp-in">
       <span class="label">For businesses · Live music rooms</span>
       <h1>Friday's act just cancelled. <span class="hl">The bench covers it.</span></h1>
       <p class="lede">The big rooms never wonder whether there will be music tonight, because they run a bench, not a phone full of maybes. SIGNL builds your room the same bench: four to six local musicians matched to your crowd, rotating through the nights you pick, posting before every set, and every guest who comes in on a post is counted, including the ones who come back.</p>
@@ -89,15 +97,6 @@
         <a class="btn btn-ghost" href="#play">See the play</a>
       </div>
       <p class="fnote">Founding signup locks your price and holds your spot in application order. Nothing is due now; you pay when your market activates.</p>
-    </div>
-    <div class="photo-band">
-      <img src="assets/photos/band-live-room.jpg" alt="A band playing live in a small room">
-      <div class="band-cap">
-        <div class="wrap">
-          <div class="cap-big">Your room.<br>Their audience.</div>
-          <div class="cap-small">A bench of local musicians · Counted at your register</div>
-        </div>
-      </div>
     </div>
   </section>
   <!-- BLOCK 2: THE PLAY -->
@@ -110,16 +109,19 @@
       </div>
       <div class="steps">
         <div class="step">
+          <figure class="step-photo"><img src="assets/photos/singer-corner.jpg" alt="A singer at the microphone in a small room" width="1200" height="750" loading="lazy"></figure>
           <div class="step-num">/ 01</div>
           <h3>Pick your nights once</h3>
           <p>Choose your standing slots once: every Tuesday early set, Friday nights, Sunday brunch. They live in the same booking system you use for creator visits. No new tool to learn, no weekly booking chore.</p>
         </div>
         <div class="step">
+          <figure class="step-photo"><img src="assets/photos/bench-duo.jpg" alt="Two musicians playing acoustic guitars together at night" width="1200" height="800" loading="lazy"></figure>
           <div class="step-num">/ 02</div>
           <h3>We build your bench</h3>
           <p>SIGNL matches four to six local musicians to your room: your crowd, your volume, your price range. They rotate through the standing slots, so regulars hear a fresh set and the calendar fills itself. A bench of five cannot quit on you the way one house band can.</p>
         </div>
         <div class="step">
+          <figure class="step-photo"><img src="assets/photos/band-crowd-room.jpg" alt="A band mid-set with the crowd's hands up" width="1200" height="800" loading="lazy"></figure>
           <div class="step-num">/ 03</div>
           <h3>Every night posts, every guest counts</h3>
           <p>Each musician makes the standard post before the night, to an audience that actually lives here, so the act itself markets the room every week. Attach an audience offer to the night and the guests who come in on it are counted, at your register, on pickup, on delivery.</p>
@@ -138,6 +140,8 @@
         <span class="label">What you get</span>
         <h2>Broadway's one advantage, without Broadway</h2>
       </div>
+      <div class="get-wrap">
+      <div class="get-steps">
       <div class="steps">
         <div class="step">
           <div class="step-num">/ 01</div>
@@ -154,8 +158,6 @@
           <h3>Paid when the post goes live</h3>
           <p>A musician's money is held safely and paid the day their post goes live, not Net 30, not whenever. That is why the right acts say yes to your room, and keep saying yes.</p>
         </div>
-      </div>
-      <div class="steps">
         <div class="step">
           <div class="step-num">/ 04</div>
           <h3>The post is part of the booking</h3>
@@ -172,8 +174,20 @@
           <p>Rehearsal dinners, corporate groups, full buyouts: the same bench books the private event. Sell the night as a package, dinner plus a named local musician who posts the room, instead of scrambling for an act after the contract signs.</p>
         </div>
       </div>
+      </div>
+      <figure class="get-photo"><img src="assets/photos/guitar-case-street.jpg" alt="A musician carrying a guitar case down the street" width="1000" height="1500" loading="lazy"></figure>
+      </div>
     </div>
   </section>
+  <!-- PHOTO BAND -->
+  <div class="photo-band">
+    <img src="assets/photos/stage-crowd-lights.jpg" alt="A crowd watching a band under stage lights" width="1600" height="1067" loading="lazy">
+    <div class="band-cap">
+      <div class="wrap">
+        <div class="cap-big">Your room, your food, and music that is actually there, every night you choose.</div>
+      </div>
+    </div>
+  </div>
   <section class="block">
     <div class="wrap">
       <div class="sec-head">
@@ -262,7 +276,8 @@
   </section>
   <!-- BLOCK 5: THE APPLICATION -->
   <section class="cta-band">
-    <div class="wrap">
+    <div class="wrap cta-flex">
+      <div>
       <span class="label">Founding application</span>
       <h2>Two minutes. Price locked. Nothing due.</h2>
       <p class="lede">The application asks your room type, the nights you want covered, and what a normal one of those nights looks like. That last answer becomes your baseline, the number your first music receipt is read against. No call, no deck, nothing to schedule.</p>
@@ -270,6 +285,8 @@
         <a class="btn" href="https://app.joinsignl.com/?src=live-music">Lock my founding price</a>
         <a class="btn btn-ghost" href="musicians.html">Musicians: join the bench</a>
       </div>
+      </div>
+      <figure class="cta-photo"><img src="assets/photos/singer-mic-close.jpg" alt="A singer holding a vintage microphone, close up" width="1200" height="800" loading="lazy"></figure>
     </div>
   </section>
   <!-- BLOCK 6: SEGMENT FAQ -->
