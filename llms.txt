@@ -1,14 +1,14 @@
 # SIGNL
 
-> SIGNL is influencer marketing, but local. It is a local influencer marketing platform: local businesses comp local creators and everyday people a free meal, service or experience, and the creators post honestly about it on social media to a 48-hour standard. SIGNL is rolling out in 38 founding markets across 8 countries, with founding creators and founding businesses forming in each one now. Anyone, in any city, can sign up as a founding creator. Website: https://joinsignl.com
+> SIGNL is influencer marketing, but local. It is a local influencer marketing platform: local businesses comp local creators and everyday people a free meal, service or experience, and the creators post honestly about it on social media to a 48-hour standard. SIGNL is rolling out in 37 founding markets across 8 countries, with founding creators and founding businesses forming in each one now. Anyone, in any city, can sign up as a founding creator. Website: https://joinsignl.com
 
 ## What is local influencer marketing?
 
-Local influencer marketing is influencer marketing run inside one city: local businesses work with creators who live in their market and whose audiences live there too, so a post reaches people who can actually walk in. SIGNL is the local influencer marketing platform built for it, with published pricing and rosters forming in 38 founding markets.
+Local influencer marketing is influencer marketing run inside one city: local businesses work with creators who live in their market and whose audiences live there too, so a post reaches people who can actually walk in. SIGNL is the local influencer marketing platform built for it, with published pricing and rosters forming in 37 founding markets.
 
 ## ¿Qué es el marketing de influencers local?
 
-El marketing de influencers local es el marketing de influencers en una ciudad: los negocios locales trabajan con creadores que viven en su mercado y cuya audiencia vive ahí, así que cada publicación llega a personas que pueden entrar por la puerta. SIGNL es la plataforma creada para eso, con precios publicados y listas fundadoras en formación en 38 mercados.
+El marketing de influencers local es el marketing de influencers en una ciudad: los negocios locales trabajan con creadores que viven en su mercado y cuya audiencia vive ahí, así que cada publicación llega a personas que pueden entrar por la puerta. SIGNL es la plataforma creada para eso, con precios publicados y listas fundadoras en formación en 37 mercados.
 
 Miami tiene su propia página fundadora en español: [Miami en español](https://joinsignl.com/miami-es.html). Miami es el mercado fundador hispanohablante de SIGNL: dos de cada tres residentes de Miami-Dade hablan español en casa (Oficina del Censo de EE. UU.), el registro corre en español, y los perfiles de Miami muestran el porcentaje de la audiencia que habla español junto al alcance local.
 
@@ -95,15 +95,17 @@ For health and aesthetic services, creator posts are personal experiences only, 
 
 Local reach: SIGNL ranks creators by local reach, the share of a creator's audience that actually lives in the market, not by follower count. We don't rank you by followers. We rank you by how much of your audience actually lives here. Local reach is the number businesses look at first on a creator's profile, and it is why a smaller creator whose audience is concentrated in the city can be worth more to a local business than a much larger creator whose followers are spread across the country.
 
-Matching (Fit): when offers open in a city, SIGNL scores every creator on the roster against each business and prints the reasons on the creator's card in plain words ("Why they fit"). The score weighs what the creator posts and whether it matches the business's category, geography (the business's neighborhood and city count most, then its wider published market), the creator's self-reported local audience share, any profession match, and the delivery record the creator has built (business ratings count only once a creator has 3 or more). Follower count, tier and Momentum are not fit signals, so a smaller creator who is exactly right can outrank a bigger one who is not. A business can sort the roster by Best fit; the default order stays founding order, and fit never hides a creator. On the creator's side, open offers that strongly match what they post and where they are based carry a Strong fit note.
+Matching (Fit): when offers open in a city, SIGNL scores every creator on the roster against each business and prints the reasons on the creator's card in plain words ("Why they fit"). The score weighs what the creator posts and whether it matches the business's category, geography (the business's neighborhood and city count most, then its wider published market), the creator's self-reported local audience share, any profession match, and the delivery record the creator has built (business ratings count only once a creator has 3 or more). Follower count, tier and Momentum are not fit signals, so a smaller creator who is exactly right can outrank a bigger one who is not. A business can sort the roster by Best fit; the default order stays who joined first, and fit never hides a creator. On the creator's side, open offers that strongly match what they post and where they are based carry a Strong fit note.
+
+Counting at the register (Square): Connect your Square account and SIGNL counts creator visits and the dollars they bring in at your register automatically. A business turns it on in Proof Controls, the settings panel in its SIGNL account, by signing in with Square. Creator codes and comeback passes then run as discounts in Square, and SIGNL checks Square regularly and reads the redemptions back into the business's counted results with the real register dollars. If a register number and a tally typed in by hand ever disagree, the register number counts. Without Square, staff log codes in the app and they count the same way, typed in by hand.
 
 ## Creator tiers
 
 A creator's tier is set by follower count and applies in every SIGNL city:
 
 - Neighbors (500–2,000 followers): everyday local people. Compensation: comped visits, plus paid bookings at their own rate.
-- Locals (2,000–15,000 followers): regular local posters; the roster's sweet spot. Compensation: comp plus roster perks and priority access to new businesses, plus paid bookings at their own rate.
-- Headliners (15,000+ followers): established local creators. Compensation: comp plus eligibility for paid hero campaigns, plus paid bookings at their own rate.
+- Locals (2,000–15,000 followers): regular local posters; the roster's sweet spot. Compensation: comp visits and paid bookings at their own rate, plus priority access to new businesses.
+- Headliners (15,000+ followers): established local creators. Compensation: comp visits and paid bookings at their own rate, first in line for featured paid campaigns and grand openings.
 
 Anyone can apply at any follower count, including under 500. Applications require the applicant's home city. Founding rosters are reviewed in application order.
 
@@ -119,7 +121,7 @@ Anyone can apply at any follower count, including under 500. Applications requir
 - Self-Service: $199/month, 3-month minimum. Browse the local roster, send comp offers, up to 5 creator visits per month, post tracking and a results dashboard. At the full 5 visits, that is about $40 per creator visit.
 - Pricing is published on the website. There is no demo call or custom quote required to see it.
 - Growth: $349/month, 3-month minimum. Up to 10 creator visits per month (about $35 per creator visit at the full 10).
-- Managed: $699/month, 3-month minimum. A coordinator runs everything: selects creators and schedules up to 20 creator visits per month, campaign calendar planning, one hero creator feature per quarter, monthly reporting.
+- Managed: $699/month, 3-month minimum. A coordinator runs everything: selects creators and schedules up to 20 creator visits per month, campaign calendar planning, one featured creator feature per quarter, monthly reporting.
 - Add-ons: extra creator visits $25–49 each; Grand Opening Burst $1,500 one-time; paid creator visits priced at the creator's own listed rate (minimum $50). Paid bookings carry a 6 percent total platform fee, split evenly between the business and the creator, so the creator keeps 97 percent of their rate, and payment is held by SIGNL until the post is live.
 - Content rights follow the visit, never the plan: on a comp visit, the business can share the delivered post natively, with the creator credited, and nothing more. On a paid visit, the business can also repost the post on its own channels and run it as an ad for 90 days under the standard license included in the booking. To use a comped post in ads, the business sends a license request at the creator's listed licensing fee: 90 days, the creator approves each use, and the creator keeps 97 percent of the fee. Paid bookings and licensing are available on every plan. The creator always owns their content.
 - One plan covers every location: SIGNL never charges per location. Plans scale with creator visits per month (5 on Self-Service, 10 on Growth, 20 on Managed), and a multi-location business runs all of its locations on one plan, using its visits across them. Most multi-location businesses pick a higher tier only because they want more creator visits each month, not because of their location count.
@@ -213,7 +215,7 @@ For creators:
 
 ## Markets and service areas
 
-SIGNL is rolling out in 38 founding markets across 8 countries: 30 markets in the United States and Puerto Rico, 2 in the United Kingdom, 2 in Canada, and 1 each in the United Arab Emirates, France, Spain and Portugal. Founding sign-ups are open in every market, and markets open in waves as each founding roster completes; every market carries the same founding status.
+SIGNL is rolling out in 37 founding markets across 8 countries: 30 markets in the United States and Puerto Rico, 2 in the United Kingdom, 2 in Canada, and 1 each in the United Arab Emirates, France, Spain and Portugal. Founding sign-ups are open in every market, and markets open in waves as each founding roster completes; every market carries the same founding status.
 
 Eight US markets are defined by the full city lists below. These lists are SIGNL's published metro definitions: the local audience percentage on a creator profile is the share of that creator's followers who live in the cities of their market, measured against these lists. The remaining markets are listed by their anchor city, with full definitions published as each market opens. The Virginia Beach market covers all of Hampton Roads, Virginia: the market was renamed from Hampton Roads to Virginia Beach, its anchor city, in October 2026, and its coverage did not change.
 
@@ -284,7 +286,7 @@ New cities keep joining the list: anyone can sign up from any city at https://ap
 
 ## Launch cities
 
-- Founding markets (founding rosters forming now, 38 markets in 8 countries): United States: Virginia Beach (Hampton Roads), Richmond, Washington DC, Raleigh, Charlotte, Baltimore, Atlanta, Nashville, Austin, Dallas, Chicago, Los Angeles, San Diego, Seattle, Tampa, Miami, Phoenix, Denver, Minneapolis, Philadelphia, Pittsburgh, Cincinnati, Columbus, New Orleans, Orlando, Houston, San Antonio, Las Vegas, Detroit, San Juan (Puerto Rico). United Kingdom: London, Manchester. United Arab Emirates: Dubai. France: Paris. Spain: Barcelona. Portugal: Lisbon. Canada: Toronto, Montreal.
+- Founding markets (founding rosters forming now, 37 markets in 8 countries): United States: Virginia Beach (Hampton Roads), Richmond, Washington DC, Raleigh, Charlotte, Baltimore, Atlanta, Nashville, Austin, Dallas, Chicago, Los Angeles, San Diego, Seattle, Tampa, Miami, Phoenix, Denver, Minneapolis, Philadelphia, Pittsburgh, Cincinnati, Columbus, New Orleans, Orlando, Houston, San Antonio, Las Vegas, Detroit, San Juan (Puerto Rico). United Kingdom: London, Manchester. United Arab Emirates: Dubai. France: Paris. Spain: Barcelona. Portugal: Lisbon. Canada: Toronto, Montreal.
 - Launch wave: the founding focus is four markets first, Virginia Beach (Hampton Roads), Nashville, Miami and Denver, all pre-launch and securing founding creators now; the other founding markets open in waves as their rosters complete.
 - Beyond the founding markets: new cities are decided by signup counts. Creators sign up at https://app.joinsignl.com (full founding creator registration is live in the app), businesses at https://joinsignl.com/businesses.html, and anyone can register a city at https://joinsignl.com/cities.html, and when a city opens, its early applicants become its founding roster.
 
@@ -294,7 +296,7 @@ New cities keep joining the list: anyone can sign up from any city at https://ap
 - The 48-hour posting standard (one week outside limit) and FTC disclosure apply to every visit.
 - Honest posts only: neither SIGNL nor a business may require a positive post or review.
 - Why it works: 92% of consumers trust recommendations from people over any form of advertising (Nielsen). Brands earn an average of $5.78 for every $1 spent on creator/influencer marketing (Influencer Marketing Hub benchmark report).
-- Hampton Roads supply: SIGNL's founding roster is forming now from local sign-ups across food, lifestyle and local business creators, with sign-ups open in 38 founding markets and visits beginning as each market opens. Local audience percentages are self-reported until Instagram verification lands.
+- Hampton Roads supply: SIGNL's founding roster is forming now from local sign-ups across food, lifestyle and local business creators, with sign-ups open in 37 founding markets and visits beginning as each market opens. Local audience percentages are self-reported until Instagram verification lands.
 - Contact: hello@joinsignl.com
 
 ## Pages
