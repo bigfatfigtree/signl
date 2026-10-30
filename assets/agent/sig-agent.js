@@ -56,11 +56,11 @@ window.SIG_CONFIG = {
     rights: "Rights follow the visit, never the plan. A comped visit is native share only: the business can reshare the post natively with credit, with no ad use. A paid booking includes one standard license: 90 days of repost and paid ad use, agreed inside the booking terms. To license a comped post, the business pays the creator's listed licensing fee, the creator approves each use, and the creator keeps 97%. Nothing is ever perpetual.",
     guarantee: "That is covered by the Visit Guarantee. If a week passes with no post, the visit does not count against the plan and it is replaced. The visit itself is made good, never a cash refund.",
     rollover: "Unused visits roll into the next month, then expire. One month of carry, maximum.",
-    cities: "SIGNL is rolling out across 37 founding markets in 8 countries, and founding enrollment is open now. Nashville is the priority market. The Cities page carries the full list.",
+    cities: "SIGNL is rolling out across 38 founding markets in 8 countries, and founding enrollment is open now. Nashville is the priority market. The Cities page carries the full list.",
     tiers: "You can join from 500 followers. Tiers are set by your stacked audience: Neighbors from 500 to 2,000, Locals from 2,000 to 15,000, and Headliners above 15,000. Businesses rank you on local reach, so a small audience that lives in one city beats a big audience scattered everywhere.",
     momentum: "Momentum is SIGNL's on-time score for creators. Post inside 48 hours and you earn +20 Momentum. It builds badges and priority in business invites, so the creators who deliver on time get booked more.",
     paidHow: "Creators set their own rate, from $50. The business pays the rate plus 3%, the money is held until the post is live, and the creator keeps 97%. A paid booking also includes one standard license: 90 days of repost and ad use.",
-    isLive: "SIGNL is built and rolling out now. Founding creator rosters are forming across 37 markets, founding businesses are joining the founding list, and markets activate as their rosters fill, Nashville first. Founding enrollment is open today.",
+    isLive: "SIGNL is built and rolling out now. Founding creator rosters are forming across 38 markets, founding businesses are joining the founding list, and markets activate as their rosters fill, Nashville first. Founding enrollment is open today.",
     contact: "Fastest route is right here: pick your side below and I will take you straight to the page that does the job. If you would rather write to a human, the team reads hello@joinsignl.com.",
     bizSummary: "Short version: browse Discover, where creators are ranked by local reach. Tap a creator, tap Invite, and the offer opens prefilled from their tier. They visit with a code, post within the standard, and the visit is tracked to the post. Take the business door and I will walk each step.",
     creSummary: "Short version: claim your spot, link your handle, finish your profile. From 500 followers you are bookable, ranked on local reach, with two ways to earn: comped experiences, or paid bookings at your own rate where you keep 97%. Take the creator door and I will walk each step."
@@ -169,7 +169,7 @@ window.SIG_CONFIG = {
       },
       {
         say: [
-          "Founding enrollment is open in 37 markets across 8 countries, and Nashville is the priority market right now.",
+          "Founding enrollment is open in 38 markets across 8 countries, and Nashville is the priority market right now.",
           "City not on the list? Claim anyway and add your city. SIGNL opens markets where creators gather."
         ],
         ctas: [

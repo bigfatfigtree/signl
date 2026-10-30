@@ -85,7 +85,7 @@ Creator door (5 steps):
    (app.joinsignl.com/?src=home-sig), cities.html
 
 Question chips / free-text answers: cost, rights and ads, comp deliverable,
-deadline, no-show, cities (37 founding markets), local reach, size to join,
+deadline, no-show, cities (38 founding markets), local reach, size to join,
 Momentum, who runs it. All drawn from the ANSWERS set in sig-agent.js only.
 
 ## Answer-set canon source
@@ -99,7 +99,7 @@ post is at the creator's listed fee, creator keeps 97%; comp visit = 1 post
 + 1 story that shares the post; 48h standard / 1-week hard deadline; Visit
 Guarantee = visit replaced, credits not cash; tiers Neighbors 500-2k,
 Locals 2k-15k, Headliners 15k+ by stacked audience; paid rate floor $50;
-37 founding markets; Nashville is the priority market; claims matching
+38 founding markets; Nashville is the priority market; claims matching
 outreach records are decided automatically (stated plainly, no AI-vetting
 claims). No competitor names. No em dashes. SIGNL is "built and rolling
 out," never "building." Sample data is labeled Preview wherever it appears.
