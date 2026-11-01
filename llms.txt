@@ -109,6 +109,10 @@ A creator's tier is set by follower count and applies in every SIGNL city:
 
 Anyone can apply at any follower count, including under 500. Applications require the applicant's home city. Founding rosters are reviewed in application order.
 
+## Public creator profiles
+
+SIGNL's public creator pages live in the app at https://app.joinsignl.com/c/<handle>. A finished founding creator's page is public and indexable, and shows the creator's categories, past-work links, listed rates for comped visits, paid bookings and licensing, and every market where that creator is ranked. Creators are ranked in each market by local audience share, the share of their audience that lives in that market, not by follower count. A creator can be ranked in more than one market when their audience is strong in each one. The app serves its own profile sitemap at https://app.joinsignl.com/sitemap.xml, generated from the finished public profiles.
+
 ## Pricing for creators
 
 - Free to join: SIGNL costs creators $0. Creators never pay to join, to list, or to get booked. Businesses pay the platform.
