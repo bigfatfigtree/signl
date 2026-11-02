@@ -1516,3 +1516,57 @@ body:has(.mobile-nav.open) .site-head{
   width:100%;height:100%;object-fit:cover;display:block;
   filter:saturate(.92) contrast(1.05);
 }
+
+/* ============ 2026-11-01 audit fix pass (Jeff: "Fix it") ============
+   One accent, one button, one headline size, on every page.
+   1) The headline accent word is azure #006AFC everywhere. It was
+      mint on the video heroes, the chapters and the black fields,
+      azure on pricing and Learn: the loudest "two products" tell.
+   2) The primary button is the black pill with mint text everywhere.
+      The header CTA, the featured plan button and the Watch button
+      flipped to a mint fill; on black surfaces the black pill now
+      carries a mint border so it still reads as a button.
+   3) Mobile H1 is one size (2.56rem) across templates: the video
+      heroes rendered 40.95px, pricing and Learn 46.4px.
+   4) Mobile menu: nav first, Sig last. The links lead on one axis,
+      the Sig profile becomes one compact row under the links, and
+      the panel hugs its content instead of stretching white to the
+      bottom of the screen (which also buried the sign-in row).
+   5) The .label ornament matches .eyebrow: one azure dash. The old
+      pale-mint dot was nearly invisible on light surfaces, and the
+      byline .tx-link clipped to pale mint on white; it is a real
+      azure link now and never wraps mid-phrase.
+   6) Learn articles can open on their photo band (band-top). */
+
+/* 1) one accent */
+.hero-video .grad-text,.chapter .grad-text,.ch-head .grad-text,.ch-title .grad-text,.hero .grad-text{color:#006AFC}
+.chapter .eyebrow::before,.hero-video .eyebrow::before{color:#006AFC}
+.field-black .grad-text{color:#006AFC}
+.field-black .eyebrow::before{color:#006AFC}
+.field-mint .grad-text{color:#006AFC}
+
+/* 2) one button */
+.site-head .btn{background:#0B0D0C;color:#A9E8C9;border:1px solid rgba(169,232,201,.55);box-shadow:none}
+.plan-featured .btn{background:#0B0D0C;color:#A9E8C9;border:1px solid #A9E8C9;box-shadow:none}
+
+/* 3) one mobile H1 size */
+@media(max-width:760px){
+  h1{font-size:2.56rem}
+  .hero-video h1{font-size:2.56rem}
+}
+
+/* 4) mobile menu: nav first, Sig last, panel hugs its content */
+.mobile-nav nav{order:1;flex:none;margin-top:8px;margin-bottom:0;border-radius:26px 26px 0 0}
+.mn-profile{order:2;margin-top:0;margin-bottom:10px;border-radius:0 0 26px 26px;
+  flex-direction:row;align-items:center;gap:12px;padding:14px 22px 18px}
+.mn-profile img{width:40px;height:40px;margin-bottom:0}
+.mn-profile-go{display:block;margin-left:auto;color:var(--ink3);font-size:1.05rem}
+.mobile-nav a.mn-signin{margin-top:0}
+
+/* 5) ornaments + byline link */
+.label::before{content:"\2014";width:auto;height:auto;border-radius:0;background:none;color:var(--mint-deep);font-weight:800}
+.tx-link{background:none;-webkit-background-clip:initial;background-clip:initial;color:#006AFC;text-decoration:underline;text-underline-offset:3px;white-space:nowrap}
+
+/* 6) Learn: photo band opens the article */
+.hero:has(> .photo-band.band-top){padding-top:0}
+.photo-band.band-top{margin-top:0;border-top:none}

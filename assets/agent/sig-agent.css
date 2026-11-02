@@ -8,7 +8,7 @@
 .sigx-section{background:#0B0D0C;color:#fff;padding:84px 0}
 .sigx-section .eyebrow{color:rgba(255,255,255,.72)}
 .sigx-section h2{color:#fff;margin:14px 0 16px}
-.sigx-section h2 .grad-text{color:#A9E8C9}
+.sigx-section h2 .grad-text{color:#006AFC}
 .sigx-section .lede{color:rgba(255,255,255,.78);max-width:520px}
 .sigx-grid{display:grid;gap:34px;align-items:start}
 @media(min-width:980px){.sigx-grid{grid-template-columns:1fr 1.35fr;gap:48px}}
@@ -148,9 +148,18 @@
 .sigx-fallback a{font-weight:700;text-decoration:underline;text-underline-offset:3px}
 
 /* ---------- floating button + sheet ---------- */
-.sigx-fab{position:fixed;right:18px;bottom:18px;z-index:90;display:inline-flex;align-items:center;gap:9px;background:var(--ink,#0B0D0C);color:#fff;border:none;border-radius:999px;padding:8px 17px 8px 8px;box-shadow:0 18px 38px -12px rgba(0,0,0,.45);font-family:'Manrope',sans-serif;font-weight:700;font-size:.92rem;cursor:pointer;animation:sigxUp .5s ease both}
+.sigx-fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:90;display:inline-flex;align-items:center;gap:9px;background:var(--ink,#0B0D0C);color:#fff;border:none;border-radius:999px;padding:8px 17px 8px 8px;box-shadow:0 18px 38px -12px rgba(0,0,0,.45);font-family:'Manrope',sans-serif;font-weight:700;font-size:.92rem;cursor:pointer;animation:sigxUp .5s ease;transition:opacity .25s ease,transform .25s ease,padding .25s ease}
 .sigx-fab .sigx-ava{width:30px;height:30px;font-size:.88rem}
 .sigx-fab:hover{transform:translateY(-1px)}
+/* Audit fix (2026-11-01): the pill must never cover content. Past the
+   hero it collapses to the avatar alone; over the footer it fades out;
+   while the mobile menu is open it is gone (the menu carries its own
+   Sig row). The entrance animation no longer fills forwards, so these
+   states can actually win the cascade. */
+.sigx-fab.mini{padding:7px}
+.sigx-fab.mini>span:last-child{display:none}
+.sigx-fab.away{opacity:0;pointer-events:none;transform:translateY(14px)}
+body:has(.mobile-nav.open) .sigx-fab{opacity:0;pointer-events:none}
 body.sigx-locked{overflow:hidden}
 .sigx-sheet{position:fixed;inset:0;z-index:130}
 .sigx-sheet[hidden]{display:none}

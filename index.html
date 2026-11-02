@@ -8,8 +8,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles-v2.css?v=10">
-<link rel="stylesheet" href="assets/agent/sig-agent.css?v=3">
+<link rel="stylesheet" href="styles-v2.css?v=11">
+<link rel="stylesheet" href="assets/agent/sig-agent.css?v=4">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
 <link rel="canonical" href="https://joinsignl.com/">
@@ -142,10 +142,11 @@
 .btn-white:hover{transform:translateY(-2px)}
 .btn-ink{background:#141414;color:#fff;border:1px solid #141414}
 .btn-ink:hover{transform:translateY(-2px)}
-.cta-band .btn-ink{background:#A9E8C9;color:#0B0D0C;border-color:#A9E8C9}
+.cta-band .btn-ink{background:transparent;color:#fff;border-color:rgba(255,255,255,.45)}
+.cta-band .btn{border:1px solid rgba(169,232,201,.55)}
 .cta-free{margin-top:30px;color:rgba(255,255,255,.94);font-weight:600;font-size:.98rem}
 /* dark-field accents: solid mint over video and black fields, deep mint inside white tier cards on the mint field */
-.hero-video .grad-text,.chapter .ch-head .grad-text{color:#A9E8C9}
+.hero-video .grad-text,.chapter .ch-head .grad-text{color:#006AFC}
 .field-mint .tier-card .grad-text{color:#006AFC}
 </style>
 </head>
@@ -207,7 +208,7 @@
       <p class="hs-cat"><span class="grad-text">Creator marketing, but local.</span></p>
       <p class="lede">Browse creators by local reach, how much of their audience actually lives in your city. Comp the visit or pay their listed rate, and every visit is tracked to the post.</p>
       <div class="hero-ctas">
-        <a class="btn" href="https://app.joinsignl.com/?src=home-v2">I&rsquo;m a creator</a>
+        <a class="btn" href="https://app.joinsignl.com/claim?platform=instagram&src=home-v2">I&rsquo;m a creator</a>
         <a class="btn btn-ghost" href="businesses.html">I&rsquo;m a business</a>
       </div>
     <div class="loop-strip" aria-label="How a SIGNL visit works">
@@ -236,7 +237,7 @@
       </div>
       <div class="duo-card cre">
         <div class="k">For creators</div>
-        <p><b>Get comped or paid near you.</b> Free always, from 500 followers.</p>
+        <p><b>Get comped or paid near you.</b> Free always. Any following can apply. Tiers start at 500.</p>
       </div>
     </div>
   </div>
@@ -269,7 +270,7 @@
       <div data-sig-panel>
         <div class="sigx-fallback">
           <p><b>Meet Sig, the SIGNL guide.</b> The live walkthrough needs JavaScript. Until then, start here:</p>
-          <p><a href="businesses.html">I run a business</a> · <a href="https://app.joinsignl.com/?src=home-v2">I am a creator</a></p>
+          <p><a href="businesses.html">I run a business</a> · <a href="https://app.joinsignl.com/claim?platform=instagram&src=home-v2">I am a creator</a></p>
         </div>
       </div>
     </div>
@@ -281,7 +282,7 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">For businesses</span>
-      <h2>Ads reach everyone <span class="grad-text">except your neighbors.</span></h2>
+      <h2>Ads reach everyone except your <span class="grad-text">neighbors.</span></h2>
     </div>
     <div class="spine-grid">
       <div class="spine-cell">
@@ -322,7 +323,7 @@
     <div class="ch-scrim"></div>
     <div class="ch-num"><div class="wrap"><span class="ch-badge">Chapter <b>02</b> · The visit</span></div></div>
     <div class="wrap ch-in">
-      <h2 class="ch-head">A local creator <span class="grad-text">shows up.</span></h2>
+      <h2 class="ch-head">A local creator shows <span class="grad-text">up.</span></h2>
       <p class="ch-sub">A neighbor, not a stranger. The right 500 followers is enough.</p>
     </div>
   </article>
@@ -347,7 +348,7 @@
     <div class="ch-scrim"></div>
     <div class="ch-num"><div class="wrap"><span class="ch-badge">Chapter <b>04</b> · The proof</span></div></div>
     <div class="wrap ch-in">
-      <h2 class="ch-head">The business sees what it <span class="grad-text">brought in.</span></h2>
+      <h2 class="ch-head">The business sees what it brought <span class="grad-text">in.</span></h2>
       <p class="ch-sub">Every visit tracked, register spend counted, media value modeled and labeled.</p>
       <div class="ch-sample" aria-label="Sample of a tracked visit report">
         <div class="sk"><span>Tracked visit report</span><span class="sample-pill">Sample</span></div>
@@ -366,7 +367,7 @@
   <div class="wrap">
     <div class="sec-head center">
       <span class="eyebrow">In the app</span>
-      <h2>The app where <span class="grad-text">visits</span> happen.</h2>
+      <h2>The app where visits <span class="grad-text">happen.</span></h2>
       <p class="lede" style="margin:0 auto">Businesses browse creators by local reach and invite in two taps. A visit runs on a code and is tracked to the post.</p>
     </div>
     <div class="skyline-zone">
@@ -467,7 +468,7 @@
     </div>
     <p class="cre-free">SIGNL is free for creators. Always. Businesses pay the platform. You never pay to join, to list, or to get booked.</p>
     <div class="hero-ctas" style="margin-top:28px">
-      <a class="btn" href="https://app.joinsignl.com/?src=home-v2">Claim your founding spot</a>
+      <a class="btn" href="https://app.joinsignl.com/claim?platform=instagram&src=home-v2">Claim your founding spot</a>
     </div>
   </div>
 </section>
@@ -476,7 +477,7 @@
 <section class="std-band field-black">
   <div class="wrap">
     <span class="eyebrow">Why you can trust it</span>
-    <h2>The standards are <span class="grad-text">the proof.</span></h2>
+    <h2>The standards are the <span class="grad-text">proof.</span></h2>
     <div class="std-grid">
       <div class="std-card">
         <div class="n">01</div>
@@ -536,7 +537,7 @@
             <li><strong>Paid deals: you keep 97%.</strong> The only creator cost is 3% on a paid booking, taken from the payout.</li>
           </ul>
         </div>
-        <a class="btn" href="https://app.joinsignl.com/?src=home-v2">Claim your founding spot</a>
+        <a class="btn" href="https://app.joinsignl.com/claim?platform=instagram&src=home-v2">Claim your founding spot</a>
       </article>
     </div>
     <div class="aud-block">
@@ -606,7 +607,7 @@
   <div class="wrap">
     <div class="sec-head center">
       <span class="eyebrow">Every size has a lane</span>
-      <h2>Small following. <span class="grad-text">Real value.</span></h2>
+      <h2>Small following. Real <span class="grad-text">value.</span></h2>
     </div>
     <div class="tier-grid">
       <div class="tier-card">
@@ -632,10 +633,10 @@
 <!-- ============ FINAL CTA ============ -->
 <section class="cta-band field-black">
   <div class="wrap">
-    <h2>Your city is forming its <span class="grad-text">founding roster.</span></h2>
+    <h2>Your city is forming its founding <span class="grad-text">roster.</span></h2>
     <p>Join the list now. Activate when your market opens.</p>
     <div class="hero-ctas">
-      <a class="btn btn-white" href="https://app.joinsignl.com/?src=home-v2">I&rsquo;m a creator</a>
+      <a class="btn" href="https://app.joinsignl.com/claim?platform=instagram&src=home-v2">I&rsquo;m a creator</a>
       <a class="btn btn-ink" href="businesses.html">I&rsquo;m a business</a>
     </div>
     <p class="cta-free">SIGNL is free for creators. Always. Businesses pay the platform. You never pay to join, to list, or to get booked.</p>
@@ -767,7 +768,7 @@
     <div class="sigx-sheet-slot" data-sig-sheet-slot></div>
   </div>
 </div>
-<script src="assets/agent/sig-agent.js?v=4" defer></script>
+<script src="assets/agent/sig-agent.js?v=5" defer></script>
 <script>
 /* Sig's living face on the homepage (V4, 2026-10-28): the idle
    loop from the app, attached lazily only when the Meet Sig

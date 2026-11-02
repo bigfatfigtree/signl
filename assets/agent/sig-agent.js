@@ -693,6 +693,30 @@ window.SIG_CONFIG = {
       });
     }
 
+    /* Audit fix (2026-11-01): the floating pill never covers content.
+       Past the hero it collapses to the avatar alone, and it fades
+       out while the footer is on screen. */
+    if (fab) {
+      var mqSmall = window.matchMedia("(max-width: 760px)");
+      var onScroll = function () {
+        /* On phones the pill is avatar-only from the first frame:
+           the hero's own loop card sits at the bottom of the first
+           screen, and the full pill ate its text mid-sentence. */
+        fab.classList.toggle("mini", mqSmall.matches || window.scrollY > 560);
+      };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      window.addEventListener("resize", onScroll);
+      onScroll();
+      var foot = document.querySelector("footer");
+      if (foot && "IntersectionObserver" in window) {
+        new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            fab.classList.toggle("away", en.isIntersecting);
+          });
+        }, { threshold: 0.05 }).observe(foot);
+      }
+    }
+
     /* any [data-sig-open] trigger (e.g. the section's own button) opens the sheet */
     document.querySelectorAll("[data-sig-open]").forEach(function (n) {
       n.addEventListener("click", function (e) { e.preventDefault(); openSheet(); });
