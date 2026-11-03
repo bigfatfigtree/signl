@@ -133,6 +133,18 @@
 .sec{padding:84px 0}
 .sec.tint{background:var(--bg2)}
 
+/* ---------- founding cities band ---------- */
+.fc-grid{display:grid;gap:14px;margin-top:8px}
+@media(min-width:640px){.fc-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1100px){.fc-grid{grid-template-columns:repeat(4,1fr)}}
+.fc-card{display:block;background:var(--card);border:1px solid var(--line2);border-radius:22px;overflow:hidden;box-shadow:var(--sh-sm);text-decoration:none;transition:transform .18s ease}
+.fc-card:hover{transform:translateY(-3px)}
+.fc-card img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block}
+.fc-body{padding:20px 22px 22px}
+.fc-name{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.45rem;letter-spacing:-.02em;color:var(--ink)}
+.fc-hook{color:var(--ink2);font-size:.95rem;line-height:1.55;margin-top:6px}
+.fc-go{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-weight:700;font-size:.9rem;color:#006AFC}
+
 /* ---------- final CTA ---------- */
 .cta-band{background:#0B0D0C;padding:88px 0;text-align:center}
 .cta-band h2{color:#fff;max-width:820px;margin:0 auto 16px;text-shadow:0 2px 22px rgba(0,0,0,.3)}
@@ -627,6 +639,51 @@
       </div>
     </div>
     <p class="tier-note">Automatic by total audience across platforms. Tiers rise as you grow.</p>
+  </div>
+</section>
+
+<!-- ============ FOUNDING CITIES ============ -->
+<section class="sec" style="padding-top:72px;padding-bottom:72px">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Founding cities</span>
+      <h2>Four cities. One <span class="grad-text">push.</span></h2>
+      <p style="max-width:620px;margin:14px auto 0;color:var(--ink2);font-size:1.02rem;line-height:1.6">The cities SIGNL is pushing now: founding creators and founding businesses, one city at a time.</p>
+    </div>
+    <div class="fc-grid">
+      <a class="fc-card" href="markets/hampton-roads.html">
+        <img src="assets/photos/city-virginia-beach.jpg" alt="The Virginia Beach oceanfront, with the hotel strip, a crowded beach and surf" loading="lazy" width="1400" height="933">
+        <div class="fc-body">
+          <div class="fc-name">Hampton Roads</div>
+          <p class="fc-hook">Virginia Beach, Norfolk &amp; five more cities, one metro roster.</p>
+          <span class="fc-go">Explore the city &rarr;</span>
+        </div>
+      </a>
+      <a class="fc-card" href="markets/nashville.html">
+        <img src="assets/photos/city-nashville.jpg" alt="The Stage on Broadway neon sign above a nighttime crowd on Lower Broadway, Nashville" loading="lazy" width="1400" height="2100" style="object-position:center 30%">
+        <div class="fc-body">
+          <div class="fc-name">Nashville</div>
+          <p class="fc-hook">East Nashville first, home of SIGNL&rsquo;s first founding business.</p>
+          <span class="fc-go">Explore the city &rarr;</span>
+        </div>
+      </a>
+      <a class="fc-card" href="markets/austin.html">
+        <img src="assets/photos/city-austin.jpg" alt="Pedestrians crossing South Congress Avenue at dusk with the downtown Austin skyline and Texas Capitol" loading="lazy" width="1400" height="915">
+        <div class="fc-body">
+          <div class="fc-name">Austin</div>
+          <p class="fc-hook">Founding roster forming now, ranked by local reach.</p>
+          <span class="fc-go">Explore the city &rarr;</span>
+        </div>
+      </a>
+      <a class="fc-card" href="markets/london.html">
+        <img src="assets/photos/london-borough-market.jpg" alt="The entrance to Borough Market in London, with The Shard behind it" loading="lazy" width="1600" height="1067">
+        <div class="fc-body">
+          <div class="fc-name">London</div>
+          <p class="fc-hook">Five districts racing to launch first.</p>
+          <span class="fc-go">Explore the city &rarr;</span>
+        </div>
+      </a>
+    </div>
   </div>
 </section>
 
