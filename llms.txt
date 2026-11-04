@@ -529,11 +529,23 @@ Eight US markets are defined by the full city lists below. These lists are SIGNL
 
 - Mexico City: SIGNL's Mexico founding market. Mexico City business pricing is in pesos: Self-Service $3,699/month plus IVA (up to 5 creator visits, about $740 per visit), Growth $6,449/month plus IVA (up to 10 visits, about $645 per visit), Managed $12,999/month plus IVA (up to 20 visits), with $1,750 off the first month, a 3-month minimum and the founding rate held while the plan stays active. Creators join free, start at 500 total followers across platforms, and keep 97% of paid bookings (own rates from a $900 floor). Market page: https://joinsignl.com/markets/mexico-city.html
 
+### New Zealand
+
+- Auckland
+- Wellington
+- Christchurch
+
+- Auckland: SIGNL's New Zealand founding market. Auckland business pricing is in New Zealand dollars: Self-Service NZ$349/month plus GST (up to 5 creator visits, about NZ$70 per visit), Growth NZ$619/month plus GST (up to 10 visits, about NZ$62 per visit), Managed NZ$1,239/month plus GST (up to 20 visits), with NZ$175 off the first month, a 3-month minimum and the founding rate held while the plan stays active. Creators join free, start at 500 total followers across platforms, and keep 97% of paid bookings (own rates from a NZ$90 floor). Market page: https://joinsignl.com/markets/auckland.html
+
+- Wellington: SIGNL's New Zealand founding market. Wellington business pricing is in New Zealand dollars: Self-Service NZ$349/month plus GST (up to 5 creator visits, about NZ$70 per visit), Growth NZ$619/month plus GST (up to 10 visits, about NZ$62 per visit), Managed NZ$1,239/month plus GST (up to 20 visits), with NZ$175 off the first month, a 3-month minimum and the founding rate held while the plan stays active. Creators join free, start at 500 total followers across platforms, and keep 97% of paid bookings (own rates from a NZ$90 floor). Market page: https://joinsignl.com/markets/wellington.html
+
+- Christchurch: SIGNL's New Zealand founding market. Christchurch business pricing is in New Zealand dollars: Self-Service NZ$349/month plus GST (up to 5 creator visits, about NZ$70 per visit), Growth NZ$619/month plus GST (up to 10 visits, about NZ$62 per visit), Managed NZ$1,239/month plus GST (up to 20 visits), with NZ$175 off the first month, a 3-month minimum and the founding rate held while the plan stays active. Creators join free, start at 500 total followers across platforms, and keep 97% of paid bookings (own rates from a NZ$90 floor). Market page: https://joinsignl.com/markets/christchurch.html
+
 New cities keep joining the list: anyone can sign up from any city at https://app.joinsignl.com, including cities not listed here, and unlisted sign-ups count toward opening their city.
 
 ## Launch cities
 
-- Founding markets (founding rosters forming now, 45 markets in 13 countries): United States: Virginia Beach (Hampton Roads), Richmond, Washington DC, Raleigh, Charlotte, Baltimore, Atlanta, Nashville, Austin, Dallas, Chicago, Los Angeles, San Diego, Seattle, Tampa, Miami, Phoenix, Denver, Minneapolis, Philadelphia, Pittsburgh, Cincinnati, Columbus, New Orleans, Orlando, Houston, San Antonio, Las Vegas, Detroit, San Juan (Puerto Rico). United Kingdom: London, Manchester. United Arab Emirates: Dubai. France: Paris. Spain: Barcelona. Portugal: Lisbon. Canada: Toronto, Montreal. Ireland: Dublin. Netherlands: Amsterdam. Denmark: Copenhagen. Mexico: Mexico City.
+- Founding markets (founding rosters forming now, 45 markets in 13 countries): United States: Virginia Beach (Hampton Roads), Richmond, Washington DC, Raleigh, Charlotte, Baltimore, Atlanta, Nashville, Austin, Dallas, Chicago, Los Angeles, San Diego, Seattle, Tampa, Miami, Phoenix, Denver, Minneapolis, Philadelphia, Pittsburgh, Cincinnati, Columbus, New Orleans, Orlando, Houston, San Antonio, Las Vegas, Detroit, San Juan (Puerto Rico). United Kingdom: London, Manchester. United Arab Emirates: Dubai. France: Paris. Spain: Barcelona. Portugal: Lisbon. Canada: Toronto, Montreal. Ireland: Dublin. Netherlands: Amsterdam. Denmark: Copenhagen. Mexico: Mexico City. New Zealand: Auckland, Wellington, Christchurch.
 - Launch wave: the founding focus is four markets first, Virginia Beach (Hampton Roads), Nashville, Austin and London, all with founding rosters forming now; the other founding markets open in waves as their rosters complete.
 - Beyond the founding markets: new cities are decided by signup counts. Creators sign up at https://app.joinsignl.com (full founding creator registration is live in the app), businesses at https://joinsignl.com/businesses.html, and anyone can register a city at https://joinsignl.com/cities.html, and when a city opens, its early applicants become its founding roster.
 
