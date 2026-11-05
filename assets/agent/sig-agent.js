@@ -3,9 +3,12 @@
    ----------------------------------------------------------------------------
    RENAME THE AGENT: edit SIG_CONFIG.name below. That is the ONLY place the
    name lives; every label, greeting and button reads it from the config.
-   THE FACE: SIG_CONFIG.avatar below is the ONLY place the avatar image is
-   referenced; every Sig avatar on the page (panel, messages, floating
-   button, sheet head) renders from it. Swap that one file to change the face.
+   THE MARK: SIG_CONFIG.avatar below is the ONLY place the orb still is
+   referenced; every Sig avatar on the page (messages, floating
+   button, sheet head) renders from it, and the panel header plays
+   the animated orb from SIG_CONFIG.avatarVideo. Swap those two
+   files to change the mark. (Build -130, 2026-11-05: the orb
+   replaced every painted face — faces read uncanny.)
    ----------------------------------------------------------------------------
    The agent is a scripted guide. Every answer comes from the locked SIGNL
    playbook baked into ANSWERS / FLOWS in this file. Free text is resolved
@@ -24,7 +27,8 @@ window.SIG_CONFIG = {
     cities: "cities.html"
   },
   samplePhoto: "assets/photos/sample-portrait-jordan.jpg",
-  avatar: "assets/sig-a/head-idle.webp"
+  avatar: "assets/sig-orb/orb.webp",
+  avatarVideo: "assets/sig-orb/orb.mp4"
 };
 
 (function () {
@@ -427,7 +431,22 @@ window.SIG_CONFIG = {
   }
   function avatar(cls) {
     var a = el("span", "sigx-ava " + (cls || ""));
-    a.appendChild(avatarImg());
+    if (cls === "lg" && CFG.avatarVideo && !reduceMotion) {
+      /* Build -130: the panel header carries the living orb;
+         every small slot keeps the still. */
+      var v = el("video", "sigx-ava-img");
+      v.muted = true; v.defaultMuted = true; v.loop = true; v.playsInline = true;
+      v.setAttribute("playsinline", "");
+      v.setAttribute("autoplay", "");
+      v.poster = CFG.avatar;
+      var s = document.createElement("source");
+      s.src = CFG.avatarVideo; s.type = "video/mp4";
+      v.appendChild(s);
+      a.appendChild(v);
+      var p = v.play && v.play(); if (p && p.catch) p.catch(function () {});
+    } else {
+      a.appendChild(avatarImg());
+    }
     a.setAttribute("aria-hidden", "true");
     return a;
   }

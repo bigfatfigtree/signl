@@ -15,20 +15,24 @@ the script stamps the config name into every `[data-sig-name]` /
 panel). To rename: change `name` in SIG_CONFIG. The literal "Sig" text in
 index.html is only the no-JS / pre-load fallback and is overwritten on init.
 
-## The face (V4, 2026-10-28; supersedes the 2026-10-27 axolotl note)
+## The mark (Build -130, 2026-11-05; supersedes every face)
 
-Sig's face is the V4 rendered character, the same one the app ships.
-The still image is referenced in ONE place: `avatar` in
-`window.SIG_CONFIG` (`assets/sig-v4/head-idle.webp`, the tight
-head crop, so he reads at 44/32/26px). Every avatar slot (panel
-header, message rows, FAB, sheet head) renders from that config
-value; the static `sigx-ava` spans in index.html carry the same
-`<img>` so the face shows pre-JS too. The Meet Sig section also
-carries his living face: the idle loop over the hero still
-(`assets/sig-v4/hero.webp` poster; `idle.webm` / `idle.mp4`
-attached lazily by the inline loader in index.html; reduced motion
-keeps the still). The old `assets/agent/sig-avatar.webp` (axolotl)
-is retired and no longer referenced by the homepage.
+Sig's mark is THE ORB — a gradient blue-to-mint orb with
+radiating signal arcs, the same mark the app ships. Every
+painted/portrait face before it (the V4 render, the Concept A
+portrait, the 2026-10-27 axolotl) is retired: human faces read
+uncanny, and the industry pattern for an AI is an abstract
+mark. The still image is referenced in ONE place: `avatar` in
+`window.SIG_CONFIG` (`assets/sig-orb/orb.webp`, so it reads at
+44/32/26px). Every avatar slot (message rows, FAB, sheet head)
+renders the still from that config value; the panel header
+plays the animated orb (`avatarVideo`,
+`assets/sig-orb/orb.mp4`) unless reduced motion. The static
+`sigx-ava` spans in index.html carry the same `<img>` so the
+mark shows pre-JS too. The Meet Sig section also carries the
+living orb: the animated clip over the orb still (poster),
+attached lazily by the inline loader in index.html; reduced
+motion keeps the still.
 
 ## Design choice (locked for v1)
 

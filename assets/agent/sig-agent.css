@@ -32,6 +32,7 @@
 .sigx-phead{display:flex;align-items:center;gap:11px;padding:14px 16px;border-bottom:1px solid var(--line2,#EAF2EA)}
 .sigx-ava{flex:none;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#006AFC 0%,#019BFC 32%,#03C9AB 64%,#2FE07E 100%);color:#fff;font-family:'Manrope',sans-serif;font-weight:800;font-size:.95rem;display:grid;place-items:center;overflow:hidden}
 .sigx-ava-img{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%}
+.sigx-ava video.sigx-ava-img{background:#0B0D0C}
 .sigx-ava.lg{width:44px;height:44px;font-size:1.2rem}
 .sigx-who{flex:1;min-width:0}
 .sigx-name{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.02rem;line-height:1.2;color:var(--ink,#0B0D0C)}
