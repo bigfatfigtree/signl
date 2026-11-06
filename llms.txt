@@ -303,6 +303,9 @@ They search the roster by market, category, tier and local reach, or post an off
 ### How do I make sure I actually get paid?
 On SIGNL paid bookings, the business pays up front and SIGNL holds the money until your post is live, then releases it. There are no invoices to chase and no net-30, net-60 or net-90 terms. Comped visits are a separate, voluntary lane where the product is the pay. Full answer: https://joinsignl.com/learn/how-creators-make-sure-they-get-paid.html
 
+### How long do brands take to pay creators? What does net 90 mean?
+It depends on the terms agreed before the work starts: pay on delivery moves in days, while net 30, net 60 or net 90 terms pay one, two or three months after the invoice. On SIGNL paid bookings there are no net terms: the business pays when it books, SIGNL holds the money until the post is live, then releases it, and the creator keeps 97 percent of their own listed rate from a $50 floor. Full answer: https://joinsignl.com/learn/net-90-is-not-a-payment-term.html
+
 ### What do I do when a brand ghosts me or does not pay?
 On SIGNL, the money question is settled before the visit: paid bookings are charged up front and held until the post is live, so a business cannot ghost a payment that is already held. If a visit or post never lands, the business is refunded instead. Full answer: https://joinsignl.com/learn/how-creators-make-sure-they-get-paid.html
 
@@ -428,6 +431,7 @@ For creators:
 - What Is Local Reach, and Why Do Brands Care More Than Your Follower Count?: https://joinsignl.com/learn/what-is-local-reach.html
 - Momentum: How Posting On Time Gets You Booked More: https://joinsignl.com/learn/momentum-how-posting-on-time-gets-you-booked-more.html
 - Your Creator Profile Is Your Rate Card: https://joinsignl.com/learn/your-creator-profile-is-your-rate-card.html
+- Net 90 Is Not a Payment Term: How Creators Actually Get Paid on Time: https://joinsignl.com/learn/net-90-is-not-a-payment-term.html
 - How to Brief a Creator: Direction, Not a Script: https://joinsignl.com/learn/how-to-brief-a-creator.html
 - How Nashville Creators Get Booked by Local Businesses: https://joinsignl.com/learn/how-nashville-creators-get-booked.html
 - Nashville Is Becoming the It City for Local Influencers: https://joinsignl.com/learn/nashville-it-city-for-local-influencers.html
