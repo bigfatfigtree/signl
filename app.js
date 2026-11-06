@@ -68,6 +68,14 @@ function trackEvent(name, params) { if (window.gtag) gtag('event', name, params 
   // Netlify forms: any <form data-signl-form="key" data-netlify name="...">
   // posts to Netlify. The success block appears only on a confirmed OK
   // response; otherwise the visitor gets an error state and can retry.
+  // NOTE (fixed 2026-11-06): Netlify's deploy-time form processing
+  // REWRITES every detected form in the HTML it serves — it strips the
+  // data-netlify attribute and injects method="post" plus a hidden
+  // form-name input. Any check for data-netlify in the live DOM
+  // therefore always fails and blocked every submission (a real
+  // creator's Minneapolis city request was lost this way). The form
+  // name is the only identity check that survives deploy processing:
+  // the name attribute, or the injected hidden form-name input.
   document.querySelectorAll('form[data-signl-form]').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -103,7 +111,12 @@ function trackEvent(name, params) { if (window.gtag) gtag('event', name, params 
         }
       }
 
-      if (!form.hasAttribute('data-netlify') || !form.getAttribute('name')) {
+      var formName = form.getAttribute('name');
+      if (!formName) {
+        var hiddenName = form.querySelector('input[name="form-name"]');
+        formName = hiddenName ? hiddenName.value : '';
+      }
+      if (!formName) {
         showError();
         return;
       }
@@ -115,7 +128,7 @@ function trackEvent(name, params) { if (window.gtag) gtag('event', name, params 
       var body = new URLSearchParams();
       var payload = {};
       new FormData(form).forEach(function (v, n) { body.append(n, v); payload[n] = v; });
-      body.append('form-name', form.getAttribute('name'));
+      body.append('form-name', formName);
 
       function postNetlify() {
         return fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: body.toString() })
@@ -141,7 +154,7 @@ function trackEvent(name, params) { if (window.gtag) gtag('event', name, params 
           return postFallback();
         })
         .then(function () {
-          trackEvent('form_submit', { form_name: form.getAttribute('name') });
+          trackEvent('form_submit', { form_name: formName });
           showSuccess();
         })
         .catch(function () { showError(); });
