@@ -13,6 +13,11 @@ from the article files themselves by a script.
      schema date, no correct slot),
    - the hero photo band (`<div class="photo-band ..."><img src="../assets/photos/..." alt="...">`)
      — this photo becomes the article's card image everywhere,
+   - **ONE ARTICLE, ONE PHOTO (Jeff's rule, 2026-11-06): every article gets its OWN
+     hero photo. Never use a photo that is already another article's hero — check
+     the other articles before picking one. `build-index.py` enforces this: if two
+     articles share a hero image it fails loudly, names the offenders, and refuses
+     to build until each one has a different photo,**
    - the audience label (`<span class="label">For creators · Learn</span>` or
      `For businesses · Learn`).
 2. Add ONE entry for it in `articles-meta.json` (audience, topic, and a short
