@@ -142,6 +142,72 @@
 .shopx .price .amt{font-size:21px;font-weight:800;letter-spacing:-.01em;}
 .shopx .price .per{font-size:13.5px;color:var(--ink-2);font-weight:600;}
 .shopx .price .free-note{font-size:12.5px;color:var(--signal-deep);font-weight:800;background:var(--signal-soft);padding:3px 9px;border-radius:99px;}
+/* Local follower count, highlighted directly under the % (Jeff, 2026-11-06) */
+.shopx .localcount{
+  display:inline-block;background:var(--mint);color:var(--ink);
+  font-size:13.5px;font-weight:800;letter-spacing:.01em;
+  padding:5px 11px;border-radius:99px;margin-top:9px;
+}
+.shopx .localcount.sm{font-size:12.5px;padding:4px 9px;margin-top:8px;}
+.shopx .tile .body .localcount,.shopx .tile .body .comptoggle{align-self:flex-start;}
+/* Accepts-comps toggle: ON = mint-highlighted, knob right; OFF = muted, knob left */
+.shopx .comptoggle{
+  display:inline-flex;align-items:center;gap:9px;line-height:1;
+  padding:5px 13px 5px 6px;border-radius:999px;
+  border:1.5px solid var(--line);background:var(--paper-2);
+  font-size:13px;font-weight:800;color:var(--ink-3);
+}
+.shopx .comptoggle .ct-track{
+  width:34px;height:20px;border-radius:99px;background:#D8D0BC;
+  position:relative;flex:none;display:inline-block;
+}
+.shopx .comptoggle .ct-knob{
+  position:absolute;top:3px;left:3px;width:14px;height:14px;border-radius:50%;
+  background:#fff;box-shadow:0 1px 3px rgba(29,26,22,.35);
+}
+.shopx .comptoggle.on{background:#DFF6E9;border-color:#7BD6A8;color:var(--ink);}
+.shopx .comptoggle.on .ct-track{background:var(--signal);}
+.shopx .comptoggle.on .ct-knob{left:17px;}
+.shopx .comptoggle.mini{padding:4px 10px 4px 4px;font-size:11.5px;gap:7px;border-width:1.5px;}
+.shopx .comptoggle.mini .ct-track{width:28px;height:17px;}
+.shopx .comptoggle.mini .ct-knob{width:11px;height:11px;}
+.shopx .comptoggle.mini.on .ct-knob{left:14px;}
+.shopx .tile .body .comptoggle{margin-top:10px;}
+.shopx .mini-tile .comptoggle{margin-top:9px;}
+.shopx .buybox .comptoggle{margin-top:14px;}
+.shopx .ratecard .comptoggle{margin-right:9px;vertical-align:middle;}
+/* Tray: local count under the big % + toggle row on the dark band */
+.shopx .tray-grid .cell.big{flex-wrap:wrap;}
+.shopx .tray-grid .cell .tcount{
+  flex-basis:100%;font-size:12.5px;font-weight:800;color:var(--mint);margin-top:3px;letter-spacing:.01em;
+}
+.shopx .tray .comptoggle{background:#2A271F;border-color:#4A453B;color:#A79E8D;}
+.shopx .tray .comptoggle .ct-track{background:#57503F;}
+.shopx .tray .comptoggle.on{background:#173527;border-color:var(--mint);color:var(--paper);}
+/* Two ways to book: doors band */
+.shopx .doors{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.shopx .door{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 2px 10px -4px rgba(29,26,22,.08);}
+.shopx .door h3{font-size:19px;font-weight:800;letter-spacing:-.01em;margin-bottom:14px;}
+.shopx .door .ph-card{margin-top:0;}
+.shopx .door .door-line{margin-top:14px;font-size:14.5px;font-weight:700;}
+/* Left door: bounded mini-shelf that scrolls through creators.
+   The shelf is absolutely positioned so the door's height is set by the
+   right door alone; the shelf fills whatever height the row gives it. */
+.shopx .door{position:relative;}
+.shopx .door-shelfwrap{position:absolute;left:21px;right:21px;top:63px;bottom:21px;display:flex;}
+.shopx .door-shelf{flex:1 1 auto;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;scrollbar-width:none;padding:2px 2px 18px;margin:-2px -2px 0;}
+.shopx .door-shelf::-webkit-scrollbar{display:none;}
+.shopx .door-shelf .ph-card{margin-top:13px;}
+.shopx .door-shelf .ph-card:first-child{margin-top:0;}
+.shopx .door-fade{position:absolute;left:0;right:0;bottom:0;height:52px;background:linear-gradient(rgba(255,255,255,0),#fff 84%);pointer-events:none;}
+.shopx .tray .comptoggle.on .ct-track{background:var(--signal);}
+/* Homepage phone card: count chip + toggle row */
+.shopx .ph-lcount{
+  display:inline-block;margin-top:9px;background:var(--mint);color:var(--ink);
+  font-size:11.5px;font-weight:800;padding:4px 9px;border-radius:99px;
+}
+.shopx .ph-tog{margin-top:10px;}
+.shopx .rc-toggle-row{padding-top:2px;}
 .shopx .proof{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:12px;padding-top:13px;border-top:1px solid var(--line);}
 .shopx .proof span{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--ink-2);}
 .shopx .proof svg{color:var(--signal);flex:none;}
@@ -466,7 +532,9 @@
 }
 .shopx .ph-screen{background:var(--paper);border-radius:40px;overflow:hidden;position:relative;height:600px;}
 .shopx .ph-notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:96px;height:24px;border-radius:99px;background:#111110;z-index:5;}
-.shopx .ph-body{padding:48px 16px 0;}
+.shopx .ph-body{padding:48px 16px 0;height:100%;box-sizing:border-box;display:flex;flex-direction:column;}
+.shopx .ph-scroll{flex:1 1 auto;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;scrollbar-width:none;padding-bottom:84px;}
+.shopx .ph-scroll::-webkit-scrollbar{display:none;}
 .shopx .ph-top{display:flex;align-items:center;justify-content:space-between;}
 .shopx .ph-top .logo{height:21px;width:auto;}
 .shopx .ph-chip{font-size:11.5px;font-weight:800;border:1.5px solid var(--ink);border-radius:99px;padding:5px 11px;background:#fff;display:inline-flex;gap:5px;align-items:center;}
@@ -496,11 +564,7 @@
 .shopx .ph-hero p{font-size:11.8px;font-weight:700;line-height:1.4;color:var(--ink);}
 .shopx .ph-hero p span{color:var(--ink-2);font-weight:600;}
 .shopx .ph-fade{position:absolute;left:0;right:0;bottom:0;height:120px;background:linear-gradient(rgba(250,247,241,0),var(--paper) 78%);z-index:4;pointer-events:none;}
-.shopx .ph-scrollhint{
-  position:absolute;left:50%;transform:translateX(-50%);bottom:16px;z-index:6;
-  background:var(--ink);color:var(--paper);font-size:11.5px;font-weight:800;border-radius:99px;padding:7px 14px;
-  display:flex;gap:7px;align-items:center;white-space:nowrap;box-shadow:var(--shadow-sm);
-}
+.shopx .ph-fade.short{height:30px;background:linear-gradient(rgba(250,247,241,0) 35%,var(--paper) 96%);}
 .shopx .phone-caption{margin-top:20px;font-size:13.5px;color:var(--ink-3);font-weight:600;text-align:center;max-width:300px;line-height:1.5;}
 .shopx .phone-caption b{color:var(--ink);}
 .shopx .appframe{
@@ -641,6 +705,9 @@
 .shopx .tray-head b{font-size:11.5px;}
 .shopx .tray-grid .cell .btn{font-size:11.5px;padding:9px 2px;white-space:nowrap;}
 .shopx .phone{transform:none;}
+.shopx .doors{grid-template-columns:1fr;}
+.shopx .door-shelfwrap{position:static;}
+.shopx .door-shelf{max-height:470px;}
 .shopx .af-body{padding:18px 14px 24px;}
 .shopx .af-body .pagehead h1,.shopx .af-body .pagehead h2{font-size:27px;}
 .shopx .af-role{display:none;}
