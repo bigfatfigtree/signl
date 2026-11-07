@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles-v2.css?v=11">
+<link rel="stylesheet" href="styles-v2.css?v=12">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
 <link rel="canonical" href="https://magpielocal.com/about.html">
@@ -105,18 +105,7 @@
 .ab-beat h3{font-size:1.55rem;margin:10px 0 10px;letter-spacing:-.018em}
 .ab-beat p{font-size:1.04rem;line-height:1.66;max-width:52ch}
 .ab-beat p b{color:var(--ink)}
-
-/* ---------- founder ---------- */
-.ab-founder{background:var(--ink);border-radius:var(--r-lg);padding:56px 34px;position:relative;overflow:hidden}
-@media(min-width:900px){.ab-founder{padding:72px 64px}}
-.ab-founder::before{content:"";position:absolute;inset:0;background:radial-gradient(560px 300px at 92% -40px,rgba(1,155,252,.16),transparent 65%),radial-gradient(480px 280px at -60px 110%,rgba(47,224,126,.12),transparent 65%);pointer-events:none}
-.ab-founder .ab-eyebrow{position:relative}
-.ab-founder-state{position:relative;font-size:clamp(1.35rem,2.5vw,1.8rem);line-height:1.5;font-weight:600;color:#F2F5F2;max-width:34em;margin-top:22px;letter-spacing:-.01em}
-.ab-founder-state .g{background:linear-gradient(92deg,#019BFC,#03C9AB 55%,#2FE07E);-webkit-background-clip:text;background-clip:text;color:transparent}
-.ab-founder-sub{position:relative;color:rgba(255,255,255,.72);font-size:1.02rem;line-height:1.65;max-width:56ch;margin-top:22px}
-.ab-founder-sign{position:relative;margin-top:30px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
-.ab-founder-sign .nm{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.2rem;color:#fff}
-.ab-founder-sign .rl{font-size:.82rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#A9E8C9}
+.ab-close{margin-top:48px;max-width:62ch}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "name": "About Magpie | Named for the Bird That Never Leaves", "url": "https://magpielocal.com/about.html", "description": "Why Magpie exists, and why it is named after the bird: social, vocal, gathers the bright things in its neighborhood, and stays in the same place its whole life. Local for life.", "isPartOf": {"@type": "WebSite", "name": "Magpie", "url": "https://magpielocal.com/"}, "about": {"@type": "Organization", "name": "Magpie", "url": "https://magpielocal.com/"}}, {"@type": "Organization", "@id": "https://magpielocal.com/#organization", "name": "Magpie", "url": "https://magpielocal.com/", "sameAs": ["https://www.instagram.com/magpielocal", "https://www.tiktok.com/@magpielocal", "https://www.facebook.com/1341797289027364", "https://www.linkedin.com/company/magpielocal"], "logo": "https://magpielocal.com/assets/logo.png", "email": "hello@magpielocal.com", "contactPoint": {"@type": "ContactPoint", "contactType": "customer service", "email": "hello@magpielocal.com", "telephone": "+1-213-264-5968"}, "address": {"@type": "PostalAddress", "streetAddress": "3419 Virginia Beach Blvd #5313", "addressLocality": "Virginia Beach", "addressRegion": "VA", "postalCode": "23452", "addressCountry": "US"}, "description": "Local creator marketing platform: local businesses comp local creators and everyday people a meal or service for honest, tracked posts within 48 hours. Launching city by city, worldwide. Founding markets in 13 countries."}]}</script>
 </head>
@@ -149,6 +138,7 @@
       <a href="pricing.html">Pricing</a>
       <a href="creator-faq.html">FAQ</a>
       <a href="learn/">Learn</a>
+      <a href="about.html">About</a>
     </nav>
     <div class="head-actions">
       <a class="btn btn-small head-cta" href="https://app.magpielocal.com/claim">Apply to Join</a>
@@ -172,6 +162,7 @@
       <a class="mn-link" href="pricing.html">Pricing <span>&rarr;</span></a>
       <a class="mn-link" href="creator-faq.html">FAQ <span>&rarr;</span></a>
       <a class="mn-link" href="learn/">Learn <span>&rarr;</span></a>
+      <a class="mn-link" href="about.html">About <span>&rarr;</span></a>
         <a class="mn-link mn-signin" href="https://app.magpielocal.com">Sign in</a>
     </nav>
   </div>
@@ -249,21 +240,7 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ================= FOUNDER ================= -->
-  <section class="block" style="padding-top:0">
-    <div class="wrap">
-      <div class="ab-founder">
-        <span class="ab-eyebrow">The founder</span>
-        <p class="ab-founder-state">Founded by Jeff Rimmer, who has spent <span class="g">2 decades in local media and startups</span>, and most recently led marketing for large brands and Fortune 100 companies, including influencer marketing at scale.</p>
-        <p class="ab-founder-sub">Magpie sits at the intersection of all of it: the local media years, the startups, and the influencer work, pointed at one problem. The neighborhood business that modern marketing forgot.</p>
-        <div class="ab-founder-sign">
-          <span class="nm">Jeff Rimmer</span>
-          <span class="rl">Founder, Magpie</span>
-        </div>
-      </div>
+      <p class="lede ab-close">So that is the deal Magpie makes. A business finds the local voices its neighbors already trust. A creator gets booked for a comped visit, or paid at their own rate, and keeps 97% of it. And every visit and every post is counted.</p>
     </div>
   </section>
 
