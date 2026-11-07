@@ -1,5 +1,5 @@
 // Static verification of Sig V4 on the marketing homepage (Jeff,
-// 2026-10-28): the real rendered character lives on magpienow.com's
+// 2026-10-28): the real rendered character lives on magpielocal.com's
 // Meet Sig section with the app's media model — idle loop over the
 // hero still, lazy attachment (no above-the-fold weight), poster
 // under reduced motion, head-crop stills at small placements, and

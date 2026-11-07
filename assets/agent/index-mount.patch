@@ -11,7 +11,7 @@ index 88d324b..356da84 100644
 +<link rel="stylesheet" href="assets/agent/sig-agent.css?v=1">
  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
  <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
- <link rel="canonical" href="https://magpienow.com/">
+ <link rel="canonical" href="https://magpielocal.com/">
 @@ -193,9 +194,9 @@
    </div>
    <div class="wrap hv-in">
@@ -22,7 +22,7 @@ index 88d324b..356da84 100644
 -      <p class="lede">Local businesses comp or pay local creators to visit and post honestly. Every visit is tracked.</p>
 +      <p class="lede">Browse creators by local reach, how much of their audience actually lives in your city. Comp the visit or pay their listed rate, and every visit is tracked to the post.</p>
        <div class="hero-ctas">
-         <a class="btn" href="https://app.magpienow.com/?src=home-v2">I&rsquo;m a creator</a>
+         <a class="btn" href="https://app.magpielocal.com/?src=home-v2">I&rsquo;m a creator</a>
          <a class="btn btn-ghost" href="businesses.html">I&rsquo;m a business</a>
 @@ -232,6 +233,36 @@
    </div>
@@ -51,7 +51,7 @@ index 88d324b..356da84 100644
 +      <div data-sig-panel>
 +        <div class="sigx-fallback">
 +          <p><b>Meet Sig, the Magpie guide.</b> The live walkthrough needs JavaScript. Until then, start here:</p>
-+          <p><a href="businesses.html">I run a business</a> · <a href="https://app.magpienow.com/?src=home-v2">I am a creator</a></p>
++          <p><a href="businesses.html">I run a business</a> · <a href="https://app.magpielocal.com/?src=home-v2">I am a creator</a></p>
 +        </div>
 +      </div>
 +    </div>

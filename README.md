@@ -37,7 +37,7 @@ The brand name "Magpie" is deliberately kept in as few places as practical. To r
   - `index.html` also has it in the `<meta name="description">`; other pages' meta descriptions vary (check each `<head>`)
 - **`README.md`:** title and intro paragraph.
 - **`app.js`:** localStorage key prefix is `signl_` (`data-signl-form` attributes in `creators.html` / `businesses.html`).
-- **Brand (locked 2026-10-15):** Magpie. Launch domain: magpienow.com (to be registered). Brand string `Magpie` appears in titles, logo, footers, copyright.
+- **Brand (locked 2026-10-15):** Magpie. Launch domain: magpielocal.com (to be registered). Brand string `Magpie` appears in titles, logo, footers, copyright.
 - **`styles.css`:** only the top comment mentions the name.
 - Tagline "Real locals. Real posts. Real walk-ins." appears in `index.html` (hero), `creators.html` indirectly, and every page footer — change there if the tagline goes with the name.
 

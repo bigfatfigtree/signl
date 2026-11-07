@@ -21,7 +21,7 @@ window.SIG_CONFIG = {
   role: "Magpie guide",
   version: 1,
   links: {
-    creatorClaim: "https://app.magpienow.com/?src=home-sig",
+    creatorClaim: "https://app.magpielocal.com/?src=home-sig",
     businessApply: "businesses.html#apply",
     pricing: "pricing.html",
     cities: "cities.html"
@@ -65,7 +65,7 @@ window.SIG_CONFIG = {
     momentum: "Momentum is Magpie's on-time score for creators. Post inside 48 hours and you earn +20 Momentum. It builds badges and priority in business invites, so the creators who deliver on time get booked more.",
     paidHow: "Creators set their own rate, from $50. The business pays the rate plus 3%, the money is held until the post is live, and the creator keeps 97%. A paid booking also includes one standard license: 90 days of repost and ad use.",
     isLive: "Magpie is built and rolling out now. Founding creator rosters are forming across 45 markets, founding businesses are joining the founding list, and markets activate as their rosters fill, Nashville first. Founding enrollment is open today.",
-    contact: "Fastest route is right here: pick your side below and I will take you straight to the page that does the job. If you would rather write to a human, the team reads hello@magpienow.com.",
+    contact: "Fastest route is right here: pick your side below and I will take you straight to the page that does the job. If you would rather write to a human, the team reads hello@magpielocal.com.",
     bizSummary: "Short version: browse Discover, where creators are ranked by local reach. Tap a creator, tap Invite, and the offer opens prefilled from their tier. They visit with a code, post within the standard, and the visit is tracked to the post. Take the business door and I will walk each step.",
     creSummary: "Short version: claim your spot, link your handle, finish your profile. From 500 followers you are bookable, ranked on local reach, with two ways to earn: comped experiences, or paid bookings at your own rate where you keep 97%. Take the creator door and I will walk each step."
   };

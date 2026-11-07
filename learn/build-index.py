@@ -159,11 +159,11 @@ def main():
         "ld+json round-trip mismatch — refusing to rewrite schema"
     old_names = {item["url"].rsplit("/", 1)[-1]: item["name"] for item in schema["@graph"][1]["itemListElement"]}
     schema["@graph"][1] = {
-        "@type": "ItemList", "name": "Magpie Learn Guides", "url": "https://magpienow.com/learn/",
+        "@type": "ItemList", "name": "Magpie Learn Guides", "url": "https://magpielocal.com/learn/",
         "numberOfItems": len(arts),
         "itemListElement": [
             {"@type": "ListItem", "position": i + 1,
-             "url": f"https://magpienow.com/learn/{a['file']}",
+             "url": f"https://magpielocal.com/learn/{a['file']}",
              "name": old_names.get(a["file"], a["title"])}
             for i, a in enumerate(arts)],
     }
