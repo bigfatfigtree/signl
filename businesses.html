@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles-v2.css?v=11">
-<link rel="stylesheet" href="shop.css?v=9">
+<link rel="stylesheet" href="shop.css?v=10">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
 <link rel="canonical" href="https://joinsignl.com/businesses.html">
@@ -146,7 +146,7 @@
 
         <div class="layout">
           <aside class="filters">
-            <div class="f-head"><b>Filters</b><a href="#">Clear all</a></div>
+            <div class="f-head"><b>Filters</b><button type="button" class="f-clear">Clear all</button></div>
 
             <div class="f-group">
               <h4>Category</h4>
@@ -1331,6 +1331,7 @@
   }
 })();
 </script>
+<script>(function(){var btn=document.querySelector('.f-clear');if(!btn)return;btn.addEventListener('click',function(){var scope=btn.closest('.shopx')||document;scope.querySelectorAll('.filters .f-group').forEach(function(g){var rows=g.querySelectorAll('.f-row');if(!rows.length)return;rows.forEach(function(r){r.classList.remove('sel');});rows[0].classList.add('sel');});scope.querySelectorAll('.chiprow .chip').forEach(function(c){c.classList.remove('sel');});});})();</script>
 
 </body>
 </html>
