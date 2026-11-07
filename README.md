@@ -1,6 +1,6 @@
-# SIGNL — MVP marketing / platform site
+# Magpie — MVP marketing / platform site
 
-Standalone static site (plain HTML/CSS/JS, no build step) for **SIGNL**, a local creator platform launching first in Hampton Roads, VA. Businesses subscribe; local creators and everyday people visit, get comped a meal/service, and post about it within 48 hours (tracked).
+Standalone static site (plain HTML/CSS/JS, no build step) for **Magpie**, a local creator platform launching first in Hampton Roads, VA. Businesses subscribe; local creators and everyday people visit, get comped a meal/service, and post about it within 48 hours (tracked).
 
 ## Structure
 
@@ -27,21 +27,21 @@ python3 -m http.server 8000
 
 ## Brand-string locations (rename checklist)
 
-The brand name "SIGNL" is deliberately kept in as few places as practical. To rename, search-and-replace `SIGNL` (and the lowercase variants below) in these spots:
+The brand name "Magpie" is deliberately kept in as few places as practical. To rename, search-and-replace `Magpie` (and the lowercase variants below) in these spots:
 
 - **Every page (`index.html`, `roster.html`, `creators.html`, `businesses.html`, `dashboard.html`):**
   - `<title>` tag
-  - Header logo text (`SIGNL.`) and footer logo text
+  - Header logo text (`Magpie.`) and footer logo text
   - Footer tagline line ("Local creator marketing for Hampton Roads…") — tagline text itself doesn't contain the name, but sits under the logo
-  - Footer copyright line (`© 2026 SIGNL.`)
+  - Footer copyright line (`© 2026 Magpie.`)
   - `index.html` also has it in the `<meta name="description">`; other pages' meta descriptions vary (check each `<head>`)
 - **`README.md`:** title and intro paragraph.
 - **`app.js`:** localStorage key prefix is `signl_` (`data-signl-form` attributes in `creators.html` / `businesses.html`).
-- **Brand (locked 2026-10-15):** SIGNL. Launch domain: joinsignl.com (to be registered). Brand string `SIGNL` appears in titles, logo, footers, copyright.
+- **Brand (locked 2026-10-15):** Magpie. Launch domain: magpienow.com (to be registered). Brand string `Magpie` appears in titles, logo, footers, copyright.
 - **`styles.css`:** only the top comment mentions the name.
 - Tagline "Real locals. Real posts. Real walk-ins." appears in `index.html` (hero), `creators.html` indirectly, and every page footer — change there if the tagline goes with the name.
 
-A quick `grep -rn "SIGNL" .` in this folder finds every remaining occurrence.
+A quick `grep -rn "Magpie" .` in this folder finds every remaining occurrence.
 
 ## Backend TODO (not built — MVP is front-end only)
 

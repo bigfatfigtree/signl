@@ -1,4 +1,4 @@
-# SIGNL Learn — how the index and article rails work (read before adding an article)
+# Magpie Learn — how the index and article rails work (read before adding an article)
 
 The Learn index (`index.html`) is a **generated magazine front page**. Do not
 hand-edit its article cards, and do not paste new cards into it. It is rebuilt
@@ -45,8 +45,8 @@ from the article files themselves by a script.
 ## Article-page standard (for new articles and any redesign)
 
 Every article page carries: the hero photo band with caption, the audience
-label, H1, lede, and the byline line (`By Jeff, Founder, SIGNL · <date> ·
-SIGNL Learn hub`). At the foot, the generated "Keep reading" rail links 3
+label, H1, lede, and the byline line (`By Jeff, Founder, Magpie · <date> ·
+Magpie Learn hub`). At the foot, the generated "Keep reading" rail links 3
 related articles (same topic first, then same audience, then newest). The
 rail lives between `<!-- KEEP-READING v1 -->` and `<!-- /KEEP-READING -->`
 markers — never hand-edit inside the markers; re-run the script instead.

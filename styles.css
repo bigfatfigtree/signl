@@ -1,4 +1,4 @@
-/* SIGNL — dark broadcast design system (2026 redesign)
+/* Magpie — dark broadcast design system (2026 redesign)
    Palette: #0C0C0C bg · #141414 panels · #F4F1EA ink · brand gradient blue #006AFC → teal #03C9AB → green #2FE07E
    Type: Archivo (display) · Inter (UI/body) · Space Grotesk (numbers) */
 
@@ -443,7 +443,7 @@ textarea::placeholder{color:var(--faint)}
 .site-footer a:hover{color:var(--teal)}
 .footer-bottom a{color:inherit;text-decoration:underline}
 
-/* ---------- why signl edge cards ---------- */
+/* ---------- why Magpie edge cards ---------- */
 .edge-grid{display:grid;gap:0;border:1px solid var(--line)}
 @media(min-width:920px){.edge-grid{grid-template-columns:1fr 1fr 1fr}}
 .edge-card{padding:30px 26px;background:var(--panel);border-top:1px solid var(--line)}
@@ -457,7 +457,7 @@ textarea::placeholder{color:var(--faint)}
 .edge-card h3{font-size:1.12rem;text-transform:uppercase;font-weight:800;margin:12px 0 8px}
 .edge-card p{color:var(--soft);font-size:.96rem}
 
-/* ---------- old way vs signl way ---------- */
+/* ---------- old way vs Magpie way ---------- */
 .vs{border-top:1px solid var(--line)}
 .vs-row{display:grid;gap:6px;padding:24px 0;border-bottom:1px solid var(--line)}
 @media(min-width:820px){.vs-row{grid-template-columns:210px 1fr 1fr;gap:28px;align-items:start}}

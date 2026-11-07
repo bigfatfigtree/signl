@@ -1,5 +1,5 @@
 /* ============================================================================
-   SIG · SIGNL homepage guide agent (v1, guided flows, no free-form LLM)
+   SIG · Magpie homepage guide agent (v1, guided flows, no free-form LLM)
    ----------------------------------------------------------------------------
    RENAME THE AGENT: edit SIG_CONFIG.name below. That is the ONLY place the
    name lives; every label, greeting and button reads it from the config.
@@ -10,7 +10,7 @@
    files to change the mark. (Build -130, 2026-11-05: the orb
    replaced every painted face — faces read uncanny.)
    ----------------------------------------------------------------------------
-   The agent is a scripted guide. Every answer comes from the locked SIGNL
+   The agent is a scripted guide. Every answer comes from the locked Magpie
    playbook baked into ANSWERS / FLOWS in this file. Free text is resolved
    against that same answer set; anything else falls back to the two doors.
    Sample data in cards is the site's own sample persona, labeled as sample.
@@ -18,10 +18,10 @@
 
 window.SIG_CONFIG = {
   name: "Sig",
-  role: "SIGNL guide",
+  role: "Magpie guide",
   version: 1,
   links: {
-    creatorClaim: "https://app.joinsignl.com/?src=home-sig",
+    creatorClaim: "https://app.magpienow.com/?src=home-sig",
     businessApply: "businesses.html#apply",
     pricing: "pricing.html",
     cities: "cities.html"
@@ -54,18 +54,18 @@ window.SIG_CONFIG = {
     costBusiness: "Three founding plans. Self-Service is $199 a month with 5 creator visits. Growth is $349 with 10. Managed is $699 with 20. Founding businesses get $100 off the first month ($99, $249, $599), with a 3-month minimum, and they keep the founding rate while the plan stays active. Paid bookings and licensing are available on every plan.",
     costCreator: "Creators pay nothing to join, and comped visits are always free. The only creator cost anywhere is 3% on a paid booking, so you keep 97% of your rate. That is the whole list.",
     costBoth: "For businesses: founding plans run $199 to $699 a month, with $100 off the first month and a 3-month minimum. For creators: free to join, and the only cost is 3% on a paid booking. Pick a door and I will walk you through your side in full.",
-    localReach: "Local reach is the share of a creator's audience that actually lives in the market. A creator with 6,240 followers and 58% local reach puts roughly 3,600 neighbors in front of a business. A national account with a million followers might have 200 people in the same city. SIGNL ranks on the local number.",
+    localReach: "Local reach is the share of a creator's audience that actually lives in the market. A creator with 6,240 followers and 58% local reach puts roughly 3,600 neighbors in front of a business. A national account with a million followers might have 200 people in the same city. Magpie ranks on the local number.",
     deliverable: "A comped visit is 1 post or reel, plus 1 story that shares the post. 48 hours is the standard the creator is held to, and one week is the hard deadline. A post inside the week counts as delivered.",
-    ugc: "Yes, in effect, and the local part is the point. Generic UGC is content from anyone, anywhere, often people who have never visited. On SIGNL, local creators your customers already follow post to their own audiences, right here in your city. Any post can be licensed for your own channels and ads: a paid booking includes one standard license, 90 days of repost and ad use, and a comped post can be licensed at the creator's listed fee, with the creator approving each use and keeping 97%. Until it is licensed, a comped post is native share only.",
+    ugc: "Yes, in effect, and the local part is the point. Generic UGC is content from anyone, anywhere, often people who have never visited. On Magpie, local creators your customers already follow post to their own audiences, right here in your city. Any post can be licensed for your own channels and ads: a paid booking includes one standard license, 90 days of repost and ad use, and a comped post can be licensed at the creator's listed fee, with the creator approving each use and keeping 97%. Until it is licensed, a comped post is native share only.",
     rights: "Rights follow the visit, never the plan. A comped visit is native share only: the business can reshare the post natively with credit, with no ad use. A paid booking includes one standard license: 90 days of repost and paid ad use, agreed inside the booking terms. To license a comped post, the business pays the creator's listed licensing fee, the creator approves each use, and the creator keeps 97%. Nothing is ever perpetual.",
     guarantee: "That is covered by the Visit Guarantee. If a week passes with no post, the visit does not count against the plan and it is replaced. The visit itself is made good, never a cash refund.",
     rollover: "Unused visits roll into the next month, then expire. One month of carry, maximum.",
-    cities: "SIGNL is rolling out across 45 founding markets in 13 countries, and founding enrollment is open now. Nashville is the priority market. The Cities page carries the full list.",
+    cities: "Magpie is rolling out across 45 founding markets in 13 countries, and founding enrollment is open now. Nashville is the priority market. The Cities page carries the full list.",
     tiers: "You can join from 500 followers. Tiers are set by your stacked audience: Neighbors from 500 to 2,000, Locals from 2,000 to 15,000, and Headliners above 15,000. Businesses rank you on local reach, so a small audience that lives in one city beats a big audience scattered everywhere.",
-    momentum: "Momentum is SIGNL's on-time score for creators. Post inside 48 hours and you earn +20 Momentum. It builds badges and priority in business invites, so the creators who deliver on time get booked more.",
+    momentum: "Momentum is Magpie's on-time score for creators. Post inside 48 hours and you earn +20 Momentum. It builds badges and priority in business invites, so the creators who deliver on time get booked more.",
     paidHow: "Creators set their own rate, from $50. The business pays the rate plus 3%, the money is held until the post is live, and the creator keeps 97%. A paid booking also includes one standard license: 90 days of repost and ad use.",
-    isLive: "SIGNL is built and rolling out now. Founding creator rosters are forming across 45 markets, founding businesses are joining the founding list, and markets activate as their rosters fill, Nashville first. Founding enrollment is open today.",
-    contact: "Fastest route is right here: pick your side below and I will take you straight to the page that does the job. If you would rather write to a human, the team reads hello@joinsignl.com.",
+    isLive: "Magpie is built and rolling out now. Founding creator rosters are forming across 45 markets, founding businesses are joining the founding list, and markets activate as their rosters fill, Nashville first. Founding enrollment is open today.",
+    contact: "Fastest route is right here: pick your side below and I will take you straight to the page that does the job. If you would rather write to a human, the team reads hello@magpienow.com.",
     bizSummary: "Short version: browse Discover, where creators are ranked by local reach. Tap a creator, tap Invite, and the offer opens prefilled from their tier. They visit with a code, post within the standard, and the visit is tracked to the post. Take the business door and I will walk each step.",
     creSummary: "Short version: claim your spot, link your handle, finish your profile. From 500 followers you are bookable, ranked on local reach, with two ways to earn: comped experiences, or paid bookings at your own rate where you keep 97%. Take the creator door and I will walk each step."
   };
@@ -87,7 +87,7 @@ window.SIG_CONFIG = {
       {
         say: [
           "This is a creator card in Discover.",
-          "Jordan Ellis is a Local in Virginia Beach: 6,240 audience, and 58% of it lives right there. On SIGNL, the 58% is the number you book."
+          "Jordan Ellis is a Local in Virginia Beach: 6,240 audience, and 58% of it lives right there. On Magpie, the 58% is the number you book."
         ],
         card: "sample",
         chips: [
@@ -174,7 +174,7 @@ window.SIG_CONFIG = {
       {
         say: [
           "Founding enrollment is open in 45 markets across 13 countries, and Nashville is the priority market right now.",
-          "City not on the list? Claim anyway and add your city. SIGNL opens markets where creators gather."
+          "City not on the list? Claim anyway and add your city. Magpie opens markets where creators gather."
         ],
         ctas: [
           { label: "Claim your spot", href: CFG.links.creatorClaim, primary: true },
@@ -588,7 +588,7 @@ window.SIG_CONFIG = {
     greet();
   }
   function greet() {
-    sayAsync("Hi, I'm " + NAME + ", the " + CFG.role + ". I can walk you through SIGNL the way it actually works, on either side of the table.")
+    sayAsync("Hi, I'm " + NAME + ", the " + CFG.role + ". I can walk you through Magpie the way it actually works, on either side of the table.")
       .then(function () { return sayAsync("Pick a door, or ask me something."); })
       .then(function () { renderChips(ROOT_CHIPS); });
   }
@@ -654,7 +654,7 @@ window.SIG_CONFIG = {
     });
     panel.appendChild(form);
 
-    panel.appendChild(el("p", "sigx-fine", "Guided tour · Answers come straight from the SIGNL playbook · Sample profile shown is a preview"));
+    panel.appendChild(el("p", "sigx-fine", "Guided tour · Answers come straight from the Magpie playbook · Sample profile shown is a preview"));
     return panel;
   }
 

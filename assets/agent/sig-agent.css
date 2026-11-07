@@ -1,5 +1,5 @@
 /* ============================================================================
-   SIG · SIGNL homepage guide agent (v1)
+   SIG · Magpie homepage guide agent (v1)
    Self-contained styles for assets/agent/sig-agent.js. Everything is scoped
    under .sigx- so it can drop into any page that loads the v2 tokens.
    Rename-safe: the agent name never appears in this file.

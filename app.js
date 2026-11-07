@@ -1,5 +1,5 @@
 /* ---------- Analytics (GA4) ----------
-   To activate: create a free GA4 property for joinsignl.com at
+   To activate: create a free GA4 property for magpienow.com at
    analytics.google.com and paste the measurement ID (looks like
    G-XXXXXXXXXX) between the quotes below, then push. Until then,
    nothing loads and nothing is tracked. */
@@ -96,7 +96,7 @@ function trackEvent(name, params) { if (window.gtag) gtag('event', name, params 
       }
       function showError() {
         if (error) {
-          error.textContent = 'Something went wrong sending that just now. Your answers are still in the form: please press send again, or email hello@joinsignl.com and we will take it from there.';
+          error.textContent = 'Something went wrong sending that just now. Your answers are still in the form: please press send again, or email hello@magpienow.com and we will take it from there.';
           error.style.display = 'block';
         }
         form.removeAttribute('data-sending');
@@ -140,7 +140,7 @@ function trackEvent(name, params) { if (window.gtag) gtag('event', name, params 
       // to the app API, which stores the application itself and emails
       // the team; success on either path is a real, recorded success.
       function postFallback() {
-        return fetch('https://app.joinsignl.com/api/founding-application', {
+        return fetch('https://app.magpienow.com/api/founding-application', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)

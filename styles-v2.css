@@ -1,4 +1,4 @@
-/* SIGNL v2 design system: LIGHT PREMIUM register.
+/* Magpie v2 design system: LIGHT PREMIUM register.
    Base: warm off-white from the brand #F4F1EA family. Ink: #141414 family.
    The locked gradient (#006AFC -> #019BFC -> #03C9AB -> #2FE07E) is the accent system only.
    Type: Archivo (display) / Inter (body) / Space Grotesk (numbers). */
@@ -578,7 +578,7 @@ html.sx-on .reveal.in{opacity:1;transform:none}
   .hero-video .hero-trust span{max-width:100%}
 }
 
-/* ---------- round 5b: skyline trio + satellites (SIGNL's own phone composition) ---------- */
+/* ---------- round 5b: skyline trio + satellites (Magpie's own phone composition) ---------- */
 .skyline-zone{position:relative;padding:18px 0 4px}
 .skyline{
   position:relative;display:flex;align-items:flex-end;justify-content:center;gap:26px;
@@ -940,7 +940,7 @@ section[id]{scroll-margin-top:96px}
 .rule h3{font-size:1.25rem;font-weight:800;margin-bottom:9px}
 .rule p{font-size:.95rem}
 
-/* old way vs SIGNL way */
+/* old way vs Magpie way */
 .vs-head{display:none}
 @media(min-width:900px){
   .vs-head{display:grid;grid-template-columns:190px 1fr 1fr;gap:0 26px;padding:0 28px 12px;
@@ -1148,7 +1148,7 @@ section.block.tight{padding:60px 0}
 .legal .updated{font-family:'Manrope',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3)}
 .legal a{color:#006AFC;text-decoration:underline}
 
-/* why-SIGNL edge cards (why-local) */
+/* why-Magpie edge cards (why-local) */
 .edge-grid{
   display:grid;gap:0;background:var(--card);
   border:1px solid var(--line2);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-md);
@@ -1454,7 +1454,7 @@ body:has(.mobile-nav.open) .site-head{
    hero, a photo on every play step, a photo side panel beside the
    What You Get grid, a full-width photo band before Price Lock, and
    a small photo beside the application band. Photography is real
-   (Pexels) and is never presented as SIGNL creators or results. */
+   (Pexels) and is never presented as Magpie creators or results. */
 
 /* Block 1: photo hero. The photo carries the top of the page and the
    headline sits on it over a scrim. */

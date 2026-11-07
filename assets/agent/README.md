@@ -1,6 +1,6 @@
-# Sig · SIGNL homepage guide agent
+# Sig · Magpie homepage guide agent
 
-A guided showcase agent for the joinsignl.com homepage: a "Meet Sig" section
+A guided showcase agent for the magpienow.com homepage: a "Meet Sig" section
 (placed after the hero overlap cards, before "The Problem, Solved") plus a
 floating "Ask Sig" button that opens the same conversation in a bottom sheet
 on mobile / card on desktop. One panel, reparented between the two homes, so
@@ -54,7 +54,7 @@ verb, or owner identity like "I own a restaurant") → founding pitch line +
 which-side question whose chips are the two routes; (4) invite questions →
 business flow step 2, the invite step itself; (5) genuine contact asks only
 → the contact answer, which now LEADS with the two doors and keeps
-hello@joinsignl.com as a secondary line; (6) city availability → the cities
+hello@magpienow.com as a secondary line; (6) city availability → the cities
 answer with its links.
 
 Every plain answer also carries action links via `ANSWER_ACTIONS` (plans
@@ -86,7 +86,7 @@ Creator door (5 steps):
 3. Momentum card (+20 on-time post, +25 license approval, +10 approval,
    +3 invite joins; 48h standard, 1 week deadline)
 4. Founding enrollment + Nashville priority → CTAs: app claim link
-   (app.joinsignl.com/?src=home-sig), cities.html
+   (app.magpienow.com/?src=home-sig), cities.html
 
 Question chips / free-text answers: cost, rights and ads, comp deliverable,
 deadline, no-show, cities (45 founding markets), local reach, size to join,
@@ -105,7 +105,7 @@ Guarantee = visit replaced, credits not cash; tiers Neighbors 500-2k,
 Locals 2k-15k, Headliners 15k+ by stacked audience; paid rate floor $50;
 45 founding markets; Nashville is the priority market; claims matching
 outreach records are decided automatically (stated plainly, no AI-vetting
-claims). No competitor names. No em dashes. SIGNL is "built and rolling
+claims). No competitor names. No em dashes. Magpie is "built and rolling
 out," never "building." Sample data is labeled Preview wherever it appears.
 
 ## Files
