@@ -541,12 +541,16 @@
 .shopx .hv h1 .grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;}
 .shopx .hv .lede{font-size:20px;color:#EDE8DB;font-weight:500;line-height:1.55;max-width:34em;}
 .shopx .hv .lede strong{color:#fff;}
+.shopx .hv .hv-sub{font-size:23px;color:#fff;font-weight:600;line-height:1.35;letter-spacing:-.01em;max-width:26em;}
 .shopx .hv .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;}
 .shopx .hv .cta-row .btn{padding:16px 28px;font-size:16.5px;}
 .shopx .btn.ghost.light{border-color:rgba(255,255,255,.9);color:#fff;background:rgba(255,255,255,.06);}
 .shopx .hv .micro{margin-top:16px;font-size:14px;color:#CFC8BA;font-weight:600;display:flex;gap:8px;align-items:center;}
 .shopx .hv .micro svg{color:var(--mint);flex:none;}
-.shopx .phone-sec{padding:62px 0 4px;}
+.shopx .stmt{padding:86px 0 2px;}
+.shopx .stmt-text{font-size:clamp(26px,2.6vw,38px);font-weight:650;line-height:1.34;letter-spacing:-.022em;color:var(--ink);max-width:25em;}
+.shopx .stmt-text strong{font-weight:800;}
+.shopx .phone-sec{padding:44px 0 4px;}
 .shopx .phone-stage{position:relative;display:flex;flex-direction:column;align-items:center;}
 .shopx .phone{
   width:332px;max-width:88vw;background:#111110;border-radius:50px;padding:11px;
@@ -717,6 +721,9 @@
 .shopx .hv-in{padding:118px 18px 62px;}
 .shopx .hv h1{font-size:41px;}
 .shopx .hv .lede{font-size:17.5px;}
+.shopx .hv .hv-sub{font-size:19.5px;}
+.shopx .stmt{padding:56px 0 2px;}
+.shopx .phone-sec{padding:28px 0 2px;}
 .shopx .hv-scrim{background:linear-gradient(180deg,rgba(8,10,12,.66) 0%,rgba(8,10,12,.55) 100%);}
 .shopx .phone-sec{padding:40px 0 2px;}
 .shopx .tmtag{font-size:10px;padding:3px 9px;top:-11px;}

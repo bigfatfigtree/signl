@@ -30,37 +30,17 @@
 
 <style>
 /* About page (page scoped, v2 tokens). Hero is Jeff's magpie flight video
-   (brand-gradient grade baked in) over the flight photo; lower slots carry
-   the abstract ribbon magpie artwork. Abstract SVG magpies drift on lanes. */
-
-/* ---------- flight layer ---------- */
-.flight-layer{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:40}
-.fly-bird{position:absolute;left:0;will-change:transform;animation:flyCross linear infinite}
-.fly-bird svg{display:block;width:100%;height:auto;overflow:visible}
-.fly-bob{animation:flyBob 5.2s ease-in-out infinite alternate}
-.fly-wing{transform-box:view-box;transform-origin:130px 88px;animation:flyFlap 2.6s ease-in-out infinite alternate}
-@keyframes flyCross{from{transform:translateX(-22vw)}to{transform:translateX(118vw)}}
-@keyframes flyBob{from{transform:translateY(-9px) rotate(-1.6deg)}to{transform:translateY(11px) rotate(1.8deg)}}
-@keyframes flyFlap{from{transform:rotate(-5deg)}to{transform:rotate(6deg)}}
-.fly-rtl{direction:rtl}
-.fly-rtl .fly-scale{transform:scaleX(-1)}
-@media (max-width:700px){
-  .flight-layer .fly-bird:nth-child(1){width:84px !important}
-  .flight-layer .fly-bird:nth-child(2){width:54px !important}
-  .flight-layer .fly-bird:nth-child(3){width:44px !important}
-  .flight-layer .fly-bird:nth-child(4){width:62px !important}
-}
-@media (prefers-reduced-motion: reduce){
-  .fly-bird,.fly-bob,.fly-wing{animation:none !important}
-}
+   (brand-gradient grade baked in) over the flight photo; the band carries
+   a text-free crop of the Magpie mark artwork; other slots carry real photos. */
 
 /* ---------- hero ---------- */
-.ab-hero{position:relative;overflow:hidden;background:var(--ink);display:flex;align-items:flex-end;min-height:min(92vh,780px)}
+.ab-hero{position:relative;overflow:hidden;background:var(--ink);display:flex;align-items:center;min-height:min(92vh,780px)}
 .ab-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:38% 32%}
 .ab-hero-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:38% 32%}
-.ab-hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,13,12,.30) 0%,rgba(11,13,12,0) 30%,rgba(11,13,12,.16) 58%,rgba(11,13,12,.78) 100%),linear-gradient(78deg,rgba(11,13,12,.55) 0%,rgba(11,13,12,0) 55%)}
-/* vertical padding only: horizontal gutter comes from .wrap (22px / 40px) */
-.ab-hero-in{position:relative;width:100%;padding-top:150px;padding-bottom:62px}
+.ab-hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,13,12,.36) 0%,rgba(11,13,12,.22) 30%,rgba(11,13,12,.34) 58%,rgba(11,13,12,.72) 100%),linear-gradient(78deg,rgba(11,13,12,.55) 0%,rgba(11,13,12,0) 55%)}
+/* vertical padding only: horizontal gutter comes from .wrap (22px / 40px).
+   Text block is vertically centered (align-items:center on .ab-hero). */
+.ab-hero-in{position:relative;width:100%;padding-top:110px;padding-bottom:110px}
 .ab-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#B9F1D6}
 .ab-eyebrow::before{content:"\2014";color:#2FE07E;font-weight:800;letter-spacing:0}
 .ab-hero h1{color:#fff;max-width:13ch;margin:18px 0 20px}
@@ -72,7 +52,7 @@
   .ab-hero{min-height:82vh}
   .ab-hero-img{object-position:56% 30%}
   .ab-hero-vid{object-position:22% 42%}
-  .ab-hero-in{padding-top:120px;padding-bottom:54px}
+  .ab-hero-in{padding-top:76px;padding-bottom:76px}
   .ab-credit{display:none}
 }
 
@@ -91,18 +71,22 @@
 
 /* ---------- photo band ---------- */
 .ab-band{position:relative;overflow:hidden;padding:132px 0;background:var(--ink)}
-.ab-band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.ab-band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 28%}
 .ab-band-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,13,12,.66) 0%,rgba(11,13,12,.28) 52%,rgba(11,13,12,.10) 100%)}
 .ab-band-in{position:relative}
 .ab-band .ab-eyebrow{color:#B9F1D6}
 .ab-band-line{font-family:'Archivo',sans-serif;font-weight:900;letter-spacing:-.02em;line-height:1.02;color:#fff;font-size:clamp(2.7rem,7.2vw,5.4rem);margin-top:16px;max-width:12ch}
 .ab-band-line .g{background:linear-gradient(92deg,#019BFC,#03C9AB 55%,#2FE07E);-webkit-background-clip:text;background-clip:text;color:transparent}
-@media(max-width:700px){.ab-band{padding:96px 0}.ab-band img{object-position:16% 50%}}
+@media(max-width:700px){.ab-band{padding:96px 0}.ab-band img{object-position:68% 30%}}
 
 /* ---------- the three beats ---------- */
 .ab-beats{display:grid;grid-template-columns:1fr;gap:44px}
 @media(min-width:960px){.ab-beats{grid-template-columns:.82fr 1.18fr;gap:68px;align-items:start}}
-.ab-beats .ab-photo{position:sticky;top:110px}
+/* sticky photo is a DESKTOP-only treatment: scoped to the two-column layout.
+   Unscoped, it stuck on mobile too and the tall card slid over the beats
+   text while scrolling (Jeff, 2026-11-07). On mobile everything stacks in
+   normal flow. */
+@media(min-width:960px){.ab-beats .ab-photo{position:sticky;top:110px}}
 .ab-beat{padding:30px 0 34px;border-top:1px solid var(--line)}
 .ab-beat:first-child{padding-top:6px;border-top:0}
 .ab-beat .no{font-family:'Space Grotesk',monospace;font-weight:700;font-size:.8rem;letter-spacing:.22em;color:var(--mint-deep)}
@@ -111,25 +95,10 @@
 .ab-beat p b{color:var(--ink)}
 .ab-close{margin-top:48px;max-width:62ch}
 </style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "name": "About Magpie | Named for the Bird That Never Leaves", "url": "https://magpielocal.com/about.html", "description": "Why Magpie exists, and why it is named after the bird: social, vocal, gathers the bright things in its neighborhood, and stays in the same place its whole life. Local for life.", "isPartOf": {"@type": "WebSite", "name": "Magpie", "url": "https://magpielocal.com/"}, "about": {"@type": "Organization", "name": "Magpie", "url": "https://magpielocal.com/"}}, {"@type": "Organization", "@id": "https://magpielocal.com/#organization", "name": "Magpie", "url": "https://magpielocal.com/", "sameAs": ["https://www.instagram.com/magpielocal", "https://www.tiktok.com/@joinsignl", "https://www.facebook.com/magpielocal", "https://www.linkedin.com/company/magpielocal"], "logo": "https://magpielocal.com/assets/logo.png", "email": "hello@magpielocal.com", "contactPoint": {"@type": "ContactPoint", "contactType": "customer service", "email": "hello@magpielocal.com", "telephone": "+1-213-264-5968"}, "address": {"@type": "PostalAddress", "streetAddress": "3419 Virginia Beach Blvd #5313", "addressLocality": "Virginia Beach", "addressRegion": "VA", "postalCode": "23452", "addressCountry": "US"}, "description": "Local creator marketing platform: local businesses comp local creators and everyday people a meal or service for honest, tracked posts within 48 hours. Launching city by city, worldwide. Founding markets in 13 countries."}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "name": "About Magpie | Named for the Bird That Never Leaves", "url": "https://magpielocal.com/about.html", "description": "Why Magpie exists, and why it is named after the bird: social, vocal, gathers the bright things in its neighborhood, and stays in the same place its whole life. Local for life.", "isPartOf": {"@type": "WebSite", "name": "Magpie", "url": "https://magpielocal.com/"}, "about": {"@type": "Organization", "name": "Magpie", "url": "https://magpielocal.com/"}}, {"@type": "Organization", "@id": "https://magpielocal.com/#organization", "name": "Magpie", "url": "https://magpielocal.com/", "sameAs": ["https://www.instagram.com/magpielocal", "https://www.threads.net/@magpielocal", "https://www.tiktok.com/@joinsignl", "https://www.facebook.com/magpielocal", "https://www.linkedin.com/company/magpielocal"], "logo": "https://magpielocal.com/assets/logo.png", "email": "hello@magpielocal.com", "contactPoint": {"@type": "ContactPoint", "contactType": "customer service", "email": "hello@magpielocal.com", "telephone": "+1-213-264-5968"}, "address": {"@type": "PostalAddress", "streetAddress": "3419 Virginia Beach Blvd #5313", "addressLocality": "Virginia Beach", "addressRegion": "VA", "postalCode": "23452", "addressCountry": "US"}, "description": "Local creator marketing platform: local businesses comp local creators and everyday people a meal or service for honest, tracked posts within 48 hours. Launching city by city, worldwide. Founding markets in 13 countries."}]}</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-
-<div class="flight-layer" id="flightLayer" aria-hidden="true">
-  <div class="fly-bird" style="top:11%;width:118px;opacity:.92;animation-duration:74s;animation-delay:-26s">
-    <div class="fly-bob"><svg viewBox="0 0 320 190" fill="#0B0D0C" xmlns="http://www.w3.org/2000/svg"><path d="M100 96 L12 130 L18 144 L102 110 Z"/><path d="M92 94 C126 80 172 74 200 79 C216 82 224 90 222 99 C220 109 206 114 182 115 L112 113 C94 112 84 102 92 94 Z"/><circle cx="210" cy="85" r="9.5"/><path d="M217 79 L242 86 L217 93 Z"/><g class="fly-wing"><path d="M138 84 C124 46 92 14 50 5 C42 3 38 11 44 18 C74 50 104 76 124 90 C130 92 136 90 138 84 Z"/></g></svg></div>
-  </div>
-  <div class="fly-bird" style="top:37%;width:78px;opacity:.30;animation-duration:98s;animation-delay:-64s">
-    <div class="fly-bob" style="animation-duration:6.4s"><svg viewBox="0 0 320 190" fill="#0B0D0C" xmlns="http://www.w3.org/2000/svg"><path d="M100 96 L12 130 L18 144 L102 110 Z"/><path d="M92 94 C126 80 172 74 200 79 C216 82 224 90 222 99 C220 109 206 114 182 115 L112 113 C94 112 84 102 92 94 Z"/><circle cx="210" cy="85" r="9.5"/><path d="M217 79 L242 86 L217 93 Z"/><g class="fly-wing" style="animation-duration:3.1s"><path d="M138 84 C124 46 92 14 50 5 C42 3 38 11 44 18 C74 50 104 76 124 90 C130 92 136 90 138 84 Z"/></g></svg></div>
-  </div>
-  <div class="fly-bird fly-rtl" style="top:63%;width:62px;opacity:.20;animation-duration:116s;animation-delay:-38s">
-    <div class="fly-bob" style="animation-duration:7.2s"><div class="fly-scale"><svg viewBox="0 0 320 190" fill="#0B0D0C" xmlns="http://www.w3.org/2000/svg"><path d="M100 96 L12 130 L18 144 L102 110 Z"/><path d="M92 94 C126 80 172 74 200 79 C216 82 224 90 222 99 C220 109 206 114 182 115 L112 113 C94 112 84 102 92 94 Z"/><circle cx="210" cy="85" r="9.5"/><path d="M217 79 L242 86 L217 93 Z"/><g class="fly-wing" style="animation-duration:3.6s"><path d="M138 84 C124 46 92 14 50 5 C42 3 38 11 44 18 C74 50 104 76 124 90 C130 92 136 90 138 84 Z"/></g></svg></div></div>
-  </div>
-  <div class="fly-bird" style="top:86%;width:92px;opacity:.26;animation-duration:88s;animation-delay:-79s">
-    <div class="fly-bob" style="animation-duration:5.8s"><svg viewBox="0 0 320 190" fill="#0B0D0C" xmlns="http://www.w3.org/2000/svg"><path d="M100 96 L12 130 L18 144 L102 110 Z"/><path d="M92 94 C126 80 172 74 200 79 C216 82 224 90 222 99 C220 109 206 114 182 115 L112 113 C94 112 84 102 92 94 Z"/><circle cx="210" cy="85" r="9.5"/><path d="M217 79 L242 86 L217 93 Z"/><g class="fly-wing" style="animation-duration:2.9s"><path d="M138 84 C124 46 92 14 50 5 C42 3 38 11 44 18 C74 50 104 76 124 90 C130 92 136 90 138 84 Z"/></g></svg></div>
-  </div>
-</div>
 
 <header class="site-head">
   <div class="wrap head-in">
@@ -203,7 +172,7 @@
           <p>Those people are already in every neighborhood, posting about where they eat, shop, train, and go out, to followers who actually live there. <b>Magpie connects the two sides:</b> a business books a local creator for a comped visit or at the creator's own rate, the post goes up, and the visit is counted when a follower walks in. <b>Local creators, local businesses, one neighborhood at a time.</b></p>
         </div>
         <div class="ab-photo wide">
-          <img src="assets/about/magpie-abstract-wide.jpg" alt="Abstract magpie artwork: a magpie formed from flowing ribbons of blue, teal and green feathers" loading="lazy" decoding="async" width="1280" height="960">
+          <img src="assets/about/magpie-flight.jpg" alt="A magpie in full flight, wings spread wide, showing the white flash and iridescent blue in its wings" loading="lazy" decoding="async" width="2560" height="1706">
         </div>
       </div>
     </div>
@@ -211,7 +180,7 @@
 
   <!-- ================= PHOTO BAND ================= -->
   <section class="ab-band">
-    <img src="assets/about/magpie-abstract-band.jpg" alt="Abstract magpie artwork: ribbons of blue and green feathers forming a magpie in profile" loading="lazy" decoding="async" width="1280" height="512">
+    <img src="assets/about/magpie-mark-band.jpg" alt="The Magpie bird mark: a black magpie silhouette with a bright eye, over a blue-to-green gradient disc" loading="lazy" decoding="async" width="1600" height="948">
     <div class="ab-band-shade"></div>
     <div class="wrap ab-band-in">
       <span class="ab-eyebrow">The name, in three words</span>
@@ -229,7 +198,7 @@
       </div>
       <div class="ab-beats">
         <div class="ab-photo tall">
-          <img src="assets/about/magpie-abstract.jpg" alt="Abstract magpie artwork: a magpie formed from flowing ribbons of blue, teal and green, head high and tail sweeping down" loading="lazy" decoding="async" width="1104" height="1400">
+          <img src="assets/about/magpie-portrait.jpg" alt="A magpie perched on a stone wall, looking back over its shoulder, blue and green iridescence in its wings and long tail" loading="lazy" decoding="async" width="1280" height="1920">
         </div>
         <div>
           <div class="ab-beat">
@@ -318,7 +287,7 @@
     </div>
     <div class="foot-bottom">
       <span>&copy; 2026 Magpie. All rights reserved.</span>
-      <span>Hero photo: <a href="https://commons.wikimedia.org/wiki/File:Eurasian_Magpie_2023-10-16_01.jpg" target="_blank" rel="noopener">Alexis Lours</a> (CC BY 4.0), via Wikimedia Commons</span>
+      <span>Magpie photos: <a href="https://commons.wikimedia.org/wiki/File:Eurasian_Magpie_2023-10-16_01.jpg" target="_blank" rel="noopener">Alexis Lours</a> (CC BY 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Urraca_(Pica_pica),_Almuradiel,_Ciudad_Real,_Espa%C3%B1a,_2021-12-19,_DD_10.jpg" target="_blank" rel="noopener">Diego Delso</a> (CC BY-SA 4.0), via Wikimedia Commons</span>
       <span>Founding creators forming now, sign up in your city</span>
       <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
     </div>
@@ -340,24 +309,6 @@
     v.removeAttribute('autoplay');
     v.pause();
   }
-})();
-</script>
-<script>
-/* Flight parallax: the bird layer drifts gently against the scroll,
-   giving the page depth. Ambient CSS motion does the flying itself.
-   Reduced motion: no parallax, and CSS freezes the birds in place. */
-(function(){
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var layer = document.getElementById('flightLayer');
-  if (!layer) return;
-  var ticking = false;
-  function drift(){
-    layer.style.transform = 'translate3d(0,' + (window.scrollY * -0.05) + 'px,0)';
-    ticking = false;
-  }
-  window.addEventListener('scroll', function(){
-    if (!ticking) { ticking = true; requestAnimationFrame(drift); }
-  }, { passive: true });
 })();
 </script>
 
