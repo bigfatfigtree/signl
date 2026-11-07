@@ -1,6 +1,23 @@
 [build]
   publish = "."
 
+# Magpie flip (2026-11-07): the old SIGNL hosts must never serve
+# content — every old address lands on the same path at the new
+# domain, path + query preserved. Forced so they win over any
+# file or rule. www.joinsignl.com already 301s at the domain
+# layer; this keeps the behavior in-repo too.
+[[redirects]]
+  from = "https://joinsignl.com/*"
+  to = "https://magpielocal.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.joinsignl.com/*"
+  to = "https://magpielocal.com/:splat"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
