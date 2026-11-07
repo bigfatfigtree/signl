@@ -767,3 +767,27 @@
 .shopx .filters .f-head .f-clear{background:none;border:0;padding:0;font:inherit;font-size:13.5px;font-weight:700;color:var(--signal);cursor:pointer}
 .shopx .filters .f-head .f-clear:hover{text-decoration:underline}
 .shopx .f-row:not(.sel) .box svg{display:none}
+
+/* ---- Tablet band fix (Jeff, 2026-11-07): between the <=680px mobile
+   restack and full desktop, the app-frame mocks kept desktop geometry and
+   broke at ~768px. Measured on businesses.html @768: the in-frame .layout
+   held a 250px filter rail + a 328px shelf, so the compare tray inside
+   the shelf got grid columns of 130px/5px/5px/38px (heads crushed to
+   5px); the in-frame .pdp kept a fixed 372px buy-box column that ran
+   past the frame's right edge (buy box right edge 834 vs frame 728);
+   and the pricing .plans cards' min-content (~283px each) overflowed
+   the page (document scrollWidth 868 at a 768px viewport). In this band
+   the frames borrow the site's own mobile pattern: one column, the
+   filter rail hidden (the chip row carries filtering), the buy box
+   stacked under the profile, and pricing cards stacked centered. ---- */
+@media (min-width:681px) and (max-width:1023px){
+  .shopx .layout{grid-template-columns:1fr;gap:8px;padding-top:14px;}
+  .shopx .filters{display:none;}
+}
+@media (min-width:681px) and (max-width:940px){
+  .shopx .pdp{grid-template-columns:1fr;gap:0;}
+  .shopx .buybox{margin-top:30px;}
+}
+@media (min-width:681px) and (max-width:980px){
+  .shopx .plans{grid-template-columns:1fr;max-width:620px;margin-left:auto;margin-right:auto;}
+}
