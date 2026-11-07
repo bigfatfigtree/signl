@@ -1,0 +1,113 @@
+/* Our Story section (homepage) — animated line-drawn magpies.
+   Scoped to .story-sec; uses the v2 tokens. Transform/opacity animation only. */
+
+.shopx .story-sec{padding-top:84px}
+.story-card{
+  background:linear-gradient(180deg,#F2F9F4 0%,#FFFFFF 78%);
+  border:1px solid var(--line);
+  border-radius:var(--r-lg);
+  box-shadow:var(--sh-sm);
+  padding:26px 30px 8px;
+  overflow:hidden;
+}
+.story-art{width:100%;height:auto;display:block}
+.story-cols{
+  display:grid;grid-template-columns:1fr 1fr;gap:26px;
+  margin-top:30px;
+}
+.story-col{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--r-md);
+  box-shadow:var(--sh-sm);
+  padding:26px 28px;
+}
+.story-col h3{margin-bottom:9px}
+.story-col p{font-size:16.5px;line-height:1.62;color:var(--ink2)}
+.story-col p strong{color:var(--ink)}
+.story-founder{
+  margin-top:26px;padding-top:20px;
+  border-top:1px solid var(--line);
+  font-size:14.5px;line-height:1.6;color:var(--ink3);font-weight:600;
+  max-width:78ch;
+}
+
+/* ---------- bird animation ---------- */
+.story-sec .mp-head{
+  transform-box:fill-box;transform-origin:12% 88%;
+  animation:mpHead 5.6s ease-in-out infinite;
+}
+.story-sec .mp-tail{
+  transform-box:fill-box;transform-origin:96% 6%;
+  animation:mpTail 6.4s ease-in-out infinite;
+}
+.story-sec .mp-sway{
+  transform-box:fill-box;transform-origin:50% 96%;
+  animation:mpSway 7.6s ease-in-out infinite;
+}
+.story-sec .mp-hop{animation:mpHop 7s ease-in-out infinite}
+.story-sec .mp-chat{
+  transform-box:fill-box;transform-origin:0% 100%;
+  opacity:0;animation:mpChat 3.4s ease-in-out infinite;
+}
+.story-sec .mp-glint{
+  transform-box:fill-box;transform-origin:50% 50%;
+  animation:mpGlint 4.2s ease-in-out infinite;
+}
+.story-sec .mp-leaf{
+  transform-box:fill-box;transform-origin:0% 100%;
+  animation:mpLeaf 6.8s ease-in-out infinite;
+}
+
+@keyframes mpHead{
+  0%,100%{transform:rotate(0deg)}
+  10%{transform:rotate(7deg)}
+  20%{transform:rotate(0deg)}
+  52%{transform:rotate(-5deg)}
+  64%{transform:rotate(0deg)}
+}
+@keyframes mpTail{
+  0%,86%,100%{transform:rotate(0deg)}
+  90%{transform:rotate(-6deg)}
+  94%{transform:rotate(3deg)}
+  97%{transform:rotate(0deg)}
+}
+@keyframes mpSway{
+  0%,100%{transform:rotate(-.8deg)}
+  50%{transform:rotate(.9deg)}
+}
+@keyframes mpHop{
+  0%,68%,100%{transform:translateY(0)}
+  75%{transform:translateY(-11px)}
+  82%{transform:translateY(0)}
+  88%{transform:translateY(-6px)}
+  94%{transform:translateY(0)}
+}
+@keyframes mpChat{
+  0%,100%{opacity:0;transform:scale(.65)}
+  22%{opacity:.95;transform:scale(1.05)}
+  44%{opacity:0;transform:scale(1.18)}
+}
+@keyframes mpGlint{
+  0%,100%{opacity:.3;transform:scale(.65) rotate(0deg)}
+  50%{opacity:1;transform:scale(1.12) rotate(18deg)}
+}
+@keyframes mpLeaf{
+  0%,100%{transform:rotate(-2.5deg)}
+  50%{transform:rotate(3deg)}
+}
+
+@media (max-width:760px){
+  .story-cols{grid-template-columns:1fr;gap:16px}
+  .story-card{padding:16px 12px 2px;border-radius:22px}
+  .story-col{padding:22px}
+  .story-founder{max-width:none}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .story-sec *, .story-sec *::before, .story-sec *::after{
+    animation:none !important;
+  }
+  .story-sec .mp-chat{opacity:.85}
+  .story-sec .mp-glint{opacity:.9}
+}
