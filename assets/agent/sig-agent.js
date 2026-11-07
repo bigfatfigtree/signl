@@ -3,12 +3,13 @@
    ----------------------------------------------------------------------------
    RENAME THE AGENT: edit SIG_CONFIG.name below. That is the ONLY place the
    name lives; every label, greeting and button reads it from the config.
-   THE MARK: SIG_CONFIG.avatar below is the ONLY place the orb still is
-   referenced; every Sig avatar on the page (messages, floating
-   button, sheet head) renders from it, and the panel header plays
-   the animated orb from SIG_CONFIG.avatarVideo. Swap those two
-   files to change the mark. (Build -130, 2026-11-05: the orb
-   replaced every painted face — faces read uncanny.)
+   THE MARK: SIG_CONFIG.avatar below is the ONLY place the avatar still
+   is referenced; every Maggie avatar on the page (messages, floating
+   button, sheet head, panel header) renders from it. The mark is
+   Maggie's character tile (Jeff's character sheet artwork, the same
+   tiles the app ships) — there is no avatar video; the Build -130
+   orb and its animated clip were retired with the Sig name in the
+   Magpie flip fix wave (2026-11-07).
    ----------------------------------------------------------------------------
    The agent is a scripted guide. Every answer comes from the locked Magpie
    playbook baked into ANSWERS / FLOWS in this file. Free text is resolved
@@ -17,7 +18,7 @@
    ========================================================================== */
 
 window.SIG_CONFIG = {
-  name: "Sig",
+  name: "Maggie",
   role: "Magpie guide",
   version: 1,
   links: {
@@ -27,8 +28,8 @@ window.SIG_CONFIG = {
     cities: "cities.html"
   },
   samplePhoto: "assets/photos/sample-portrait-jordan.jpg",
-  avatar: "assets/sig-orb/orb.webp",
-  avatarVideo: "assets/sig-orb/orb.mp4"
+  avatar: "assets/maggie-char/curious.jpg",
+  avatarVideo: null
 };
 
 (function () {
@@ -432,8 +433,9 @@ window.SIG_CONFIG = {
   function avatar(cls) {
     var a = el("span", "sigx-ava " + (cls || ""));
     if (cls === "lg" && CFG.avatarVideo && !reduceMotion) {
-      /* Build -130: the panel header carries the living orb;
-         every small slot keeps the still. */
+      /* If a header video is ever configured it plays here; with
+         avatarVideo null (Maggie character tile) every slot, the
+         panel header included, keeps the still. */
       var v = el("video", "sigx-ava-img");
       v.muted = true; v.defaultMuted = true; v.loop = true; v.playsInline = true;
       v.setAttribute("playsinline", "");

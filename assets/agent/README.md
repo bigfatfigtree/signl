@@ -1,38 +1,31 @@
-# Sig · Magpie homepage guide agent
+# Maggie · Magpie homepage guide agent
 
-A guided showcase agent for the magpielocal.com homepage: a "Meet Sig" section
+A guided showcase agent for the magpielocal.com homepage: a "Meet Maggie" section
 (placed after the hero overlap cards, before "The Problem, Solved") plus a
-floating "Ask Sig" button that opens the same conversation in a bottom sheet
+floating "Ask Maggie" button that opens the same conversation in a bottom sheet
 on mobile / card on desktop. One panel, reparented between the two homes, so
 the conversation is never duplicated or lost.
 
 ## Rename in one word
 
 The name lives in ONE place: `window.SIG_CONFIG` at the top of
-`sig-agent.js` (`name: "Sig"`, plus `role` and all outbound links). On load
+`sig-agent.js` (`name: "Maggie"`, plus `role` and all outbound links). On load
 the script stamps the config name into every `[data-sig-name]` /
 `[data-sig-initial]` slot in the page (section headline, FAB, sheet header,
-panel). To rename: change `name` in SIG_CONFIG. The literal "Sig" text in
+panel). To rename: change `name` in SIG_CONFIG. The literal "Maggie" text in
 index.html is only the no-JS / pre-load fallback and is overwritten on init.
 
-## The mark (Build -130, 2026-11-05; supersedes every face)
+## The mark (Magpie flip fix wave, 2026-11-07; supersedes the Build -130 orb)
 
-Sig's mark is THE ORB — a gradient blue-to-mint orb with
-radiating signal arcs, the same mark the app ships. Every
-painted/portrait face before it (the V4 render, the Concept A
-portrait, the 2026-10-27 axolotl) is retired: human faces read
-uncanny, and the industry pattern for an AI is an abstract
-mark. The still image is referenced in ONE place: `avatar` in
-`window.SIG_CONFIG` (`assets/sig-orb/orb.webp`, so it reads at
-44/32/26px). Every avatar slot (message rows, FAB, sheet head)
-renders the still from that config value; the panel header
-plays the animated orb (`avatarVideo`,
-`assets/sig-orb/orb.mp4`) unless reduced motion. The static
-`sigx-ava` spans in index.html carry the same `<img>` so the
-mark shows pre-JS too. The Meet Sig section also carries the
-living orb: the animated clip over the orb still (poster),
-attached lazily by the inline loader in index.html; reduced
-motion keeps the still.
+Maggie's mark is her character tile — Jeff's character-sheet
+artwork, the same tiles the app ships (`assets/maggie-char/curious.jpg`
+on this site). The Build -130 orb (still + animated clip) was
+retired with the Sig name: `avatarVideo` in `window.SIG_CONFIG`
+is null, so every avatar slot (message rows, FAB, sheet head,
+panel header) renders the still from the `avatar` config value.
+The static `sigx-ava` spans in index.html carry the same `<img>`
+so the mark shows pre-JS too, and the Meet Maggie section hero
+is the still alone (the inline orb-clip loader was removed).
 
 ## Design choice (locked for v1)
 
