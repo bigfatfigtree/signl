@@ -306,6 +306,9 @@ On SIGNL paid bookings, the business pays up front and SIGNL holds the money unt
 ### How long do brands take to pay creators? What does net 90 mean?
 It depends on the terms agreed before the work starts: pay on delivery moves in days, while net 30, net 60 or net 90 terms pay one, two or three months after the invoice. On SIGNL paid bookings there are no net terms: the business pays when it books, SIGNL holds the money until the post is live, then releases it, and the creator keeps 97 percent of their own listed rate from a $50 floor. Full answer: https://joinsignl.com/learn/net-90-is-not-a-payment-term.html
 
+### What does usage rights in perpetuity mean for creators?
+It means a brand can reuse your post or video forever, with no end date, after paying you once. A fair term has an end date, named places of use, and a matching price: on SIGNL, paid bookings include one 90 day license to repost and run the post as an ad, comped visits are native share only with any license a separate creator approved step, and nothing is granted in perpetuity. Full answer: https://joinsignl.com/learn/usage-rights-in-perpetuity.html
+
 ### What do I do when a brand ghosts me or does not pay?
 On SIGNL, the money question is settled before the visit: paid bookings are charged up front and held until the post is live, so a business cannot ghost a payment that is already held. If a visit or post never lands, the business is refunded instead. Full answer: https://joinsignl.com/learn/how-creators-make-sure-they-get-paid.html
 
@@ -432,6 +435,7 @@ For creators:
 - Momentum: How Posting On Time Gets You Booked More: https://joinsignl.com/learn/momentum-how-posting-on-time-gets-you-booked-more.html
 - Your Creator Profile Is Your Rate Card: https://joinsignl.com/learn/your-creator-profile-is-your-rate-card.html
 - Net 90 Is Not a Payment Term: How Creators Actually Get Paid on Time: https://joinsignl.com/learn/net-90-is-not-a-payment-term.html
+- Usage Rights in Perpetuity: The Clause That Takes Your Content Forever: https://joinsignl.com/learn/usage-rights-in-perpetuity.html
 - How to Brief a Creator: Direction, Not a Script: https://joinsignl.com/learn/how-to-brief-a-creator.html
 - How Nashville Creators Get Booked by Local Businesses: https://joinsignl.com/learn/how-nashville-creators-get-booked.html
 - Nashville Is Becoming the It City for Local Influencers: https://joinsignl.com/learn/nashville-it-city-for-local-influencers.html
