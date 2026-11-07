@@ -29,8 +29,9 @@
 <link rel="manifest" href="site.webmanifest">
 
 <style>
-/* About page (page scoped, v2 tokens). Real magpie photography, art-directed;
-   abstract SVG magpies drift across the page on slow flight lanes. */
+/* About page (page scoped, v2 tokens). Hero is Jeff's magpie flight video
+   (brand-gradient grade baked in) over the flight photo; lower slots carry
+   the abstract ribbon magpie artwork. Abstract SVG magpies drift on lanes. */
 
 /* ---------- flight layer ---------- */
 .flight-layer{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:40}
@@ -56,8 +57,10 @@
 /* ---------- hero ---------- */
 .ab-hero{position:relative;overflow:hidden;background:var(--ink);display:flex;align-items:flex-end;min-height:min(92vh,780px)}
 .ab-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:38% 32%}
+.ab-hero-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:38% 32%}
 .ab-hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,13,12,.30) 0%,rgba(11,13,12,0) 30%,rgba(11,13,12,.16) 58%,rgba(11,13,12,.78) 100%),linear-gradient(78deg,rgba(11,13,12,.55) 0%,rgba(11,13,12,0) 55%)}
-.ab-hero-in{position:relative;width:100%;padding:150px 0 62px}
+/* vertical padding only: horizontal gutter comes from .wrap (22px / 40px) */
+.ab-hero-in{position:relative;width:100%;padding-top:150px;padding-bottom:62px}
 .ab-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#B9F1D6}
 .ab-eyebrow::before{content:"\2014";color:#2FE07E;font-weight:800;letter-spacing:0}
 .ab-hero h1{color:#fff;max-width:13ch;margin:18px 0 20px}
@@ -68,7 +71,8 @@
 @media(max-width:700px){
   .ab-hero{min-height:82vh}
   .ab-hero-img{object-position:56% 30%}
-  .ab-hero-in{padding:120px 0 54px}
+  .ab-hero-vid{object-position:22% 42%}
+  .ab-hero-in{padding-top:120px;padding-bottom:54px}
   .ab-credit{display:none}
 }
 
@@ -87,13 +91,13 @@
 
 /* ---------- photo band ---------- */
 .ab-band{position:relative;overflow:hidden;padding:132px 0;background:var(--ink)}
-.ab-band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.ab-band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
 .ab-band-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,13,12,.66) 0%,rgba(11,13,12,.28) 52%,rgba(11,13,12,.10) 100%)}
 .ab-band-in{position:relative}
 .ab-band .ab-eyebrow{color:#B9F1D6}
 .ab-band-line{font-family:'Archivo',sans-serif;font-weight:900;letter-spacing:-.02em;line-height:1.02;color:#fff;font-size:clamp(2.7rem,7.2vw,5.4rem);margin-top:16px;max-width:12ch}
 .ab-band-line .g{background:linear-gradient(92deg,#019BFC,#03C9AB 55%,#2FE07E);-webkit-background-clip:text;background-clip:text;color:transparent}
-@media(max-width:700px){.ab-band{padding:96px 0}.ab-band img{object-position:22% 60%}}
+@media(max-width:700px){.ab-band{padding:96px 0}.ab-band img{object-position:16% 50%}}
 
 /* ---------- the three beats ---------- */
 .ab-beats{display:grid;grid-template-columns:1fr;gap:44px}
@@ -173,6 +177,11 @@
   <!-- ================= HERO ================= -->
   <section class="ab-hero">
     <img class="ab-hero-img" src="assets/about/magpie-flight.jpg" alt="A magpie in full flight, wings spread wide, showing the white flash and iridescent blue in its wings" fetchpriority="high">
+    <video class="ab-hero-vid" id="abHeroVid" autoplay muted loop playsinline preload="auto" poster="assets/about/magpie-flight.jpg" aria-hidden="true" tabindex="-1">
+      <source src="assets/video/about-magpie-flight-1280.mp4" type="video/mp4" media="(max-width:700px)">
+      <source src="assets/video/about-magpie-flight.webm" type="video/webm">
+      <source src="assets/video/about-magpie-flight.mp4" type="video/mp4">
+    </video>
     <div class="ab-hero-shade"></div>
     <div class="wrap ab-hero-in">
       <span class="ab-eyebrow">About Magpie</span>
@@ -194,7 +203,7 @@
           <p>Those people are already in every neighborhood, posting about where they eat, shop, train, and go out, to followers who actually live there. <b>Magpie connects the two sides:</b> a business books a local creator for a comped visit or at the creator's own rate, the post goes up, and the visit is counted when a follower walks in. <b>Local creators, local businesses, one neighborhood at a time.</b></p>
         </div>
         <div class="ab-photo wide">
-          <img src="assets/about/magpie-water.jpg" alt="A magpie standing at the edge of a pool of water, alert, in warm evening light" loading="lazy" decoding="async" width="1920" height="1280">
+          <img src="assets/about/magpie-abstract-wide.jpg" alt="Abstract magpie artwork: a magpie formed from flowing ribbons of blue, teal and green feathers" loading="lazy" decoding="async" width="1280" height="960">
         </div>
       </div>
     </div>
@@ -202,7 +211,7 @@
 
   <!-- ================= PHOTO BAND ================= -->
   <section class="ab-band">
-    <img src="assets/about/magpie-stride.jpg" alt="A magpie striding across open ground, long tail trailing, carrying a crumb in its beak" loading="lazy" decoding="async" width="2560" height="1152">
+    <img src="assets/about/magpie-abstract-band.jpg" alt="Abstract magpie artwork: ribbons of blue and green feathers forming a magpie in profile" loading="lazy" decoding="async" width="1280" height="512">
     <div class="ab-band-shade"></div>
     <div class="wrap ab-band-in">
       <span class="ab-eyebrow">The name, in three words</span>
@@ -220,7 +229,7 @@
       </div>
       <div class="ab-beats">
         <div class="ab-photo tall">
-          <img src="assets/about/magpie-portrait.jpg" alt="A magpie perched on a stone wall, looking back over its shoulder, blue and green iridescence in its wings and long tail" loading="lazy" decoding="async" width="1280" height="1920">
+          <img src="assets/about/magpie-abstract.jpg" alt="Abstract magpie artwork: a magpie formed from flowing ribbons of blue, teal and green, head high and tail sweeping down" loading="lazy" decoding="async" width="1104" height="1400">
         </div>
         <div>
           <div class="ab-beat">
@@ -309,7 +318,7 @@
     </div>
     <div class="foot-bottom">
       <span>&copy; 2026 Magpie. All rights reserved.</span>
-      <span>Magpie photos: <a href="https://commons.wikimedia.org/wiki/File:Eurasian_Magpie_2023-10-16_01.jpg" target="_blank" rel="noopener">Alexis Lours</a> (CC BY 4.0) · <a href="https://commons.wikimedia.org/wiki/File:Urraca_(Pica_pica),_Almuradiel,_Ciudad_Real,_Espa%C3%B1a,_2021-12-19,_DD_10.jpg" target="_blank" rel="noopener">Diego Delso</a> (CC BY-SA 4.0), via Wikimedia Commons</span>
+      <span>Hero photo: <a href="https://commons.wikimedia.org/wiki/File:Eurasian_Magpie_2023-10-16_01.jpg" target="_blank" rel="noopener">Alexis Lours</a> (CC BY 4.0), via Wikimedia Commons</span>
       <span>Founding creators forming now, sign up in your city</span>
       <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
     </div>
@@ -317,6 +326,22 @@
 </footer>
 
 <script src="app.js?v=6"></script>
+<script>
+/* Hero video: with reduced motion the flight photo stays (video paused on
+   its poster, which is the same photo); if no source can play, remove the
+   video so the photo underneath shows through. */
+(function(){
+  var v = document.getElementById('abHeroVid');
+  if (!v) return;
+  function dropVideo(){ if (v.parentNode) v.parentNode.removeChild(v); }
+  var sources = v.querySelectorAll('source');
+  if (sources.length) sources[sources.length - 1].addEventListener('error', dropVideo);
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    v.removeAttribute('autoplay');
+    v.pause();
+  }
+})();
+</script>
 <script>
 /* Flight parallax: the bird layer drifts gently against the scroll,
    giving the page depth. Ambient CSS motion does the flying itself.
