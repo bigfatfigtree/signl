@@ -691,7 +691,7 @@
 .shopx .hero{grid-template-columns:1fr;gap:36px;padding:36px 0 10px;}
 .shopx .hero h1{font-size:41px;}
 .shopx .hero .lede{font-size:17.5px;}
-.shopx .hv-in{padding:54px 18px 62px;}
+.shopx .hv-in{padding:118px 18px 62px;}
 .shopx .hv h1{font-size:41px;}
 .shopx .hv .lede{font-size:17.5px;}
 .shopx .hv-scrim{background:linear-gradient(180deg,rgba(8,10,12,.66) 0%,rgba(8,10,12,.55) 100%);}
