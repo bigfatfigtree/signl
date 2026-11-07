@@ -11,11 +11,18 @@
 <link rel="stylesheet" href="styles-v2.css?v=11">
 <link rel="stylesheet" href="shop.css?v=10">
 <style>
-/* Header fix (Jeff, 2026-11-07) — THIS PAGE ONLY: wordmark carries no drop shadow,
-   and the "formerly SIGNL" bridge line is mid gray so it stays readable over both the
-   dark hero and the white sections (shared styles-v2.css rules left untouched). */
-.site-head.over-hero .logo-img{filter:none}
-.site-head .formerly-line{color:#767676;text-shadow:none}
+/* Always-black top nav (Jeff, 2026-11-07) — THIS PAGE ONLY: the header below uses the
+   plain .site-head variant (same as the markets pages), so the bar is solid #0B0D0C at
+   every scroll position instead of the transparent over-hero treatment. On black the
+   shared defaults read correctly as-is: the logo carries no drop shadow and the
+   "formerly SIGNL" bridge line is near-white (the earlier gray-line / no-shadow
+   overrides for the transparent bar are no longer needed and are removed).
+   The hero padding rules repay the clearance shop.css added for the old overlay
+   header (134px desktop / 102px mobile), now that the bar sits in flow
+   (76px tall, 68px under 560px), keeping the hero's visible top gap unchanged. */
+.shopx .hero{padding-top:58px}
+@media(max-width:680px){.shopx .hero{padding-top:26px}}
+@media(max-width:560px){.shopx .hero{padding-top:34px}}
 </style>
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
@@ -43,7 +50,7 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://magpielocal.com/"}, {"@type": "ListItem", "position": 2, "name": "For Creators", "item": "https://magpielocal.com/creators.html"}]}</script>
 </head>
 <body>
-<header class="site-head over-hero">
+<header class="site-head">
   <div class="wrap head-in">
     <span class="brand-lockup"><a href="index.html" aria-label="Magpie home"><img class="logo-img" src="assets/logo.png" alt="Magpie"></a><span class="formerly-line" data-bridge="formerly-signl">formerly SIGNL</span></span>
     <nav class="main-nav">
