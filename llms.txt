@@ -201,6 +201,9 @@ That is the whole Magpie roster. Creator tiers start at 500 followers: Neighbors
 ### How do I tell if a local influencer's followers are actually local?
 Ask for local reach: the share of the creator's audience that lives in your market. Magpie puts that number on every creator's card before you choose, and ranks creators by it, never by follower count alone. Today the percentage is self-reported by the creator and labeled that way; it becomes verified from Instagram data when the Instagram connection activates. Full answer: https://magpielocal.com/learn/what-is-local-reach.html
 
+### How do I check if an influencer's followers are local?
+Ask for local reach: followers multiplied by local audience share gives you the nearby count. Check the city breakdown in the creator's own insights, read recent comments for local voices and places, and look at where the creator actually posts from. On Magpie the local share is on the creator's card before you choose, labeled by source. Full answer: https://magpielocal.com/learn/how-to-tell-if-a-creators-followers-are-local.html
+
 ### Where do I find UGC creators to hire?
 Know which thing you are buying. UGC is content made for your own channels; a creator post is distribution to a local audience that trusts the creator. Magpie books the second: local creators posting to their own followers, with delivered posts saved to your content library and reuse rights that follow the visit type. Full answer: https://magpielocal.com/learn/ugc-vs-influencer-posts-for-local-businesses.html
 
@@ -419,6 +422,7 @@ Magpie Learn (https://magpielocal.com/learn/) publishes practical, numbers-forwa
 - Local Creator Marketing Glossary: Words Worth Getting Right: https://magpielocal.com/learn/local-creator-marketing-glossary.html
 - Campus Creators: How Student Creators Fit a Local Market: https://magpielocal.com/learn/campus-creators-how-student-creators-fit-a-local-market.html
 - FTC Disclosure for Comped Posts: https://magpielocal.com/learn/ftc-disclosure-for-comped-posts.html
+- How to Tell If a Creator's Followers Actually Live in Your City: https://magpielocal.com/learn/how-to-tell-if-a-creators-followers-are-local.html
 For creators:
 - How to Get Brand Deals With a Small Following: https://magpielocal.com/learn/how-to-get-brand-deals-with-a-small-following.html
 - How Much Should a Small Creator Charge?: https://magpielocal.com/learn/how-much-should-a-small-creator-charge.html
