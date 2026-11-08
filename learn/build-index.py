@@ -70,7 +70,10 @@ BLOCK_RE = re.compile(r"<!-- KEEP-READING v1.*?<!-- /KEEP-READING -->\n?", re.S)
 def scan(path):
     s = BLOCK_RE.sub("", open(path, encoding="utf-8").read())
     h1 = re.search(r"<h1[^>]*>(.*?)</h1>", s, re.S)
-    title = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", h1.group(1))).strip() if h1 else ""
+    # Decode entities from the scanned source so esc() on output encodes exactly
+    # once (bug 2026-11-08: raw "&ndash;" in an H1 was re-escaped to "&amp;ndash;"
+    # and rendered literally on cards).
+    title = html.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", h1.group(1))).strip()) if h1 else ""
     dp = re.search(r'"datePublished":\s*"(\d{4}-\d{2}-\d{2})', s)
     band = re.search(r'class="photo-band[^"]*">\s*<img src="([^"]+)" alt="([^"]*)"', s)
     label = re.search(r"<span class=\"label\">(For (?:creators|businesses)[^<]*)</span>", s)
@@ -80,8 +83,8 @@ def scan(path):
         text = re.sub(r"<script.*?</script>|<style.*?</style>", " ", main.group(0), flags=re.S)
         words = len(re.sub(r"<[^>]+>", " ", text).split())
     return dict(title=title, date=dp.group(1) if dp else None,
-                hero=band.group(1) if band else None, hero_alt=band.group(2) if band else "",
-                label=label.group(1) if label else "", read=max(1, round(words / 200)))
+                hero=band.group(1) if band else None, hero_alt=html.unescape(band.group(2)) if band else "",
+                label=html.unescape(label.group(1)) if label else "", read=max(1, round(words / 200)))
 
 def infer(fname, art):
     """Fallback for articles with no meta entry. Prints warnings in main()."""
@@ -157,7 +160,9 @@ def main():
     schema = json.loads(ld.group(1))
     assert json.dumps(schema, separators=(", ", ": "), ensure_ascii=False) == ld.group(1), \
         "ld+json round-trip mismatch — refusing to rewrite schema"
-    old_names = {item["url"].rsplit("/", 1)[-1]: item["name"] for item in schema["@graph"][1]["itemListElement"]}
+    # unescape: a poisoned name carried over verbatim would keep an entity string
+    # like "&ndash;" as literal JSON text forever (2026-11-08 bug).
+    old_names = {item["url"].rsplit("/", 1)[-1]: html.unescape(item["name"]) for item in schema["@graph"][1]["itemListElement"]}
     schema["@graph"][1] = {
         "@type": "ItemList", "name": "Magpie Learn Guides", "url": "https://magpielocal.com/learn/",
         "numberOfItems": len(arts),
