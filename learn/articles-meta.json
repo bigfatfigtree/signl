@@ -39,14 +39,29 @@
   "dek": "The habits that make a creator look bookable, plus the signals that quietly end the conversation.",
   "topic": "working-with-creators"
  },
+ "chicago-creators-to-watch.html": {
+  "audience": "businesses",
+  "dek": "Forty Chicago creators, picked by hand: rooted in the city, posting for the people who live here. The list Chicago launches with.",
+  "topic": "the-local-scene"
+ },
  "dallas-fort-worth-creators-to-watch.html": {
   "audience": "businesses",
   "dek": "Forty Dallas-Fort Worth creators, picked by hand: rooted in the metro, posting for the people who live here. The list Dallas launches with.",
   "topic": "the-local-scene"
  },
+ "london-creators-to-watch.html": {
+  "audience": "businesses",
+  "dek": "Forty London creators, picked by hand: rooted in the city, posting for the people who live here. The list London launches with.",
+  "topic": "the-local-scene"
+ },
  "raleigh-creators-to-watch.html": {
   "audience": "businesses",
   "dek": "Forty Raleigh creators, picked by hand: rooted here in the Triangle, posting for the neighbors who live here. The list Raleigh launches with.",
+  "topic": "the-local-scene"
+ },
+ "seattle-creators-to-watch.html": {
+  "audience": "businesses",
+  "dek": "Forty Seattle creators, picked by hand: rooted in the city, posting for the people who live here. The list Seattle launches with.",
   "topic": "the-local-scene"
  },
  "dc-restaurants-creator-visits.html": {
@@ -102,6 +117,11 @@
  "how-creators-make-sure-they-get-paid.html": {
   "audience": "creators",
   "dek": "Paid bookings are charged up front and held until your post is live. Here is the whole chain.",
+  "topic": "rates-and-pay"
+ },
+ "how-many-revisions-should-a-brand-get.html": {
+  "audience": "creators",
+  "dek": "One round of small fixes, corrections always free, and a reshoot is new work: how to set the revision number before the visit, in writing.",
   "topic": "rates-and-pay"
  },
  "how-much-do-local-influencers-cost.html": {
