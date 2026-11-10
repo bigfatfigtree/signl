@@ -291,5 +291,10 @@
   "audience": "creators",
   "dek": "A complete profile with your local reach, categories, and rate on it does the pitching for you.",
   "topic": "rates-and-pay"
+ },
+ "nashville-bars-and-venues-booking-local-musicians-who-post.html": {
+  "audience": "businesses",
+  "dek": "Book the night like a creator visit: a local musician plays, posts to a Nashville audience that can come back next week, and the terms are written before load in.",
+  "topic": "local-marketing"
  }
 }
