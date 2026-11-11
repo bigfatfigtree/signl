@@ -296,5 +296,10 @@
   "audience": "businesses",
   "dek": "Book the night like a creator visit: a local musician plays, posts to a Nashville audience that can come back next week, and the terms are written before load in.",
   "topic": "local-marketing"
+ },
+ "washington-dc-creator-marketing-neighborhoods-not-reach.html": {
+  "audience": "businesses",
+  "dek": "DC buys by neighborhood, not by citywide reach. Pick creators neighborhood by neighborhood, judge them by local reach, and sequence visits across the metro.",
+  "topic": "local-marketing"
  }
 }
