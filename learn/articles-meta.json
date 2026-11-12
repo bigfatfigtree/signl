@@ -301,5 +301,10 @@
   "audience": "businesses",
   "dek": "DC buys by neighborhood, not by citywide reach. Pick creators neighborhood by neighborhood, judge them by local reach, and sequence visits across the metro.",
   "topic": "local-marketing"
+ },
+ "why-influencer-platforms-hide-their-prices.html": {
+  "audience": "businesses",
+  "dek": "Quote-only pricing lets a platform size the number to your budget. The five numbers a small business should be able to read before any sales call, and the published rates Magpie puts on the page instead.",
+  "topic": "working-with-creators"
  }
 }
