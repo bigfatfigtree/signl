@@ -14,9 +14,9 @@
 /* Always-black top nav (Jeff, 2026-11-07) — THIS PAGE ONLY: the header below uses the
    plain .site-head variant (same as the markets pages), so the bar is solid #0B0D0C at
    every scroll position instead of the transparent over-hero treatment. On black the
-   shared defaults read correctly as-is: the logo carries no drop shadow and the
-   "formerly SIGNL" bridge line is near-white (the earlier gray-line / no-shadow
-   overrides for the transparent bar are no longer needed and are removed).
+   shared defaults read correctly as-is: the logo carries no drop shadow (the
+   earlier gray-line / no-shadow overrides for the transparent bar are no longer
+   needed and are removed).
    The hero padding rules repay the clearance shop.css added for the old overlay
    header (134px desktop / 102px mobile), now that the bar sits in flow
    (76px tall, 68px under 560px), keeping the hero's visible top gap unchanged. */
@@ -55,7 +55,7 @@
 <body>
 <header class="site-head">
   <div class="wrap head-in">
-    <span class="brand-lockup"><a href="index.html" aria-label="Magpie home"><img class="logo-img" src="assets/logo.png" alt="Magpie"></a><span class="formerly-line" data-bridge="formerly-signl">formerly SIGNL</span></span>
+    <a href="index.html" aria-label="Magpie home"><img class="logo-img" src="assets/logo.png" alt="Magpie"></a>
     <nav class="main-nav">
       <a href="creators.html">For Creators</a>
       <a href="businesses.html" aria-current="page">For Businesses</a>

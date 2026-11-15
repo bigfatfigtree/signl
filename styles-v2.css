@@ -77,7 +77,7 @@ p{color:var(--ink2)}
   box-shadow:0 18px 36px -30px rgba(0,0,0,.5);
 }
 .head-in{display:flex;align-items:center;justify-content:space-between;gap:22px;height:76px}
-.logo-img{height:42px;width:auto}
+.logo-img{height:58px;width:auto}
 .main-nav{display:none;gap:20px}
 .main-nav a{font-size:.8rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.72);padding:6px 0}
 .main-nav a:hover{color:#A9E8C9}
@@ -1309,7 +1309,7 @@ section.block.tight{padding:60px 0}
 .head-cta{white-space:nowrap;flex:none}
 @media(max-width:560px){
   .head-in{gap:12px;height:68px}
-  .logo-img{height:34px}
+  .logo-img{height:48px}
   .head-actions{gap:9px}
   .site-head .btn-small{padding:10px 17px;font-size:.82rem}
   .nav-toggle{width:40px;height:40px;border-radius:11px}
