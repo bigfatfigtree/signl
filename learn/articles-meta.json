@@ -321,5 +321,10 @@
   "audience": "creators",
   "dek": "Category, place, and a short window, priced as its own line item. What fair exclusivity includes, what to refuse, and the sentence to send back.",
   "topic": "rates-and-pay"
+ },
+ "richmond-bakeries-salons-and-studios-creator-visit-playbook.html": {
+  "audience": "businesses",
+  "dek": "Weekday visits matched to each trade: bakeries own the morning, salons fill the midweek chair, studios fill the off peak class, all with neighborhood creators picked by local reach.",
+  "topic": "local-marketing"
  }
 }
