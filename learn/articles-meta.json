@@ -326,5 +326,85 @@
   "audience": "businesses",
   "dek": "Weekday visits matched to each trade: bakeries own the morning, salons fill the midweek chair, studios fill the off peak class, all with neighborhood creators picked by local reach.",
   "topic": "local-marketing"
+ },
+ "get-brand-deals-with-1000-followers.html": {
+  "audience": "creators",
+  "dek": "The 30-day plan for the exact 1,000-follower milestone: what businesses see at your size, and the first five moves.",
+  "topic": "finding-work"
+ },
+ "how-much-to-charge-for-a-sponsored-post.html": {
+  "audience": "creators",
+  "dek": "The per-post pricing math: tier bands, what moves you inside them, and usage and exclusivity as separate line items.",
+  "topic": "rates-and-pay"
+ },
+ "how-to-get-comped-meals-and-experiences.html": {
+  "audience": "creators",
+  "dek": "Meals, services, stays and things to do: the full comp playbook, from the first ask to a regular gig.",
+  "topic": "comped-visits"
+ },
+ "local-reach-vs-follower-count.html": {
+  "audience": "both",
+  "dek": "Followers times local share equals neighbors who can walk in. The head-to-head, with the math worked out.",
+  "topic": "the-local-scene"
+ },
+ "how-to-pitch-a-local-business-with-a-sample-pitch.html": {
+  "audience": "creators",
+  "dek": "Three copy-ready pitches, restaurant, salon and DM, with a line-by-line breakdown of why each one works.",
+  "topic": "finding-work"
+ },
+ "do-brands-work-with-creators-under-10000-followers.html": {
+  "audience": "creators",
+  "dek": "National brands shop big. Local businesses shop location. What sub-10,000 creators actually get booked for.",
+  "topic": "finding-work"
+ },
+ "how-to-become-a-ugc-creator-for-local-businesses.html": {
+  "audience": "creators",
+  "dek": "What UGC work is, what local businesses buy it for, and how it stacks with comped visits and paid posts.",
+  "topic": "finding-work"
+ },
+ "how-to-get-invited-to-restaurant-openings.html": {
+  "audience": "creators",
+  "dek": "How opening lists get built, and how a local creator gets on one before the doors open.",
+  "topic": "finding-work"
+ },
+ "how-much-does-it-cost-to-hire-a-local-influencer.html": {
+  "audience": "businesses",
+  "dek": "The buyer's budget view: a comp at product cost, a paid post from $50, or a founding plan, and what each level includes.",
+  "topic": "rates-and-pay"
+ },
+ "how-to-find-influencers-in-your-city.html": {
+  "audience": "businesses",
+  "dek": "Roster over hashtag search: the five-minute vetting routine and the red flags that end the conversation.",
+  "topic": "working-with-creators"
+ },
+ "influencer-marketing-for-restaurants.html": {
+  "audience": "businesses",
+  "dek": "What a creator night is, how it runs hour by hour, what it costs, and what lands in your content library.",
+  "topic": "working-with-creators"
+ },
+ "influencer-marketing-for-salons-and-barbershops.html": {
+  "audience": "businesses",
+  "dek": "An empty chair costs the product and the hour. Why salons and barbershops are built for creator visits.",
+  "topic": "working-with-creators"
+ },
+ "influencer-marketing-for-nashville-restaurants.html": {
+  "audience": "businesses",
+  "dek": "Broadway brings visitors. Neighborhoods bring regulars. Creator marketing for the Nashville that lives here.",
+  "topic": "local-marketing"
+ },
+ "how-to-find-food-creators-in-miami.html": {
+  "audience": "businesses",
+  "dek": "Wynwood to Little Havana: finding Miami food creators whose audiences, Spanish-speaking included, can actually visit.",
+  "topic": "working-with-creators"
+ },
+ "how-to-run-a-comped-creator-visit.html": {
+  "audience": "businesses",
+  "dek": "The operating playbook: what to offer, the written deliverable, the register code, and the Visit Guarantee.",
+  "topic": "working-with-creators"
+ },
+ "micro-influencers-vs-big-influencers-for-local-businesses.html": {
+  "audience": "businesses",
+  "dek": "Geography decides it: one big audience spread nationwide, or several small ones within driving distance.",
+  "topic": "working-with-creators"
  }
 }
