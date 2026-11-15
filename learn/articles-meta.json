@@ -406,5 +406,350 @@
   "audience": "businesses",
   "dek": "Geography decides it: one big audience spread nationwide, or several small ones within driving distance.",
   "topic": "working-with-creators"
+ },
+ "how-to-get-comped-meals-in-nashville.html": {
+  "audience": "creators",
+  "dek": "Hot chicken counters to 12 South cafes: getting comped in Music City without chasing the bachelorette crowds.",
+  "topic": "comped-visits"
+ },
+ "how-to-get-brand-deals-in-virginia-beach.html": {
+  "audience": "creators",
+  "dek": "Oceanfront energy, locals' rates: how Virginia Beach creators turn beach-season posts into year-round deals.",
+  "topic": "finding-work"
+ },
+ "how-to-get-comped-meals-in-virginia-beach.html": {
+  "audience": "creators",
+  "dek": "Lynnhaven oysters and Shore Drive seafood: the comped table guide for Virginia Beach creators.",
+  "topic": "comped-visits"
+ },
+ "find-local-influencers-virginia-beach.html": {
+  "audience": "businesses",
+  "dek": "Boardwalk reach is not local reach: finding Virginia Beach creators whose audiences live here.",
+  "cityGuide": true
+ },
+ "influencer-marketing-for-virginia-beach-restaurants.html": {
+  "audience": "businesses",
+  "dek": "Seafood houses and oyster bars: creator nights that fill tables past the summer season.",
+  "topic": "local-marketing"
+ },
+ "how-to-get-brand-deals-in-norfolk.html": {
+  "audience": "creators",
+  "dek": "Ghent to Granby Street: how Norfolk creators land deals in a navy town with a real arts streak.",
+  "topic": "finding-work"
+ },
+ "how-to-get-comped-meals-in-norfolk.html": {
+  "audience": "creators",
+  "dek": "Colley Avenue dinners and Ocean View seafood: getting comped across Norfolk neighborhoods.",
+  "topic": "comped-visits"
+ },
+ "find-local-influencers-norfolk.html": {
+  "audience": "businesses",
+  "dek": "Mermaid city, neighborhood by neighborhood: finding Norfolk creators by where their audiences live.",
+  "cityGuide": true
+ },
+ "influencer-marketing-for-norfolk-restaurants.html": {
+  "audience": "businesses",
+  "dek": "Homecomings, ship schedules and Ghent regulars: creator marketing for Norfolk restaurants.",
+  "topic": "local-marketing"
+ },
+ "how-to-get-brand-deals-in-richmond.html": {
+  "audience": "creators",
+  "dek": "Murals, Carytown and Scott's Addition: how Richmond creators turn neighborhood posts into brand deals.",
+  "topic": "finding-work"
+ },
+ "how-to-get-comped-meals-in-richmond.html": {
+  "audience": "creators",
+  "dek": "Barbecue boards and bakery boxes: the comped visit guide for Richmond creators.",
+  "topic": "comped-visits"
+ },
+ "influencer-marketing-for-richmond-restaurants.html": {
+  "audience": "businesses",
+  "dek": "From the Fan to Church Hill: creator marketing that fills Richmond dining rooms.",
+  "topic": "local-marketing"
+ },
+ "how-to-get-brand-deals-in-raleigh.html": {
+  "audience": "creators",
+  "dek": "City of Oaks creators: turning farmers market posts and Five Points regulars into brand deals.",
+  "topic": "finding-work"
+ },
+ "how-to-get-comped-meals-in-raleigh.html": {
+  "audience": "creators",
+  "dek": "Whole-hog barbecue and downtown lunches: getting comped as a Raleigh creator.",
+  "topic": "comped-visits"
+ },
+ "influencer-marketing-for-raleigh-restaurants.html": {
+  "audience": "businesses",
+  "dek": "Glenwood South to North Hills: creator marketing for Raleigh restaurants that need regulars.",
+  "topic": "local-marketing"
+ },
+ "how-to-get-brand-deals-in-austin.html": {
+  "audience": "creators",
+  "dek": "Breakfast tacos and brisket lines: how Austin creators land deals beyond festival weeks.",
+  "topic": "finding-work"
+ },
+ "how-to-get-comped-meals-in-austin.html": {
+  "audience": "creators",
+  "dek": "Food trucks, queso and East Austin counters: the comped playbook for Austin creators.",
+  "topic": "comped-visits"
+ },
+ "influencer-marketing-for-austin-restaurants.html": {
+  "audience": "businesses",
+  "dek": "SoCo to the Domain: creator marketing for Austin restaurants that live on locals.",
+  "topic": "local-marketing"
+ },
+ "how-to-get-brand-deals-in-washington-dc.html": {
+  "audience": "creators",
+  "dek": "Half-smokes and embassy rows: how DC creators turn neighborhood posts into brand deals.",
+  "topic": "finding-work"
+ },
+ "how-to-get-comped-meals-in-washington-dc.html": {
+  "audience": "creators",
+  "dek": "14th Street to H Street: getting comped across DC dining neighborhoods.",
+  "topic": "comped-visits"
+ },
+ "how-to-get-brand-deals-in-london.html": {
+  "audience": "creators",
+  "dek": "Borough to Brixton: how London creators turn their corner of the city into brand deals.",
+  "topic": "finding-work"
+ },
+ "how-to-get-comped-meals-in-london.html": {
+  "audience": "creators",
+  "dek": "Market stalls and Sunday roasts: getting comped as a London creator.",
+  "topic": "comped-visits"
+ },
+ "find-local-influencers-london.html": {
+  "audience": "businesses",
+  "dek": "A city of villages: finding London creators by borough, not by follower count.",
+  "cityGuide": true
+ },
+ "influencer-marketing-for-london-restaurants.html": {
+  "audience": "businesses",
+  "dek": "From Borough Market to Peckham: creator marketing for London restaurants.",
+  "topic": "local-marketing"
+ },
+ "how-to-get-brand-deals-in-toronto.html": {
+  "audience": "creators",
+  "dek": "Kensington to Scarborough: how Toronto creators turn multicultural food posts into brand deals.",
+  "topic": "finding-work"
+ },
+ "how-to-get-comped-meals-in-toronto.html": {
+  "audience": "creators",
+  "dek": "Peameal bacon and strip-mall gems: getting comped across Toronto.",
+  "topic": "comped-visits"
+ },
+ "influencer-marketing-for-toronto-restaurants.html": {
+  "audience": "businesses",
+  "dek": "Queen West to the Danforth: creator marketing for Toronto restaurants.",
+  "topic": "local-marketing"
+ },
+ "how-to-get-brand-deals-in-chicago.html": {
+  "audience": "creators",
+  "dek": "Logan Square to Pilsen: how Chicago creators land deals neighborhood by neighborhood.",
+  "topic": "finding-work"
+ },
+ "how-to-get-comped-meals-in-chicago.html": {
+  "audience": "creators",
+  "dek": "Tavern-style pizza and Italian beef: getting comped as a Chicago creator.",
+  "topic": "comped-visits"
+ },
+ "find-local-influencers-chicago.html": {
+  "audience": "businesses",
+  "dek": "77 community areas, one right roster: finding Chicago creators by neighborhood.",
+  "cityGuide": true
+ },
+ "influencer-marketing-for-chicago-restaurants.html": {
+  "audience": "businesses",
+  "dek": "Restaurant Row to Hyde Park: creator marketing for Chicago restaurants.",
+  "topic": "local-marketing"
+ },
+ "how-to-get-brand-deals-in-los-angeles.html": {
+  "audience": "creators",
+  "dek": "Nobody crosses LA for dinner: how creators turn one side of the city into brand deals.",
+  "topic": "finding-work"
+ },
+ "how-to-get-comped-meals-in-los-angeles.html": {
+  "audience": "creators",
+  "dek": "Taco trucks and strip-mall sushi: getting comped across Los Angeles neighborhoods.",
+  "topic": "comped-visits"
+ },
+ "find-local-influencers-los-angeles.html": {
+  "audience": "businesses",
+  "dek": "Koreatown to the SGV: finding LA creators whose audiences live within driving distance.",
+  "cityGuide": true
+ },
+ "influencer-marketing-for-los-angeles-restaurants.html": {
+  "audience": "businesses",
+  "dek": "Grand Central Market to Sawtelle: creator marketing for LA restaurants.",
+  "topic": "local-marketing"
+ },
+ "how-to-get-brand-deals-in-dallas-fort-worth.html": {
+  "audience": "creators",
+  "dek": "Two downtowns, one metro: how DFW creators land deals on their side of the Trinity.",
+  "topic": "finding-work"
+ },
+ "how-to-get-comped-meals-in-dallas-fort-worth.html": {
+  "audience": "creators",
+  "dek": "Brisket, queso and the Stockyards: getting comped across Dallas-Fort Worth.",
+  "topic": "comped-visits"
+ },
+ "find-local-influencers-dallas-fort-worth.html": {
+  "audience": "businesses",
+  "dek": "Bishop Arts to Magnolia Avenue: finding creators across the DFW metro.",
+  "cityGuide": true
+ },
+ "influencer-marketing-for-dallas-fort-worth-restaurants.html": {
+  "audience": "businesses",
+  "dek": "Deep Ellum to the Stockyards: creator marketing for DFW restaurants.",
+  "topic": "local-marketing"
+ },
+ "how-to-get-brand-deals-in-miami.html": {
+  "audience": "creators",
+  "dek": "Wynwood to Little Havana: how Miami creators turn bilingual, neighborhood posts into brand deals.",
+  "topic": "finding-work"
+ },
+ "how-to-get-comped-meals-in-miami.html": {
+  "audience": "creators",
+  "dek": "Cafecito windows and stone crab season: getting comped as a Miami creator.",
+  "topic": "comped-visits"
+ },
+ "how-to-get-brand-deals-in-new-york-city.html": {
+  "audience": "creators",
+  "dek": "Your market is a few subway stops: how NYC creators land deals borough by borough.",
+  "topic": "finding-work"
+ },
+ "how-to-get-comped-meals-in-new-york-city.html": {
+  "audience": "creators",
+  "dek": "Jackson Heights to Arthur Avenue: getting comped across the five boroughs.",
+  "topic": "comped-visits"
+ },
+ "find-local-influencers-new-york-city.html": {
+  "audience": "businesses",
+  "dek": "Nobody's audience is 'New York': finding creators by the neighborhoods they actually move.",
+  "cityGuide": true
+ },
+ "influencer-marketing-for-new-york-city-restaurants.html": {
+  "audience": "businesses",
+  "dek": "Slice shops to food halls: creator marketing for NYC restaurants.",
+  "topic": "local-marketing"
+ },
+ "how-to-get-brand-deals-in-atlanta.html": {
+  "audience": "creators",
+  "dek": "Buford Highway to the BeltLine: how Atlanta creators turn neighborhood posts into brand deals.",
+  "topic": "finding-work"
+ },
+ "how-to-get-comped-meals-in-atlanta.html": {
+  "audience": "creators",
+  "dek": "Lemon pepper wings and food halls: getting comped as an Atlanta creator.",
+  "topic": "comped-visits"
+ },
+ "find-local-influencers-atlanta.html": {
+  "audience": "businesses",
+  "dek": "Peachtree means ten streets: finding Atlanta creators by neighborhood, not skyline.",
+  "cityGuide": true
+ },
+ "influencer-marketing-for-atlanta-restaurants.html": {
+  "audience": "businesses",
+  "dek": "Inman Park to Decatur: creator marketing for Atlanta restaurants.",
+  "topic": "local-marketing"
+ },
+ "how-to-get-brand-deals-in-houston.html": {
+  "audience": "creators",
+  "dek": "Your market is your side of the loop: how Houston creators land local brand deals.",
+  "topic": "finding-work"
+ },
+ "how-to-get-comped-meals-in-houston.html": {
+  "audience": "creators",
+  "dek": "Viet-Cajun crawfish and Bellaire Boulevard: getting comped across Houston.",
+  "topic": "comped-visits"
+ },
+ "find-local-influencers-houston.html": {
+  "audience": "businesses",
+  "dek": "No zoning, no shortcuts: finding Houston creators by the neighborhoods they feed.",
+  "cityGuide": true
+ },
+ "influencer-marketing-for-houston-restaurants.html": {
+  "audience": "businesses",
+  "dek": "Montrose to Asiatown: creator marketing for Houston restaurants.",
+  "topic": "local-marketing"
+ },
+ "how-to-get-brand-deals-in-orlando.html": {
+  "audience": "creators",
+  "dek": "The Orlando tourists never see: how local creators turn resident audiences into brand deals.",
+  "topic": "finding-work"
+ },
+ "how-to-get-comped-meals-in-orlando.html": {
+  "audience": "creators",
+  "dek": "Mills 50 pho to Winter Park brunches: getting comped as an Orlando creator.",
+  "topic": "comped-visits"
+ },
+ "find-local-influencers-orlando.html": {
+  "audience": "businesses",
+  "dek": "Past the theme park corridor: finding Orlando creators whose audiences actually live here.",
+  "cityGuide": true
+ },
+ "influencer-marketing-for-orlando-restaurants.html": {
+  "audience": "businesses",
+  "dek": "Milk District to Restaurant Row: creator marketing for Orlando restaurants.",
+  "topic": "local-marketing"
+ },
+ "how-to-get-brand-deals-in-las-vegas.html": {
+  "audience": "creators",
+  "dek": "Locals' Vegas pays better than the Strip: how resident creators land brand deals.",
+  "topic": "finding-work"
+ },
+ "how-to-get-comped-meals-in-las-vegas.html": {
+  "audience": "creators",
+  "dek": "Spring Mountain ramen and post-shift sushi: getting comped off-Strip.",
+  "topic": "comped-visits"
+ },
+ "find-local-influencers-las-vegas.html": {
+  "audience": "businesses",
+  "dek": "Henderson to the Arts District: finding Las Vegas creators visitors never see.",
+  "cityGuide": true
+ },
+ "influencer-marketing-for-las-vegas-restaurants.html": {
+  "audience": "businesses",
+  "dek": "The workforce eats off-Strip: creator marketing for Las Vegas restaurants.",
+  "topic": "local-marketing"
+ },
+ "how-to-get-brand-deals-in-phoenix.html": {
+  "audience": "creators",
+  "dek": "One Valley, many corners: how Phoenix creators turn their side of the metro into deals.",
+  "topic": "finding-work"
+ },
+ "how-to-get-comped-meals-in-phoenix.html": {
+  "audience": "creators",
+  "dek": "Sonoran hot dogs and Roosevelt Row: getting comped across the Valley.",
+  "topic": "comped-visits"
+ },
+ "find-local-influencers-phoenix.html": {
+  "audience": "businesses",
+  "dek": "Arcadia to Tempe: finding Phoenix creators by their corner of the Valley.",
+  "cityGuide": true
+ },
+ "influencer-marketing-for-phoenix-restaurants.html": {
+  "audience": "businesses",
+  "dek": "Old Town to Chandler: creator marketing for Valley restaurants.",
+  "topic": "local-marketing"
+ },
+ "how-to-get-brand-deals-in-san-diego.html": {
+  "audience": "creators",
+  "dek": "Fish tacos and fierce neighborhoods: how San Diego creators land local brand deals.",
+  "topic": "finding-work"
+ },
+ "how-to-get-comped-meals-in-san-diego.html": {
+  "audience": "creators",
+  "dek": "California burritos and Convoy counters: getting comped across San Diego.",
+  "topic": "comped-visits"
+ },
+ "find-local-influencers-san-diego.html": {
+  "audience": "businesses",
+  "dek": "North Park to Chula Vista: finding San Diego creators by neighborhood.",
+  "cityGuide": true
+ },
+ "influencer-marketing-for-san-diego-restaurants.html": {
+  "audience": "businesses",
+  "dek": "Barrio Logan to La Jolla: creator marketing for San Diego restaurants.",
+  "topic": "local-marketing"
  }
 }
