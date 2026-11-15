@@ -7,7 +7,7 @@
 <meta name="description" content="Local micro-influencer marketing in Austin: founding creators claim comped tacos, brisket and experiences for honest posts, and businesses join the founding list. Join free.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles-v2.css?v=13">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
@@ -39,6 +39,45 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://magpielocal.com/"}, {"@type": "ListItem", "position": 2, "name": "Markets", "item": "https://magpielocal.com/cities.html"}, {"@type": "ListItem", "position": 3, "name": "Austin", "item": "https://magpielocal.com/austin.html"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Magpie: Local Micro-Influencer Marketing in Austin", "serviceType": "Local micro-influencer marketing", "provider": {"@id": "https://magpielocal.com/#organization"}, "areaServed": {"@type": "City", "name": "Austin"}, "description": "Magpie is forming its founding creator roster in Austin. Local businesses comp local creators a meal, service or experience, and creators post honestly, with the goal of posting within 48 hours of the visit, tracked in a dashboard. Creators are ranked by local reach: the share of their audience that lives in Austin.", "offers": [{"@type": "Offer", "name": "Self-Service", "price": 199, "priceCurrency": "USD", "description": "$199 a month. Up to 5 creator visits per month, about $40 per visit. $100 off the first month; 3-month minimum, then month to month; founding rate held while the plan stays active; unused visits roll one month, then expire."}, {"@type": "Offer", "name": "Growth", "price": 349, "priceCurrency": "USD", "description": "$349 a month. Up to 10 creator visits per month, about $35 per visit. $100 off the first month; 3-month minimum, then month to month; founding rate held while the plan stays active; unused visits roll one month, then expire."}, {"@type": "Offer", "name": "Managed", "price": 699, "priceCurrency": "USD", "description": "$699 a month. Up to 20 creator visits per month, with a coordinator running everything. $100 off the first month; 3-month minimum, then month to month; founding rate held while the plan stays active; unused visits roll one month, then expire."}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "name": "Austin neighborhoods on the Magpie founding roster", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "East Austin", "url": "https://magpielocal.com/austin.html#nb-east-austin"}, {"@type": "ListItem", "position": 2, "name": "South Congress", "url": "https://magpielocal.com/austin.html#nb-south-congress"}, {"@type": "ListItem", "position": 3, "name": "Rainey Street", "url": "https://magpielocal.com/austin.html#nb-rainey-street"}, {"@type": "ListItem", "position": 4, "name": "South Lamar", "url": "https://magpielocal.com/austin.html#nb-south-lamar"}, {"@type": "ListItem", "position": 5, "name": "Hyde Park", "url": "https://magpielocal.com/austin.html#nb-hyde-park"}, {"@type": "ListItem", "position": 6, "name": "North Loop", "url": "https://magpielocal.com/austin.html#nb-north-loop"}, {"@type": "ListItem", "position": 7, "name": "Mueller", "url": "https://magpielocal.com/austin.html#nb-mueller"}, {"@type": "ListItem", "position": 8, "name": "Cherrywood", "url": "https://magpielocal.com/austin.html#nb-cherrywood"}, {"@type": "ListItem", "position": 9, "name": "Zilker", "url": "https://magpielocal.com/austin.html#nb-zilker"}, {"@type": "ListItem", "position": 10, "name": "Downtown", "url": "https://magpielocal.com/austin.html#nb-downtown"}]}</script>
+<style>
+/* ===== Flagship city elevation (fx): shared by the seven core city pages ===== */
+.fx-hero{position:relative;overflow:hidden;background:#150722;display:flex;align-items:flex-end;min-height:min(90vh,860px)}
+.fx-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.fx-hero-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,4,32,.42) 0%,rgba(18,4,32,.06) 32%,rgba(18,4,32,.34) 60%,rgba(18,4,32,.86) 100%)}
+.fx-hero .wrap{position:relative;width:100%;padding-top:128px;padding-bottom:42px}
+.fx-hero .label{color:#f5e9ff}
+.fx-hero .label::before{color:#ff5ca8}
+.fx-hero h1{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;color:#fff;font-size:clamp(3rem,8.4vw,7rem);line-height:.99;letter-spacing:.004em;max-width:1050px;margin:22px 0 24px}
+.fx-hero h1 .hl{background:linear-gradient(93deg,#c44dff 0%,#ec008c 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.fx-hero .lede{color:rgba(255,255,255,.95);max-width:660px}
+.fx-hero .fine{color:rgba(255,255,255,.85)}
+.fx-hero .fine a{color:#fff}
+.fx-hero .wrap a:not(.btn){color:#ffb9dd;text-decoration:underline;text-underline-offset:3px}
+.fx-hero-cap{margin-top:46px;padding-top:24px;border-top:1px solid rgba(255,255,255,.38);display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.fx-hero .cap-big{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;color:#fff;font-size:clamp(1.5rem,3vw,2.3rem);line-height:1.08;letter-spacing:.01em}
+.fx-hero .cap-small{color:#f5e9ff;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.fx-duo{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.fx-duo figure{margin:0;border-radius:18px;overflow:hidden;height:clamp(260px,36vw,430px);background:#150722}
+.fx-duo img{width:100%;height:100%;object-fit:cover;display:block}
+.fx-statement{background:#faf7f1;border-top:1px solid #ead9f2;border-bottom:1px solid #ead9f2;padding:92px 0}
+.fx-state-line{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;color:#17101f;font-size:clamp(2.7rem,7.2vw,5.8rem);line-height:1.01;max-width:1080px}
+.fx-grad{background:linear-gradient(93deg,#a200ff 0%,#ec008c 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.fx-statement p{margin-top:20px;max-width:640px;font-size:1.06rem}
+.fx-gradband{background:linear-gradient(100deg,#a200ff 0%,#c400a5 48%,#ec008c 100%);padding:88px 0;color:#fff}
+.fx-gb-line{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;color:#fff;font-size:clamp(2.5rem,6.4vw,5rem);line-height:1.02;max-width:1020px}
+.fx-gradband p{color:rgba(255,255,255,.94);max-width:620px;margin:18px 0 28px;font-size:1.06rem}
+.fx-gradband .btn{background:#fff;color:#22042e;box-shadow:0 14px 34px rgba(30,0,50,.35)}
+.fx-gradband .btn:hover{background:#fdf2f9;color:#22042e}
+@media(max-width:760px){
+.fx-hero{min-height:0}
+.fx-hero .wrap{padding-top:104px;padding-bottom:34px}
+.fx-hero h1{font-size:clamp(2.7rem,13.5vw,3.4rem)}
+.fx-duo{grid-template-columns:1fr}
+.fx-duo figure{height:250px}
+.fx-statement{padding:64px 0}
+.fx-gradband{padding:64px 0}
+}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -84,7 +123,9 @@
   </div>
 </header>
 <main id="main">
-  <section class="hero">
+  <section class="fx-hero">
+    <img class="fx-hero-img" src="assets/photos/city-austin.jpg" alt="People crossing South Congress Avenue at dusk, the Austin skyline behind them" fetchpriority="high">
+    <div class="fx-hero-shade"></div>
     <div class="wrap">
       <span class="label">Founding market · Austin, Texas</span>
       <h1>Keep Austin <span class="hl">posted.</span></h1>
@@ -93,17 +134,12 @@
         <a class="btn" href="https://app.magpielocal.com/claim?market=Austin&src=austin">Claim your founding spot</a>
         <a class="btn btn-ghost" href="businesses.html#apply">Join the founding business list</a>
       </div>
-    </div>
-    <div class="photo-band">
-      <img src="assets/photos/cafe-window-night.jpg" alt="A cozy cafe window glowing at night">
-      <div class="band-cap">
-        <div class="wrap">
+    <div class="fx-hero-cap">
           <div class="cap-big">The comp is the pay.<br>The post is the job.</div>
           <div class="cap-small">From 500 total followers, there is a tier for you</div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
   <section class="block tight">
     <div class="wrap">
@@ -142,6 +178,14 @@
           <h3>Live music, every night</h3>
           <p>The live music claim is not a slogan, it is a Tuesday. Listening rooms, honky-tonks and patio sets give creators something real to post seven nights a week.</p>
         </div>
+      </div>
+    </div>
+  </section>
+  <section class="block" style="padding:24px 0">
+    <div class="wrap">
+      <div class="fx-duo">
+        <figure><img src="assets/photos/watch-food-bakery.jpg" alt="Pastries and tarts lined up in a bakery case" loading="lazy"></figure>
+        <figure><img src="assets/photos/guitar-case-street.jpg" alt="A musician carrying a worn guitar case down the sidewalk" loading="lazy"></figure>
       </div>
     </div>
   </section>
@@ -187,6 +231,12 @@
     </div>
   </section>
 
+  <section class="fx-statement">
+    <div class="wrap">
+      <div class="fx-state-line">Post the Austin you <span class="fx-grad">actually eat in</span>.</div>
+      <p>Local reach is the share of a creator's audience that lives in Austin, and it is the headline number on every profile here, ahead of follower count.</p>
+    </div>
+  </section>
   <section class="block">
     <div class="wrap">
       <div class="sec-head">
@@ -227,6 +277,13 @@
     </div>
   </section>
 
+  <section class="fx-gradband">
+    <div class="wrap">
+      <div class="fx-gb-line">Founding creators see every offer first.</div>
+      <p>Join free, from 500 total followers across your platforms. The founding roster is forming now, and founding creators see every offer first when the market opens.</p>
+      <a class="btn" href="https://app.magpielocal.com/claim?market=Austin&src=austin">Claim your founding spot</a>
+    </div>
+  </section>
   <section class="block">
     <div class="wrap">
       <div class="sec-head">
