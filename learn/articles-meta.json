@@ -886,5 +886,240 @@
   "audience": "creators",
   "dek": "A complete profile with your local reach, categories, and rate on it does the pitching for you.",
   "topic": "rates-and-pay"
+ },
+ "how-beauty-creators-get-booked-in-atlanta.html": {
+  "audience": "creators",
+  "dek": "Atlanta beauty creators, from braiders and barbers to glam artists, get comped services and paid bookings ranked by local reach.",
+  "topic": "finding-work"
+ },
+ "how-beauty-creators-get-booked-in-austin.html": {
+  "audience": "creators",
+  "dek": "How Austin beauty creators turn chair content into comped services and paid bookings at their own rate.",
+  "topic": "finding-work"
+ },
+ "how-beauty-creators-get-booked-in-los-angeles.html": {
+  "audience": "creators",
+  "dek": "How Los Angeles beauty creators turn a trusted local niche into comped services and paid bookings.",
+  "topic": "finding-work"
+ },
+ "how-beauty-creators-get-booked-in-miami.html": {
+  "audience": "creators",
+  "dek": "Miami beauty creators turn local reach in Brickell and Coral Gables into comped services and paid bookings on Magpie.",
+  "topic": "finding-work"
+ },
+ "how-beauty-creators-get-booked-in-nashville.html": {
+  "audience": "creators",
+  "dek": "How Nashville beauty creators turn local trust into comped services and paid bookings for salons, barbers and glam.",
+  "topic": "finding-work"
+ },
+ "how-beauty-creators-get-booked-in-new-york-city.html": {
+  "audience": "creators",
+  "dek": "How New York City beauty creators turn trusted recommendations into comped services and paid deals.",
+  "topic": "finding-work"
+ },
+ "how-beauty-creators-get-booked-in-toronto.html": {
+  "audience": "creators",
+  "dek": "Toronto beauty creators earn comped services and paid bookings with local reach, specialty and reliability.",
+  "topic": "finding-work"
+ },
+ "how-beauty-creators-get-booked-in-virginia-beach.html": {
+  "audience": "creators",
+  "dek": "How Virginia Beach beauty creators earn comped services and paid bookings, ranked by local reach.",
+  "topic": "finding-work"
+ },
+ "how-fitness-creators-get-booked-in-atlanta.html": {
+  "audience": "creators",
+  "dek": "Atlanta fitness creators get comped sessions and paid bookings by proving local reach on the BeltLine, in parks, and in studios.",
+  "topic": "finding-work"
+ },
+ "how-fitness-creators-get-booked-in-austin.html": {
+  "audience": "creators",
+  "dek": "How Austin fitness creators turn trail, pool, and gym posts into comped sessions and paid bookings.",
+  "topic": "finding-work"
+ },
+ "how-fitness-creators-get-booked-in-los-angeles.html": {
+  "audience": "creators",
+  "dek": "How Los Angeles fitness creators turn consistent local training into comped trials and paid bookings.",
+  "topic": "finding-work"
+ },
+ "how-fitness-creators-get-booked-in-miami.html": {
+  "audience": "creators",
+  "dek": "Miami fitness creators turn beach, gym and run club reach into comped classes and paid bookings by delivering reliably.",
+  "topic": "finding-work"
+ },
+ "how-fitness-creators-get-booked-in-nashville.html": {
+  "audience": "creators",
+  "dek": "How Nashville fitness creators turn local training content into comped classes and paid bookings with gyms and studios.",
+  "topic": "finding-work"
+ },
+ "how-fitness-creators-get-booked-in-new-york-city.html": {
+  "audience": "creators",
+  "dek": "How New York City fitness creators turn a real training life into comped access and paid bookings.",
+  "topic": "finding-work"
+ },
+ "how-fitness-creators-get-booked-in-toronto.html": {
+  "audience": "creators",
+  "dek": "Toronto fitness creators earn comped classes and paid campaigns with local reach and year round consistency.",
+  "topic": "finding-work"
+ },
+ "how-fitness-creators-get-booked-in-virginia-beach.html": {
+  "audience": "creators",
+  "dek": "How Virginia Beach fitness creators earn comped classes and paid bookings, ranked by local reach.",
+  "topic": "finding-work"
+ },
+ "how-food-creators-get-booked-in-atlanta.html": {
+  "audience": "creators",
+  "dek": "Atlanta food creators get comped meals and paid bookings by ranking on local reach from Buford Highway to Decatur.",
+  "topic": "comped-visits"
+ },
+ "how-food-creators-get-booked-in-austin.html": {
+  "audience": "creators",
+  "dek": "How Austin food creators turn regular posts into comped meals and paid bookings at their own listed rate.",
+  "topic": "comped-visits"
+ },
+ "how-food-creators-get-booked-in-los-angeles.html": {
+  "audience": "creators",
+  "dek": "How Los Angeles food creators turn a trusted neighborhood pocket into comped meals and paid bookings.",
+  "topic": "comped-visits"
+ },
+ "how-food-creators-get-booked-in-miami.html": {
+  "audience": "creators",
+  "dek": "Miami food creators get comped meals and paid bookings by proving local reach from Calle Ocho to Wynwood and delivering on time.",
+  "topic": "comped-visits"
+ },
+ "how-food-creators-get-booked-in-nashville.html": {
+  "audience": "creators",
+  "dek": "How Nashville food creators turn local reach into comped meals and paid bookings, neighborhood by neighborhood.",
+  "topic": "comped-visits"
+ },
+ "how-food-creators-get-booked-in-new-york-city.html": {
+  "audience": "creators",
+  "dek": "How New York City food creators turn neighborhood followings into comped meals and paid bookings.",
+  "topic": "comped-visits"
+ },
+ "how-food-creators-get-booked-in-toronto.html": {
+  "audience": "creators",
+  "dek": "Toronto food creators get comped meals and paid bookings by proving local reach and reliability.",
+  "topic": "comped-visits"
+ },
+ "how-food-creators-get-booked-in-virginia-beach.html": {
+  "audience": "creators",
+  "dek": "How Virginia Beach food creators earn comped meals and paid bookings, ranked by local reach.",
+  "topic": "comped-visits"
+ },
+ "how-to-find-beauty-creators-in-atlanta.html": {
+  "audience": "businesses",
+  "dek": "Atlanta salons, barbers, and glam studios can find beauty creators by local reach and specialty, from braids and wigs to Buckhead glam.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-beauty-creators-in-austin.html": {
+  "audience": "businesses",
+  "dek": "Find Austin beauty creators by local reach and fill chairs with comped services and paid glam bookings.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-beauty-creators-in-los-angeles.html": {
+  "audience": "businesses",
+  "dek": "How Los Angeles salons, spas, and studios find beauty creators by service, neighborhood, and real local reach.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-beauty-creators-in-miami.html": {
+  "audience": "businesses",
+  "dek": "Miami salons and med spas can find beauty creators by local reach, language fit and reliability, not follower count alone.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-beauty-creators-in-nashville.html": {
+  "audience": "businesses",
+  "dek": "How Nashville salons, barbershops and glam artists find beauty creators by local reach instead of follower count.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-beauty-creators-in-new-york-city.html": {
+  "audience": "businesses",
+  "dek": "A specialty first guide to finding and booking New York City beauty creators who can fill real chairs.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-beauty-creators-in-toronto.html": {
+  "audience": "businesses",
+  "dek": "Toronto salons and barbershops find beauty creators by local reach, specialty and neighborhood trust.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-beauty-creators-in-virginia-beach.html": {
+  "audience": "businesses",
+  "dek": "How Virginia Beach salons and spas find beauty creators ranked by local reach, from Hilltop to Red Mill.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-fitness-creators-in-atlanta.html": {
+  "audience": "businesses",
+  "dek": "Atlanta gyms and studios can find fitness creators by local reach across the BeltLine, Piedmont Park, and neighborhood studios.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-fitness-creators-in-austin.html": {
+  "audience": "businesses",
+  "dek": "Find Austin fitness creators by local reach and fill classes with comped sessions and paid training bookings.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-fitness-creators-in-los-angeles.html": {
+  "audience": "businesses",
+  "dek": "How Los Angeles gyms and studios find fitness creators by training style, place, and local reach that fills classes.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-fitness-creators-in-miami.html": {
+  "audience": "businesses",
+  "dek": "Miami gyms and studios can find fitness creators by local reach and format fit, from beach sunrise sessions to Wynwood lifting.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-fitness-creators-in-nashville.html": {
+  "audience": "businesses",
+  "dek": "How Nashville gyms and studios find fitness creators by local reach, from Shelby Bottoms run clubs to Gulch classes.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-fitness-creators-in-new-york-city.html": {
+  "audience": "businesses",
+  "dek": "A training style first guide to finding and booking New York City fitness creators who drive real trials.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-fitness-creators-in-toronto.html": {
+  "audience": "businesses",
+  "dek": "Toronto gyms and studios find fitness creators by local reach, training style and season.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-fitness-creators-in-virginia-beach.html": {
+  "audience": "businesses",
+  "dek": "How Virginia Beach gyms and studios find fitness creators ranked by local reach, from the boardwalk to First Landing.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-food-creators-in-atlanta.html": {
+  "audience": "businesses",
+  "dek": "Atlanta restaurants can find food creators by local reach across Buford Highway, the BeltLine, and Decatur, not by follower count alone.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-food-creators-in-austin.html": {
+  "audience": "businesses",
+  "dek": "Find Austin food creators by local reach and book comped visits or paid posts that fill real neighborhood rooms.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-food-creators-in-los-angeles.html": {
+  "audience": "businesses",
+  "dek": "A neighborhood first guide for Los Angeles restaurants, trucks, and markets that want food creators with real local reach.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-food-creators-in-nashville.html": {
+  "audience": "businesses",
+  "dek": "How Nashville restaurants find food creators by local reach, from hot chicken counters to meat and three lunch rooms.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-food-creators-in-new-york-city.html": {
+  "audience": "businesses",
+  "dek": "A neighborhood first guide to finding and booking New York City food creators by real local reach.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-food-creators-in-toronto.html": {
+  "audience": "businesses",
+  "dek": "Toronto businesses find food creators by neighborhood local reach, from Kensington Market to Scarborough plazas.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-food-creators-in-virginia-beach.html": {
+  "audience": "businesses",
+  "dek": "How Virginia Beach restaurants find food creators ranked by local reach, from Shore Drive to Pungo.",
+  "topic": "working-with-creators"
  }
 }
