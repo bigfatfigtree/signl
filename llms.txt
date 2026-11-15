@@ -1274,6 +1274,8 @@ Eight US markets are defined by the full city lists below. These lists are Magpi
 
 - Toronto: Magpie's Canada founding market, covering the whole Greater Toronto Area: the city of Toronto plus Mississauga, Brampton, Vaughan, Markham, Richmond Hill, Oakville, Burlington, Milton, Ajax, Pickering, Whitby, Oshawa, Newmarket, Aurora, Caledon and Georgetown. The founding roster forms neighborhood by neighborhood: Queen West, Ossington, Kensington Market, Yorkville, Liberty Village, Leslieville, Greektown on the Danforth and the Junction. Local businesses book local creators ranked by local audience share. Creators join free, start at 500 total followers across their platforms, and take comped visits (1 post + 1 story, with the goal of posting within 48 hours) or paid bookings at their own listed rate, keeping 97%. Market pages: https://magpielocal.com/toronto.html and https://magpielocal.com/markets/toronto.html
 
+- Montreal: Magpie's second Canada founding market, covering the Montreal metro as one market: the island neighborhoods plus Laval and Longueuil across the river. The founding roster forms neighborhood by neighborhood: Plateau-Mont-Royal, Mile End, Old Montreal, Griffintown, Saint-Henri, Little Italy, Rosemont, Villeray, Hochelaga-Maisonneuve, Verdun, Côte-des-Neiges, Notre-Dame-de-Grâce and Downtown. Local businesses book local creators ranked by local audience share. Creators join free, start at 500 total followers across their platforms, and take comped visits (1 post + 1 story, with the goal of posting within 48 hours) or paid bookings at their own listed rate, keeping 97%. Market pages: https://magpielocal.com/montreal.html and https://magpielocal.com/markets/montreal.html
+
 ### Ireland
 
 - Dublin
@@ -1381,6 +1383,7 @@ New cities keep joining the list: anyone can sign up from any city at https://ap
 - [Chicago](https://magpielocal.com/chicago.html): the founding city page for Chicago; founding roster and founding business enrollment.
 - [Charlotte](https://magpielocal.com/charlotte.html): the founding city page for Charlotte; founding roster and founding business enrollment.
 - [Atlanta](https://magpielocal.com/atlanta.html): the founding city page for Atlanta, Georgia: Atlanta eats by neighborhood, and the founding roster forms neighborhood by neighborhood across Midtown, Buckhead, Inman Park, Old Fourth Ward, West Midtown, Decatur and East Atlanta, with the whole metro as one market; founding roster and founding business enrollment.
+- [Montreal](https://magpielocal.com/montreal.html): the founding city page for Montreal, Quebec: Montreal eats by neighborhood, and the founding roster forms neighborhood by neighborhood across Plateau-Mont-Royal, Mile End, Old Montreal, Griffintown, Saint-Henri, Little Italy and Rosemont, with the island plus Laval and Longueuil as one market; founding roster and founding business enrollment.
 - [Tampa](https://magpielocal.com/tampa.html): the founding city page for Tampa; founding roster and founding business enrollment.
 - [Denver](https://magpielocal.com/denver.html): the founding city page for Denver; founding roster and founding business enrollment.
 - [San Diego](https://magpielocal.com/san-diego.html): the founding city page for San Diego; founding roster and founding business enrollment.
