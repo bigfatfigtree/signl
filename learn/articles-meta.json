@@ -64,6 +64,11 @@
   "dek": "National brands shop big. Local businesses shop location. What sub-10,000 creators actually get booked for.",
   "topic": "finding-work"
  },
+ "do-influencer-platforms-handle-payment-and-contracts.html": {
+  "audience": "businesses",
+  "dek": "Not just introductions: terms set in the booking, payment held until the post is live, and a 90-day license on paid bookings.",
+  "topic": "working-with-creators"
+ },
  "find-local-influencers-atlanta.html": {
   "audience": "businesses",
   "dek": "Peachtree means ten streets: finding Atlanta creators by neighborhood, not skyline.",
@@ -78,6 +83,11 @@
   "audience": "businesses",
   "dek": "North End to Dorchester: finding creators whose audience actually lives in Boston.",
   "cityGuide": true
+ },
+ "find-local-influencers-by-follower-count-and-location.html": {
+  "audience": "businesses",
+  "dek": "Magpie shows every creator's local follower count and local percentage before you choose, and ranks by local reach, not total followers.",
+  "topic": "working-with-creators"
  },
  "find-local-influencers-chicago.html": {
   "audience": "businesses",
@@ -222,6 +232,11 @@
  "how-much-do-local-influencers-cost.html": {
   "audience": "businesses",
   "dek": "Real numbers: comped visits at $0 cash, paid posts at the creator's own rate from $50, and plan pricing from $199 a month.",
+  "topic": "rates-and-pay"
+ },
+ "how-much-does-it-cost-to-book-a-local-micro-influencer.html": {
+  "audience": "businesses",
+  "dek": "The two honest numbers: a comped visit costs the experience itself, a paid booking costs the creator's own rate, and plans start at $199 a month.",
   "topic": "rates-and-pay"
  },
  "how-much-does-it-cost-to-hire-a-local-influencer.html": {
@@ -739,6 +754,16 @@
   "audience": "both",
   "dek": "Plain definitions for local reach, comped visit, paid booking, deliverables, disclosure, usage rights, UGC, and Momentum.",
   "topic": "the-local-scene"
+ },
+ "local-influencer-marketing-for-multiple-locations.html": {
+  "audience": "businesses",
+  "dek": "Four locations means four local audiences. One platform, one set of terms, a local roster in each city.",
+  "topic": "local-marketing"
+ },
+ "local-influencer-platform-vs-dming-creators.html": {
+  "audience": "businesses",
+  "dek": "DMing is free in cash and expensive in everything else. The honest comparison, and what a platform actually carries.",
+  "topic": "working-with-creators"
  },
  "local-reach-vs-follower-count.html": {
   "audience": "both",

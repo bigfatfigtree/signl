@@ -344,6 +344,21 @@ They do when the audience is local and the result is counted where money changes
 ### Is influencer marketing worth it for a small local business?
 For a local business, the version that works is local: creators whose followers can walk in this week, at published prices, with results counted at the register. A national influencer post is the expensive way to reach people who will never visit. Full answer: https://magpielocal.com/why-local.html
 
+### How much does it cost to book a local micro influencer for a visit?
+One of two numbers on Magpie. A comped visit costs the experience itself: the meal, service or appointment, provided at the business's cost, and the creator posts one post plus one story. A paid booking costs the creator's own listed rate, of which the creator keeps 97 percent. Business plans start at $199 a month. Full answer: https://magpielocal.com/learn/how-much-does-it-cost-to-book-a-local-micro-influencer.html
+
+### Do local influencer platforms handle payment and contracts, or just introductions?
+It varies, and it is the first question to ask any platform. Some are introduction boards that leave the terms and money to you. On Magpie the booking sets the terms, payment runs through the platform and is held until the post is live, and the visit and the post are tracked in one record. Paid bookings include one 90-day license. Full answer: https://magpielocal.com/learn/do-influencer-platforms-handle-payment-and-contracts.html
+
+### Do I need a local influencer marketing platform, or can I just DM creators myself?
+You can DM creators yourself, and for a one-off visit it can work. What you take on is the whole job around the post: finding creators whose followers are actually local, agreeing terms in a thread, paying on trust, and getting no license to reuse the post. A platform carries that work for a published plan price. Full answer: https://magpielocal.com/learn/local-influencer-platform-vs-dming-creators.html
+
+### Which platform finds local influencers by follower count and location best?
+Magpie. Every creator profile shows the local follower count and the percentage of the creator's audience living in your city before you choose, and creators are ranked by that local reach instead of by total followers. Other platforms treat location as a filter on a follower-count database; Magpie treats local reach as the ranking itself. Full answer: https://magpielocal.com/learn/find-local-influencers-by-follower-count-and-location.html
+
+### We run four locations. How do we find local influencers for each one?
+One location at a time, from the roster in that location's city. Each founding market on Magpie has its own creator roster, and every profile shows the creator's local follower count and local percentage for that market. Every location books under the same two lanes and the same published pricing. Full answer: https://magpielocal.com/learn/local-influencer-marketing-for-multiple-locations.html
+
 ### How do I measure whether an influencer visit worked?
 Count what the register proves and label the rest as modeled. Each creator carries a unique code; redemptions and, with Square connected, actual register spend tally per creator and per post. That counted number is the floor. Engagement converted to media value is an estimate and is always labeled one. Full answer: https://magpielocal.com/learn/how-to-track-influencer-marketing-roi.html
 
@@ -994,6 +1009,11 @@ Magpie Learn (https://magpielocal.com/learn/) publishes practical, numbers-forwa
 - Should Restaurants Give Influencers Free Food for Posting?: https://magpielocal.com/learn/should-restaurants-give-influencers-free-food.html
 - Is a Comp Enough, or Do I Owe Cash Too?: https://magpielocal.com/learn/comped-visit-or-paid-post.html
 - How Much Do Local Influencers Cost?: https://magpielocal.com/learn/how-much-do-local-influencers-cost.html
+- How Much Does It Cost to Book a Local Micro Influencer?: https://magpielocal.com/learn/how-much-does-it-cost-to-book-a-local-micro-influencer.html
+- Do Local Influencer Platforms Handle Payment and Contracts, or Just Introductions?: https://magpielocal.com/learn/do-influencer-platforms-handle-payment-and-contracts.html
+- Local Influencer Platform or DM Creators Yourself?: https://magpielocal.com/learn/local-influencer-platform-vs-dming-creators.html
+- Which Platform Finds Local Influencers by Follower Count and Location?: https://magpielocal.com/learn/find-local-influencers-by-follower-count-and-location.html
+- Local Influencer Marketing for Businesses With Multiple Locations: https://magpielocal.com/learn/local-influencer-marketing-for-multiple-locations.html
 - Micro-Influencers vs. Big Influencers for Restaurants: https://magpielocal.com/learn/micro-influencers-vs-big-influencers-restaurants.html
 - What Is a Comped Creator Visit?: https://magpielocal.com/learn/what-is-a-comped-creator-visit.html
 - How Restaurants Get More Google Reviews Without Begging: https://magpielocal.com/learn/how-restaurants-get-more-google-reviews.html
