@@ -734,6 +734,9 @@ Do the three jobs an agent would do, in writing. Anchor on the deliverable and t
 ### What does a fair creator exclusivity clause look like?
 A fair clause has three limits and a price. The category is narrow, for example one type of business rather than a whole industry. The place is clear, for example the same market rather than everywhere you post. The window is short, with a real end date tied to the campaign. Exclusivity is paid as its own line item because it blocks other bookings. On Magpie, barring a creator from competitors is a separate, priced thing, not quietly bundled into a standard visit: a comped visit is 1 post or reel plus 1 story that shares the post within 48 hours, and a paid booking runs at the creator's own listed rate from a $50 floor, with the creator keeping 97 percent. Full answer: https://magpielocal.com/learn/what-a-fair-exclusivity-clause-looks-like.html
 
+### Should a local business ask for a reel or a photo post?
+Pick by the job. A reel wins when the value is in motion, sound, or a before and after: a pour, a cut, a class, a room filling up. A photo post wins when the value needs to be kept and found again: a menu, a price, a finished result, opening hours. Photo posts get saved as references, reels get shared as proof, and both matter more than views. On Magpie the format is agreed before the visit: a comped visit is 1 post or reel plus 1 story that shares the post within 48 hours, and a paid booking runs at the creator's own listed rate from a $50 floor, with the creator keeping 97 percent. Full answer: https://magpielocal.com/learn/reels-vs-photo-posts-for-a-local-business.html
+
 ### Brand deals in Nashville: how do I get comped or paid there?
 Nashville creators join the founding roster free from 500 followers. Businesses across the Nashville metro comp meals, services and experiences, or book you at your own listed rate, from $50, and you keep 97 percent. Founding signups are open and the market is not live yet. Full answer: https://magpielocal.com/brand-deals-nashville.html
 
@@ -997,6 +1000,7 @@ Magpie Learn (https://magpielocal.com/learn/) publishes practical, numbers-forwa
 - Black Friday Marketing for Local Businesses: https://magpielocal.com/learn/black-friday-marketing-for-local-businesses.html
 - How to Track Influencer Marketing ROI: https://magpielocal.com/learn/how-to-track-influencer-marketing-roi.html
 - UGC vs. Influencer Posts for Local Businesses: Which Do You Actually Need?: https://magpielocal.com/learn/ugc-vs-influencer-posts-for-local-businesses.html
+- Reels vs. Photo Posts for a Local Business: What Actually Gets Saved and Shared: https://magpielocal.com/learn/reels-vs-photo-posts-for-a-local-business.html
 - Local Creator Marketing Glossary: Words Worth Getting Right: https://magpielocal.com/learn/local-creator-marketing-glossary.html
 - Campus Creators: How Student Creators Fit a Local Market: https://magpielocal.com/learn/campus-creators-how-student-creators-fit-a-local-market.html
 - FTC Disclosure for Comped Posts: https://magpielocal.com/learn/ftc-disclosure-for-comped-posts.html
