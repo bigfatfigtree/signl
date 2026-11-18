@@ -30,7 +30,7 @@ window.SIG_CONFIG = {
     cities: "cities.html"
   },
   samplePhoto: "assets/photos/sample-portrait-jordan.jpg",
-  avatar: "assets/maggie-kaws/curious.jpg",
+  avatar: "assets/maggie-logo/curious.jpg",
   avatarVideo: null
 };
 
