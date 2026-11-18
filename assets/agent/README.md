@@ -17,9 +17,11 @@ index.html is only the no-JS / pre-load fallback and is overwritten on init.
 
 ## The mark (Magpie flip fix wave, 2026-11-07; supersedes the Build -130 orb)
 
-Maggie's mark is her character tile — Jeff's character-sheet
-artwork, the same tiles the app ships (`assets/maggie-char/curious.jpg`
-on this site). The Build -130 orb (still + animated clip) was
+Maggie's mark is her character tile — the matte vinyl
+portrait Jeff approved 2026-11-18 (gradient X eye, the
+Magpie logo across her black t-shirt), the same tiles the
+app ships (`assets/maggie-kaws/curious.jpg`
+on this site; the retired sets stay on disk in the app repo). The Build -130 orb (still + animated clip) was
 retired with the Sig name: `avatarVideo` in `window.SIG_CONFIG`
 is null, so every avatar slot (message rows, FAB, sheet head,
 panel header) renders the still from the `avatar` config value.

@@ -34,6 +34,14 @@
 .sigx-ava-img{width:100%;height:100%;object-fit:cover;display:block;border-radius:50%}
 .sigx-ava video.sigx-ava-img{background:#0B0D0C}
 .sigx-ava.lg{width:44px;height:44px;font-size:1.2rem}
+/* Maggie moves (2026-11-18): the floating button face, the
+   sheet head and the Meet-Maggie hero idle with her gentle
+   bob, the same motion vocabulary as the app; the message
+   avatars stay still. Transform only; rested for reduced
+   motion in the block at the foot of this file. */
+.sigx-fab .sigx-ava-img,.sigx-ava.lg .sigx-ava-img{animation:sigxBob 4.4s ease-in-out infinite}
+.sigx-hero img{animation:sigxBob 3.8s ease-in-out infinite}
+@keyframes sigxBob{0%,100%{transform:scale(1.07) translateY(0) rotate(0deg)}50%{transform:scale(1.07) translateY(-2.4%) rotate(.6deg)}}
 .sigx-who{flex:1;min-width:0}
 .sigx-name{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.02rem;line-height:1.2;color:var(--ink,#0B0D0C)}
 .sigx-role{font-size:.76rem;color:var(--ink3,#5F7265);font-weight:600}
@@ -178,6 +186,7 @@ body.sigx-locked{overflow:hidden}
 
 @media (prefers-reduced-motion: reduce){
   .sigx-msg,.sigx-ctas,.sigx-fab,.sigx-sheet-card{animation:none}
+  .sigx-ava-img,.sigx-hero img{animation:none!important}
   .sigx-typing span{animation:none}
   .sigx-cta:hover,.sigx-fab:hover{transform:none}
 }

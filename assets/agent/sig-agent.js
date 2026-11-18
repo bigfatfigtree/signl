@@ -6,8 +6,10 @@
    THE MARK: SIG_CONFIG.avatar below is the ONLY place the avatar still
    is referenced; every Maggie avatar on the page (messages, floating
    button, sheet head, panel header) renders from it. The mark is
-   Maggie's character tile (Jeff's character sheet artwork, the same
-   tiles the app ships) — there is no avatar video; the Build -130
+   Maggie's character tile (the matte vinyl portrait Jeff
+   approved 2026-11-18: gradient X eye, the Magpie logo across
+   her black t-shirt; the same tiles the app ships) — there is
+   no avatar video; the Build -130
    orb and its animated clip were retired with the Sig name in the
    Magpie flip fix wave (2026-11-07).
    ----------------------------------------------------------------------------
@@ -28,7 +30,7 @@ window.SIG_CONFIG = {
     cities: "cities.html"
   },
   samplePhoto: "assets/photos/sample-portrait-jordan.jpg",
-  avatar: "assets/maggie-char/curious.jpg",
+  avatar: "assets/maggie-kaws/curious.jpg",
   avatarVideo: null
 };
 

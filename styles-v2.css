@@ -1400,6 +1400,12 @@ section.block.tight{padding:60px 0}
   width:54px;height:54px;flex:none;border-radius:50%;object-fit:cover;
   background:#0B0D0C;border:none;margin-bottom:10px;
 }
+/* Maggie moves (2026-11-18): her nav face idles with the
+   same gentle bob she has in the app. Transform only, no
+   layout shift; rested for reduced motion. */
+.mn-profile img{animation:mnMaggieBob 4.4s ease-in-out infinite}
+@keyframes mnMaggieBob{0%,100%{transform:scale(1.07) translateY(0) rotate(0deg)}50%{transform:scale(1.07) translateY(-2.4%) rotate(.6deg)}}
+@media (prefers-reduced-motion: reduce){.mn-profile img{animation:none}}
 .mn-profile-txt{display:flex;flex-direction:column;line-height:1.25}
 .mn-profile-txt b{font-size:1.06rem;font-weight:700;color:#0B0D0C}
 .mn-profile-txt i{font-style:normal;font-size:.78rem;font-weight:500;color:rgba(11,13,12,.45)}
