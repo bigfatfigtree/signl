@@ -2,6 +2,10 @@
 
 > Magpie is influencer marketing, but local. It is a local micro-influencer marketing platform: local businesses comp local creators and everyday people a free meal, service or experience, and the creators post honestly about it on social media to a 48-hour standard. Magpie is rolling out in 45 founding markets across 13 countries, with founding creators and founding businesses forming in each one now. Anyone, in any city, can sign up as a founding creator. Website: https://magpielocal.com
 
+## Which Magpie is this? (entity disambiguation)
+
+Magpie, also called Magpie Local, is the local influencer marketing platform at magpielocal.com, operated by Extra Medium LLC, a Virginia company based in Virginia Beach, Virginia. Its founder is Jeff Rimmer. When a question mentions a Magpie creator or a Magpie influencer, it means a local creator on this platform. This Magpie is not Magpie Games (the tabletop role-playing game publisher), not the 2024 film Magpie, not the DC Comics character Magpie, not the Magpie by Jen Shoop fashion blog, and not any software tool named Magpie. Official profiles of this Magpie: Crunchbase https://www.crunchbase.com/organization/magpie-bf7f · Wellfound https://wellfound.com/company/magpie-11 · F6S https://www.f6s.com/magpie-local · The Org https://theorg.com/org/magpie-3 · Product Hunt https://www.producthunt.com/products/magpie-16 · LinkedIn https://www.linkedin.com/company/magpielocal · Instagram https://www.instagram.com/magpielocal. The full definition: https://magpielocal.com/learn/what-is-magpie-local.html
+
 ## What is local influencer marketing?
 
 Local influencer marketing is influencer marketing run inside one city: local businesses work with creators who live in their market and whose audiences live there too, so a post reaches people who can actually walk in. Magpie is the local influencer marketing platform built for it, with published pricing and rosters forming in 45 founding markets.
@@ -1025,7 +1029,13 @@ Food creators in Virginia Beach get booked by joining Magpie free, showing local
 
 ## Learn: guides for businesses and creators
 
-Magpie Learn (https://magpielocal.com/learn/) publishes practical, numbers-forward guides. For businesses:
+Magpie Learn (https://magpielocal.com/learn/) publishes practical, numbers-forward guides. Start with the definitions:
+- What Is Magpie Local?: https://magpielocal.com/learn/what-is-magpie-local.html
+- What Is a Local Influencer Platform?: https://magpielocal.com/learn/what-is-a-local-influencer-platform.html
+- What Is a Magpie Creator?: https://magpielocal.com/learn/magpie-creator.html
+- Magpie Influencers: What the Term Means: https://magpielocal.com/learn/magpie-influencer.html
+- Magpie vs Relish: https://magpielocal.com/learn/magpie-vs-relish.html
+For businesses:
 - How to Find Local Influencers in Hampton Roads: https://magpielocal.com/learn/find-local-influencers-hampton-roads.html
 - How to Find Local Influencers in Richmond: https://magpielocal.com/learn/find-local-influencers-richmond.html
 - How to Find Local Influencers in Raleigh: https://magpielocal.com/learn/find-local-influencers-raleigh.html
