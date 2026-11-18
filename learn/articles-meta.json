@@ -1196,5 +1196,10 @@
     "audience": "businesses",
     "topic": "local-marketing",
     "dek": "A grand opening is a one-day local event: book beauty creators whose followers live in your city, anchored by one paid name."
+  },
+  "how-to-build-a-media-kit-from-posts-you-already-have.html": {
+    "audience": "creators",
+    "dek": "Local reach first, three best posts picked by saves, shares, and local comments, your categories, and your rate: a one page media kit built from work you have already published.",
+    "topic": "finding-work"
   }
 }
