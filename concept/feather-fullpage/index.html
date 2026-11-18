@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magpie — Feather Concept V3 · Full Page (not live)</title>
+<meta name="description" content="Concept mock V3: the full Magpie homepage in the feather system — navy photographic hero with the iridescent light, every live section below it. For review only, not the live site.">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles-v2.css">
+<link rel="stylesheet" href="shop.css">
+<link rel="stylesheet" href="assets/agent/sig-agent.css">
+<script>if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver'in window){document.documentElement.classList.add('sx-on');}</script>
+<style>
+/* ================================================================
+   FEATHER CONCEPT V3 — hero system (scoped) + full-page theme layer
+   ================================================================ */
+:root{
+  --navy:#0A1F44;
+  --navy-deep:#06142E;
+  --fgrad:linear-gradient(93deg,#006afc 0%,#019bfc 38%,#03c9ab 74%,#2fe07e 100%);
+  --gx:50%; --gy:42%; --flow:32%; --tilt:0deg; --bandx:50%; --pulse:0;
+  /* pull the live theme onto the v2 ground: cream, navy-tinted lines + shadows */
+  --bg:#FAF7F1;
+  --bg2:#F2ECDF;
+  --line:#D8E1EA;
+  --line2:#E6EDF4;
+  --sh-sm:0 1px 2px rgba(10,31,68,.05),0 6px 18px -6px rgba(10,31,68,.10);
+  --sh-md:0 2px 4px rgba(10,31,68,.05),0 20px 40px -16px rgba(10,31,68,.18);
+  --sh-lg:0 4px 10px rgba(10,31,68,.06),0 40px 72px -24px rgba(10,31,68,.26);
+}
+
+/* ---------- the feather hero ---------- */
+.hero{
+  position:relative;min-height:100svh;display:flex;flex-direction:column;
+  background:var(--navy-deep);color:#fff;overflow:hidden;isolation:isolate;
+}
+.hero .stage{position:absolute;inset:0;z-index:0}
+.hero .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.7s ease;overflow:hidden}
+.hero .slide.active{opacity:1}
+.hero .slide img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  filter:saturate(.94) contrast(1.06) brightness(.93);
+  transform:scale(1.03);will-change:transform,opacity;
+}
+.hero .slide.active img{animation:kbA 9.5s ease-out forwards}
+.hero .slide.active.flip img{animation-name:kbB}
+@keyframes kbA{from{transform:scale(1.03) translate(0,0)}to{transform:scale(1.12) translate(-1.6%,-1.2%)}}
+@keyframes kbB{from{transform:scale(1.12) translate(1.4%,1%)}to{transform:scale(1.04) translate(0,0)}}
+.hero .slide-creator img{object-position:70% 30%}
+.hero .slide-barber  img{object-position:50% 38%}
+.hero .slide-cafe    img{object-position:68% 30%}
+@media(max-width:700px){
+  .hero .slide-creator img{object-position:60% 28%}
+  .hero .slide-barber  img{object-position:50% 40%}
+  .hero .slide-cafe    img{object-position:47% 26%}
+}
+.hero .grade{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg, rgba(10,31,68,.26) 0%, rgba(10,31,68,.02) 38%, rgba(6,20,46,.30) 100%);}
+.hero .grade-tint{position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(115deg, rgba(0,106,252,.14), rgba(3,201,171,.10) 70%, rgba(47,224,126,.06));
+  mix-blend-mode:soft-light;}
+.hero .sheen-glow{position:absolute;inset:0;z-index:2;pointer-events:none;mix-blend-mode:screen;opacity:.6;
+  background:
+    radial-gradient(640px 460px at var(--gx) var(--gy), rgba(1,155,252,.50), rgba(3,201,171,.22) 46%, transparent 72%),
+    radial-gradient(360px 280px at var(--gx) var(--gy), rgba(47,224,126,.20), transparent 70%);}
+.hero .sheen-band{position:absolute;inset:-12% -30%;z-index:2;pointer-events:none;mix-blend-mode:soft-light;opacity:.85;
+  background:linear-gradient(calc(93deg + var(--tilt)),
+    transparent 26%, rgba(1,155,252,.55) 44%, rgba(3,201,171,.65) 52%, rgba(47,224,126,.5) 60%, transparent 76%);
+  background-size:260% 100%;background-position:var(--bandx) 0;}
+.hero .sheen-barbs{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:.55;mix-blend-mode:overlay;
+  background:repeating-linear-gradient(112deg, rgba(255,255,255,.05) 0 1px, transparent 1px 8px);
+  -webkit-mask-image:radial-gradient(680px 500px at var(--gx) var(--gy), #000 0%, transparent 72%);
+          mask-image:radial-gradient(680px 500px at var(--gx) var(--gy), #000 0%, transparent 72%);}
+.hero .scrim{position:absolute;inset:0;z-index:3;pointer-events:none;
+  background:
+    linear-gradient(180deg, rgba(6,20,46,.52) 0%, rgba(6,20,46,.10) 30%, rgba(6,20,46,0) 52%, rgba(6,20,46,.42) 82%, rgba(6,20,46,.66) 100%),
+    linear-gradient(100deg, rgba(6,20,46,.86) 0%, rgba(6,20,46,.60) 44%, rgba(6,20,46,.16) 74%, rgba(6,20,46,.26) 100%);}
+@media(max-width:700px){
+  .hero .scrim{
+    background:
+      linear-gradient(180deg, rgba(6,20,46,.72) 0%, rgba(6,20,46,.44) 34%, rgba(6,20,46,.22) 55%, rgba(6,20,46,.55) 80%, rgba(6,20,46,.85) 100%),
+      linear-gradient(100deg, rgba(6,20,46,.45) 0%, rgba(6,20,46,.12) 70%, rgba(6,20,46,.20) 100%);}
+}
+.hero .sheen-vignette{position:absolute;inset:0;z-index:3;pointer-events:none;
+  background:radial-gradient(125% 92% at 50% 38%, transparent 56%, rgba(3,10,26,.42) 100%);}
+.hero .btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:'Manrope',sans-serif;font-weight:800;letter-spacing:-.01em;
+  border-radius:999px;text-decoration:none;cursor:pointer;border:1px solid transparent;
+  padding:16px 32px;font-size:1.02rem;line-height:1;white-space:nowrap;
+}
+.hero .btn-grad{color:#fff;background-image:var(--fgrad);background-size:250% 100%;background-position:var(--flow) 0;
+  box-shadow:0 12px 34px rgba(0,20,60,.45);
+  filter:brightness(calc(1 + var(--pulse) * .13)) saturate(calc(1 + var(--pulse) * .18));}
+.hero .btn-ghostlight{background:rgba(6,20,46,.42);color:#fff;border-color:rgba(255,255,255,.55);backdrop-filter:blur(6px)}
+.hero .hv-in{position:relative;z-index:4;flex:1;display:flex;flex-direction:column;justify-content:space-between;width:100%;padding:118px 24px 46px}
+@media(min-width:900px){.hero .hv-in{padding:132px 24px 64px}}
+.hero .eyebrow{
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.92);
+  text-shadow:0 1px 12px rgba(3,10,26,.65);
+}
+.hero .eyebrow::before{content:"\2014";color:#2FE07E;font-weight:800;letter-spacing:0}
+.hero h1{
+  font-family:'Manrope',sans-serif;font-weight:800;letter-spacing:-.028em;line-height:1.0;
+  font-size:clamp(2.6rem,6.2vw,5.3rem);color:#fff;max-width:940px;margin:22px 0 24px;
+  text-shadow:0 3px 34px rgba(3,10,26,.55), 0 1px 6px rgba(3,10,26,.5);
+}
+.hero .grad-word{
+  background-image:var(--fgrad);background-size:270% 100%;background-position:var(--flow) 0;
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
+  filter:drop-shadow(0 2px 14px rgba(3,10,26,.45));
+}
+.hero .hv-sub{
+  font-family:'Manrope',sans-serif;font-weight:800;letter-spacing:-.02em;line-height:1.12;
+  font-size:clamp(1.5rem,3.4vw,2.7rem);color:rgba(255,255,255,.96);max-width:760px;
+  text-shadow:0 2px 22px rgba(3,10,26,.55), 0 1px 5px rgba(3,10,26,.5);
+}
+.hero .hv-bottom{margin-top:56px}
+.hero .cta-row{display:flex;flex-wrap:wrap;gap:14px}
+.hero .micro{display:flex;align-items:center;gap:8px;margin-top:20px;color:rgba(255,255,255,.85);font-size:.92rem;font-weight:500;text-shadow:0 1px 10px rgba(3,10,26,.6)}
+.hero .micro svg{flex:none;color:#2FE07E}
+@media(max-width:560px){
+  .hero .cta-row .btn{flex:1 1 100%;padding:17px 24px}
+  .hero .micro{font-size:.88rem}
+}
+.journey-thread{height:4px;background-image:var(--fgrad);background-size:250% 100%;background-position:var(--flow) 0}
+
+/* ---------- full-page theme layer: live sections in the v2 language ---------- */
+main .eyebrow{color:#006AFC}
+.grad-text{
+  background-image:var(--fgrad);background-size:250% 100%;
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;
+}
+.btn.grad{background-image:var(--fgrad);background-size:250% 100%;background-position:18% 0;color:#fff}
+.btn.ink{background:var(--navy)}
+.ph-btn{background:var(--navy)}
+.step-card .num{background:var(--navy)}
+.shopx .ctaband{background:var(--navy)}
+.shopx .ctaband p{color:#C9D8F2}
+.shopx .ctaband .fine{color:#8FA8CF}
+.sigx-section{background:var(--navy-deep)}
+.sigx-fab{background:var(--navy)}
+.site-foot{background:var(--navy-deep)}
+/* difference cards keep the live pastel trio: blue / mint / paper are tints of the feather gradient */
+
+@media (prefers-reduced-motion: reduce){
+  .hero .slide img{animation:none !important;transform:scale(1.03)}
+  .hero .slide{transition:none}
+}
+</style>
+</head>
+<body>
+<header class="site-head over-hero">
+  <div class="wrap head-in">
+    <a href="https://magpielocal.com/" aria-label="Magpie home"><img class="logo-img" src="assets/logo.png" alt="Magpie"></a>
+    <nav class="main-nav">
+      <a href="https://magpielocal.com/creators.html">For Creators</a>
+      <a href="https://magpielocal.com/businesses.html">For Businesses</a>
+      <a href="https://magpielocal.com/why-local.html">Why Local</a>
+      <a href="https://magpielocal.com/cities.html">Markets</a>
+      <a href="https://magpielocal.com/pricing.html">Pricing</a>
+      <a href="https://magpielocal.com/creator-faq.html">FAQ</a>
+      <a href="https://magpielocal.com/learn/">Learn</a>
+      <a href="https://magpielocal.com/about.html">About</a>
+    </nav>
+    <div class="head-actions">
+      <a class="btn btn-small head-cta" href="https://app.magpielocal.com/claim">Apply to Join</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+        <svg class="nt-b" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="nt-x" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mn-profile" type="button" aria-label="Ask Maggie">
+      <img src="assets/maggie-logo/curious.jpg" alt="" width="54" height="54">
+      <span class="mn-profile-txt"><b>Maggie</b><i>Your Magpie guide · ask me anything</i></span>
+      <span class="mn-profile-go" aria-hidden="true">&rarr;</span>
+    </button>
+    <nav class="wrap" aria-label="Mobile">
+      <a class="mn-link" href="https://magpielocal.com/creators.html">Creators <span>&rarr;</span></a>
+      <a class="mn-link" href="https://magpielocal.com/businesses.html">Businesses <span>&rarr;</span></a>
+      <a class="mn-link" href="https://magpielocal.com/why-local.html">Why Local <span>&rarr;</span></a>
+      <a class="mn-link" href="https://magpielocal.com/cities.html">Markets <span>&rarr;</span></a>
+      <a class="mn-link" href="https://magpielocal.com/pricing.html">Pricing <span>&rarr;</span></a>
+      <a class="mn-link" href="https://magpielocal.com/creator-faq.html">FAQ <span>&rarr;</span></a>
+      <a class="mn-link" href="https://magpielocal.com/learn/">Learn <span>&rarr;</span></a>
+      <a class="mn-link" href="https://magpielocal.com/about.html">About <span>&rarr;</span></a>
+        <a class="mn-link mn-signin" href="https://app.magpielocal.com">Sign in</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="shopx">
+
+
+<!-- ================= FEATHER HERO (concept v3) ================= -->
+<section class="hero" id="hero">
+  <div class="stage" aria-hidden="true">
+    <div class="slide slide-creator active"><img src="photo-creator.jpg" alt="" fetchpriority="high"></div>
+    <div class="slide slide-barber flip"><img src="photo-barber.jpg" alt="" loading="lazy"></div>
+    <div class="slide slide-cafe"><img src="photo-cafe.jpg" alt="" loading="lazy"></div>
+  </div>
+  <div class="grade" aria-hidden="true"></div>
+  <div class="grade-tint" aria-hidden="true"></div>
+  <div class="sheen-glow" aria-hidden="true"></div>
+  <div class="sheen-band" aria-hidden="true"></div>
+  <div class="sheen-barbs" aria-hidden="true"></div>
+  <div class="scrim" aria-hidden="true"></div>
+  <div class="sheen-vignette" aria-hidden="true"></div>
+
+  
+
+  <div class="wrap hv-in">
+    <div class="hv-top">
+      <div class="eyebrow">Local creator marketing</div>
+      <h1>Local businesses book <span class="grad-word">local creators.</span></h1>
+      <p class="hv-sub">Local influencer marketing with the creators your neighbors already follow.</p>
+    </div>
+    <div class="hv-bottom">
+      <div class="cta-row">
+        <a class="btn btn-grad" id="ctaPrimary" href="https://magpielocal.com/businesses.html">I'm a business</a>
+        <a class="btn btn-ghostlight" href="https://magpielocal.com/creators.html">I'm a creator</a>
+      </div>
+      <div class="micro">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>
+        Free for creators, always. Founding plans for businesses start at $199/mo.
+      </div>
+    </div>
+  </div>
+</section>
+<div class="journey-thread" aria-hidden="true"></div>
+
+
+<!-- ================= STATEMENT ================= -->
+<section class="stmt">
+  <div class="stmt-card">
+    <img class="stmt-icon" src="assets/icon-g-512.png" alt="" width="52" height="52">
+    <p class="stmt-text">Shop local creators the way you'd shop anything: <strong>by the numbers that matter.</strong> Magpie ranks creators by how many of their followers actually live in your city, books the visit, and counts who walks in. Nothing is guessed.</p>
+  </div>
+</section>
+
+<!-- ================= THE SHORT ANSWER ================= -->
+<section class="sec" style="padding-top:26px;padding-bottom:0">
+  <div class="wrap">
+    <style>
+.ans-box{background:var(--card);border:1px solid var(--line2);border-radius:20px;padding:26px 28px 22px;box-shadow:var(--sh-md);position:relative;overflow:hidden}
+.ans-box::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#006AFC,#019BFC,#03C9AB,#2FE07E)}
+.ans-box .eyebrow{color:#006AFC}
+.ans-box p{max-width:820px;font-size:1.06rem;line-height:1.65;margin:10px 0 4px}
+    </style>
+    <div class="ans-box">
+      <div class="eyebrow">The Short Answer</div>
+      <p>Magpie is local influencer marketing: local businesses book local creators whose followers actually live in their city. A business comps a creator a meal, service or experience, or books them at the creator's own rate, and the creator posts honestly about the visit. Creators join free from 500 total followers.</p>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+
+  <!-- ================= THE APP, IN A PHONE ================= -->
+  <section class="phone-sec">
+    <div class="phone-stage">
+      <div class="phone">
+        <div class="ph-screen">
+          <div class="ph-notch"></div>
+          <div class="ph-body">
+            <div class="ph-top">
+              <img class="logo" src="assets/logo.png" alt="Magpie">
+              <span class="ph-chip">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                Your city
+              </span>
+            </div>
+            <div class="ph-tabs"><b>Find creators</b><span>Shortlist</span><span>Bookings</span></div>
+            <div class="ph-scroll">
+            <div class="ph-title">Creators your neighbors already follow.</div>
+            <div class="ph-count">Ranked by how local their audience is</div>
+
+            <div class="ph-card">
+              <div class="ph-photo"><img src="assets/photos/sample-portrait-jordan.jpg" alt="June Calloway"></div>
+              <div class="ph-in">
+                <h4>June Calloway</h4>
+                <div class="ph-meta">East Nashville · Cocktails &amp; rooftops</div>
+                <div class="ph-local">
+                  <div class="n">93<small>%</small></div>
+                  <div class="cap">of her followers live in Nashville
+                    <div class="bar"><i style="width:93%"></i></div>
+                  </div>
+                </div>
+                <span class="ph-lcount">10,400 local followers</span>
+                <div class="ph-row2">
+                  <div class="ph-price">$150 <span>per post</span></div>
+                  <span class="ph-btn">Book June</span>
+                </div>
+                <div class="ph-tog"><span class="comptoggle mini on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts comps</span></span></div>
+                <div class="ph-tog"><span class="comptoggle couptoggle mini on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span></div>
+              </div>
+            </div>
+
+            <div class="ph-hero">
+              <div class="n">91<small>%</small></div>
+              <p>of Nadia's followers live in her city. <span>That's about 8,600 neighbors who could actually walk through your door.</span></p>
+            </div>
+
+            <div class="ph-card">
+              <div class="ph-photo"><img src="assets/photos/sample-portrait-priya.jpg" alt="Nadia Rahman"></div>
+              <div class="ph-in">
+                <h4>Nadia Rahman</h4>
+                <div class="ph-meta">Soho · Street food &amp; late-night</div>
+                <div class="ph-local">
+                  <div class="n">91<small>%</small></div>
+                  <div class="cap">of her followers live in London
+                    <div class="bar"><i style="width:91%"></i></div>
+                  </div>
+                </div>
+                <span class="ph-lcount">8,600 local followers</span>
+                <div class="ph-row2">
+                  <div class="ph-price">£120 <span>per post</span></div>
+                  <span class="ph-btn">Book Nadia</span>
+                </div>
+                <div class="ph-tog"><span class="comptoggle mini on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts comps</span></span></div>
+                <div class="ph-tog"><span class="comptoggle couptoggle mini on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span></div>
+              </div>
+            </div>
+
+            <div class="ph-card">
+              <div class="ph-photo"><img src="assets/photos/dining-room-busy.jpg" alt="Ember and Oak"></div>
+              <div class="ph-in">
+                <div class="ph-price" style="font-size:15.5px;">Comped tasting for two</div>
+                <div class="ph-meta" style="margin-top:2px;">Ember &amp; Oak · 0.8 miles away — open visit for creators</div>
+                <div class="ph-row2">
+                  <div class="ph-price" style="font-size:13px;color:var(--ink-2);font-weight:700;">1 post + 1 story</div>
+                  <span class="ph-btn">Grab this visit</span>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+          <div class="ph-fade short"></div>
+        </div>
+      </div>
+      <p class="phone-caption">This is the real app: <b>shop creators, book the visit, count who came in.</b></p>
+    </div>
+  </section>
+
+  <!-- ================= HOW IT WORKS ================= -->
+  <section class="sec">
+    <div class="sec-head">
+      <div class="eyebrow">How Magpie works</div>
+      <h2>Three steps. No agency, no guesswork.</h2>
+    </div>
+    <div class="steps3">
+      <div class="step-card">
+        <div class="num">1</div>
+        <b>Shop your city</b>
+        <p>Browse local creators like products, each with one number up front: <strong>the share of their followers who live in your city.</strong> Save the ones you like, compare them side by side.</p>
+      </div>
+      <div class="step-card">
+        <div class="num">2</div>
+        <b>Book the visit</b>
+        <p>Offer a comped visit — a meal, a cut, a tasting — or <strong>pay their listed rate.</strong> They come in like a regular, enjoy it for real, and post their honest take within 48 hours.</p>
+      </div>
+      <div class="step-card">
+        <div class="num">3</div>
+        <b>Count who came in</b>
+        <p>Every post carries the creator's code, so <strong>you see exactly how many visits it brought.</strong> Good creators get booked again. That's the whole loop.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= AS A BUSINESS ================= -->
+  <section class="sec">
+    <div class="sec-head">
+      <div class="eyebrow">As a business · Find creators</div>
+      <h2>This is your shelf of creators.</h2>
+      <p>Logged in, a business sees creators the way shoppers see products: the local number first, the price on the card, the proof underneath. <strong>Follower count is the small print, not the headline.</strong></p>
+    </div>
+
+    <div class="appframe">
+      <div class="af-bar">
+        <span class="af-dot" style="background:#E5B7A6;"></span>
+        <span class="af-dot" style="background:#EBD9A0;"></span>
+        <span class="af-dot" style="background:#A9E8C9;"></span>
+        <span class="af-url">app.magpielocal.com</span>
+        <span class="af-role">Logged in · Business</span>
+      </div>
+      <div class="af-body">
+        <div class="pagehead">
+          <div class="eyebrow">Find creators</div>
+          <h2>Creators your neighbors already follow.</h2>
+          <p class="lede">Ranked by one thing first: <strong>how many of their followers actually live near you.</strong></p>
+        </div>
+        <div class="toolbar">
+          <div class="count">Creators near you <span>· sorted for your city</span></div>
+          <div class="sort">Sort
+            <span class="pill">Best local fit
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 9l7 7 7-7"/></svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="grid" style="margin-top:18px;">
+          <article class="tile">
+            <div class="photo">
+              <img src="assets/photos/sample-portrait-jordan.jpg" alt="June Calloway">
+              <div class="badges">
+                <span class="badge dark"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z"/></svg>Top local</span>
+              </div>
+              <span class="savebtn saved"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 3.5h12V21l-6-4.2L6 21z"/></svg></span>
+            </div>
+            <div class="body">
+              <h3>June Calloway</h3>
+              <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>East Nashville · Cocktails &amp; rooftops</div>
+              <div class="localrow">
+                <div class="localnum">93<small>%</small></div>
+                <div class="localcap">
+                  <div class="cap">of her followers live in Nashville</div>
+                  <div class="localbar"><i style="width:93%"></i></div>
+                </div>
+              </div>
+              <div class="localcount">10,400 local followers</div>
+              <div class="price"><span class="amt">$150</span><span class="per">per post</span></div>
+              <span class="comptoggle on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts comps</span></span>
+              <span class="comptoggle couptoggle on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span>
+              <div class="proof">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>16 visits done</span>
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>16 of 16 posts on time</span>
+              </div>
+              <div class="quiet">11,200 followers · posts about 3 times a week</div>
+              <div class="actions">
+                <button class="btn ink flex">Book June</button>
+                <button class="btn ghost">Saved</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tile">
+            <div class="photo">
+              <img src="assets/photos/sample-portrait-priya.jpg" alt="Nadia Rahman">
+              <div class="badges">
+                <span class="badge light">Founding creator</span>
+              </div>
+              <span class="savebtn saved"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 3.5h12V21l-6-4.2L6 21z"/></svg></span>
+            </div>
+            <div class="body">
+              <h3>Nadia Rahman</h3>
+              <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Soho · Street food &amp; late-night</div>
+              <div class="localrow">
+                <div class="localnum">91<small>%</small></div>
+                <div class="localcap">
+                  <div class="cap">of her followers live in London</div>
+                  <div class="localbar"><i style="width:91%"></i></div>
+                </div>
+              </div>
+              <div class="localcount">8,600 local followers</div>
+              <div class="price"><span class="amt">£120</span><span class="per">per post</span></div>
+              <span class="comptoggle on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts comps</span></span>
+              <span class="comptoggle couptoggle on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span>
+              <div class="proof">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>12 visits done</span>
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>12 of 12 posts on time</span>
+              </div>
+              <div class="quiet">9,400 followers · posts about 4 times a week</div>
+              <div class="actions">
+                <button class="btn ink flex">Book Nadia</button>
+                <button class="btn ghost">Saved</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tile">
+            <div class="photo">
+              <img src="assets/photos/sample-portrait-sofia.jpg" alt="Amara Osei">
+              <div class="badges">
+                <span class="badge dark"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z"/></svg>Top local</span>
+                <span class="badge light">Founding creator</span>
+              </div>
+              <span class="savebtn saved"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 3.5h12V21l-6-4.2L6 21z"/></svg></span>
+            </div>
+            <div class="body">
+              <h3>Amara Osei</h3>
+              <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Logan Square · Beauty &amp; skincare</div>
+              <div class="localrow">
+                <div class="localnum">94<small>%</small></div>
+                <div class="localcap">
+                  <div class="cap">of her followers live in Chicago</div>
+                  <div class="localbar"><i style="width:94%"></i></div>
+                </div>
+              </div>
+              <div class="localcount">13,900 local followers</div>
+              <div class="price"><span class="amt">$180</span><span class="per">per post</span></div>
+              <span class="comptoggle off"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Paid only</span></span>
+              <span class="comptoggle couptoggle off"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span>
+              <div class="proof">
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>19 visits done</span>
+                <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>19 of 19 posts on time</span>
+              </div>
+              <div class="quiet">14,800 followers · posts about 5 times a week</div>
+              <div class="actions">
+                <button class="btn ink flex">Book Amara</button>
+                <button class="btn ghost">Saved</button>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <section class="tray">
+          <div class="eyebrow">Your shortlist</div>
+          <h2>Side by side</h2>
+          <p class="sub">The creators you saved, lined up on the numbers that decide it.</p>
+          <div class="tray-grid">
+            <div class="tray-spacer"></div>
+            <div class="tray-head">
+              <div class="who"><img src="assets/photos/sample-portrait-jordan.jpg" alt="June Calloway"><b>June<br>Calloway</b></div>
+            </div>
+            <div class="tray-head">
+              <div class="who"><img src="assets/photos/sample-portrait-priya.jpg" alt="Nadia Rahman"><b>Nadia<br>Rahman</b></div>
+            </div>
+            <div class="tray-head tm">
+              <span class="tmtag">Top match</span>
+              <div class="who"><img src="assets/photos/sample-portrait-sofia.jpg" alt="Amara Osei"><b>Amara<br>Osei</b></div>
+            </div>
+
+            <div class="lab">Local audience</div>
+            <div class="cell big" data-lab="Local">93%<span class="tcount">10,400 local followers</span></div>
+            <div class="cell big" data-lab="Local">91%<span class="tcount">8,600 local followers</span></div>
+            <div class="cell big tm" data-lab="Local">94%<span class="tcount">13,900 local followers</span></div>
+
+            <div class="lab">Their rate</div>
+            <div class="cell" data-lab="Rate">$150<span class="dim">per post</span></div>
+            <div class="cell" data-lab="Rate">£120<span class="dim">per post</span></div>
+            <div class="cell tm" data-lab="Rate">$180<span class="dim">per post</span></div>
+
+            <div class="lab">Accepts comps</div>
+            <div class="cell" data-lab="Comps"><span class="comptoggle on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts comps</span></span></div>
+            <div class="cell" data-lab="Comps"><span class="comptoggle on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts comps</span></span></div>
+            <div class="cell tm" data-lab="Comps"><span class="comptoggle off"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Paid only</span></span></div>
+            <div class="lab">Accepts coupons</div>
+            <div class="cell" data-lab="Coupons"><span class="comptoggle couptoggle on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span></div>
+            <div class="cell" data-lab="Coupons"><span class="comptoggle couptoggle on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span></div>
+            <div class="cell tm" data-lab="Coupons"><span class="comptoggle couptoggle off"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span></div>
+
+            <div class="lab">Visits done</div>
+            <div class="cell" data-lab="Visits">16</div>
+            <div class="cell" data-lab="Visits">12</div>
+            <div class="cell tm" data-lab="Visits">19</div>
+
+            <div class="lab"></div>
+            <div class="cell"><button class="btn ghost sm">Book June</button></div>
+            <div class="cell"><button class="btn ghost sm">Book Nadia</button></div>
+            <div class="cell tm tmlast"><button class="btn grad sm">Book Amara</button></div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="sec-cta">
+      <a class="btn ink" href="https://magpielocal.com/businesses.html">See the full business side</a>
+      <span class="note">Every creator page opens up the same way: local %, what you get, proof, price.</span>
+    </div>
+  </section>
+
+
+  <!-- ================= TWO WAYS TO BOOK ================= -->
+  <section class="sec">
+    <div class="sec-head">
+      <h2>Two ways to book a creator</h2>
+    </div>
+    <div class="doors">
+      <div class="door">
+        <h3>Shop and book directly</h3>
+        <div class="door-shelfwrap">
+          <div class="door-shelf">
+          <div class="ph-card">
+            <div class="ph-photo"><img src="assets/photos/sample-portrait-jordan.jpg" alt="June Calloway"></div>
+            <div class="ph-in">
+              <h4>June Calloway</h4>
+              <div class="ph-meta">East Nashville · Cocktails &amp; rooftops</div>
+              <div class="ph-local">
+                <div class="n">93<small>%</small></div>
+                <div class="cap">of her followers live in Nashville
+                  <div class="bar"><i style="width:93%"></i></div>
+                </div>
+              </div>
+              <span class="ph-lcount">10,400 local followers</span>
+              <div class="ph-row2">
+                <div class="ph-price">$150 <span>per post</span></div>
+                <span class="ph-btn">Book June</span>
+              </div>
+              <div class="ph-tog"><span class="comptoggle mini on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts comps</span></span></div>
+              <div class="ph-tog"><span class="comptoggle couptoggle mini on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span></div>
+            </div>
+          </div>
+          <div class="ph-card">
+            <div class="ph-photo"><img src="assets/photos/sample-portrait-priya.jpg" alt="Nadia Rahman"></div>
+            <div class="ph-in">
+              <h4>Nadia Rahman</h4>
+              <div class="ph-meta">Soho · Street food &amp; late-night</div>
+              <div class="ph-local">
+                <div class="n">91<small>%</small></div>
+                <div class="cap">of her followers live in London
+                  <div class="bar"><i style="width:91%"></i></div>
+                </div>
+              </div>
+              <span class="ph-lcount">8,600 local followers</span>
+              <div class="ph-row2">
+                <div class="ph-price">£120 <span>per post</span></div>
+                <span class="ph-btn">Book Nadia</span>
+              </div>
+              <div class="ph-tog"><span class="comptoggle mini on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts comps</span></span></div>
+              <div class="ph-tog"><span class="comptoggle couptoggle mini on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span></div>
+            </div>
+          </div>
+          <div class="ph-card">
+            <div class="ph-photo"><img src="assets/photos/sample-portrait-sofia.jpg" alt="Amara Osei"></div>
+            <div class="ph-in">
+              <h4>Amara Osei</h4>
+              <div class="ph-meta">Logan Square · Beauty &amp; skincare</div>
+              <div class="ph-local">
+                <div class="n">94<small>%</small></div>
+                <div class="cap">of her followers live in Chicago
+                  <div class="bar"><i style="width:94%"></i></div>
+                </div>
+              </div>
+              <span class="ph-lcount">13,900 local followers</span>
+              <div class="ph-row2">
+                <div class="ph-price">$180 <span>per post</span></div>
+                <span class="ph-btn">Book Amara</span>
+              </div>
+              <div class="ph-tog"><span class="comptoggle mini off"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Paid only</span></span></div>
+              <div class="ph-tog"><span class="comptoggle couptoggle mini off"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span></div>
+            </div>
+          </div>
+          </div>
+          <div class="door-fade"></div>
+        </div>
+      </div>
+      <div class="door">
+        <h3>Post an open offer</h3>
+        <article class="tile biz-tile">
+          <div class="photo">
+            <img src="assets/photos/watch-fitness.jpg" alt="Sunroom Studio">
+            <span class="savebtn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M6 3.5h12V21l-6-4.2L6 21z"/></svg></span>
+          </div>
+          <div class="body">
+            <div class="offer">Comped class pass<span class="worth">worth $45</span></div>
+            <h3>Sunroom Studio</h3>
+            <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Zilker · 1.4 miles · Fitness</div>
+            <div class="duty"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span>The ask: 1 post + 1 story within 48 hours. Mats, towels and the smoothie after are on us.</span></div>
+            <div class="actions">
+              <button class="btn ink flex">Grab this visit</button>
+              <button class="btn ghost">Save</button>
+            </div>
+          </div>
+        </article>
+        <p class="door-line">Post it once. Creators apply to you.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= AS A CREATOR ================= -->
+  <section class="sec">
+    <div class="sec-head">
+      <div class="eyebrow">As a creator · Find offers</div>
+      <h2>And this is what creators see.</h2>
+      <p>Open visits from local businesses, each one reading like a price tag: <strong>the offer, the ask, and the distance, all on the card.</strong> No vague promises of exposure.</p>
+    </div>
+
+    <div class="appframe">
+      <div class="af-bar">
+        <span class="af-dot" style="background:#E5B7A6;"></span>
+        <span class="af-dot" style="background:#EBD9A0;"></span>
+        <span class="af-dot" style="background:#A9E8C9;"></span>
+        <span class="af-url">app.magpielocal.com</span>
+        <span class="af-role">Logged in · Creator</span>
+      </div>
+      <div class="af-body">
+        <div class="pagehead">
+          <div class="eyebrow">Open visits · Near you</div>
+          <h2>Places that want you in the room.</h2>
+          <p class="lede">What you see is exactly what you get. <strong>Grab the visit, post within 48 hours, get counted.</strong></p>
+        </div>
+        <div class="toolbar">
+          <div class="count">Open visits near you</div>
+          <div class="sort">Sort
+            <span class="pill">Closest first
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 9l7 7 7-7"/></svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="grid" style="margin-top:18px;">
+          <article class="feature">
+            <div class="f-photo">
+              <img src="assets/photos/dining-room-busy.jpg" alt="Ember & Oak">
+              <div class="badges" style="position:absolute;top:14px;left:14px;">
+                <span class="badge dark"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z"/></svg>Creators love it here</span>
+              </div>
+            </div>
+            <div class="f-body">
+              <div class="offer">Comped tasting for two</div>
+              <h3>Ember &amp; Oak</h3>
+              <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>The Gulch · 0.8 miles away · Food &amp; drink</div>
+              <div class="duty" style="display:flex;gap:9px;font-size:14.5px;font-weight:600;color:var(--ink-2);margin-top:12px;line-height:1.5;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#006AFC" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:3px;"><path d="M4 12.5l5 5L20 6.5"/></svg>
+                <span>The ask: <b style="color:var(--ink);">1 post + 1 story</b>, up within 48 hours of your visit. The tasting runs about $140 for two.</span>
+              </div>
+              <div class="trackrecord">
+                <div><div class="n">23</div><div class="t">creator visits hosted here</div></div>
+                <div><div class="n">9</div><div class="t">creators came back for a second visit</div></div>
+                <div><div class="n">100%</div><div class="t">of visits ended with the post up on time</div></div>
+              </div>
+              <div class="f-actions">
+                <button class="btn grad flex">Grab this visit</button>
+                <button class="btn ghost">Save</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tile biz-tile">
+            <div class="photo">
+              <img src="assets/photos/watch-fitness.jpg" alt="Sunroom Studio">
+              <span class="savebtn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M6 3.5h12V21l-6-4.2L6 21z"/></svg></span>
+            </div>
+            <div class="body">
+              <div class="offer">Comped class pass<span class="worth">worth $45</span></div>
+              <h3>Sunroom Studio</h3>
+              <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Zilker · 1.4 miles · Fitness</div>
+              <div class="duty"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span>The ask: 1 post + 1 story within 48 hours. Mats, towels and the smoothie after are on us.</span></div>
+              <div class="actions">
+                <button class="btn ink flex">Grab this visit</button>
+                <button class="btn ghost">Save</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tile biz-tile">
+            <div class="photo">
+              <img src="assets/photos/cocktails-toast.jpg" alt="Neon Palms Rooftop">
+              <div class="badges">
+                <span class="badge light">New this week</span>
+              </div>
+              <span class="savebtn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M6 3.5h12V21l-6-4.2L6 21z"/></svg></span>
+            </div>
+            <div class="body">
+              <div class="offer">$200 paid</div>
+              <h3>Neon Palms Rooftop</h3>
+              <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Capitol Hill · 2.1 miles · Nightlife</div>
+              <div class="duty"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span>The ask: 1 post + 1 story within 48 hours, sunset slot. Paid the moment your post is live.</span></div>
+              <div class="actions">
+                <button class="btn ink flex">Grab this visit</button>
+                <button class="btn ghost">Save</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="tile biz-tile">
+            <div class="photo">
+              <img src="assets/photos/salon-barber.jpg" alt="Fade Factory">
+              <span class="savebtn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M6 3.5h12V21l-6-4.2L6 21z"/></svg></span>
+            </div>
+            <div class="body">
+              <div class="offer">Comped cut + trim<span class="worth">worth $70</span></div>
+              <h3>Fade Factory</h3>
+              <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>RiNo · 1.6 miles · Grooming</div>
+              <div class="duty"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span>The ask: 1 post + 1 story within 48 hours. Hosted 6 creator visits — 3 came back as paying regulars.</span></div>
+              <div class="actions">
+                <button class="btn ink flex">Grab this visit</button>
+                <button class="btn ghost">Save</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="sec-cta">
+      <a class="btn ink" href="https://magpielocal.com/creators.html">See the full creator side</a>
+      <span class="note">Creators are free, always — and you keep 97% of your own rate.</span>
+    </div>
+  </section>
+
+  <!-- ================= THE DIFFERENCE ================= -->
+  <section class="sec">
+    <div class="sec-head">
+      <div class="eyebrow">Why local wins</div>
+      <h2>Built different, on purpose.</h2>
+    </div>
+    <div class="diff3">
+      <div class="diff">
+        <div class="big">Ranked by local,<br>not by famous.</div>
+        <p>Every other platform sorts by follower count. Magpie sorts by the share of a creator's audience that lives in your city — the only number that fills your seats.</p>
+      </div>
+      <div class="diff mint">
+        <div class="big">Counted,<br>not guessed.</div>
+        <p>Each post carries the creator's code. When a follower walks in and uses it, the visit is counted. You stop wondering if it worked and start knowing.</p>
+      </div>
+      <div class="diff paper2">
+        <div class="big">Paid when posted,<br>not net-90.</div>
+        <p>Creators set their own rate and keep 97% of it. The money is held before the visit and released the moment the post is live. Nobody chases an invoice.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OUR STORY (teaser) ================= -->
+  <section class="sec" id="our-story">
+    <div class="sec-head center">
+      <div class="eyebrow">Our story</div>
+      <h2>Named for the bird that <span class="grad-text">never leaves.</span></h2>
+      <p>Magpies are social, vocal, and stay in the same place their whole lives. Word of mouth works the same way. Here is why the platform carries their name.</p>
+      <div class="sec-cta" style="justify-content:center;">
+        <a class="btn ink" href="https://magpielocal.com/about.html">Read our story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRICING TEASER ================= -->
+  <section class="sec" id="pricing">
+    <div class="sec-head center">
+      <div class="eyebrow">Founding plans</div>
+      <h2>One flat plan. Every creator in your city.</h2>
+      <p>Founding businesses lock their rate: <strong>$199/mo</strong> for up to 5 creator visits a month, with a <strong>$100 founding credit</strong> on the first month. No per-location charges, no agency markup.</p>
+      <div class="sec-cta" style="justify-content:center;">
+        <a class="btn ink" href="https://magpielocal.com/businesses.html#pricing">See business plans</a>
+        <a class="btn ghost" href="https://app.magpielocal.com/claim">Creators join free</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="ctaband">
+    <div>
+      <h2>Your city's founding roster is forming.</h2>
+      <p>Magpie is built and rolling out, city by city. Founding creators see every offer first; founding businesses lock the founding rate for good.</p>
+    </div>
+    <div class="cta-col">
+      <a class="btn grad" href="https://magpielocal.com/businesses.html#apply">Apply as a business</a>
+      <a class="btn ghost" href="https://app.magpielocal.com/claim">Claim your creator page</a>
+      <div class="fine">Creators are free, always.</div>
+    </div>
+  </section>
+</div>
+
+</div>
+<section class="sigx-section" id="meet-sig" aria-label="Meet Maggie, the Magpie guide">
+  <div class="wrap">
+    <div class="sigx-grid">
+      <div>
+        <span class="eyebrow">Your Magpie guide</span>
+        <h2>Meet <span class="grad-text" data-sig-name>Maggie</span>. Watch Magpie work.</h2>
+        <p class="lede">Maggie shows you Magpie the way it actually works, on either side of the table: a business finding a local creator, or a creator claiming a founding spot. Every answer comes from the playbook.</p>
+        <div class="sigx-doors">
+          <div class="sigx-doorline">
+            <div class="k">For businesses</div>
+            <p>Discover ranked by local reach, the two-tap invite, and a visit tracked to the post.</p>
+          </div>
+          <div class="sigx-doorline">
+            <div class="k">For creators</div>
+            <p>The claim steps, comped visits and paid bookings explained, and how posting on time gets you booked more.</p>
+          </div>
+        </div>
+        <p class="sigx-honest">Maggie is a guided tour, not a person. It only ever says what the Magpie playbook says.</p>
+        <div class="sigx-hero" aria-hidden="true">
+          <img class="sigx-hero-still" src="assets/maggie-logo/curious.jpg" alt="Maggie, the Magpie guide" decoding="async">
+        </div>
+      </div>
+      <div data-sig-panel>
+        <div class="sigx-fallback">
+          <p><b>Meet Maggie, the Magpie guide.</b> The live walkthrough needs JavaScript. Until then, start here:</p>
+          <p><a href="https://magpielocal.com/businesses.html">I run a business</a> · <a href="https://app.magpielocal.com/claim?platform=instagram&src=home-v2">I am a creator</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- ================= FAQ ================= -->
+  <section class="sec">
+    <div class="sec-head center">
+      <div class="eyebrow">Straight answers</div>
+      <h2>Before you ask.</h2>
+    </div>
+    <div class="faq">
+      <div class="q">
+        <b>What is Magpie?</b>
+        <p>Magpie is the local micro-influencer marketing platform: local businesses book local creators whose followers actually live in the city. Businesses offer comped visits or paid bookings, creators post honestly, and every visit is tracked.</p>
+      </div>
+      <div class="q">
+        <b>How does Magpie rank creators?</b>
+        <p>By local reach, not follower count. Magpie shows each creator's local audience share before a business chooses, so a smaller creator whose followers live in the city ranks ahead of a bigger creator whose audience is scattered.</p>
+      </div>
+      <div class="q">
+        <b>Does it cost anything to join as a creator?</b>
+        <p>No. Magpie is free for creators. Always. Businesses pay the platform. You never pay to join, to list, or to get booked. On standard visits the comp itself is the pay.</p>
+      </div>
+      <div class="q">
+        <b>What does a comped visit include?</b>
+        <p>A business hosts you with a meal, a service, or an experience, and you post your honest take. Every visit has one defined deliverable, agreed before you claim: 1 post or reel plus 1 story that shares the post, in your own voice, with the goal of posting within 48 hours of the visit. No cash changes hands on a comped visit.</p>
+      </div>
+      <div class="q">
+        <b>What does Magpie cost a business?</b>
+        <p>Founding pricing is $199, $349, or $699 a month, with a 3 month minimum. After that, plans run month to month and founding pricing stays locked while subscribed. Comped visits are the plan's core. Paid bookings are extra only if you choose one, at the creator's own listed rate.</p>
+      </div>
+      <div class="q">
+        <b>Is Magpie live in my city?</b>
+        <p>Magpie is built and rolling out across its founding markets now. Founding businesses apply, lock the founding rate, and get first pick of the roster as their city opens. Creators can join free from any city: sign up with your home city and finish your profile, and when your city opens you are in its founding circle.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="https://magpielocal.com/"><img class="logo-img" src="assets/logo.png" alt="Magpie"></a>
+        <p class="foot-tag">Local creator marketing, city by city. Real locals. Real posts. Real walk-ins.</p>
+        <!-- TikTok username is still @joinsignl until Nov 21; swap the TikTok href in the social bar below to https://www.tiktok.com/@magpielocal after the rename lands. -->
+        <div class="social-bar">
+          <a href="https://www.instagram.com/magpielocal" target="_blank" rel="noopener" aria-label="Magpie on Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></a>
+          <a href="https://www.threads.net/@magpielocal" target="_blank" rel="noopener" aria-label="Magpie on Threads"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 0 0-2.215-.221z"/></svg></a>
+          <a href="https://www.facebook.com/magpielocal" target="_blank" rel="noopener" aria-label="Magpie on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a>
+          <a href="https://www.linkedin.com/company/magpielocal" target="_blank" rel="noopener" aria-label="Magpie on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://www.tiktok.com/@joinsignl" target="_blank" rel="noopener" aria-label="Magpie on TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <p class="foot-h">Platform</p>
+        <ul>
+          <li><a href="https://magpielocal.com/creators.html">For Creators</a></li>
+          <li><a href="https://magpielocal.com/businesses.html">For Businesses</a></li>
+          <li><a href="https://magpielocal.com/why-local.html">Why Local Creators</a></li>
+          <li><a href="https://magpielocal.com/about.html">About Magpie</a></li>
+          <li><a href="https://magpielocal.com/alternatives.html">Platform comparison</a></li>
+          <li><a href="https://magpielocal.com/learn/">Learn: guides &amp; how-tos</a></li>
+          <li><a href="https://magpielocal.com/es.html">Magpie en Español</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-h">Founding Markets</p>
+        <ul>
+          <li><a href="https://magpielocal.com/cities.html#united-states">United States · 30 markets</a></li>
+          <li><a href="https://magpielocal.com/cities.html#united-kingdom">United Kingdom · London, Manchester</a></li>
+          <li>Canada · Toronto, Montreal</li>
+          <li>France · Spain · Portugal</li>
+          <li>UAE · Dubai</li>
+          <li><a href="https://magpielocal.com/cities.html">All 45 founding markets</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-h">Connect</p>
+        <ul>
+          <li><a href="mailto:hello@magpielocal.com">hello@magpielocal.com</a></li>
+          <li><a href="https://www.instagram.com/magpielocal" target="_blank" rel="noopener">Instagram · @magpielocal</a></li>
+          <li><a href="https://www.tiktok.com/@joinsignl" target="_blank" rel="noopener">TikTok · @magpielocal</a></li>
+          <li><a href="https://www.facebook.com/magpielocal" target="_blank" rel="noopener">Facebook · Magpie</a></li>
+          <li><a href="https://www.linkedin.com/company/magpielocal" target="_blank" rel="noopener">LinkedIn · Magpie</a></li>
+          <li><a href="https://magpielocal.com/privacy.html">Privacy Policy</a></li>
+          <li><a href="https://magpielocal.com/terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Magpie. All rights reserved.</span>
+      <span>A product of <a href="https://xmedium.co">Extra Medium</a></span>
+      <span>Founding creators forming now, sign up in your city</span>
+      <span><a href="https://magpielocal.com/privacy.html">Privacy</a> · <a href="https://magpielocal.com/terms.html">Terms</a> · <a href="https://magpielocal.com/credits.html">Credits</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js?v=6"></script>
+<script>
+(function(){
+
+  /* overlay header: transparent over the hero, solid once scrolled (mirrors the sibling previews) */
+  var head = document.querySelector('.site-head.over-hero');
+  if (head) {
+    var onScrollHead = function(){ head.classList.toggle('scrolled', window.scrollY > 30); };
+    window.addEventListener('scroll', onScrollHead, { passive: true });
+    onScrollHead();
+  }
+
+  /* video governor: only the video in view plays, everything else paused.
+     No scroll-jacking: the document scrolls naturally; chapters are full-height sections. */
+  var vids = Array.prototype.slice.call(document.querySelectorAll('video[data-io]'));
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) {
+    /* posters stay up, nothing autoplays */
+    return;
+  }
+  /* iOS/WebKit hardening (2026-10-25): muted + inline set as PROPERTIES
+     before play; rejected play() calls queue for a one-gesture retry.
+     Posters carry the frame whenever playback stays blocked. */
+  vids.forEach(function(v){ v.muted = true; v.defaultMuted = true; v.playsInline = true; });
+  var blockedVids = [];
+  var unlockArmed = false;
+  function vidInView(v){ var r = v.getBoundingClientRect(); return r.bottom > 0 && r.top < window.innerHeight && r.right > 0 && r.left < window.innerWidth; }
+  function armUnlock(){
+    if (unlockArmed) return; unlockArmed = true;
+    var unlock = function(){ blockedVids.slice().forEach(function(v){ if (vidInView(v)) { tryPlay(v); } }); };
+    ['pointerdown','touchstart','keydown'].forEach(function(ev){ document.addEventListener(ev, unlock, { passive: true }); });
+  }
+  function tryPlay(v){
+    var p = v.play();
+    if (p && p.catch) { p.catch(function(){ if (blockedVids.indexOf(v) < 0) { blockedVids.push(v); } armUnlock(); }); }
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      var v = entry.target;
+      if (entry.isIntersecting) {
+        tryPlay(v);
+      } else {
+        v.pause();
+      }
+    });
+  }, { threshold: 0.18 });
+  vids.forEach(function(v){ io.observe(v); });
+  document.addEventListener('visibilitychange', function(){
+    if (document.hidden) { vids.forEach(function(v){ v.pause(); }); }
+  });
+})();
+</script>
+
+<!-- ============ SIG: floating entry + sheet ============ -->
+<button class="sigx-fab" type="button" data-sig-fab aria-haspopup="dialog">
+  <span class="sigx-ava" data-sig-initial aria-hidden="true"><img class="sigx-ava-img" src="assets/maggie-logo/curious.jpg" alt=""></span>
+  <span>Ask <span data-sig-name>Maggie</span>, Magpie's guide</span>
+</button>
+<div class="sigx-sheet" data-sig-sheet hidden role="dialog" aria-modal="true" aria-label="Chat with the Magpie guide">
+  <div class="sigx-backdrop"></div>
+  <div class="sigx-sheet-card">
+    <div class="sigx-sheet-head">
+      <span class="sigx-ava" data-sig-initial aria-hidden="true"><img class="sigx-ava-img" src="assets/maggie-logo/curious.jpg" alt=""></span>
+      <div class="sigx-who">
+        <div class="sigx-name" data-sig-name>Maggie</div>
+        <div class="sigx-role">Magpie guide · Guided tour</div>
+      </div>
+      <button class="sigx-close" type="button" aria-label="Close">&times;</button>
+    </div>
+    <div class="sigx-sheet-slot" data-sig-sheet-slot></div>
+  </div>
+</div>
+<script src="assets/agent/sig-agent.js?v=7" defer></script>
+
+
+<script>
+(function(){
+  var hero = document.getElementById('hero');
+  var root = document.documentElement;
+  var cta  = document.getElementById('ctaPrimary');
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var S = {
+    mode: reduced ? 'reduced' : 'live',
+    cx: .5, cy: .42,        /* current light position (0..1 across the hero) */
+    tx: .5, ty: .42,        /* target light position */
+    journey: 0, journeyT: 0,/* scroll journey 0 (top, blue) .. 1 (at the CTA, green) */
+    pulse: 0, pulseT: 0,    /* CTA heat on hover / tap */
+    lastPointer: -1e9,
+    frames: 0
+  };
+  window.__feather = S;
+
+  /* ---------- photo rotation: three local worlds, one stage ---------- */
+  var slides = Array.prototype.slice.call(hero.querySelectorAll('.slide'));
+  var ROTATE_MS = 7000;
+  var rot = { idx: 0, timer: null, frozen: reduced };
+  function showSlide(i){
+    rot.idx = (i + slides.length) % slides.length;
+    slides.forEach(function(s, j){ s.classList.toggle('active', j === rot.idx); });
+  }
+  function startRotation(){
+    if (rot.timer || rot.frozen) return;
+    rot.timer = setInterval(function(){ showSlide(rot.idx + 1); }, ROTATE_MS);
+  }
+  function stopRotation(){
+    if (rot.timer){ clearInterval(rot.timer); rot.timer = null; }
+  }
+  document.addEventListener('visibilitychange', function(){
+    if (document.hidden) stopRotation(); else startRotation();
+  });
+  window.__featherV2 = {
+    showSlide: showSlide,
+    freeze: function(){ rot.frozen = true; stopRotation(); },
+    unfreeze: function(){ rot.frozen = false; startRotation(); },
+    slideIndex: function(){ return rot.idx; }
+  };
+  if (!reduced) startRotation();
+
+  function clamp01(v){ return v < 0 ? 0 : (v > 1 ? 1 : v); }
+
+  function setVars(){
+    /* flow travels blue -> green: pointer position + scroll journey both feed it */
+    var flow = clamp01(.10 + S.cx * .42 + S.journey * .48);
+    root.style.setProperty('--gx', (S.cx * 100).toFixed(2) + '%');
+    root.style.setProperty('--gy', (S.cy * 100).toFixed(2) + '%');
+    root.style.setProperty('--flow', (flow * 100).toFixed(2) + '%');
+    root.style.setProperty('--bandx', (50 + (S.cx - .5) * -34 + S.journey * 10).toFixed(2) + '%');
+    root.style.setProperty('--tilt', ((S.cx - .5) * 16).toFixed(2) + 'deg');
+    root.style.setProperty('--pulse', S.pulse.toFixed(3));
+    S.flowNow = flow;
+  }
+
+  if (reduced){
+    /* Static and still striking: first world on stage, light parked mid-feather. No loop, ever. */
+    S.cx = .62; S.cy = .40; S.journey = .18;
+    setVars();
+    return;
+  }
+
+  function heroPoint(clientX, clientY){
+    var r = hero.getBoundingClientRect();
+    if (clientY > r.bottom + 40) return;
+    S.tx = clamp01((clientX - r.left) / r.width);
+    S.ty = clamp01((clientY - r.top) / r.height);
+    S.lastPointer = performance.now();
+  }
+  window.addEventListener('pointermove', function(e){ heroPoint(e.clientX, e.clientY); }, {passive:true});
+  window.addEventListener('pointerdown', function(e){ heroPoint(e.clientX, e.clientY); }, {passive:true});
+
+  /* touch drag feeds the same pointer events; pan-y keeps vertical scrolling natural */
+  hero.style.touchAction = 'pan-y';
+
+  function onScroll(){
+    var h = hero.offsetHeight || window.innerHeight;
+    S.journeyT = clamp01(window.scrollY / (h * .92));
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  if (cta){
+    cta.addEventListener('pointerenter', function(){ S.pulseT = 1; });
+    cta.addEventListener('pointerleave', function(){ S.pulseT = 0; });
+    cta.addEventListener('focus',      function(){ S.pulseT = 1; });
+    cta.addEventListener('blur',       function(){ S.pulseT = 0; });
+    cta.addEventListener('pointerdown',function(){ S.pulseT = 1; });
+  }
+
+  function frame(now){
+    /* idle drift: when nobody is touching it, the light breathes on its own */
+    if (now - S.lastPointer > 2600){
+      S.tx = .5 + .34 * Math.sin(now * .00023);
+      S.ty = .44 + .17 * Math.sin(now * .000171 + 1.7);
+    }
+    var k = .055; /* lerp: the light glides, never snaps */
+    S.cx += (S.tx - S.cx) * k;
+    S.cy += (S.ty - S.cy) * k;
+    S.journey += (S.journeyT - S.journey) * .08;
+    S.pulse   += (S.pulseT   - S.pulse)   * .12;
+    setVars();
+    S.frames++;
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
