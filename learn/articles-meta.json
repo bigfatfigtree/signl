@@ -1281,5 +1281,10 @@
   "audience": "businesses",
   "topic": "working-with-creators",
   "dek": "Visitors browse, residents buy twice: Nashville boutiques book creators ranked by Nashville reach."
+ },
+ "what-businesses-see-before-they-book-you.html": {
+  "audience": "creators",
+  "dek": "The card a business reads in five seconds: photo, local reach and local count, categories, listed rate, and delivery record, and how each field earns its place.",
+  "topic": "finding-work"
  }
 }
