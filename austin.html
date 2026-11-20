@@ -85,7 +85,7 @@
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="site-head">
+<header class="site-head over-hero">
   <div class="wrap head-in">
     <span class="brand-lockup"><a href="index.html" aria-label="Magpie home"><img class="logo-img" src="assets/logo.png" alt="Magpie"></a></span>
     <nav class="main-nav">
@@ -500,5 +500,17 @@
 </footer>
 
 <script src="app.js?v=6"></script>
+<script>
+(function(){
+  /* Transparent over-hero header (Jeff, 2026-11-20): floats transparent
+     over the hero film, solid dark bar once scrolled. */
+  var head = document.querySelector('.site-head.over-hero');
+  if (head) {
+    var onScrollHead = function(){ head.classList.toggle('scrolled', window.scrollY > 30); };
+    window.addEventListener('scroll', onScrollHead, { passive: true });
+    onScrollHead();
+  }
+})();
+</script>
 </body>
 </html>

@@ -11,15 +11,15 @@
 <link rel="stylesheet" href="styles-v2.css?v=14">
 <link rel="stylesheet" href="shop.css?v=14">
 <style>
-/* Always-black top nav (Jeff, 2026-11-07) — THIS PAGE ONLY: the header below uses the
-   plain .site-head variant (same as the markets pages), so the bar is solid #0B0D0C at
-   every scroll position instead of the transparent over-hero treatment. On black the
-   shared defaults read correctly as-is: the logo carries no drop shadow (the
-   earlier gray-line / no-shadow overrides for the transparent bar are no longer
-   needed and are removed).
-   The hero padding rules repay the clearance shop.css added for the old overlay
-   header (134px desktop / 102px mobile), now that the bar sits in flow
-   (76px tall, 68px under 560px), keeping the hero's visible top gap unchanged. */
+/* Transparent over-hero top nav (Jeff, 2026-11-20 ~14:26 ET, superseding the
+   2026-11-07 always-black ruling): the header below uses the .over-hero variant,
+   so it floats transparent over the hero film at the top of the page and flips
+   to the solid #0B0D0C bar on scroll (treatment in styles-v2.css; the .scrolled
+   toggle script is at the end of this file). The hero film section keeps its
+   exact box and framing; it now starts at the top of the page.
+   The padding rules below belong to the light .hero section UNDER the film
+   (they repay the clearance shop.css added for an earlier overlay header) and
+   are unchanged by the header treatment. */
 .shopx .hero{padding-top:58px}
 @media(max-width:680px){.shopx .hero{padding-top:26px}}
 @media(max-width:560px){.shopx .hero{padding-top:34px}}
@@ -67,7 +67,7 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "A customer walks into a local cafe — Magpie for Businesses", "description": "A customer walks through a warm local cafe toward the counter, in this hero film for Magpie's businesses page, where local businesses book nearby creators ranked by how many of their followers live in the same city.", "thumbnailUrl": "https://magpielocal.com/assets/video/poster-cafe-enter.jpg", "contentUrl": "https://magpielocal.com/assets/video/jeff-hero-cafe-enter.mp4", "uploadDate": "2026-11-15", "duration": "PT10S", "publisher": {"@type": "Organization", "name": "Magpie", "logo": {"@type": "ImageObject", "url": "https://magpielocal.com/assets/logo.png"}, "alternateName": "Magpie Local", "url": "https://magpielocal.com/", "founder": {"@type": "Person", "name": "Jeff Rimmer"}, "parentOrganization": {"@type": "Organization", "name": "Extra Medium LLC"}, "sameAs": ["https://www.linkedin.com/company/magpielocal", "https://www.instagram.com/magpielocal", "https://www.crunchbase.com/organization/magpie-bf7f", "https://wellfound.com/company/magpie-11", "https://www.f6s.com/magpie-local", "https://theorg.com/org/magpie-3", "https://www.producthunt.com/products/magpie-16"]}}</script>
 </head>
 <body>
-<header class="site-head">
+<header class="site-head over-hero">
   <div class="wrap head-in">
     <a href="index.html" aria-label="Magpie home"><img class="logo-img" src="assets/logo.png" alt="Magpie"></a>
     <nav class="main-nav">

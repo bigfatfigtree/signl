@@ -567,15 +567,34 @@ html.sx-on .reveal.in{opacity:1;transform:none}
 .rail-sec{padding:52px 0 4px}
 @media(min-width:900px){.rail-sec{padding:64px 0 8px}}
 .rail-sec .rail{margin-top:0}
+/* Transparent over-hero header (Jeff, 2026-11-20 ~14:26 ET,
+   superseding the gradient veil that used to sit here): on pages
+   with a full-bleed dark hero the bar carries NO background at the
+   top of the page — logo, links, Apply pill and hamburger float
+   directly on the hero media — and flips to the solid dark bar on
+   scroll (.scrolled below, toggled at scrollY > 30 by each page's
+   inline script). Legibility in the top state is carried by the
+   logo's drop shadow and the links' subtle text shadow, never by
+   a bar or a box. */
 .site-head.over-hero{
   position:absolute;top:0;left:0;right:0;
-  background:linear-gradient(180deg,rgba(8,8,10,.44),rgba(8,8,10,.14) 64%,rgba(8,8,10,0));
+  background:transparent;
   backdrop-filter:none;-webkit-backdrop-filter:none;
+  box-shadow:none;
   transition:background .3s ease;
 }
 .site-head.over-hero .logo-img{filter:drop-shadow(0 2px 12px rgba(0,0,0,.40))}
-.site-head.over-hero .main-nav a{color:rgba(255,255,255,.90);text-shadow:0 1px 12px rgba(0,0,0,.4)}
+.site-head.over-hero .main-nav a{color:rgba(255,255,255,.92);text-shadow:0 1px 10px rgba(0,0,0,.55),0 0 26px rgba(0,0,0,.35)}
 .site-head.over-hero .main-nav a:hover{color:#fff}
+/* Hamburger in the top state: no card, no box — light lines
+   floating on the media. The default cream card returns with the
+   dark scrolled bar, where it reads correctly. */
+.site-head.over-hero:not(.scrolled) .nav-toggle{
+  background:transparent;border-color:transparent;box-shadow:none;
+}
+.site-head.over-hero:not(.scrolled) .nav-toggle svg{
+  stroke:#fff;filter:drop-shadow(0 1px 8px rgba(0,0,0,.55));
+}
 .site-head.over-hero.scrolled{
   position:fixed;background:#0B0D0C;
   backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
