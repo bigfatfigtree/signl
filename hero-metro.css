@@ -8,14 +8,32 @@
    ============================================================ */
 @font-face{font-family:"Anton";src:url("assets/fonts/anton.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 
-/* Header: the homepage uses the site-wide standard header (plain
-   .site-head in styles-v2.css — solid black sticky bar, same as every
-   other page). An earlier metro-hero override gave this page only a
-   white translucent bar with dark-slate nav text; Jeff flagged the nav
-   as looking different (2026-11-20), so that override is removed and
-   no header rules live in this file any more. The bar sits in flow
-   above the light hero (not over it), so the standard dark bar reads
-   exactly as it does on businesses / why-local / creators. */
+/* Header (Jeff's ruling, 2026-11-20 ~01:14 ET, which supersedes
+   the same-day nav-restore that made this page's bar solid black
+   at all times): on this page only, the header is the light
+   sticky bar at the top of the page and turns BLACK once
+   scrolled (.scrolled, toggled at scrollY > 30 by the inline
+   script in index.html, same trigger as the sibling pages).
+   The scrolled treatment is the standard black one from
+   styles-v2.css (.site-head.over-hero.scrolled: #0B0D0C, white
+   nav at .78, mint hover), keeping position:sticky. Type, logo
+   and layout are the site-wide standard throughout; only the
+   bar's colors change with scroll. */
+.site-head.over-hero{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(16,21,27,.07)}
+.site-head.over-hero .logo-img{filter:none}
+.site-head.over-hero .main-nav a{color:#3d4753;text-shadow:none}
+.site-head.over-hero .main-nav a:hover{color:#10151b}
+.site-head.over-hero.scrolled{position:sticky;background:#0B0D0C;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 18px 36px -24px rgba(60,45,20,.42)}
+.site-head.over-hero.scrolled .logo-img{filter:none}
+.site-head.over-hero.scrolled .main-nav a{color:rgba(255,255,255,.78);text-shadow:none}
+.site-head.over-hero.scrolled .main-nav a:hover{color:#A9E8C9}
+/* While the mobile menu is open, drop the scrolled blur: a
+   backdrop-filter on the header makes it the containing block
+   for the fixed .mobile-nav and collapses the menu (the same
+   guard styles-v2.css carries; restated here because the
+   .scrolled rule above outranks it). The scrolled background
+   is solid #0B0D0C, so the blur painted nothing anyway. */
+body:has(.mobile-nav.open) .site-head.over-hero.scrolled{backdrop-filter:none;-webkit-backdrop-filter:none}
 
 .metro-hero{
   --mh-ink:#10151b;--mh-ink-soft:#3d4753;--mh-muted:#68727e;--mh-line:#e6eaed;
@@ -33,6 +51,16 @@
 
 /* --- metro map layer (from styles-metro.css, scoped) --- */
 .metro-hero .hero-map{position:absolute;top:0;left:0;right:0;height:900px;z-index:0;overflow:hidden;background:#fdfefe;pointer-events:none}
+/* Wide screens (>1600px): cap the map layer at the 1600px design
+   frame, centered. Both desktop SVGs use viewBox 1600x900 with
+   preserveAspectRatio slice, so past 1600px the slice scaling
+   cropped the top line and the MAIN STREET / DOWNTOWN labels.
+   At the design frame the container aspect equals the viewBox
+   aspect and nothing is ever cropped; wider screens render
+   exactly the approved 1600px composition, centered. */
+@media (min-width:1601px){
+  .metro-hero .hero-map{width:1600px;left:50%;right:auto;transform:translateX(-50%)}
+}
 .metro-hero .hero-map-svg{width:100%;height:100%;display:block}
 .metro-hero .hero-map::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.92) 0%,rgba(255,255,255,.62) 34%,rgba(255,255,255,.08) 60%,rgba(255,255,255,0) 72%),linear-gradient(180deg,rgba(255,255,255,0) 52%,rgba(255,255,255,.38) 74%,rgba(255,255,255,.66) 100%)}
 .metro-hero .hero-labels-svg{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:1;pointer-events:none}
@@ -45,9 +73,14 @@
 .metro-hero #metroDotM,.metro-hero #metroDotHaloM{display:none}
 
 /* --- mobile metro layer (≤980px only): separate full-hero-height
-   map whose route exits the right edge above the claim card and
-   re-enters below it, so no line or ring ever passes behind the
-   card. Hidden on desktop; the desktop .hero-map is untouched. --- */
+   map. The route runs the top line (MAIN STREET -> DOWNTOWN),
+   dives off the right edge on the diagonal, re-enters from the
+   right edge below the sub-line paragraph and runs left BEHIND
+   the claim card (the card sits in .hero-grid at z-index 2,
+   above this layer, and its white background hides the stretch
+   behind it), emerges from the card's left edge, drops down
+   the left margin and ends in a terminus stop below the card.
+   Hidden on desktop; the desktop .hero-map is untouched. --- */
 .metro-hero .hero-map-m{display:none;position:absolute;top:0;bottom:0;left:0;right:0;z-index:0;overflow:hidden;background:#fdfefe;pointer-events:none}
 .metro-hero .hero-map-m::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.66) 0%,rgba(255,255,255,.30) 14%,rgba(255,255,255,.10) 30%,rgba(255,255,255,0) 48%)}
 .metro-hero .hero-map-m-svg{width:100%;height:100%;display:block}

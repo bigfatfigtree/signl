@@ -9,9 +9,15 @@
      motion is verifiable in the DOM, not just in a screenshot.
      Two routes exist: the desktop route (#metroPath in .hero-map)
      and a mobile-only route (#metroPathM in .hero-map-m, ≤980px)
-     whose geometry exits the screen edge before the claim card
-     and re-enters below it. The active route is chosen by
-     matchMedia and re-initialised if the breakpoint changes. */
+     whose geometry dives off the right edge on the diagonal,
+     re-enters below the sub-line paragraph, runs left behind the
+     claim card (hidden by the card, which sits above the map
+     layer), emerges from the card's left edge and drops down
+     the left margin to a terminus below the card. Stop fractions
+     and dot pauses are measured from the path itself, so they
+     follow the geometry automatically. The active route is
+     chosen by matchMedia and re-initialised if the breakpoint
+     changes. */
   var mq = window.matchMedia("(max-width: 980px)");
   var rafId = null;
 
