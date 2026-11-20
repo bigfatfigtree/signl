@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="styles-v2.css?v=14">
 <link rel="stylesheet" href="shop.css?v=17">
 <link rel="stylesheet" href="assets/agent/sig-agent.css?v=7">
-<link rel="stylesheet" href="hero-metro.css?v=1">
+<link rel="stylesheet" href="hero-metro.css?v=2">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
 <link rel="canonical" href="https://magpielocal.com/">
@@ -130,6 +130,32 @@
 <circle id="metroDotM" r="16" fill="#019bfc" stroke="#fff" stroke-width="4" cx="-20" cy="44"/>
 </svg>
 </div>
+<div class="hero-map-m" aria-hidden="true">
+<svg class="hero-map-m-svg" viewBox="0 0 390 1257" preserveAspectRatio="none" focusable="false">
+<defs>
+<linearGradient id="routeGradM" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#006afc"/><stop offset=".55" stop-color="#03c9ab"/><stop offset="1" stop-color="#2fe07e"/>
+</linearGradient>
+</defs>
+<rect width="390" height="1257" fill="#fdfefe"/>
+<g id="metroGroupM">
+<path id="metroUnderM" d="M-20 27 H307 L430 150 V1075 H300" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+<path id="metroPathM" d="M-20 27 H307 L430 150 V1075 H300" fill="none" stroke="url(#routeGradM)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="metroStopsM">
+<g class="map-stop" data-f="0"><circle cx="133" cy="27" r="7" fill="#fff" stroke="#006afc" stroke-width="3"/></g>
+<g class="map-stop is-interchange" data-f="0"><circle cx="307" cy="27" r="10" fill="#fff" stroke="#03c9ab" stroke-width="3"/><circle cx="307" cy="27" r="4.7" fill="#fff" stroke="#03c9ab" stroke-width="2.5"/></g>
+<g class="map-stop" data-f="0"><circle cx="369" cy="89" r="7" fill="#fff" stroke="#03c9ab" stroke-width="3"/></g>
+<g class="map-stop" data-f="0"><circle cx="300" cy="1075" r="8" fill="#fff" stroke="#03c9ab" stroke-width="3"/></g>
+</g>
+</g>
+</svg>
+<svg class="hero-labels-svg hero-labels-m-svg" viewBox="0 0 390 1257" preserveAspectRatio="none" focusable="false" aria-hidden="true">
+<g class="map-stop" data-f="0"><circle cx="133" cy="27" r="0" fill="none" stroke="none"/><text x="133" y="15" text-anchor="middle" class="map-label">MAIN STREET</text></g>
+<g class="map-stop" data-f="0"><circle cx="307" cy="27" r="0" fill="none" stroke="none"/><text x="296" y="15" text-anchor="end" class="map-label">DOWNTOWN</text></g>
+<circle id="metroDotHaloMg" r="17" fill="#019bfc" fill-opacity=".30" stroke="none" cx="-20" cy="27"/>
+<circle id="metroDotMg" r="10" fill="#019bfc" stroke="#fff" stroke-width="2.5" cx="-20" cy="27"/>
+</svg>
+</div>
     <div class="walk-band" aria-hidden="true">
       <video class="walk-video" autoplay muted loop playsinline preload="auto" poster="assets/hero-metro/hero-crowd-poster.png">
         <source src="assets/hero-metro/hero-crowd-alpha.webm" type="video/webm">
@@ -186,14 +212,6 @@
       </div>
     </div>
   </section>
-
-<!-- ================= STATEMENT ================= -->
-<section class="stmt">
-  <div class="stmt-card">
-    <img class="stmt-icon" src="assets/icon-g-512.png" alt="" width="52" height="52">
-    <p class="stmt-text">Shop local creators the way you'd shop anything: <strong>by the numbers that matter.</strong> Magpie ranks creators by how many of their followers actually live in your city, books the visit, and counts who walks in. Nothing is guessed.</p>
-  </div>
-</section>
 
 <!-- ================= THE SHORT ANSWER ================= -->
 <section class="sec" style="padding-top:26px;padding-bottom:0">
@@ -924,7 +942,7 @@
 </footer>
 
 <script src="app.js?v=6"></script>
-<script src="hero-metro.js?v=1"></script>
+<script src="hero-metro.js?v=2"></script>
 <script>
 (function(){
 
