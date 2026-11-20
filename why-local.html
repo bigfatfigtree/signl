@@ -101,6 +101,9 @@ section.block.wl-geo-sec{padding-bottom:0}
 /* Section-gap sweep (2026-11-20): the flush photo band sits between the receipt section and the Concentration section; drop the stacked section padding on both sides of the band so the transition carries no double padding (same pattern as the wl-geo-sec fix above) */
 section.block.wl-receipt-sec{padding-bottom:0}
 .photo-band.flush + section.block{padding-top:0}
+/* Band breathing room (Jeff, 2026-11-20, after the sweep): the caption rode the photo's bottom edge (20px) and the next section's eyebrow sat 2px under the band. Inset the caption inside the photo and trade the 0 top padding for ONE modest gap: the flush structure stays (no return to the stacked ~186/250px dead band), the receipt side above the band stays flush. */
+.photo-band .band-cap{padding:72px 0 40px}
+.photo-band.flush + section.block{padding-top:44px}
 .wl-receipt{max-width:580px;margin:0 auto;background:#fff;border-radius:8px;box-shadow:var(--sh-lg);padding:40px 36px 32px;position:relative}
 .wl-receipt::before,.wl-receipt::after{content:"";position:absolute;left:0;right:0;height:12px;background-size:22px 22px}
 .wl-receipt::before{top:-11px;background-image:radial-gradient(circle at 11px -3px, transparent 13px, #fff 14px)}
