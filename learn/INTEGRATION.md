@@ -42,6 +42,36 @@ from the article files themselves by a script.
 4. Sitemap + IndexNow steps are unchanged — the article URL set is the same
    as before; only the index page's internals changed.
 
+## Series collapse in The latest (Jeff's rule, 2026-11-20)
+
+A templated cross-city series (the same guide written once per city) shows
+**once** in the index's front window — the lead story plus "The latest"
+rail. The other versions are not removed, noindexed, or dropped anywhere:
+they stay in their topic sections, the search/filter data, the ItemList
+schema, and the sitemap exactly as before. The shown entry carries an
+"Also for:" cluster line linking every other version by city name, so all
+versions stay one tap away from the front page.
+
+`build-index.py` applies this automatically — the daily flow above needs
+no extra step. How detection works:
+
+- The canonical city list is the city guides themselves:
+  `find-local-influencers-<city>.html` files with `"cityGuide": true` in
+  `articles-meta.json`. Display names come from those guides' H1s.
+- Each magazine article whose slug contains exactly one known city slug at
+  a hyphen boundary is grouped by a template key (its slug with the city
+  slug replaced by a placeholder). A group with 2+ distinct cities is a
+  candidate series.
+- Cross-check: the group's H1s must become identical once each city's
+  display name is removed. If they do not, the group is **not** collapsed
+  (two genuinely different articles that share a slug pattern always show).
+- In the front window, the first member in the index's normal sort order
+  is the shown entry; later members are skipped there and the rail
+  backfills with the next shown articles, keeping its full length.
+- Every run prints a detection report (series found, members, and any
+  group rejected by the title check) — read it when adding a batch of
+  articles and eyeball it for false positives.
+
 ## Article-page standard (for new articles and any redesign)
 
 Every article page carries: the hero photo band with caption, the audience

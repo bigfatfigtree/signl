@@ -145,8 +145,101 @@ def main():
     arts.sort(key=lambda a: (a["date"], a["file"]), reverse=True)
     mag = [a for a in arts if not a["city"]]
     cities = sorted([a for a in arts if a["city"]], key=lambda a: a["title"])
-    lead = mag[0]
-    latest = mag[1:12]
+
+    # ---------- series detection (Jeff, 2026-11-20) ----------
+    # A templated cross-city series (same guide, one version per city) shows
+    # ONCE in the front window (lead + latest); the other versions stay
+    # everywhere else and are linked from the shown entry's cluster line.
+    # Canonical city list: the city-guide articles themselves
+    # (find-local-influencers-<city>.html with cityGuide set in meta, which is
+    # exactly the `cities` list above). Display names come from those guides'
+    # H1s ("... in <City>"), the same source the city-guide strip uses.
+    city_info = []  # (city slug, display name)
+    for a in cities:
+        if not a["file"].startswith("find-local-influencers-"):
+            continue
+        cslug = a["file"][len("find-local-influencers-"):-len(".html")]
+        disp = a["title"].split(" in ")[-1].replace(" | Magpie", "").strip() if " in " in a["title"] \
+            else cslug.replace("-", " ").title()
+        city_info.append((cslug, disp))
+    city_display = dict(city_info)
+
+    def city_match(base, cslug):
+        """Index where cslug sits in base at a hyphen boundary, else -1."""
+        if base == cslug:
+            return 0
+        if base.startswith(cslug + "-"):
+            return 0
+        i = base.find("-" + cslug + "-")
+        if i >= 0:
+            return i + 1
+        if base.endswith("-" + cslug):
+            return len(base) - len(cslug)
+        return -1
+
+    def norm_title(t):
+        t = t.replace("\u2013", "-").replace("\u2014", "-").replace(",", "").replace(".", "")
+        return re.sub(r"\s+", " ", t).strip().lower()
+
+    def title_without_city(title, disp):
+        t, d = norm_title(title), norm_title(disp)
+        if not d or d not in t:
+            return None
+        return re.sub(r"\s+", " ", t.replace(d, "", 1)).strip(" -")
+
+    # Group mag articles by template key (slug with the city slug replaced by
+    # a placeholder). An article whose slug matches zero or several different
+    # cities is never grouped — err toward showing it.
+    groups = {}
+    for a in mag:
+        base = a["file"][:-len(".html")] if a["file"].endswith(".html") else a["file"]
+        hits = [(cslug, city_match(base, cslug)) for cslug, _ in city_info]
+        hits = [(cslug, i) for cslug, i in hits if i >= 0]
+        if len(hits) != 1:
+            continue
+        cslug, i = hits[0]
+        key = base[:i] + "{city}" + base[i + len(cslug):]
+        groups.setdefault(key, []).append((a, cslug))
+
+    # A group is a series only with >= 2 distinct cities AND identical H1s
+    # once each city's display name is removed. A failed title check means
+    # two genuinely different articles share a slug pattern: do not collapse.
+    series = {}        # template key -> [(article, city slug), ...] in mag order
+    series_of = {}     # file -> template key
+    rejected = []
+    for key, members in groups.items():
+        if len({cslug for _, cslug in members}) < 2:
+            continue
+        stripped = {title_without_city(a["title"], city_display[cslug]) for a, cslug in members}
+        if len(stripped) != 1 or None in stripped or "" in stripped:
+            rejected.append((key, members))
+            continue
+        series[key] = members
+        for a, _ in members:
+            series_of[a["file"]] = key
+    print(f"series detection: {len(series)} series found "
+          f"({sum(len(m) for m in series.values())} articles) across {len(mag)} magazine articles")
+    for key in sorted(series):
+        members = series[key]
+        print(f"  SERIES {key} ({len(members)} cities): " +
+              ", ".join(f"{a['file']} [{cslug}]" for a, cslug in members))
+    for key, members in rejected:
+        print(f"  NOT COLLAPSED (title check failed) {key}: " +
+              ", ".join(a["file"] for a, _ in members))
+
+    # Collapse the front window only: first member of a series (in mag order)
+    # is shown and carries the cluster line; later members are skipped here
+    # and backfilled by the next shown articles so the rail keeps its length.
+    front, seen_series = [], set()
+    for a in mag:
+        key = series_of.get(a["file"])
+        if key is not None:
+            if key in seen_series:
+                continue
+            seen_series.add(key)
+        front.append(a)
+    lead = front[0]
+    latest = front[1:12]
     start_here = [next(a for a in mag if a["file"] == f) for f in START_HERE_ORDER if any(a["file"] == f for a in mag)]
 
     # ---------- read current index: preserve head/tail, CTA, schema names ----------
@@ -188,6 +281,20 @@ def main():
         t = TOPIC_NAME.get(a["topic"] or "", "")
         return f'{AUD_LABEL[a["audience"]]}' + (f' &middot; {t}' if t else "")
 
+    def cluster_line(a, extra_class=""):
+        """'Also for: <city links>' naming every OTHER member of a's series.
+        Only the shown (first, in mag order) member of a series carries it;
+        non-series articles and hidden members get nothing."""
+        key = series_of.get(a["file"])
+        if key is None or series[key][0][0] is not a:
+            return ""
+        links = " &middot; ".join(
+            f'<a href="{m["file"]}">{esc(city_display[cslug])}</a>'
+            for m, cslug in series[key] if m is not a)
+        if not links:
+            return ""
+        return f'<p class="mz-cluster{extra_class}">Also for: {links}</p>'
+
     def card(a):
         return f'''        <article class="mz-card" data-aud="{a['audience']}" data-topic="{a['topic'] or ''}" data-search="{search_text(a)}">
           <a class="mz-card-link" href="{a['file']}">
@@ -211,7 +318,7 @@ def main():
     latest_rows = "\n".join(
         f'            <li><a href="{a["file"]}"><span class="mz-lt-date">{fmt_date(a["date"])}</span>'
         f'<span class="mz-lt-title">{esc(a["title"])}</span>'
-        f'<span class="mz-lt-mins">{a["read"]} min</span></a></li>' for a in latest)
+        f'<span class="mz-lt-mins">{a["read"]} min</span></a>{cluster_line(a)}</li>' for a in latest)
 
     start_cards = "\n".join(
         f'''            <a class="mz-start-card" href="{a['file']}">
@@ -236,6 +343,9 @@ def main():
 
     city_links = " &middot; ".join(
         f'<a href="{a["file"]}">{esc(a["title"].split(" in ")[-1].replace(" | Magpie", ""))}</a>' for a in cities)
+
+    _lc = cluster_line(lead, " mz-cluster-lead")
+    lead_cluster = ("\n    " + _lc) if _lc else ""
 
     main_html = f'''<main id="main">
   <section class="mz-mast wrap">
@@ -277,7 +387,7 @@ def main():
         <span class="mz-lead-dek">{esc(lead['dek'])}</span>
         <span class="mz-meta">{meta_line(lead)}</span>
       </span>
-    </a>
+    </a>{lead_cluster}
   </article>
 
   <div class="mz-front wrap" id="mzFront">
@@ -361,6 +471,11 @@ CSS = """/* Magpie Learn magazine index (generated by build-index.py — edit th
 .mz-lt-date{font-family:'Space Grotesk',monospace;font-size:.78rem;color:var(--ink3);white-space:nowrap;min-width:86px}
 .mz-lt-title{font-weight:700;line-height:1.3;flex:1}
 .mz-lt-mins{font-size:.8rem;color:var(--ink3);white-space:nowrap}
+.mz-cluster{font-size:.82rem;line-height:1.45;color:var(--ink3);margin:0;padding:0 2px 11px 104px}
+.mz-cluster a{display:inline;padding:0;color:#006AFC;font-weight:600;text-decoration:none;white-space:nowrap}
+.mz-cluster a:hover{text-decoration:underline}
+.mz-cluster-lead{padding:10px 6px 0}
+@media(max-width:600px){.mz-cluster{padding-left:2px}.mz-cluster a{white-space:normal}}
 .mz-start-note{font-size:.9rem;color:var(--ink3);margin:10px 0 14px}
 .mz-start-card{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line2);border-radius:18px;padding:10px;margin-bottom:12px;text-decoration:none;color:inherit;box-shadow:var(--sh-md)}
 .mz-start-card img{width:86px;height:64px;object-fit:cover;border-radius:10px;flex:none}
