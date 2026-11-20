@@ -23,6 +23,13 @@
 .shopx .hero{padding-top:58px}
 @media(max-width:680px){.shopx .hero{padding-top:26px}}
 @media(max-width:560px){.shopx .hero{padding-top:34px}}
+/* Gradient wash removal (Jeff, 2026-11-20) — THIS PAGE ONLY: the shared
+   .hero::before in styles-v2.css paints two radial gradients (blue
+   top-right, green left) behind the hero content. On this page that
+   wash showed as a colored band under the video hero and bled around
+   the Short Answer card. Removed here so the content sits on the
+   page's clean cream background; other pages keep the wash. */
+.shopx .hero::before{display:none}
 </style>
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
@@ -486,7 +493,7 @@
   <section class="sec">
     <div class="sec-head center">
       <div class="eyebrow">Straight answers</div>
-      <h2>Before you ask.</h2>
+      <h2>Common questions.</h2>
     </div>
     <div class="faqmore">
       <details class="qa">

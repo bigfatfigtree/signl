@@ -8,20 +8,14 @@
    ============================================================ */
 @font-face{font-family:"Anton";src:url("assets/fonts/anton.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 
-/* Header over the light metro hero: the live header's over-hero
-   treatment (dark gradient, white nav) was built for the old dark
-   video hero. On this page only, the header takes the concept's
-   white sticky treatment so the nav and the real logo (no backing
-   box, as everywhere) stay readable. Other pages do not load
-   this file and keep the dark header. */
-.site-head.over-hero{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(16,21,27,.07)}
-.site-head.over-hero .logo-img{filter:none}
-.site-head.over-hero .main-nav a{color:#3d4753;text-shadow:none}
-.site-head.over-hero .main-nav a:hover{color:#10151b}
-.site-head.over-hero.scrolled{position:sticky;background:rgba(255,255,255,.97);box-shadow:0 14px 30px -18px rgba(16,21,27,.28)}
-.site-head.over-hero.scrolled .logo-img{filter:none}
-.site-head.over-hero.scrolled .main-nav a{color:#3d4753;text-shadow:none}
-.site-head.over-hero.scrolled .main-nav a:hover{color:#10151b}
+/* Header: the homepage uses the site-wide standard header (plain
+   .site-head in styles-v2.css — solid black sticky bar, same as every
+   other page). An earlier metro-hero override gave this page only a
+   white translucent bar with dark-slate nav text; Jeff flagged the nav
+   as looking different (2026-11-20), so that override is removed and
+   no header rules live in this file any more. The bar sits in flow
+   above the light hero (not over it), so the standard dark bar reads
+   exactly as it does on businesses / why-local / creators. */
 
 .metro-hero{
   --mh-ink:#10151b;--mh-ink-soft:#3d4753;--mh-muted:#68727e;--mh-line:#e6eaed;

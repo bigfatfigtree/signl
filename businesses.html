@@ -23,6 +23,15 @@
 .shopx .hero{padding-top:58px}
 @media(max-width:680px){.shopx .hero{padding-top:26px}}
 @media(max-width:560px){.shopx .hero{padding-top:34px}}
+/* Creator-card photo fixes (Jeff, 2026-11-20, same fix as the homepage):
+   scrolling phone-style cards show photos at natural aspect instead of
+   the 118px banner crop that sliced faces, and shelf tile photos anchor
+   toward the top of the frame so heads are never clipped. */
+.shopx .ph-card .ph-photo{height:auto;overflow:hidden;position:relative}
+.shopx .ph-card .ph-photo img{width:100%;height:auto;display:block;object-fit:initial}
+.shopx .tile .photo.creator-photo img{object-position:50% 20%}
+.plan .amt s{font-size:.55em;font-weight:600;opacity:.5;text-decoration-thickness:3px}
+.plan .amt .now{color:#019BFC}
 </style>
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
@@ -124,7 +133,7 @@
       </div>
       <div class="micro">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>
-        Founding rate locked while your plan stays active. First month $99 with the founding credit.
+        Founding rate locked while your plan stays active. First 3 months $99/mo with the founding credit.
       </div>
     </div>
   </section>
@@ -243,7 +252,7 @@
             <div class="grid">
 
               <article class="tile">
-                <div class="photo">
+                <div class="photo creator-photo">
                   <img src="assets/photos/sample-portrait-jordan.jpg" alt="June Calloway">
                   <div class="badges">
                     <span class="badge dark"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z"/></svg>Top local</span>
@@ -277,7 +286,7 @@
               </article>
 
               <article class="tile">
-                <div class="photo">
+                <div class="photo creator-photo">
                   <img src="assets/photos/sample-portrait-priya.jpg" alt="Nadia Rahman">
                   <div class="badges">
                     <span class="badge light">Founding creator</span>
@@ -311,7 +320,7 @@
               </article>
 
               <article class="tile">
-                <div class="photo">
+                <div class="photo creator-photo">
                   <img src="assets/photos/sample-portrait-sofia.jpg" alt="Amara Osei">
                   <div class="badges">
                     <span class="badge dark"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z"/></svg>Top local</span>
@@ -346,7 +355,7 @@
               </article>
 
               <article class="tile">
-                <div class="photo">
+                <div class="photo creator-photo">
                   <img src="assets/photos/sample-portrait-marcus.jpg" alt="Dre Coleman">
                   <span class="savebtn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M6 3.5h12V21l-6-4.2L6 21z"/></svg></span>
                 </div>
@@ -377,7 +386,7 @@
               </article>
 
               <article class="tile">
-                <div class="photo">
+                <div class="photo creator-photo">
                   <img src="assets/photos/sample-portrait-taylor.jpg" alt="Sadie Lindqvist">
                   <div class="badges">
                     <span class="badge light">Founding creator</span>
@@ -411,7 +420,7 @@
               </article>
 
               <article class="tile">
-                <div class="photo">
+                <div class="photo creator-photo">
                   <img src="assets/photos/sample-portrait-maya.jpg" alt="Hazel Brooks">
                   <span class="savebtn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M6 3.5h12V21l-6-4.2L6 21z"/></svg></span>
                 </div>
@@ -708,60 +717,60 @@
           <div class="door-shelfwrap">
             <div class="door-shelf">
             <div class="ph-card">
-              <div class="ph-photo"><img src="assets/photos/sample-portrait-jordan.jpg" alt="June Calloway"></div>
+              <div class="ph-photo"><img src="assets/photos/sample-portrait-elena.jpg" alt="Elena Ruiz"></div>
               <div class="ph-in">
-                <h4>June Calloway</h4>
-                <div class="ph-meta">Shoreditch · Cocktails &amp; rooftops</div>
+                <h4>Elena Ruiz</h4>
+                <div class="ph-meta">Shoreditch · Cafes &amp; coffee</div>
                 <div class="ph-local">
-                  <div class="n">93<small>%</small></div>
+                  <div class="n">92<small>%</small></div>
                   <div class="cap">of her followers live here
-                    <div class="bar"><i style="width:93%"></i></div>
+                    <div class="bar"><i style="width:92%"></i></div>
                   </div>
                 </div>
-                <span class="ph-lcount">10,400 local followers</span>
+                <span class="ph-lcount">9,300 local followers</span>
                 <div class="ph-row2">
-                  <div class="ph-price">£140 <span>per post</span></div>
-                  <span class="ph-btn">Book June</span>
+                  <div class="ph-price">£115 <span>per post</span></div>
+                  <span class="ph-btn">Book Elena</span>
                 </div>
                 <div class="ph-tog"><span class="comptoggle mini on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts comps</span></span></div>
                 <div class="ph-tog"><span class="comptoggle couptoggle mini on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span></div>
               </div>
             </div>
             <div class="ph-card">
-              <div class="ph-photo"><img src="assets/photos/sample-portrait-priya.jpg" alt="Nadia Rahman"></div>
+              <div class="ph-photo"><img src="assets/photos/sample-portrait-ben.jpg" alt="Ben Okafor"></div>
               <div class="ph-in">
-                <h4>Nadia Rahman</h4>
-                <div class="ph-meta">Soho · Street food &amp; late-night</div>
+                <h4>Ben Okafor</h4>
+                <div class="ph-meta">Hackney · Fitness &amp; gyms</div>
                 <div class="ph-local">
-                  <div class="n">91<small>%</small></div>
-                  <div class="cap">of her followers live here
-                    <div class="bar"><i style="width:91%"></i></div>
+                  <div class="n">89<small>%</small></div>
+                  <div class="cap">of his followers live here
+                    <div class="bar"><i style="width:89%"></i></div>
                   </div>
                 </div>
-                <span class="ph-lcount">8,600 local followers</span>
+                <span class="ph-lcount">7,200 local followers</span>
                 <div class="ph-row2">
-                  <div class="ph-price">£120 <span>per post</span></div>
-                  <span class="ph-btn">Book Nadia</span>
+                  <div class="ph-price">£95 <span>per post</span></div>
+                  <span class="ph-btn">Book Ben</span>
                 </div>
                 <div class="ph-tog"><span class="comptoggle mini on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts comps</span></span></div>
-                <div class="ph-tog"><span class="comptoggle couptoggle mini on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span></div>
+                <div class="ph-tog"><span class="comptoggle couptoggle mini off"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span></div>
               </div>
             </div>
             <div class="ph-card">
-              <div class="ph-photo"><img src="assets/photos/sample-portrait-sofia.jpg" alt="Amara Osei"></div>
+              <div class="ph-photo"><img src="assets/photos/sample-portrait-chloe.jpg" alt="Chloe Bennett"></div>
               <div class="ph-in">
-                <h4>Amara Osei</h4>
-                <div class="ph-meta">Brixton · Beauty &amp; skincare</div>
+                <h4>Chloe Bennett</h4>
+                <div class="ph-meta">Camden · Vintage &amp; retail</div>
                 <div class="ph-local">
-                  <div class="n">94<small>%</small></div>
+                  <div class="n">87<small>%</small></div>
                   <div class="cap">of her followers live here
-                    <div class="bar"><i style="width:94%"></i></div>
+                    <div class="bar"><i style="width:87%"></i></div>
                   </div>
                 </div>
-                <span class="ph-lcount">13,900 local followers</span>
+                <span class="ph-lcount">4,800 local followers</span>
                 <div class="ph-row2">
-                  <div class="ph-price">£180 <span>per post</span></div>
-                  <span class="ph-btn">Book Amara</span>
+                  <div class="ph-price">£70 <span>per post</span></div>
+                  <span class="ph-btn">Book Chloe</span>
                 </div>
                 <div class="ph-tog"><span class="comptoggle mini off"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Paid only</span></span></div>
                 <div class="ph-tog"><span class="comptoggle couptoggle mini off"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span></div>
@@ -809,8 +818,8 @@
         <div class="plan">
           <h3>Self-Service</h3>
           <p class="who">You browse the shelf and book creators yourself.</p>
-          <div class="amt">$199<small>/month</small></div>
-          <div class="firstmo">First month $99 with the $100 founding credit</div>
+          <div class="amt"><s>$199</s> <span class="now">$99</span><small>/month</small></div>
+          <div class="firstmo">$99/mo for your first 3 months, then $199/mo.</div>
           <ul>
             <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span><b>Up to 5 creator visits</b> a month — about $40 a visit</span></li>
             <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Comped visits or paid bookings at each creator's listed rate</span></li>
@@ -824,8 +833,8 @@
           <span class="tag">Most popular</span>
           <h3>Growth</h3>
           <p class="who">More visits a month, same shelf, same counting.</p>
-          <div class="amt">$349<small>/month</small></div>
-          <div class="firstmo">First month $249 with the $100 founding credit</div>
+          <div class="amt"><s>$349</s> <span class="now">$249</span><small>/month</small></div>
+          <div class="firstmo">$249/mo for your first 3 months, then $349/mo.</div>
           <ul>
             <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span><b>Up to 10 creator visits</b> a month — about $35 a visit</span></li>
             <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Everything in Self-Service</span></li>
@@ -838,8 +847,8 @@
         <div class="plan">
           <h3>Managed</h3>
           <p class="who">A coordinator runs your creator program for you.</p>
-          <div class="amt">$699<small>/month</small></div>
-          <div class="firstmo">First month $599 with the $100 founding credit</div>
+          <div class="amt"><s>$699</s> <span class="now">$599</span><small>/month</small></div>
+          <div class="firstmo">$599/mo for your first 3 months, then $699/mo.</div>
           <ul>
             <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span><b>Up to 20 creator visits</b> a month</span></li>
             <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span>Everything in Growth</span></li>
@@ -873,7 +882,7 @@
   <section class="sec">
     <div class="sec-head center">
       <div class="eyebrow">Straight answers</div>
-      <h2>Before you ask.</h2>
+      <h2>Common questions.</h2>
     </div>
     <div class="faq">
       <div class="q">
@@ -999,7 +1008,7 @@
     <div class="cta-col">
       <a class="btn grad" href="#apply">Apply for a founding spot</a>
       <a class="btn ghost" href="creators.html">See the creator side</a>
-      <div class="fine">First month $99 on Self-Service with the founding credit.</div>
+      <div class="fine">First 3 months $99/mo on Self-Service with the founding credit.</div>
     </div>
   </section>
 </div>

@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="styles-v2.css?v=14">
 <link rel="stylesheet" href="shop.css?v=17">
 <link rel="stylesheet" href="assets/agent/sig-agent.css?v=7">
-<link rel="stylesheet" href="hero-metro.css?v=3">
+<link rel="stylesheet" href="hero-metro.css?v=4">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
 <link rel="canonical" href="https://magpielocal.com/">
@@ -39,7 +39,7 @@
 
 </head>
 <body>
-<header class="site-head over-hero">
+<header class="site-head">
   <div class="wrap head-in">
     <a href="index.html" aria-label="Magpie home"><img class="logo-img" src="assets/logo.png" alt="Magpie"></a>
     <nav class="main-nav">
@@ -81,6 +81,33 @@
 </header>
 <main id="main">
 <div class="shopx">
+<style>
+/* ===== Jeff's homepage edits, 2026-11-20 (this page only) =====
+   1) Creator photos in the scrolling phone-style cards (.ph-card) show
+      at their natural aspect instead of the old 118px banner crop that
+      sliced faces (June read as chin-down, Nadia as a hard face crop).
+      The rows scroll, so full photos are the point.
+   2) Shelf tile photos anchor toward the top of the frame so heads
+      are never clipped by the cover crop.
+   3) The dark founding-roster band (.ctaband) gets a real bottom gap
+      (page cream) before the black Maggie guide section below it.
+   4) The homepage FAQ uses the creators page's .faqmore component
+      (centered 820px column, one question per row, + expander,
+      hairline dividers) — same rules as shop.css .faqmore, repeated
+      here because the homepage FAQ section sits outside .shopx. */
+.shopx .ph-card .ph-photo{height:auto;overflow:hidden;position:relative}
+.shopx .ph-card .ph-photo img{width:100%;height:auto;display:block;object-fit:initial}
+.shopx .tile .photo.creator-photo img{object-position:50% 20%}
+.shopx .ctaband{margin-bottom:84px}
+@media(max-width:680px){.shopx .ctaband{margin-bottom:56px}}
+.faqmore{max-width:820px;margin:0 auto}
+.faqmore .qa{border-bottom:1px solid var(--line)}
+.faqmore .qa summary{cursor:pointer;list-style:none;font-size:17px;font-weight:800;padding:20px 30px 20px 2px;position:relative}
+.faqmore .qa summary::-webkit-details-marker{display:none}
+.faqmore .qa summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);font-size:22px;font-weight:600;color:var(--ink-2)}
+.faqmore .qa[open] summary::after{content:"\2013"}
+.faqmore .qa p{font-size:15px;color:var(--ink-2);font-weight:500;line-height:1.6;padding:0 2px 20px;margin-top:-6px}
+</style>
 
 
 <!-- ================= METRO HERO (2026-11-20) ================= -->
@@ -176,7 +203,7 @@
 
           <section class="door-panel" id="panel-creator" role="tabpanel" aria-labelledby="tab-creator" data-door-panel="creator">
             <div class="panel-head"><span>For creators</span><strong>Free to join</strong></div>
-            <form class="door-form" data-form="creator" action="https://app.magpielocal.com/claim" method="get">
+            <form class="door-form" data-form="creator" action="https://app.magpielocal.com/claim" method="get" novalidate>
               <div class="field">
                 <label for="mh-platform">Platform</label>
                 <select id="mh-platform" name="platform"><option value="instagram">Instagram</option><option value="tiktok">TikTok</option><option value="youtube">YouTube</option><option value="facebook">Facebook</option><option value="x">X</option></select>
@@ -441,7 +468,7 @@
 
         <div class="grid" style="margin-top:18px;">
           <article class="tile">
-            <div class="photo">
+            <div class="photo creator-photo">
               <img src="assets/photos/sample-portrait-jordan.jpg" alt="June Calloway">
               <div class="badges">
                 <span class="badge dark"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z"/></svg>Top local</span>
@@ -475,7 +502,7 @@
           </article>
 
           <article class="tile">
-            <div class="photo">
+            <div class="photo creator-photo">
               <img src="assets/photos/sample-portrait-priya.jpg" alt="Nadia Rahman">
               <div class="badges">
                 <span class="badge light">Founding creator</span>
@@ -509,7 +536,7 @@
           </article>
 
           <article class="tile">
-            <div class="photo">
+            <div class="photo creator-photo">
               <img src="assets/photos/sample-portrait-sofia.jpg" alt="Amara Osei">
               <div class="badges">
                 <span class="badge dark"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z"/></svg>Top local</span>
@@ -612,63 +639,63 @@
         <div class="door-shelfwrap">
           <div class="door-shelf">
           <div class="ph-card">
-            <div class="ph-photo"><img src="assets/photos/sample-portrait-jordan.jpg" alt="June Calloway"></div>
+            <div class="ph-photo"><img src="assets/photos/sample-portrait-marcus.jpg" alt="Dre Coleman"></div>
             <div class="ph-in">
-              <h4>June Calloway</h4>
-              <div class="ph-meta">East Nashville · Cocktails &amp; rooftops</div>
+              <h4>Dre Coleman</h4>
+              <div class="ph-meta">East Austin · Style &amp; barbershops</div>
               <div class="ph-local">
-                <div class="n">93<small>%</small></div>
-                <div class="cap">of her followers live in Nashville
-                  <div class="bar"><i style="width:93%"></i></div>
+                <div class="n">88<small>%</small></div>
+                <div class="cap">of his followers live in Austin
+                  <div class="bar"><i style="width:88%"></i></div>
                 </div>
               </div>
-              <span class="ph-lcount">10,400 local followers</span>
+              <span class="ph-lcount">5,500 local followers</span>
               <div class="ph-row2">
-                <div class="ph-price">$150 <span>per post</span></div>
-                <span class="ph-btn">Book June</span>
+                <div class="ph-price">Comped <span>visit</span></div>
+                <span class="ph-btn">Invite Dre</span>
               </div>
               <div class="ph-tog"><span class="comptoggle mini on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts comps</span></span></div>
-              <div class="ph-tog"><span class="comptoggle couptoggle mini on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span></div>
+              <div class="ph-tog"><span class="comptoggle couptoggle mini off"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span></div>
             </div>
           </div>
           <div class="ph-card">
-            <div class="ph-photo"><img src="assets/photos/sample-portrait-priya.jpg" alt="Nadia Rahman"></div>
+            <div class="ph-photo"><img src="assets/photos/sample-portrait-taylor.jpg" alt="Sadie Lindqvist"></div>
             <div class="ph-in">
-              <h4>Nadia Rahman</h4>
-              <div class="ph-meta">Soho · Street food &amp; late-night</div>
+              <h4>Sadie Lindqvist</h4>
+              <div class="ph-meta">Cherry Creek · Fitness &amp; wellness</div>
               <div class="ph-local">
-                <div class="n">91<small>%</small></div>
-                <div class="cap">of her followers live in London
-                  <div class="bar"><i style="width:91%"></i></div>
+                <div class="n">86<small>%</small></div>
+                <div class="cap">of her followers live in Denver
+                  <div class="bar"><i style="width:86%"></i></div>
                 </div>
               </div>
-              <span class="ph-lcount">8,600 local followers</span>
+              <span class="ph-lcount">5,100 local followers</span>
               <div class="ph-row2">
-                <div class="ph-price">£120 <span>per post</span></div>
-                <span class="ph-btn">Book Nadia</span>
-              </div>
-              <div class="ph-tog"><span class="comptoggle mini on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts comps</span></span></div>
-              <div class="ph-tog"><span class="comptoggle couptoggle mini on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span></div>
-            </div>
-          </div>
-          <div class="ph-card">
-            <div class="ph-photo"><img src="assets/photos/sample-portrait-sofia.jpg" alt="Amara Osei"></div>
-            <div class="ph-in">
-              <h4>Amara Osei</h4>
-              <div class="ph-meta">Logan Square · Beauty &amp; skincare</div>
-              <div class="ph-local">
-                <div class="n">94<small>%</small></div>
-                <div class="cap">of her followers live in Chicago
-                  <div class="bar"><i style="width:94%"></i></div>
-                </div>
-              </div>
-              <span class="ph-lcount">13,900 local followers</span>
-              <div class="ph-row2">
-                <div class="ph-price">$180 <span>per post</span></div>
-                <span class="ph-btn">Book Amara</span>
+                <div class="ph-price">$85 <span>per post</span></div>
+                <span class="ph-btn">Book Sadie</span>
               </div>
               <div class="ph-tog"><span class="comptoggle mini off"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Paid only</span></span></div>
-              <div class="ph-tog"><span class="comptoggle couptoggle mini off"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span></div>
+              <div class="ph-tog"><span class="comptoggle couptoggle mini on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span></div>
+            </div>
+          </div>
+          <div class="ph-card">
+            <div class="ph-photo"><img src="assets/photos/sample-portrait-maya.jpg" alt="Hazel Brooks"></div>
+            <div class="ph-in">
+              <h4>Hazel Brooks</h4>
+              <div class="ph-meta">Ballard · Outdoors &amp; day trips</div>
+              <div class="ph-local">
+                <div class="n">79<small>%</small></div>
+                <div class="cap">of her followers live near Seattle
+                  <div class="bar"><i style="width:79%"></i></div>
+                </div>
+              </div>
+              <span class="ph-lcount">9,800 local followers</span>
+              <div class="ph-row2">
+                <div class="ph-price">Comped <span>visit</span></div>
+                <span class="ph-btn">Invite Hazel</span>
+              </div>
+              <div class="ph-tog"><span class="comptoggle mini on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts comps</span></span></div>
+              <div class="ph-tog"><span class="comptoggle couptoggle mini on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span></div>
             </div>
           </div>
           </div>
@@ -859,7 +886,7 @@
     <div class="sec-head center">
       <div class="eyebrow">Founding plans</div>
       <h2>One flat plan. Every creator in your city.</h2>
-      <p>Founding businesses lock their rate: <strong>$199/mo</strong> for up to 5 creator visits a month, with a <strong>$100 founding credit</strong> on the first month. No per-location charges, no agency markup.</p>
+      <p>Founding businesses lock their rate: <strong>$199/mo</strong> for up to 5 creator visits a month, with <strong>$100 off</strong> each of the first 3 months. No per-location charges, no agency markup.</p>
       <div class="sec-cta" style="justify-content:center;">
         <a class="btn ink" href="businesses.html#pricing">See business plans</a>
         <a class="btn ghost" href="https://app.magpielocal.com/claim">Creators join free</a>
@@ -900,9 +927,6 @@
           </div>
         </div>
         <p class="sigx-honest">Maggie is a guided tour, not a person. It only ever says what the Magpie playbook says.</p>
-        <div class="sigx-hero" aria-hidden="true">
-          <img class="sigx-hero-still" src="assets/maggie-logo/curious.jpg" alt="Maggie, the Magpie guide" decoding="async">
-        </div>
       </div>
       <div data-sig-panel>
         <div class="sigx-fallback">
@@ -915,35 +939,37 @@
 </section>
   <!-- ================= FAQ ================= -->
   <section class="sec">
+    <div class="wrap">
     <div class="sec-head center">
       <div class="eyebrow">Straight answers</div>
-      <h2>Before you ask.</h2>
+      <h2>Common questions.</h2>
     </div>
-    <div class="faq">
-      <div class="q">
-        <b>What is Magpie?</b>
+    <div class="faqmore">
+      <details class="qa">
+        <summary>What is Magpie?</summary>
         <p>Magpie is the local micro-influencer marketing platform: local businesses book local creators whose followers actually live in the city. Businesses offer comped visits or paid bookings, creators post honestly, and every visit is tracked.</p>
-      </div>
-      <div class="q">
-        <b>How does Magpie rank creators?</b>
+      </details>
+      <details class="qa">
+        <summary>How does Magpie rank creators?</summary>
         <p>By local reach, not follower count. Magpie shows each creator's local audience share before a business chooses, so a smaller creator whose followers live in the city ranks ahead of a bigger creator whose audience is scattered.</p>
-      </div>
-      <div class="q">
-        <b>Does it cost anything to join as a creator?</b>
+      </details>
+      <details class="qa">
+        <summary>Does it cost anything to join as a creator?</summary>
         <p>No. Magpie is free for creators. Always. Businesses pay the platform. You never pay to join, to list, or to get booked. On standard visits the comp itself is the pay.</p>
-      </div>
-      <div class="q">
-        <b>What does a comped visit include?</b>
+      </details>
+      <details class="qa">
+        <summary>What does a comped visit include?</summary>
         <p>A business hosts you with a meal, a service, or an experience, and you post your honest take. Every visit has one defined deliverable, agreed before you claim: 1 post or reel plus 1 story that shares the post, in your own voice, with the goal of posting within 48 hours of the visit. No cash changes hands on a comped visit.</p>
-      </div>
-      <div class="q">
-        <b>What does Magpie cost a business?</b>
+      </details>
+      <details class="qa">
+        <summary>What does Magpie cost a business?</summary>
         <p>Founding pricing is $199, $349, or $699 a month, with a 3 month minimum. After that, plans run month to month and founding pricing stays locked while subscribed. Comped visits are the plan's core. Paid bookings are extra only if you choose one, at the creator's own listed rate.</p>
-      </div>
-      <div class="q">
-        <b>Is Magpie live in my city?</b>
+      </details>
+      <details class="qa">
+        <summary>Is Magpie live in my city?</summary>
         <p>Magpie is built and rolling out across its founding markets now. Founding businesses apply, lock the founding rate, and get first pick of the roster as their city opens. Creators can join free from any city: sign up with your home city and finish your profile, and when your city opens you are in its founding circle.</p>
-      </div>
+      </details>
+    </div>
     </div>
   </section>
 </main>
