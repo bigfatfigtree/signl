@@ -306,6 +306,62 @@
     </div>
   </section>
 
+<!-- ================= CREATOR CLIP STRIP (2026-11-20) ================= -->
+<section class="clip-strip" aria-label="Local spots, filmed on phones">
+  <style>
+.clip-strip{background:#fff;padding:36px 0 6px}
+.clip-row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.clip-card{position:relative;aspect-ratio:9/16;border-radius:20px;overflow:hidden;background:#141414;box-shadow:0 14px 34px rgba(11,13,12,.16)}
+.clip-card video{width:100%;height:100%;display:block;object-fit:cover}
+.clip-cap{position:absolute;left:0;right:0;bottom:0;padding:42px 16px 15px;background:linear-gradient(to top,rgba(0,0,0,.58),rgba(0,0,0,0));color:#fff;font-family:Inter,system-ui,sans-serif;font-size:15px;font-weight:500;letter-spacing:.01em;pointer-events:none}
+@media(max-width:899px){
+  .clip-strip{padding:28px 0 2px}
+  .clip-row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding:4px 2px 18px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .clip-row::-webkit-scrollbar{display:none}
+  .clip-card{flex:0 0 74vw;scroll-snap-align:start}
+}
+  </style>
+  <div class="wrap">
+    <div class="clip-row">
+      <figure class="clip-card" style="margin:0">
+        <video class="clip-video" muted loop playsinline preload="metadata" poster="assets/video/creator-clip-1.jpg" src="assets/video/creator-clip-1.mp4" aria-label="The café"></video>
+        <figcaption class="clip-cap">The café</figcaption>
+      </figure>
+      <figure class="clip-card" style="margin:0">
+        <video class="clip-video" muted loop playsinline preload="metadata" poster="assets/video/creator-clip-2.jpg" src="assets/video/creator-clip-2.mp4" aria-label="The shop"></video>
+        <figcaption class="clip-cap">The shop</figcaption>
+      </figure>
+      <figure class="clip-card" style="margin:0">
+        <video class="clip-video" muted loop playsinline preload="metadata" poster="assets/video/creator-clip-3.jpg" src="assets/video/creator-clip-3.mp4" aria-label="Dessert"></video>
+        <figcaption class="clip-cap">Dessert</figcaption>
+      </figure>
+      <figure class="clip-card" style="margin:0">
+        <video class="clip-video" muted loop playsinline preload="metadata" poster="assets/video/creator-clip-4.jpg" src="assets/video/creator-clip-4.mp4" aria-label="The barber"></video>
+        <figcaption class="clip-cap">The barber</figcaption>
+      </figure>
+    </div>
+  </div>
+  <script>
+  (function(){
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+    var vids = document.querySelectorAll('.clip-video');
+    vids.forEach(function(v){ v.muted = true; v.defaultMuted = true; v.playsInline = true; });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        var v = entry.target;
+        if (entry.intersectionRatio >= 0.4) {
+          var p = v.play();
+          if (p && p.catch) { p.catch(function(){}); }
+        } else {
+          v.pause();
+        }
+      });
+    }, { threshold: [0, 0.4, 0.65] });
+    vids.forEach(function(v){ io.observe(v); });
+  })();
+  </script>
+</section>
+
 <!-- ================= THE SHORT ANSWER ================= -->
 <section class="sec" style="padding-top:26px;padding-bottom:0">
   <div class="wrap">
