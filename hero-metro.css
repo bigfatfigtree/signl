@@ -35,25 +35,12 @@
    is solid #0B0D0C, so the blur painted nothing anyway. */
 body:has(.mobile-nav.open) .site-head.over-hero.scrolled{backdrop-filter:none;-webkit-backdrop-filter:none}
 
-/* Mid-width nav switch + logo protection (Jeff's screenshots,
-   2026-11-20 ~13:51 ET): styles-v2.css turns the full nav on at
-   920px, but the full row (logo at natural size + 8 links + the
-   Apply button) only actually fits from ~1190px up. Between 920
-   and ~1190 the flex row shrank the logo off its natural aspect
-   ratio (as low as 38px wide at 920px) and wrapped every link
-   onto two lines. On this page the header now stays in hamburger
-   mode until 1240px (the .wrap max-width, with headroom over the
-   measured 1190px fit point) and the logo block can never be
-   flex-shrunk at any width. Desktop is unchanged: logo stays
-   left-aligned, full nav from 1240px up. */
-.site-head .head-in>a{flex:none}
-.site-head .head-actions{flex:none}
-@media (max-width:1239px){
-  .site-head .main-nav{display:none}
-  .site-head .nav-toggle{display:inline-flex}
-  .site-head .mobile-nav{display:none!important}
-  .site-head .mobile-nav.open{display:flex!important}
-}
+/* Mid-width nav switch + logo protection: this page carried a
+   scoped copy of the fix on 2026-11-20 (Jeff's screenshots,
+   ~13:51 ET); it now lives in styles-v2.css for the whole site
+   (full nav only from 1240px up, logo block flex:none), so the
+   scoped rules were removed from here to keep one source of
+   truth. Header behavior on this page is unchanged. */
 
 .metro-hero{
   --mh-ink:#10151b;--mh-ink-soft:#3d4753;--mh-muted:#68727e;--mh-line:#e6eaed;

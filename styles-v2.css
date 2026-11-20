@@ -81,7 +81,26 @@ p{color:var(--ink2)}
 .main-nav{display:none;gap:20px}
 .main-nav a{font-size:.8rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.72);padding:6px 0}
 .main-nav a:hover{color:#A9E8C9}
-@media(min-width:920px){.main-nav{display:flex}.head-cta{display:inline-flex}}
+/* Mid-width nav switch + logo protection, site-wide (Jeff,
+   2026-11-20): the full header row (logo at natural size + 8
+   links + the Apply button) only fits from ~1190px up on the
+   widest English variant, so the full nav stays off until
+   1240px (the .wrap max-width, with headroom) and the hamburger
+   takes over below that. The logo block, the nav and the header
+   actions can never be flex-shrunk, so the logo keeps its
+   natural aspect ratio at every width. Desktop is unchanged:
+   logo left-aligned, full nav from 1240px up. The Spanish
+   pages' longer labels never fit the 1240px bar at any width,
+   so they keep the hamburger at every width. */
+.site-head .head-in>a{flex:none}
+.site-head .brand-lockup{flex:none}
+.site-head .main-nav{flex:none}
+.site-head .head-actions{flex:none}
+html[lang="es"] .site-head .main-nav{display:none}
+html[lang="es"] .site-head .nav-toggle{display:inline-flex}
+html[lang="es"] .site-head .mobile-nav{display:none!important}
+html[lang="es"] .site-head .mobile-nav.open{display:flex!important}
+@media(min-width:1240px){.main-nav{display:flex}.head-cta{display:inline-flex}}
 .head-cta{display:none}
 
 /* ---------- buttons ---------- */
@@ -417,7 +436,7 @@ html.sx-on .reveal.in{opacity:1;transform:none}
 .nav-toggle .nt-x{display:none}
 .nav-toggle[aria-expanded="true"] .nt-x{display:block}
 .nav-toggle[aria-expanded="true"] .nt-b{display:none}
-@media(min-width:920px){.nav-toggle{display:none}}
+@media(min-width:1240px){.nav-toggle{display:none}}
 .mobile-nav{
   display:none;border-top:1px solid var(--line2);
   background:#fff;box-shadow:var(--sh-md);
@@ -432,7 +451,7 @@ html.sx-on .reveal.in{opacity:1;transform:none}
 .mobile-nav a.mn-link span{color:var(--ink3);font-weight:400}
 .mobile-nav a.mn-link:active{color:#019BFC}
 .mobile-nav .mn-apply{margin-top:16px;width:100%}
-@media(min-width:920px){.mobile-nav{display:none!important}}
+@media(min-width:1240px){.mobile-nav{display:none!important}}
 
 /* ---------- platform sample panels (round 3) ---------- */
 .sample-tag{
@@ -1380,7 +1399,7 @@ section.block.join{padding-top:0}
    wide and nearly full length. Sig at the top like a profile photo,
    name under him, then plain line-icon rows in black, with the sign-in
    row pinned at the bottom the way the reference pins Log out.
-   Tap Sig to open Ask Sig (app.js). Desktop untouched: the >=920px
+   Tap Sig to open Ask Sig (app.js). Desktop untouched: the >=1240px
    rules above still hide the panel and the toggle. */
 .mobile-nav{
   position:fixed;top:76px;right:0;bottom:0;left:0;
