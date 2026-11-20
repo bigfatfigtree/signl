@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="styles-v2.css?v=14">
 <link rel="stylesheet" href="shop.css?v=17">
 <link rel="stylesheet" href="assets/agent/sig-agent.css?v=7">
-<link rel="stylesheet" href="hero-metro.css?v=2">
+<link rel="stylesheet" href="hero-metro.css?v=3">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
 <link rel="canonical" href="https://magpielocal.com/">
@@ -139,13 +139,13 @@
 </defs>
 <rect width="390" height="1257" fill="#fdfefe"/>
 <g id="metroGroupM">
-<path id="metroUnderM" d="M-20 27 H307 L430 150 V1075 H300" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
-<path id="metroPathM" d="M-20 27 H307 L430 150 V1075 H300" fill="none" stroke="url(#routeGradM)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="metroUnderM" d="M-20 27 H307 L430 150 V1130 H300" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+<path id="metroPathM" d="M-20 27 H307 L430 150 V1130 H300" fill="none" stroke="url(#routeGradM)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
 <g id="metroStopsM">
 <g class="map-stop" data-f="0"><circle cx="133" cy="27" r="7" fill="#fff" stroke="#006afc" stroke-width="3"/></g>
 <g class="map-stop is-interchange" data-f="0"><circle cx="307" cy="27" r="10" fill="#fff" stroke="#03c9ab" stroke-width="3"/><circle cx="307" cy="27" r="4.7" fill="#fff" stroke="#03c9ab" stroke-width="2.5"/></g>
 <g class="map-stop" data-f="0"><circle cx="369" cy="89" r="7" fill="#fff" stroke="#03c9ab" stroke-width="3"/></g>
-<g class="map-stop" data-f="0"><circle cx="300" cy="1075" r="8" fill="#fff" stroke="#03c9ab" stroke-width="3"/></g>
+<g class="map-stop" data-f="0"><circle cx="300" cy="1130" r="8" fill="#fff" stroke="#03c9ab" stroke-width="3"/></g>
 </g>
 </g>
 </svg>
@@ -186,11 +186,77 @@
                 <input id="mh-handle" name="handle" type="text" placeholder="@yourhandle" autocomplete="off">
               </div>
               <div class="field">
-                <label for="mh-city">Your city</label>
-                <input id="mh-city" name="market" type="text" placeholder="Any city" autocomplete="address-level2">
-                <input type="hidden" name="src" value="home-hero">
+                <label for="mh-market">Your city</label>
+                <select id="mh-market" name="market">
+                  <option value="" selected>Choose your city</option>
+                  <option value="Virginia Beach">Virginia Beach</option>
+                  <option value="Richmond">Richmond</option>
+                  <option value="Washington DC">Washington DC</option>
+                  <option value="Raleigh">Raleigh</option>
+                  <option value="Charlotte">Charlotte</option>
+                  <option value="Baltimore">Baltimore</option>
+                  <option value="Atlanta">Atlanta</option>
+                  <option value="Nashville">Nashville</option>
+                  <option value="Austin">Austin</option>
+                  <option value="Dallas">Dallas</option>
+                  <option value="Chicago">Chicago</option>
+                  <option value="Los Angeles">Los Angeles</option>
+                  <option value="New York City">New York City</option>
+                  <option value="Boston">Boston</option>
+                  <option value="Charlottesville">Charlottesville</option>
+                  <option value="San Diego">San Diego</option>
+                  <option value="Seattle">Seattle</option>
+                  <option value="Tampa">Tampa</option>
+                  <option value="Phoenix">Phoenix</option>
+                  <option value="Denver">Denver</option>
+                  <option value="Minneapolis">Minneapolis</option>
+                  <option value="Philadelphia">Philadelphia</option>
+                  <option value="Pittsburgh">Pittsburgh</option>
+                  <option value="Cincinnati">Cincinnati</option>
+                  <option value="Columbus">Columbus</option>
+                  <option value="New Orleans">New Orleans</option>
+                  <option value="Orlando">Orlando</option>
+                  <option value="Miami">Miami</option>
+                  <option value="Houston">Houston</option>
+                  <option value="San Antonio">San Antonio</option>
+                  <option value="Las Vegas">Las Vegas</option>
+                  <option value="Detroit">Detroit</option>
+                  <option value="San Juan">San Juan</option>
+                  <option value="London">London</option>
+                  <option value="Manchester">Manchester</option>
+                  <option value="Dublin">Dublin</option>
+                  <option value="Amsterdam">Amsterdam</option>
+                  <option value="Copenhagen">Copenhagen</option>
+                  <option value="Mexico City">Mexico City</option>
+                  <option value="Dubai">Dubai</option>
+                  <option value="Paris">Paris</option>
+                  <option value="Barcelona">Barcelona</option>
+                  <option value="Lisbon">Lisbon</option>
+                  <option value="Toronto">Toronto</option>
+                  <option value="Montreal">Montreal</option>
+                  <option value="Auckland">Auckland</option>
+                  <option value="Wellington">Wellington</option>
+                  <option value="Christchurch">Christchurch</option>
+                  <option value="__add__">Add your city</option>
+                </select>
               </div>
+              <div class="field field-full" id="mh-city-wrap" hidden>
+                <label for="mh-city-custom">Type your city</label>
+                <input id="mh-city-custom" name="city" type="text" placeholder="Your city" autocomplete="address-level2">
+              </div>
+              <div class="field">
+                <label for="mh-followers">Total follower count</label>
+                <input id="mh-followers" name="followers" type="number" min="0" step="1" inputmode="numeric" placeholder="e.g. 12400" autocomplete="off">
+                <p class="lookup-note" id="mh-lookup-note" hidden></p>
+              </div>
+              <div class="field">
+                <label for="mh-localpct">Total local percentage</label>
+                <input id="mh-localpct" name="localpct" type="number" min="0" max="100" step="1" inputmode="numeric" placeholder="e.g. 65" autocomplete="off">
+                <p class="field-note">The share of your followers who live in your city. If 65 out of every 100 followers are local, enter 65.</p>
+              </div>
+              <input type="hidden" name="src" value="home-hero">
               <button class="btn door-submit" type="submit">Claim your page</button>
+              <p class="door-error" id="mh-form-error" role="alert" hidden></p>
             </form>
             <p class="door-note">Free to join. Comped visits, or paid bookings at your own rate. You keep 97%.</p>
             <p class="door-line">Claim now. If you are approved, you finish your profile after.</p>
@@ -942,7 +1008,7 @@
 </footer>
 
 <script src="app.js?v=6"></script>
-<script src="hero-metro.js?v=2"></script>
+<script src="hero-metro.js?v=3"></script>
 <script>
 (function(){
 
