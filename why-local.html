@@ -98,6 +98,9 @@ section.block.wl-geo-sec{padding-bottom:0}
 .wl-geo.geo-armed.geo-played .geo-punch{opacity:1;transform:none;transition:opacity .5s ease 1.9s,transform .5s ease 1.9s}
 @media(max-width:560px){.geo-count-total{margin-left:0;text-align:left}}
 .wl-receipt-sec{background:var(--bg2)}
+/* Section-gap sweep (2026-11-20): the flush photo band sits between the receipt section and the Concentration section; drop the stacked section padding on both sides of the band so the transition carries no double padding (same pattern as the wl-geo-sec fix above) */
+section.block.wl-receipt-sec{padding-bottom:0}
+.photo-band.flush + section.block{padding-top:0}
 .wl-receipt{max-width:580px;margin:0 auto;background:#fff;border-radius:8px;box-shadow:var(--sh-lg);padding:40px 36px 32px;position:relative}
 .wl-receipt::before,.wl-receipt::after{content:"";position:absolute;left:0;right:0;height:12px;background-size:22px 22px}
 .wl-receipt::before{top:-11px;background-image:radial-gradient(circle at 11px -3px, transparent 13px, #fff 14px)}
