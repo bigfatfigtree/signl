@@ -1088,6 +1088,8 @@ section[id]{scroll-margin-top:96px}
 
 /* tighter section rhythm where the legacy markup asks for it */
 section.block.tight{padding:60px 0}
+/* business type pages: do not stack a second section padding after the Play section or before the FAQ */
+section.block.join{padding-top:0}
 @media(min-width:920px){.price-grid.plans{grid-template-columns:1fr 1fr 1fr}}
 
 /* full-bleed photo band (why-local) */
