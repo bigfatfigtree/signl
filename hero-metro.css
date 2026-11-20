@@ -198,6 +198,13 @@ body:has(.mobile-nav.open) .site-head.over-hero.scrolled{backdrop-filter:none;-w
   .hero-text{padding:0 40px 44px}
   .hero-text .hero-subline{font-size:19px}
 }
+/* Phone only: the fixed Maggie chat button (bottom-right, ~62px of
+   clearance needed) overlapped the sub-line's last line once the text
+   was lowered. Extra bottom padding lifts the whole text block so the
+   full sub-line clears the button; desktop is untouched. */
+@media (max-width:759px){
+  .hero-text{padding-bottom:88px}
+}
 /* The claim card, right below the hero, on the page's near-white */
 .card-below{background:#fdfefe;padding:28px 0 48px}
 .card-below .hero-copy{padding-top:0}
