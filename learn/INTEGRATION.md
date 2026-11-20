@@ -72,6 +72,35 @@ no extra step. How detection works:
   group rejected by the title check) — read it when adding a batch of
   articles and eyeball it for false positives.
 
+## SEO / AI search board in Magpie Admin (Build -216, 2026-11-20)
+
+Jeff's search work board lives inside the Magpie app Admin
+(app.magpielocal.com) as the **"SEO / AI search"** section — there
+is no public page for it. The board shows every page built for the
+search climb (title as a live link, date added, target phrase),
+the totals, what is next in the queue, and the latest tracking
+facts from the search log.
+
+- **Generator:** `generate-seo-board.mjs`, at
+  `~/workspace/signl-app/scripts/generate-seo-board.mjs` in the
+  app repo. Run it with `node scripts/generate-seo-board.mjs`
+  from the app repo root.
+- **What it reads:** the goal-workspace records
+  (`seo-fix-2026-11-18.md`, `phrase-map-2026-11-18.md`,
+  `search-tracking-log.md` under
+  `goals/local-creator-platform-max-media-licensing-deal/hidden_files/`)
+  plus this repo's article files (H1 + `datePublished` per page)
+  and `sitemap.xml` (total site pages). It refuses to emit a page
+  the records do not evidence, and a page with no establishable
+  date is emitted dateless — never guess a date.
+- **What it writes:** `netlify/functions/lib/seo-board.json` in
+  the app repo, served only by the admin-gated
+  `GET /api/admin/seo-board` endpoint. The file never goes under
+  `public/`, so the board and its data stay admin-only.
+- **Daily climb step:** after a tranche ships, re-run the
+  generator, commit the regenerated `seo-board.json` with the app
+  repo, and push — one step, and the Admin board is current.
+
 ## Article-page standard (for new articles and any redesign)
 
 Every article page carries: the hero photo band with caption, the audience
