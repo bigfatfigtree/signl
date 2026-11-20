@@ -25,3 +25,11 @@
     X-Frame-Options = "SAMEORIGIN"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Apple universal links (2026-11-20): the association file has no
+# extension, so pin its content type explicitly. With the global
+# nosniff header above, a wrong type would make Apple reject it.
+[[headers]]
+  for = "/.well-known/apple-app-site-association"
+  [headers.values]
+    Content-Type = "application/json"
