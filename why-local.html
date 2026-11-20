@@ -7,7 +7,7 @@
 <meta name="description" content="Local on purpose: why Magpie builds one roster of local micro-influencers per city instead of selling national reach. The audience concentration math, and why regulars beat reach.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles-v2.css?v=14">
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
@@ -82,6 +82,21 @@
 .geo-legend .l-else{background:#E3DCCB}
 .wl-geo .note{margin-top:16px;font-size:.82rem;color:var(--ink3);line-height:1.55}
 @media(max-width:560px){.wl-geo{padding:24px 19px}.geo-seg{font-size:.66rem}}
+/* Animated bars (2026-11-20): final state is the default; JS arms + plays once on scroll into view */
+section.block.wl-geo-sec{padding-bottom:0}
+.geo-count{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-top:14px}
+.geo-count-num{font-family:'Anton',sans-serif;font-weight:400;font-size:clamp(2rem,5.4vw,2.9rem);line-height:1;letter-spacing:.01em;color:var(--ink)}
+.geo-count-num.grad{color:var(--teal)}
+.geo-count-lbl{font-size:.95rem;color:var(--ink2);font-weight:600}
+.geo-count-total{margin-left:auto;font-family:'Space Grotesk',monospace;font-size:.76rem;color:var(--ink3);letter-spacing:.08em;text-transform:uppercase;text-align:right}
+.geo-count-total b{display:block;font-family:'Anton',sans-serif;font-size:1.35rem;letter-spacing:.02em;color:var(--ink3);text-transform:none;margin-top:2px}
+.geo-punch{margin-top:24px;font-family:'Archivo',sans-serif;font-weight:800;font-size:1.12rem;letter-spacing:-.01em;color:var(--ink)}
+.wl-geo.geo-armed .geo-seg{transition-property:width;transition-timing-function:cubic-bezier(.22,.8,.3,1)}
+.wl-geo.geo-armed .geo-seg>span{opacity:0}
+.wl-geo.geo-armed.geo-played .geo-seg>span{opacity:1;transition:opacity .45s ease}
+.wl-geo.geo-armed .geo-punch{opacity:0;transform:translateY(6px)}
+.wl-geo.geo-armed.geo-played .geo-punch{opacity:1;transform:none;transition:opacity .5s ease 1.9s,transform .5s ease 1.9s}
+@media(max-width:560px){.geo-count-total{margin-left:0;text-align:left}}
 .wl-receipt-sec{background:var(--bg2)}
 .wl-receipt{max-width:580px;margin:0 auto;background:#fff;border-radius:8px;box-shadow:var(--sh-lg);padding:40px 36px 32px;position:relative}
 .wl-receipt::before,.wl-receipt::after{content:"";position:absolute;left:0;right:0;height:12px;background-size:22px 22px}
@@ -186,7 +201,7 @@
     </div>
   </section>
 
-  <section class="block">
+  <section class="block wl-geo-sec">
     <div class="wrap">
       <div class="sec-head">
         <span class="label">Where the audience actually is</span>
@@ -224,25 +239,28 @@
   <p class="aud-punch">Same post. Same day. One of them can fill your dining room.</p>
   <p class="aud-note">Illustrative example: a national creator whose 200,000 followers spread across the whole country, against a Magpie local creator with 70% of a 2,000-follower audience in one metro. On the roster, every creator profile shows the real local share, with its source, before you choose.</p>
 </div>
-      <div class="wl-geo">
+      <div class="wl-geo" id="wlGeo">
         <h3>The same audience, drawn as bars</h3>
         <p class="sub">Sample profile: Priya, a Magpie in Raleigh with 18,900 followers across her accounts. Here is where her audience lives, next to where a national creator's 200,000 live.</p>
         <div class="geo-group">
           <div class="geo-who"><span class="geo-name">Priya Nair <span>@priyaplates · Magpie, Raleigh</span></span><span class="geo-total">18,900 followers</span></div>
+          <div class="geo-count"><span class="geo-count-num grad" data-count="13400" data-count-dur="1500">13,400</span><span class="geo-count-lbl">people in the Raleigh metro</span></div>
           <div class="geo-bar" role="img" aria-label="Stacked bar: 71 percent of Priya's audience is in the Raleigh metro, 14 percent in the rest of North Carolina, 15 percent everywhere else">
-            <div class="geo-seg home" style="width:71%">71% in the Raleigh metro</div>
-            <div class="geo-seg state" style="width:14%">14%</div>
-            <div class="geo-seg else" style="width:15%">15%</div>
+            <div class="geo-seg home" data-w="71" style="width:71%"><span>71% in the Raleigh metro</span></div>
+            <div class="geo-seg state" data-w="14" style="width:14%"><span>14%</span></div>
+            <div class="geo-seg else" data-w="15" style="width:15%"><span>15%</span></div>
           </div>
         </div>
         <div class="geo-group">
           <div class="geo-who"><span class="geo-name">The national creator <span>one audience, fifty states</span></span><span class="geo-total">200,000 followers</span></div>
+          <div class="geo-count"><span class="geo-count-num" data-count="300" data-count-dur="550" data-count-prefix="about ">about 300</span><span class="geo-count-lbl">people here, in your metro</span><span class="geo-count-total">Total audience<b data-count="200000" data-count-dur="2000">200,000</b></span></div>
           <div class="geo-bar" role="img" aria-label="Stacked bar: about 300 of the national creator's 200,000 followers, roughly 0.15 percent, are in your metro; the other 99.85 percent are everywhere else">
-            <div class="geo-seg home" style="width:0.15%;min-width:4px;padding:0"></div>
-            <div class="geo-seg else" style="width:99.85%">99.85% everywhere else</div>
+            <div class="geo-seg home" data-w="0.15" data-minw="4" style="width:0.15%;min-width:4px;padding:0"></div>
+            <div class="geo-seg else" data-w="99.85" style="width:99.85%"><span>99.85% everywhere else</span></div>
           </div>
           <p class="geo-callout">Your metro's slice of the national audience: <b>about 300 people</b>. The gradient sliver on the left is drawn to scale.</p>
         </div>
+        <p class="geo-punch">Same follower game. One audience is actually here.</p>
         <div class="geo-legend"><span><i class="l-home"></i>Home metro</span><span><i class="l-state"></i>Rest of the state</span><span><i class="l-else"></i>Everywhere else</span></div>
         <p class="note">Sample profile and illustrative split. On the live roster, every creator shows their real local share with its source before a business books. Today that source is Self-reported; Verified by Instagram arrives when the Instagram connection activates.</p>
       </div>
@@ -527,6 +545,60 @@
 </footer>
 
 
+<script>
+(function(){
+  var card = document.getElementById('wlGeo');
+  if(!card) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce || !('IntersectionObserver' in window)) return; /* settled final state stays */
+  var segs = Array.prototype.slice.call(card.querySelectorAll('.geo-seg[data-w]'));
+  var counters = Array.prototype.slice.call(card.querySelectorAll('[data-count]'));
+  /* Arm: collapse bars + zero counters (JS-only initial state; no-JS keeps final state) */
+  card.classList.add('geo-armed');
+  segs.forEach(function(seg, i){
+    seg.dataset.delay = [0, 950, 1250, 150, 150][i] || 0;
+    seg.dataset.dur = [1400, 550, 550, 300, 1850][i] || 800;
+    seg.style.width = '0%';
+    if(seg.dataset.minw) seg.style.minWidth = '0px';
+  });
+  counters.forEach(function(el){ el.textContent = (el.dataset.countPrefix || '') + '0'; });
+  var played = false;
+  function fmt(n){ return n.toLocaleString('en-US'); }
+  function play(){
+    if(played) return; played = true;
+    /* force reflow so transitions run from the armed state */
+    void card.offsetWidth;
+    segs.forEach(function(seg){
+      seg.style.transitionDuration = seg.dataset.dur + 'ms';
+      seg.style.transitionDelay = seg.dataset.delay + 'ms';
+      seg.style.width = seg.dataset.w + '%';
+      if(seg.dataset.minw) seg.style.minWidth = seg.dataset.minw + 'px';
+      var lbl = seg.querySelector('span');
+      if(lbl) lbl.style.transitionDelay = (parseInt(seg.dataset.delay,10) + parseInt(seg.dataset.dur,10) * 0.55) + 'ms';
+    });
+    card.classList.add('geo-played');
+    var t0 = null;
+    function frame(ts){
+      if(!t0) t0 = ts;
+      var elapsed = ts - t0, done = true;
+      counters.forEach(function(el){
+        var target = parseInt(el.dataset.count, 10), dur = parseInt(el.dataset.countDur, 10) || 1800;
+        var p = Math.min(elapsed / dur, 1);
+        if(p < 1) done = false;
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = (el.dataset.countPrefix || '') + fmt(Math.round(target * eased));
+      });
+      if(!done) requestAnimationFrame(frame);
+      else counters.forEach(function(el){ el.textContent = (el.dataset.countPrefix || '') + fmt(parseInt(el.dataset.count, 10)); });
+    }
+    requestAnimationFrame(frame);
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ play(); io.disconnect(); } });
+  }, {threshold: 0.35});
+  io.observe(card);
+})();
+</script>
 <script src="app.js?v=6"></script>
 </body>
 </html>
