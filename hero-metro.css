@@ -94,6 +94,16 @@ body:has(.mobile-nav.open) .site-head.over-hero.scrolled{backdrop-filter:none;-w
 .metro-hero .walk-still{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none}
 .metro-hero .walk-band.is-still .walk-video{display:none}
 .metro-hero .walk-band.is-still .walk-still{display:block}
+/* Conditional white-keying (Jeff's order, 2026-11-20): when the
+   crowd video renders opaque (Safari/iOS cannot use the WebM
+   alpha, so it falls back to the white-background MP4), hero-metro.js
+   probes the frame alpha and adds .is-keyed; multiply then drops
+   the white background so the metro map + travelling dot show
+   through behind the walkers. Browsers with working alpha never
+   get .is-keyed and are untouched. The still is an opaque PNG in
+   every browser, so it is keyed unconditionally. */
+.metro-hero .walk-band.is-keyed .walk-video{mix-blend-mode:multiply}
+.metro-hero .walk-still{mix-blend-mode:multiply}
 
 /* --- copy + claim card --- */
 .metro-hero .hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;align-items:start;position:relative;z-index:2}

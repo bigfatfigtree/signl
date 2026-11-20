@@ -337,6 +337,38 @@
         var p = video.play();
         if (p && p.catch) p.catch(function () {});
       }
+      /* Opacity probe (Jeff's order, 2026-11-20): browsers that
+         cannot use the WebM alpha (Safari/iOS) fall back to the
+         opaque white-background MP4, which hides the metro map.
+         Once the playing video can render a frame, sample the
+         alpha at background points; if every sample is opaque,
+         mark the band .is-keyed so CSS multiply keys the white
+         out. Real alpha (any sample < 250) or any probe failure
+         leaves today's behaviour untouched. Runs once. */
+      var probed = false;
+      function probeOpacity() {
+        if (probed) return;
+        probed = true;
+        if (band.classList.contains("is-still")) return;
+        try {
+          var w = video.videoWidth, h = video.videoHeight;
+          if (!w || !h) return;
+          var c = document.createElement("canvas");
+          c.width = w; c.height = h;
+          var ctx = c.getContext("2d", { willReadFrequently: true });
+          if (!ctx) return;
+          ctx.drawImage(video, 0, 0);
+          var pts = [[8, 8], [w - 9, 8], [8, h - 9], [w - 9, h - 9], [Math.floor(w / 2), 8]];
+          var opaque = true;
+          for (var i = 0; i < pts.length; i++) {
+            var a = ctx.getImageData(pts[i][0], pts[i][1], 1, 1).data[3];
+            if (a < 250) { opaque = false; break; }
+          }
+          if (opaque) band.classList.add("is-keyed");
+        } catch (e) { /* probe failure must never break the hero */ }
+      }
+      video.addEventListener("loadeddata", probeOpacity);
+      video.addEventListener("canplay", probeOpacity);
       video.addEventListener("error", still, true);
       video.addEventListener("canplay", tryPlay);
       video.addEventListener("loadedmetadata", tryPlay);
