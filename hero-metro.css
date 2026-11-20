@@ -102,8 +102,8 @@ body:has(.mobile-nav.open) .site-head.over-hero.scrolled{backdrop-filter:none;-w
    through behind the walkers. Browsers with working alpha never
    get .is-keyed and are untouched. The still is an opaque PNG in
    every browser, so it is keyed unconditionally. */
-.metro-hero .walk-band.is-keyed .walk-video{mix-blend-mode:multiply}
-.metro-hero .walk-still{mix-blend-mode:multiply}
+.metro-hero .walk-band.is-keyed{mix-blend-mode:multiply}
+.metro-hero .walk-band.is-still{mix-blend-mode:multiply}
 
 /* --- copy + claim card --- */
 .metro-hero .hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;align-items:start;position:relative;z-index:2}
@@ -166,5 +166,6 @@ body:has(.mobile-nav.open) .site-head.over-hero.scrolled{backdrop-filter:none;-w
   .metro-hero .map-stop{opacity:1;transition:none}
   .metro-hero .walk-video{display:none}
   .metro-hero .walk-still{display:block}
+  .metro-hero .walk-band{mix-blend-mode:multiply}
   .metro-hero .btn{transition:none}
 }
