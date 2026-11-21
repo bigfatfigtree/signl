@@ -92,6 +92,10 @@ Auto detailing / ceramic coating, Premium car wash, Tattoo / piercing studio, Ph
 
 CPG / consumer packaged goods brands, DTC / ecommerce brands. National product brands served one national page each, not a city matrix: CPG runs on local creators picking the product up off the shelf at local stores; DTC runs on product shipped to local creators who shoot and post from their own city.
 
+### Music & Labels
+
+Record labels and artists' teams, served one national page: a local street team made of Magpie creators, ranked by local reach per city, promoting releases and shows to followers who actually live in each city.
+
 For health and aesthetic services, creator posts are personal experiences only, with no treatment claims and full disclosure of the comp, and each practice stays responsible for its own medical advertising rules.
 
 ### Business type pages
@@ -114,6 +118,7 @@ For health and aesthetic services, creator posts are personal experiences only, 
 - Grand opening — book local influencers for a grand opening — https://magpielocal.com/for-grand-opening.html
 - CPG brands — CPG influencer marketing — https://magpielocal.com/for-cpg-brands.html — National page for packaged goods brands: how a national rollout works market by market (markets and categories picked by the brand, creators ranked by local reach per market, shelf pickups checked in, posts live, 90-day license on paid bookings, per-market reporting of counted check-ins and posts), category plays for beverage, snacks and food, beauty and personal care, wellness and supplements, household, and pet, a pilot structure that starts in a few founding markets and expands as markets activate, the founding markets where rosters are forming, and a fair comparison with national platforms. Also covers CPG and FMCG influencer marketing, micro-influencer strategies for CPG brands, and local influencers for CPG brands.
 - DTC brands — influencer marketing for DTC brands — https://magpielocal.com/for-dtc-brands.html — National page for direct-to-consumer and ecommerce brands: how a national rollout works city by city (cities and categories picked by the brand, creators ranked by local reach, product shipped to real homes, posts live, optional post file upload and 90-day license on paid bookings, per-market reporting of counted posts), category fit notes for beauty, apparel, supplements and wellness, home goods, pet, and food and drink including where Magpie is not the right tool, a pilot structure starting in one or a few cities, the founding markets where rosters are forming, and a fair comparison with UGC platforms. Also covers influencer marketing for ecommerce brands, UGC platforms for ecommerce brands, and product seeding with micro-influencers.
+- Record labels — music street team and record label marketing — https://magpielocal.com/for-record-labels.html
 
 ## How it works
 
