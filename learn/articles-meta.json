@@ -1391,5 +1391,10 @@
     "audience": "businesses",
     "dek": "Hampton Roads spas fill quiet weekday slots with comped treatments and paid posts from creators ranked by how many of their followers live in Hampton Roads.",
     "topic": "local-marketing"
+  },
+  "your-first-30-days-on-a-creator-platform.html": {
+    "audience": "creators",
+    "dek": "Four simple weeks: finish the profile, post like a local, deliver the first visit on time, and close the loop.",
+    "topic": "finding-work"
   }
 }
