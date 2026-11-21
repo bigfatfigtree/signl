@@ -11,25 +11,50 @@
 <link rel="stylesheet" href="styles-v2.css?v=14">
 <link rel="stylesheet" href="shop.css?v=14">
 <style>
-/* Transparent over-hero top nav (Jeff, 2026-11-20 ~14:26 ET, superseding the
-   2026-11-07 always-black ruling): the header below uses the .over-hero variant,
-   so it floats transparent over the hero film at the top of the page and flips
-   to the solid #0B0D0C bar on scroll (treatment in styles-v2.css; the .scrolled
-   toggle script is at the end of this file). The hero film section keeps its
-   exact box and framing; it now starts at the top of the page.
-   The padding rules below belong to the light .hero section UNDER the film
-   (they repay the clearance shop.css added for an earlier overlay header) and
-   are unchanged by the header treatment. */
-.shopx .hero{padding-top:58px}
-@media(max-width:680px){.shopx .hero{padding-top:26px}}
-@media(max-width:560px){.shopx .hero{padding-top:34px}}
-/* Gradient wash removal (Jeff, 2026-11-20) — THIS PAGE ONLY: the shared
-   .hero::before in styles-v2.css paints two radial gradients (blue
-   top-right, green left) behind the hero content. On this page that
-   wash showed as a colored band under the video hero and bled around
-   the Short Answer card. Removed here so the content sits on the
-   page's clean cream background; other pages keep the wash. */
-.shopx .hero::before{display:none}
+/* Locked-card refresh (2026-11-21, Jeff-approved proposals): the page top is
+   now the locked app language on white: kicker, plain headline, one big
+   photo-led card (white badge top-left on the photo, bookmark top-right,
+   name strip straddling the seam, gradient price shown once, fact chips,
+   Comped/Coupons/Paid checks, gradient action button). Classes are lk-
+   prefixed so nothing collides with the shared stylesheets. */
+.lk-top{background:#fff;padding:46px 0 10px}
+.lk-grid{display:grid;grid-template-columns:1fr;gap:28px}
+@media(min-width:960px){.lk-grid{grid-template-columns:1.02fr .98fr;gap:52px;align-items:start}}
+.lk-kicker{font-size:12px;font-weight:600;letter-spacing:.14em;color:#8a9199;text-transform:uppercase;margin-bottom:12px}
+.lk-h1{font-family:Inter,-apple-system,"Helvetica Neue",Arial,sans-serif;font-size:clamp(31px,4.4vw,54px);line-height:1.12;font-weight:600;letter-spacing:-.01em;color:#1c1e21;margin-bottom:14px}
+.lk-sub{font-size:17px;line-height:1.55;color:#5b636c;max-width:540px}
+.lk-intro .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.lk-cards{display:flex;flex-direction:column;gap:24px}
+.lk-card{background:#fff;border-radius:26px;box-shadow:0 10px 34px rgba(20,30,40,.14);overflow:hidden;padding-bottom:16px;font-family:Inter,-apple-system,"Helvetica Neue",Arial,sans-serif}
+.lk-photo{position:relative;height:300px}
+.lk-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.lk-photo.priya img{object-position:50% 22%}
+.lk-badge{position:absolute;top:14px;left:14px;width:58px;height:58px;background:#fff;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.lk-badge b{font-size:19px;line-height:1;background:linear-gradient(90deg,#006afc,#2fe07e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lk-badge span{font-size:7.5px;letter-spacing:.16em;color:#8a9199;font-weight:600;margin-top:2px}
+.lk-badge .lk-star{color:#f5a623;font-size:15px;line-height:1;letter-spacing:0;margin:0}
+.lk-badge .lk-rate{color:#1c1e21;font-size:16px;font-weight:600;letter-spacing:0;margin:0}
+.lk-mark{position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:50%;background:rgba(30,30,30,.55);display:flex;align-items:center;justify-content:center}
+.lk-strip{position:relative;margin:-34px 14px 0;background:rgba(255,255,255,.96);border-radius:16px;box-shadow:0 6px 20px rgba(20,30,40,.13);padding:11px 14px}
+.lk-strip b{font-size:18.5px;font-weight:600;display:block;color:#1c1e21}
+.lk-strip span{font-size:13px;color:#5b636c}
+.lk-grad{background:linear-gradient(90deg,#006afc,#03c9ab,#2fe07e);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600}
+.lk-price{padding:12px 16px 0;font-size:14px;color:#5b636c}
+.lk-price b{font-size:27px;background:linear-gradient(90deg,#006afc,#2fe07e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lk-chips{display:flex;flex-wrap:wrap;gap:6px;padding:10px 16px 0}
+.lk-chips span{background:#f1f3f4;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:600;color:#3c434a}
+.lk-checks{display:flex;gap:16px;flex-wrap:wrap;border-top:1px solid #eef0f1;margin:12px 16px 0;padding:12px 0 0;font-size:13.5px;color:#1c1e21}
+.lk-checks i{font-style:normal;color:#159a6c;font-weight:700}
+.lk-checks .off{color:#a7adb4}
+.lk-checks .off i{color:#a7adb4}
+.lk-actions{display:flex;align-items:center;gap:16px;padding:14px 16px 0}
+.lk-btn{flex:1;text-align:center;background:linear-gradient(90deg,#006afc,#03c9ab,#2fe07e);color:#fff;font-weight:600;font-size:16.5px;padding:14px 10px;border-radius:14px;box-shadow:0 8px 20px rgba(0,140,200,.25)}
+.lk-link{font-size:14.5px;font-weight:600;color:#1c1e21;white-space:nowrap}
+.lk-cta-line{font-size:14.5px;color:#5b636c;text-align:center;padding:26px 0 16px}
+.lk-cta-line b{color:#1c1e21}
+.lk-feed{display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:860px){.lk-feed{grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}}
+.lk-feed .lk-photo{height:230px}
 </style>
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
@@ -55,10 +80,9 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does it cost anything to join Magpie as a creator?", "acceptedAnswer": {"@type": "Answer", "text": "No. Magpie is free for creators. Always. Businesses pay the platform. You never pay to join, to list, or to get booked. On standard visits the comp itself is the pay."}}, {"@type": "Question", "name": "What does Magpie charge on paid bookings?", "acceptedAnswer": {"@type": "Answer", "text": "Joining and comped visits are free. On paid bookings the fee is 6 percent total, split evenly, so you keep 97 percent. Payment is held until the post is live, and refunded in full if the visit or post never lands."}}, {"@type": "Question", "name": "How do creators get paid on Magpie?", "acceptedAnswer": {"@type": "Answer", "text": "On standard visits the comp is the pay. Any creator can set a paid rate, and when a business books you at it, you keep 97 percent. Headliners are also eligible for featured paid campaigns."}}, {"@type": "Question", "name": "When do I actually get paid?", "acceptedAnswer": {"@type": "Answer", "text": "When your post goes live. On a paid booking the business pays up front and Magpie holds the money until your post is live, then releases it to you. No invoices, no chasing, and no Net 30, 60 or 90 day terms. If the visit or the post never lands, the business is refunded in full instead."}}, {"@type": "Question", "name": "Can a business make me revise my post again and again?", "acceptedAnswer": {"@type": "Answer", "text": "No. Every visit has one defined deliverable, agreed before you claim: 1 post or reel plus 1 story that shares the post, in your own voice. The brief is written up front, so what is expected is never a surprise, and no business can script your words or demand endless edits."}}, {"@type": "Question", "name": "Do I have to post something positive?", "acceptedAnswer": {"@type": "Answer", "text": "Never. Honest posts only. Businesses cannot require a positive post, and any business that pressures a creator is removed."}}, {"@type": "Question", "name": "What do I have to post, and how fast?", "acceptedAnswer": {"@type": "Answer", "text": "The goal is 1 post or reel plus 1 story that shares the post within 48 hours of your visit, disclosed as comped, for example #gifted. The post stays live for at least 30 days. Up to a week at the outside still counts, but hitting the 48-hour goal is what earns the Momentum. No post inside the week means a replacement visit for the business and a hit to your standing."}}, {"@type": "Question", "name": "What if I can't make a visit I claimed?", "acceptedAnswer": {"@type": "Answer", "text": "Tell us in the app before your visit window closes. A visit you flag in time is released back to the business and does not count against you. Going silent is what hurts: a no-show with no post means a hit to your standing, and repeat no-shows are removed from the roster."}}, {"@type": "Question", "name": "How many followers do I need to join Magpie?", "acceptedAnswer": {"@type": "Answer", "text": "Magpie starts at 500 total followers across your platforms. Your counts stack across Instagram, TikTok, Facebook, YouTube, X and LinkedIn. Tiers are Neighbors 500 to 2,000, Locals 2,000 to 15,000, and Headliners 15,000 plus. A small local audience beats a big scattered one."}}, {"@type": "Question", "name": "My city is not in the rollout. Can I still join Magpie?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Founding rosters are forming in 45 markets across 13 countries. In any other city, sign up with your home city and finish your profile. When your city opens, you are in its founding circle, and first pick goes to completed founding profiles. Cities are picked by signup counts, and every completed profile moves its city closer to opening."}}, {"@type": "Question", "name": "How do I get comped meals for posting?", "acceptedAnswer": {"@type": "Answer", "text": "Apply for your city roster, free. Claim the comp offers you want, visit like a real customer, and post honestly with disclosure, with the goal of posting within 48 hours of your visit. The comp is the pay."}}, {"@type": "Question", "name": "Can small creators get brand deals?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Local businesses shop by audience location, not follower count. Tiers start at 500 total followers across your platforms, and 1,000 local followers is exactly what they want."}}, {"@type": "Question", "name": "How do I become a local creator?", "acceptedAnswer": {"@type": "Answer", "text": "Apply with your home city and handle, then complete your profile. Claim offers, show up, and the goal is to post within 48 hours of your visit. Delivered posts build the record that gets you picked first."}}, {"@type": "Question", "name": "What are Momentum points?", "acceptedAnswer": {"@type": "Answer", "text": "Momentum points are your record, turned into priority. You earn them by delivering: an on-time post is +20, completed visits and ratings add more, and creators who join through your invite link earn you +3 when they join and +10 when they are approved. Points order the list businesses see when they choose creators, so a strong record gets you picked first."}}, {"@type": "Question", "name": "Do restaurants really give free food for posts?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The business offers a free meal or service and you post your honest experience, disclosed as comped, for example #gifted. Businesses cannot buy a positive post."}}, {"@type": "Question", "name": "Is Magpie a UGC creator program?", "acceptedAnswer": {"@type": "Answer", "text": "Partly. You post to your own audience, not brand channels. Comp visits are native share only. Repost and ad rights come only with paid visits, as one standard 90-day license. You own your content."}}, {"@type": "Question", "name": "How long does review take?", "acceptedAnswer": {"@type": "Answer", "text": "Every founding application gets a decision or clear status within 2 business days, reviewed by a person in sign up order."}}, {"@type": "Question", "name": "What do I get today, before my market opens?", "acceptedAnswer": {"@type": "Answer", "text": "Three things, starting the day you finish your profile. Your creator page is live and on Google that day. Your paid rate and licensing fee are public on your page, so businesses see your price before they book you. And your founding order is recorded: founding creators see new offers first when their market opens."}}, {"@type": "Question", "name": "Are my rates public on Magpie?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The paid rate and licensing fee you set show on your public creator page, so businesses see your price before they book you. When a business books you at your rate, you keep 97 percent of it."}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://magpielocal.com/creators.html#webpage", "url": "https://magpielocal.com/creators.html", "name": "Local Creator Marketing: Get Paid When You Post, Keep 97% | Magpie", "isPartOf": {"@type": "WebSite", "url": "https://magpielocal.com/"}, "about": {"@id": "https://magpielocal.com/#organization", "@type": "Organization", "alternateName": "Magpie Local", "legalName": "Extra Medium LLC", "slogan": "Local influencer marketing platform where businesses book nearby creators by their local reach.", "brand": {"@type": "Brand", "name": "Magpie", "logo": "https://magpielocal.com/assets/logo.png"}, "knowsAbout": ["Local influencer marketing", "Micro-influencer marketing", "Local creators", "Comped creator visits", "UGC marketing for local businesses"], "sameAs": ["https://www.linkedin.com/company/magpielocal", "https://www.instagram.com/magpielocal", "https://www.crunchbase.com/organization/magpie-bf7f", "https://wellfound.com/company/magpie-11", "https://www.f6s.com/magpie-local", "https://theorg.com/org/magpie-3", "https://www.producthunt.com/products/magpie-16"], "name": "Magpie", "url": "https://magpielocal.com/", "logo": "https://magpielocal.com/assets/logo.png", "founder": {"@type": "Person", "name": "Jeff Rimmer"}, "parentOrganization": {"@type": "Organization", "name": "Extra Medium LLC"}}, "description": "Local creator marketing for small creators: comped meals and experiences, or paid bookings at your own rate. One post, one story, no endless revisions. You keep 97% and get paid when your post goes live, never Net 90. Free to join, starting at 500 total followers across your platforms."}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://magpielocal.com/"}, {"@type": "ListItem", "position": 2, "name": "For Creators", "item": "https://magpielocal.com/creators.html"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "A creator arrives for a visit — Magpie for Creators", "description": "A creator walks into a bright local cafe and is welcomed at the counter, in this hero film for Magpie's creators page, where local businesses post comped visits and paid bookings and creators are ranked by how local their audience is.", "thumbnailUrl": "https://magpielocal.com/assets/video/poster-open-door.jpg", "contentUrl": "https://magpielocal.com/assets/video/jeff-open-door-web.mp4", "uploadDate": "2026-11-15", "duration": "PT12S", "publisher": {"@type": "Organization", "name": "Magpie", "logo": {"@type": "ImageObject", "url": "https://magpielocal.com/assets/logo.png"}, "alternateName": "Magpie Local", "url": "https://magpielocal.com/", "founder": {"@type": "Person", "name": "Jeff Rimmer"}, "parentOrganization": {"@type": "Organization", "name": "Extra Medium LLC"}, "sameAs": ["https://www.linkedin.com/company/magpielocal", "https://www.instagram.com/magpielocal", "https://www.crunchbase.com/organization/magpie-bf7f", "https://wellfound.com/company/magpie-11", "https://www.f6s.com/magpie-local", "https://theorg.com/org/magpie-3", "https://www.producthunt.com/products/magpie-16"]}}</script>
 </head>
 <body>
-<header class="site-head over-hero">
+<header class="site-head">
   <div class="wrap head-in">
     <a href="index.html" aria-label="Magpie home"><img class="logo-img" src="assets/logo.png" alt="Magpie"></a>
     <nav class="main-nav">
@@ -102,36 +126,47 @@
 <div class="shopx">
 
 
-  <!-- ================= HERO VIDEO ================= -->
-  <section class="hv">
-    <video class="hv-video js-hero-video" autoplay muted loop playsinline preload="auto" poster="assets/video/poster-open-door.jpg">
-      <source src="assets/video/jeff-open-door-web.mp4" type="video/mp4">
-    </video>
-    <div class="hv-scrim"></div>
-    <div class="hv-in">
-      <div class="hv-top">
-        <h1>Eat, experience, post. <span class="grad-text">That's the job.</span></h1>
-        <p class="lede">Inside the app, local businesses post visits that read like price tags: <strong>the offer, the ask, and the distance, all on the card.</strong> And your own page shows every business exactly why you're the one to book — starting with how many of your followers live right here.</p>
+  <!-- ================= TOP (locked refresh, 2026-11-21) ================= -->
+  <section class="lk-top">
+    <div class="wrap">
+      <div class="lk-grid">
+        <div class="lk-intro">
+          <div class="lk-kicker">Magpie for creators</div>
+          <h1 class="lk-h1">Eat, experience, post. That&rsquo;s the job.</h1>
+          <p class="lk-sub">Free visits and paid posts near you. The value, what they ask, and how far away, on every card, before you apply.</p>
+          <div class="cta-row">
+            <a class="btn grad" href="#claim">Claim your founding page</a>
+            <a class="btn ghost" href="#offers">See open visits</a>
+          </div>
+        </div>
+        <div class="lk-cards">
+<article class="lk-card">
+  <div class="lk-photo"><img src="assets/photos/dining-room-busy.jpg" alt="Juniper Table dining room">
+    <div class="lk-badge"><span class="lk-star">&#9733;</span><span class="lk-rate">4.8</span></div>
+    <div class="lk-mark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4"><path d="M6 3h12v18l-6-4-6 4z"/></svg></div></div>
+  <div class="lk-strip"><b>Juniper Table</b><span>Chef&rsquo;s counter &middot; <span class="lk-grad">Midtown</span></span></div>
+  <div class="lk-price"><b>$85</b> &middot; value of the visit</div>
+  <div class="lk-chips"><span>0.4 mi away</span><span>Dinner for two</span><span>Post within 48 hours</span></div>
+  <div class="lk-checks"><span><i>&#10003;</i> Comped</span><span><i>&#10003;</i> Coupons</span><span><i>&#10003;</i> Paid</span></div>
+  <div class="lk-actions"><a class="lk-btn" href="https://app.magpielocal.com/claim?src=creators-v2">Apply</a><a class="lk-link" href="#offers">See full offer</a></div>
+</article>
+<article class="lk-card">
+  <div class="lk-photo"><img src="assets/photos/salon-barber.jpg" alt="Golden Hour Salon">
+    <div class="lk-badge"><span class="lk-star">&#9733;</span><span class="lk-rate">4.9</span></div>
+    <div class="lk-mark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4"><path d="M6 3h12v18l-6-4-6 4z"/></svg></div></div>
+  <div class="lk-strip"><b>Golden Hour Salon</b><span>Hair salon &middot; <span class="lk-grad">East Nashville</span></span></div>
+  <div class="lk-price"><b>$120</b> &middot; value of the visit</div>
+  <div class="lk-chips"><span>1.2 mi away</span><span>Cut and styling</span><span>Post within 48 hours</span></div>
+  <div class="lk-checks"><span><i>&#10003;</i> Comped</span><span><i>&#10003;</i> Coupons</span><span><i>&#10003;</i> Paid</span></div>
+  <div class="lk-actions"><a class="lk-btn" href="https://app.magpielocal.com/claim?src=creators-v2">Apply</a><a class="lk-link" href="#offers">See full offer</a></div>
+</article>
+        </div>
       </div>
+      <p class="lk-cta-line"><b>Free for creators, always.</b> You set your rate and keep 97% of it.</p>
     </div>
   </section>
 
 <div class="wrap">
-
-  <!-- ================= BELOW HERO ================= -->
-  <section class="hero" style="grid-template-columns:1fr;max-width:900px;">
-    <div>
-      <div class="eyebrow">Magpie for creators</div>
-      <div class="cta-row">
-        <a class="btn grad" href="#claim">Claim your founding page</a>
-        <a class="btn ghost" href="#offers">See open visits</a>
-      </div>
-      <div class="micro">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>
-        Free for creators, always. You set your rate and keep 97% of it.
-      </div>
-    </div>
-  </section>
 
   <!-- ================= THE SHORT ANSWER ================= -->
   <section class="sec" style="padding-top:10px;padding-bottom:0">
@@ -171,177 +206,40 @@
           <p class="lede">Local spots offering a free visit or a paid post. <strong>What you see is exactly what you get</strong> — the offer, the ask, and how far away it is. No vague promises of “exposure.”</p>
         </div>
 
-        <div class="toolbar">
-          <div class="count">17 open visits near you <span>· 6 new this week</span></div>
-          <div class="sort">Sort
-            <span class="pill">Closest first
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 9l7 7 7-7"/></svg>
-            </span>
-          </div>
+        <div class="lk-feed">
+<article class="lk-card">
+  <div class="lk-photo"><img src="assets/photos/watch-fitness.jpg" alt="Sunroom Studio">
+    <div class="lk-badge"><span class="lk-star">&#9733;</span><span class="lk-rate">4.9</span></div>
+    <div class="lk-mark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4"><path d="M6 3h12v18l-6-4-6 4z"/></svg></div></div>
+  <div class="lk-strip"><b>Sunroom Studio</b><span>Fitness studio &middot; <span class="lk-grad">Logan Square</span></span></div>
+  <div class="lk-price"><b>$45</b> &middot; value of the visit</div>
+  <div class="lk-chips"><span>1.4 mi away</span><span>Class pass</span><span>Post within 48 hours</span></div>
+  <div class="lk-checks"><span><i>&#10003;</i> Comped</span><span><i>&#10003;</i> Coupons</span><span><i>&#10003;</i> Paid</span></div>
+  <div class="lk-actions"><a class="lk-btn" href="https://app.magpielocal.com/claim?src=creators-v2">Apply</a><a class="lk-link" href="#your-page">See full offer</a></div>
+</article>
+<article class="lk-card">
+  <div class="lk-photo"><img src="assets/photos/cocktails-toast.jpg" alt="Neon Palms Rooftop">
+    <div class="lk-badge"><span class="lk-star">&#9733;</span><span class="lk-rate">4.7</span></div>
+    <div class="lk-mark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4"><path d="M6 3h12v18l-6-4-6 4z"/></svg></div></div>
+  <div class="lk-strip"><b>Neon Palms Rooftop</b><span>Rooftop bar &middot; <span class="lk-grad">Capitol Hill</span></span></div>
+  <div class="lk-price"><b>$200</b> &middot; paid post</div>
+  <div class="lk-chips"><span>2.1 mi away</span><span>Sunset slot</span><span>Post within 48 hours</span></div>
+  <div class="lk-checks"><span class="off"><i>-</i> Comped</span><span class="off"><i>-</i> Coupons</span><span><i>&#10003;</i> Paid</span></div>
+  <div class="lk-actions"><a class="lk-btn" href="https://app.magpielocal.com/claim?src=creators-v2">Apply</a><a class="lk-link" href="#your-page">See full offer</a></div>
+</article>
         </div>
-
-        <div class="chiprow">
-          <span class="chip sel">Comped visits</span>
-          <span class="chip">Paid posts</span>
-          <span class="chip sel">Food &amp; drink</span>
-          <span class="chip">Fitness</span>
-          <span class="chip">Under 3 miles</span>
-          <span class="chip">Replies fast</span>
-        </div>
-
-        <div class="layout">
-          <aside class="filters">
-            <div class="f-head"><b>Filters</b><button type="button" class="f-clear">Clear all</button></div>
-
-            <div class="f-group">
-              <h4>The offer</h4>
-              <div class="f-row sel"><span class="box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>All offers<span class="n">17</span></div>
-              <div class="f-row sel"><span class="box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>Comped visit<span class="n">11</span></div>
-              <div class="f-row"><span class="box"></span>Paid post<span class="n">6</span></div>
-            </div>
-
-            <div class="f-group">
-              <h4>Category</h4>
-              <div class="f-row sel"><span class="box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>All categories<span class="n">17</span></div>
-              <div class="f-row sel"><span class="box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>Food &amp; drink<span class="n">8</span></div>
-              <div class="f-row"><span class="box"></span>Fitness &amp; movement<span class="n">3</span></div>
-              <div class="f-row"><span class="box"></span>Beauty &amp; grooming<span class="n">2</span></div>
-              <div class="f-row"><span class="box"></span>Nightlife<span class="n">3</span></div>
-              <div class="f-row"><span class="box"></span>Wellness &amp; spa<span class="n">1</span></div>
-            </div>
-
-            <div class="f-group">
-              <h4>Distance from you</h4>
-              <div class="f-row"><span class="dot"></span>Anywhere near you</div>
-              <div class="f-row"><span class="dot"></span>Under 1 mile</div>
-              <div class="f-row sel"><span class="dot"></span>Under 3 miles</div>
-            </div>
-
-            <div class="f-group">
-              <h4>Good to know</h4>
-              <div class="f-row sel"><span class="box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>All of these</div>
-              <div class="f-row sel"><span class="box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>Replies fast</div>
-              <div class="f-row"><span class="box"></span>New this week</div>
-              <div class="f-row"><span class="box"></span>Bring a friend included</div>
-            </div>
-          </aside>
-
-          <div>
-            <div class="grid">
-
-              <article class="feature">
-                <div class="f-photo">
-                  <img src="assets/photos/dining-room-busy.jpg" alt="Ember & Oak">
-                  <div class="badges" style="position:absolute;top:14px;left:14px;">
-                    <span class="badge dark"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z"/></svg>Creators love it here</span>
-                  </div>
-                </div>
-                <div class="f-body">
-                  <div class="offer">Comped tasting for two</div>
-                  <h3>Ember &amp; Oak</h3>
-                  <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Germantown · 0.8 miles away · Food &amp; drink</div>
-                  <div class="duty" style="display:flex;gap:9px;font-size:14.5px;font-weight:600;color:var(--ink-2);margin-top:12px;line-height:1.5;">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#006AFC" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:3px;"><path d="M4 12.5l5 5L20 6.5"/></svg>
-                    <span>The ask: <b style="color:var(--ink);">1 post + 1 story</b>, up within 48 hours of your visit. The tasting runs about $140 for two — bring someone who owes you a favor.</span>
-                  </div>
-                  <div class="trackrecord">
-                    <div><div class="n">23</div><div class="t">creator visits hosted here</div></div>
-                    <div><div class="n">9</div><div class="t">creators came back for a second visit</div></div>
-                    <div><div class="n">100%</div><div class="t">of visits ended with the post up on time</div></div>
-                  </div>
-                  <div class="f-actions">
-                    <button class="btn grad flex">Grab this visit</button>
-                    <button class="btn ghost">Save</button>
-                  </div>
-                </div>
-              </article>
-
-              <article class="tile biz-tile">
-                <div class="photo">
-                  <img src="assets/photos/watch-fitness.jpg" alt="Sunroom Studio">
-                  <span class="savebtn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M6 3.5h12V21l-6-4.2L6 21z"/></svg></span>
-                </div>
-                <div class="body">
-                  <div class="offer">Comped class pass<span class="worth">worth $45</span></div>
-                  <h3>Sunroom Studio</h3>
-                  <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Logan Square · 1.4 miles · Fitness</div>
-                  <div class="duty"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span>The ask: 1 post + 1 story within 48 hours. Mats, towels and the smoothie after are on us.</span></div>
-                  <div class="actions">
-                    <button class="btn ink flex">Grab this visit</button>
-                    <button class="btn ghost">Save</button>
-                  </div>
-                </div>
-              </article>
-
-              <article class="tile biz-tile">
-                <div class="photo">
-                  <img src="assets/photos/salon-barber.jpg" alt="Fade Factory">
-                  <span class="savebtn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M6 3.5h12V21l-6-4.2L6 21z"/></svg></span>
-                </div>
-                <div class="body">
-                  <div class="offer">Comped cut + trim<span class="worth">worth $70</span></div>
-                  <h3>Fade Factory</h3>
-                  <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>RiNo · 1.6 miles · Grooming</div>
-                  <div class="duty"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span>The ask: 1 post + 1 story within 48 hours.</span></div>
-                  <div class="actions">
-                    <button class="btn ink flex">Grab this visit</button>
-                    <button class="btn ghost">Save</button>
-                  </div>
-                </div>
-              </article>
-
-              <article class="tile biz-tile">
-                <div class="photo">
-                  <img src="assets/photos/cocktails-toast.jpg" alt="Neon Palms Rooftop">
-                  <div class="badges">
-                    <span class="badge light">New this week</span>
-                  </div>
-                  <span class="savebtn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M6 3.5h12V21l-6-4.2L6 21z"/></svg></span>
-                </div>
-                <div class="body">
-                  <div class="offer">$200 paid</div>
-                  <h3>Neon Palms Rooftop</h3>
-                  <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Capitol Hill · 2.1 miles · Nightlife</div>
-                  <div class="duty"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span>The ask: 1 post + 1 story within 48 hours, sunset slot. You are paid after your post is live and verified, within 48 hours, once your payout details are set up.</span></div>
-                  <div class="actions">
-                    <button class="btn ink flex">Grab this visit</button>
-                    <button class="btn ghost">Save</button>
-                  </div>
-                </div>
-              </article>
-
-              <article class="tile biz-tile">
-                <div class="photo">
-                  <img src="assets/photos/watch-style.jpg" alt="Velvet Brush Studio">
-                  <span class="savebtn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M6 3.5h12V21l-6-4.2L6 21z"/></svg></span>
-                </div>
-                <div class="body">
-                  <div class="offer">£120 paid</div>
-                  <h3>Velvet Brush Studio</h3>
-                  <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Shoreditch · 1.9 miles · Beauty</div>
-                  <div class="duty"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg><span>The ask: 1 reel of the chair-to-reveal transformation, up within 48 hours. You are paid after your post is live and verified, within 48 hours, once your payout details are set up.</span></div>
-                  <div class="actions">
-                    <button class="btn ink flex">Grab this visit</button>
-                    <button class="btn ghost">Save</button>
-                  </div>
-                </div>
-              </article>
-
-            </div>
 
             <div class="howto">
               <div class="step"><div class="num">1</div><b>Pick a visit</b><p>Grab a spot that fits your feed and your neighborhood. The offer on the card is the whole deal — nothing hidden later.</p></div>
               <div class="step"><div class="num">2</div><b>Show up &amp; post</b><p>Enjoy it like a regular, then post your honest take within 48 hours. Paid posts pay you after the post is live and verified, within 48 hours, once your payout details are set up.</p></div>
               <div class="step"><div class="num">3</div><b>Get counted</b><p>Your post carries your code, so the business sees exactly who walked in because of you. That's what gets you booked again.</p></div>
             </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
 
   <!-- ================= YOUR PAGE ================= -->
-  <section class="sec">
+  <section class="sec" id="your-page">
     <div class="sec-head">
       <div class="eyebrow">Your page · What businesses see</div>
       <h2>Your page sells you while you sleep.</h2>

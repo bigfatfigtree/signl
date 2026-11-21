@@ -11,18 +11,6 @@
 <link rel="stylesheet" href="styles-v2.css?v=14">
 <link rel="stylesheet" href="shop.css?v=14">
 <style>
-/* Transparent over-hero top nav (Jeff, 2026-11-20 ~14:26 ET, superseding the
-   2026-11-07 always-black ruling): the header below uses the .over-hero variant,
-   so it floats transparent over the hero film at the top of the page and flips
-   to the solid #0B0D0C bar on scroll (treatment in styles-v2.css; the .scrolled
-   toggle script is at the end of this file). The hero film section keeps its
-   exact box and framing; it now starts at the top of the page.
-   The padding rules below belong to the light .hero section UNDER the film
-   (they repay the clearance shop.css added for an earlier overlay header) and
-   are unchanged by the header treatment. */
-.shopx .hero{padding-top:58px}
-@media(max-width:680px){.shopx .hero{padding-top:26px}}
-@media(max-width:560px){.shopx .hero{padding-top:34px}}
 /* Creator-card photo fixes (Jeff, 2026-11-20, same fix as the homepage):
    scrolling phone-style cards show photos at natural aspect instead of
    the 118px banner crop that sliced faces, and shelf tile photos anchor
@@ -36,6 +24,50 @@
 .bytype-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:12px 48px;max-width:920px}
 @media(min-width:720px){.bytype-list{grid-template-columns:1fr 1fr}}
 .bytype-list a{color:#006AFC;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+/* Locked-card refresh (2026-11-21, Jeff-approved proposals): the page top is
+   now the locked app language on white: kicker, plain headline, one big
+   photo-led card (white badge top-left on the photo, bookmark top-right,
+   name strip straddling the seam, gradient price shown once, fact chips,
+   Comped/Coupons/Paid checks, gradient action button). Classes are lk-
+   prefixed so nothing collides with the shared stylesheets. */
+.lk-top{background:#fff;padding:46px 0 10px}
+.lk-grid{display:grid;grid-template-columns:1fr;gap:28px}
+@media(min-width:960px){.lk-grid{grid-template-columns:1.02fr .98fr;gap:52px;align-items:start}}
+.lk-kicker{font-size:12px;font-weight:600;letter-spacing:.14em;color:#8a9199;text-transform:uppercase;margin-bottom:12px}
+.lk-h1{font-family:Inter,-apple-system,"Helvetica Neue",Arial,sans-serif;font-size:clamp(31px,4.4vw,54px);line-height:1.12;font-weight:600;letter-spacing:-.01em;color:#1c1e21;margin-bottom:14px}
+.lk-sub{font-size:17px;line-height:1.55;color:#5b636c;max-width:540px}
+.lk-intro .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.lk-cards{display:flex;flex-direction:column;gap:24px}
+.lk-card{background:#fff;border-radius:26px;box-shadow:0 10px 34px rgba(20,30,40,.14);overflow:hidden;padding-bottom:16px;font-family:Inter,-apple-system,"Helvetica Neue",Arial,sans-serif}
+.lk-photo{position:relative;height:300px}
+.lk-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.lk-photo.priya img{object-position:50% 22%}
+.lk-badge{position:absolute;top:14px;left:14px;width:58px;height:58px;background:#fff;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.lk-badge b{font-size:19px;line-height:1;background:linear-gradient(90deg,#006afc,#2fe07e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lk-badge span{font-size:7.5px;letter-spacing:.16em;color:#8a9199;font-weight:600;margin-top:2px}
+.lk-badge .lk-star{color:#f5a623;font-size:15px;line-height:1;letter-spacing:0;margin:0}
+.lk-badge .lk-rate{color:#1c1e21;font-size:16px;font-weight:600;letter-spacing:0;margin:0}
+.lk-mark{position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:50%;background:rgba(30,30,30,.55);display:flex;align-items:center;justify-content:center}
+.lk-strip{position:relative;margin:-34px 14px 0;background:rgba(255,255,255,.96);border-radius:16px;box-shadow:0 6px 20px rgba(20,30,40,.13);padding:11px 14px}
+.lk-strip b{font-size:18.5px;font-weight:600;display:block;color:#1c1e21}
+.lk-strip span{font-size:13px;color:#5b636c}
+.lk-grad{background:linear-gradient(90deg,#006afc,#03c9ab,#2fe07e);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600}
+.lk-price{padding:12px 16px 0;font-size:14px;color:#5b636c}
+.lk-price b{font-size:27px;background:linear-gradient(90deg,#006afc,#2fe07e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lk-chips{display:flex;flex-wrap:wrap;gap:6px;padding:10px 16px 0}
+.lk-chips span{background:#f1f3f4;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:600;color:#3c434a}
+.lk-checks{display:flex;gap:16px;flex-wrap:wrap;border-top:1px solid #eef0f1;margin:12px 16px 0;padding:12px 0 0;font-size:13.5px;color:#1c1e21}
+.lk-checks i{font-style:normal;color:#159a6c;font-weight:700}
+.lk-checks .off{color:#a7adb4}
+.lk-checks .off i{color:#a7adb4}
+.lk-actions{display:flex;align-items:center;gap:16px;padding:14px 16px 0}
+.lk-btn{flex:1;text-align:center;background:linear-gradient(90deg,#006afc,#03c9ab,#2fe07e);color:#fff;font-weight:600;font-size:16.5px;padding:14px 10px;border-radius:14px;box-shadow:0 8px 20px rgba(0,140,200,.25)}
+.lk-link{font-size:14.5px;font-weight:600;color:#1c1e21;white-space:nowrap}
+.lk-cta-line{font-size:14.5px;color:#5b636c;text-align:center;padding:26px 0 16px}
+.lk-cta-line b{color:#1c1e21}
+.lk-feed{display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:860px){.lk-feed{grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}}
+.lk-feed .lk-photo{height:230px}
 </style>
 <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
@@ -64,10 +96,9 @@
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://magpielocal.com/businesses.html#webpage", "url": "https://magpielocal.com/businesses.html", "name": "Influencer Marketing for Local Businesses and Restaurants | Magpie", "isPartOf": {"@type": "WebSite", "url": "https://magpielocal.com/"}, "about": {"@id": "https://magpielocal.com/#organization", "@type": "Organization", "alternateName": "Magpie Local", "legalName": "Extra Medium LLC", "slogan": "Local influencer marketing platform where businesses book nearby creators by their local reach.", "brand": {"@type": "Brand", "name": "Magpie", "logo": "https://magpielocal.com/assets/logo.png"}, "knowsAbout": ["Local influencer marketing", "Micro-influencer marketing", "Local creators", "Comped creator visits", "UGC marketing for local businesses"], "sameAs": ["https://www.linkedin.com/company/magpielocal", "https://www.instagram.com/magpielocal", "https://www.crunchbase.com/organization/magpie-bf7f", "https://wellfound.com/company/magpie-11", "https://www.f6s.com/magpie-local", "https://theorg.com/org/magpie-3", "https://www.producthunt.com/products/magpie-16"], "name": "Magpie", "url": "https://magpielocal.com/", "logo": "https://magpielocal.com/assets/logo.png", "founder": {"@type": "Person", "name": "Jeff Rimmer"}, "parentOrganization": {"@type": "Organization", "name": "Extra Medium LLC"}}, "description": "Local micro-influencer marketing for small businesses: book local creators whose followers actually live in your city, ranked by local reach, not follower count. Visits post within 48 hours, tracked at your register, backed by the Visit Guarantee. Plans from $199/mo."}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://magpielocal.com/"}, {"@type": "ListItem", "position": 2, "name": "For Businesses", "item": "https://magpielocal.com/businesses.html"}]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "name": "A customer walks into a local cafe — Magpie for Businesses", "description": "A customer walks through a warm local cafe toward the counter, in this hero film for Magpie's businesses page, where local businesses book nearby creators ranked by how many of their followers live in the same city.", "thumbnailUrl": "https://magpielocal.com/assets/video/poster-cafe-enter.jpg", "contentUrl": "https://magpielocal.com/assets/video/jeff-hero-cafe-enter.mp4", "uploadDate": "2026-11-15", "duration": "PT10S", "publisher": {"@type": "Organization", "name": "Magpie", "logo": {"@type": "ImageObject", "url": "https://magpielocal.com/assets/logo.png"}, "alternateName": "Magpie Local", "url": "https://magpielocal.com/", "founder": {"@type": "Person", "name": "Jeff Rimmer"}, "parentOrganization": {"@type": "Organization", "name": "Extra Medium LLC"}, "sameAs": ["https://www.linkedin.com/company/magpielocal", "https://www.instagram.com/magpielocal", "https://www.crunchbase.com/organization/magpie-bf7f", "https://wellfound.com/company/magpie-11", "https://www.f6s.com/magpie-local", "https://theorg.com/org/magpie-3", "https://www.producthunt.com/products/magpie-16"]}}</script>
 </head>
 <body>
-<header class="site-head over-hero">
+<header class="site-head">
   <div class="wrap head-in">
     <a href="index.html" aria-label="Magpie home"><img class="logo-img" src="assets/logo.png" alt="Magpie"></a>
     <nav class="main-nav">
@@ -111,36 +142,51 @@
 <div class="shopx">
 
 
-  <!-- ================= HERO VIDEO ================= -->
-  <section class="hv">
-    <video class="hv-video js-hero-video" autoplay muted loop playsinline preload="auto" poster="assets/video/poster-cafe-enter.jpg">
-      <source src="assets/video/jeff-hero-cafe-enter.mp4" type="video/mp4">
-    </video>
-    <div class="hv-scrim"></div>
-    <div class="hv-in">
-      <div class="hv-top">
-        <h1>Word of mouth <span class="grad-text">is local.</span></h1>
-        <p class="lede">This page shows you the inside of the app before you ever sign up: <strong>a shelf of local creators, each one a full product page</strong>, ranked by how many of their followers live in your city. Book a visit, and every post gets counted at your register.</p>
+  <!-- ================= TOP (locked refresh, 2026-11-21) ================= -->
+  <section class="lk-top">
+    <div class="wrap">
+      <div class="lk-grid">
+        <div class="lk-intro">
+          <div class="lk-kicker">Magpie for businesses</div>
+          <h1 class="lk-h1">Book local creators your customers already follow.</h1>
+          <p class="lk-sub">Ranked by how many of their followers live near you, not by total followers. You see the local numbers before you book.</p>
+          <div class="cta-row">
+            <a class="btn grad" href="#apply">Apply for a founding spot</a>
+            <a class="btn ghost" href="#pricing">See founding plans</a>
+          </div>
+          <div class="micro">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>
+            Founding rate locked while your plan stays active. First 3 months $99/mo with the founding credit.
+          </div>
+        </div>
+        <div class="lk-cards">
+<article class="lk-card">
+  <div class="lk-photo priya"><img src="assets/photos/priya-jeff-pick.jpg" alt="Priya">
+    <div class="lk-badge"><b>94</b><span>MATCH</span></div>
+    <div class="lk-mark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4"><path d="M6 3h12v18l-6-4-6 4z"/></svg></div></div>
+  <div class="lk-strip"><b>Priya</b><span>Food &amp; Drink &middot; Lifestyle &middot; <span class="lk-grad">Nashville</span></span></div>
+  <div class="lk-price"><b>$125</b> &middot; her paid visit rate</div>
+  <div class="lk-chips"><span>82% local</span><span>8,528 local followers</span><span>21.5k total followers</span></div>
+  <div class="lk-checks"><span><i>&#10003;</i> Comped</span><span class="off"><i>-</i> Coupons</span><span><i>&#10003;</i> Paid</span></div>
+  <div class="lk-actions"><a class="lk-btn" href="#apply">Book Priya</a><a class="lk-link" href="#creator-page">See profile</a></div>
+</article>
+<article class="lk-card">
+  <div class="lk-photo"><img src="assets/photos/sample-portrait-marcus.jpg" alt="Alex">
+    <div class="lk-badge"><b>88</b><span>MATCH</span></div>
+    <div class="lk-mark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4"><path d="M6 3h12v18l-6-4-6 4z"/></svg></div></div>
+  <div class="lk-strip"><b>Alex</b><span>Nightlife &middot; Music &middot; <span class="lk-grad">Nashville</span></span></div>
+  <div class="lk-price"><b>$95</b> &middot; his paid visit rate</div>
+  
+  
+  <div class="lk-actions"><a class="lk-btn" href="#apply">Book Alex</a><a class="lk-link" href="#creator-page">See profile</a></div>
+</article>
+        </div>
       </div>
+      <p class="lk-cta-line"><b>Comp a visit, or book a paid post</b> at the creator&rsquo;s own rate.</p>
     </div>
   </section>
 
 <div class="wrap">
-
-  <!-- ================= BELOW HERO ================= -->
-  <section class="hero" style="grid-template-columns:1fr;max-width:900px;">
-    <div>
-      <div class="eyebrow">Magpie for businesses</div>
-      <div class="cta-row">
-        <a class="btn grad" href="#apply">Apply for a founding spot</a>
-        <a class="btn ghost" href="#pricing">See founding plans</a>
-      </div>
-      <div class="micro">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>
-        Founding rate locked while your plan stays active. First 3 months $99/mo with the founding credit.
-      </div>
-    </div>
-  </section>
 
   <!-- ================= THE SHORT ANSWER ================= -->
   <section class="sec" style="padding-top:10px;padding-bottom:0">
@@ -162,7 +208,7 @@
       <div class="eyebrow">Inside the app · Find creators</div>
       <h2>Shop creators like products.</h2>
       <p class="example-note" style="font-size:13px;color:#5F7265;margin:8px 0 0"><strong>Example:</strong> the creators, businesses, and numbers in this section are made up, so you can see how the app looks. They are not real people or real results.</p>
-      <p>Filter by category, neighborhood, and how local their audience is. Every card carries the same things: <strong>the local % with the local follower count right under it, the price, the accepts-comps toggle, the proof, and the book button.</strong></p>
+      <p>Filter by category, neighborhood, and how local their audience is. Every card carries the same things: <strong>the match score, the local % and the local follower count, the price shown once, what they accept, and the book button.</strong></p>
     </div>
 
     <div class="appframe">
@@ -180,346 +226,44 @@
           <p class="lede">Ranked by one thing first: <strong>how many of their followers actually live near you.</strong> A huge following somewhere else doesn't fill your tables on Saturday. A local one does.</p>
         </div>
 
-        <div class="toolbar">
-          <div class="count">48 creators near you <span>· updated this morning</span></div>
-          <div class="sort">Sort
-            <span class="pill">Best local fit
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M5 9l7 7 7-7"/></svg>
-            </span>
-          </div>
-        </div>
-
-        <div class="chiprow">
-          <span class="chip sel">Food &amp; drink</span>
-          <span class="chip sel">Beauty</span>
-          <span class="chip">Neighborhood</span>
-          <span class="chip sel">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
-            70% local or more</span>
-          <span class="chip">Comped visits</span>
-          <span class="chip">Paid bookings</span>
-          <span class="chip">Their rate</span>
-        </div>
-
-        <div class="layout">
-          <aside class="filters">
-            <div class="f-head"><b>Filters</b><button type="button" class="f-clear">Clear all</button></div>
-
-            <div class="f-group">
-              <h4>Category</h4>
-              <div class="f-row sel"><span class="box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>All categories<span class="n">56</span></div>
-              <div class="f-row sel"><span class="box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>Food &amp; drink<span class="n">21</span></div>
-              <div class="f-row sel"><span class="box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>Beauty &amp; skincare<span class="n">8</span></div>
-              <div class="f-row"><span class="box"></span>Fitness &amp; wellness<span class="n">9</span></div>
-              <div class="f-row"><span class="box"></span>Nightlife<span class="n">7</span></div>
-              <div class="f-row"><span class="box"></span>Style &amp; grooming<span class="n">6</span></div>
-              <div class="f-row"><span class="box"></span>Retail &amp; boutiques<span class="n">5</span></div>
-            </div>
-
-            <div class="f-group">
-              <h4>Neighborhood</h4>
-              <div class="f-row sel"><span class="box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>All neighborhoods<span class="n">48</span></div>
-              <div class="f-row sel"><span class="box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>East Nashville<span class="n">14</span></div>
-              <div class="f-row sel"><span class="box"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg></span>Soho<span class="n">9</span></div>
-              <div class="f-row"><span class="box"></span>Logan Square<span class="n">8</span></div>
-              <div class="f-row"><span class="box"></span>East Austin<span class="n">7</span></div>
-              <div class="f-row"><span class="box"></span>Cherry Creek<span class="n">6</span></div>
-              <div class="f-row"><span class="box"></span>Ballard<span class="n">4</span></div>
-            </div>
-
-            <div class="f-group">
-              <h4>Their audience lives here</h4>
-              <div class="range-track"><div class="fill"></div><div class="knob"></div></div>
-              <div class="range-labels"><span>Anyone</span><span>100% local</span></div>
-              <div class="range-value">Showing <span>70% local</span> and up</div>
-            </div>
-
-            <div class="f-group">
-              <h4>How you book them</h4>
-              <div class="f-row"><span class="dot"></span>Either is fine</div>
-              <div class="f-row sel"><span class="dot"></span>Paid booking</div>
-              <div class="f-row"><span class="dot"></span>Comped visit</div>
-            </div>
-
-            <div class="f-group">
-              <h4>Their rate</h4>
-              <div class="chips">
-                <span class="chip">Any rate</span>
-                <span class="chip sel">Under $100</span>
-                <span class="chip">$100–$150</span>
-                <span class="chip">$150+</span>
-                <span class="chip">Comped only</span>
-              </div>
-            </div>
-          </aside>
-
-          <div>
-            <div class="grid">
-
-              <article class="tile">
-                <div class="photo creator-photo">
-                  <img src="assets/photos/sample-portrait-jordan.jpg" alt="June Calloway">
-                  <div class="badges">
-                    <span class="badge dark"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z"/></svg>Top local</span>
-                  </div>
-                  <span class="savebtn saved"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 3.5h12V21l-6-4.2L6 21z"/></svg></span>
-                </div>
-                <div class="body">
-                  <h3>June Calloway</h3>
-                  <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>East Nashville · Cocktails &amp; rooftops</div>
-                  <div class="localrow">
-                    <div class="localnum">93<small>%</small></div>
-                    <div class="localcap">
-                      <div class="cap">of her followers live in Nashville</div>
-                      <div class="localbar"><i style="width:93%"></i></div>
-                    </div>
-                  </div>
-                  <div class="localcount">10,400 local followers</div>
-                  <div class="price"><span class="amt">$150</span><span class="per">per post</span></div>
-                  <span class="comptoggle on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts comps</span></span>
-                  <span class="comptoggle couptoggle on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span>
-                  <div class="proof">
-                    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>16 visits done</span>
-                    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>16 of 16 posts on time</span>
-                  </div>
-                  <div class="quiet">11,200 followers · posts about 3 times a week</div>
-                  <div class="actions">
-                    <button class="btn ink flex">Book June</button>
-                    <button class="btn ghost">Saved</button>
-                  </div>
-                </div>
-              </article>
-
-              <article class="tile">
-                <div class="photo creator-photo">
-                  <img src="assets/photos/sample-portrait-priya.jpg" alt="Nadia Rahman">
-                  <div class="badges">
-                    <span class="badge light">Founding creator</span>
-                  </div>
-                  <span class="savebtn saved"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 3.5h12V21l-6-4.2L6 21z"/></svg></span>
-                </div>
-                <div class="body">
-                  <h3>Nadia Rahman</h3>
-                  <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Soho · Street food &amp; late-night</div>
-                  <div class="localrow">
-                    <div class="localnum">91<small>%</small></div>
-                    <div class="localcap">
-                      <div class="cap">of her followers live in London</div>
-                      <div class="localbar"><i style="width:91%"></i></div>
-                    </div>
-                  </div>
-                  <div class="localcount">8,600 local followers</div>
-                  <div class="price"><span class="amt">£120</span><span class="per">per post</span></div>
-                  <span class="comptoggle on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts comps</span></span>
-                  <span class="comptoggle couptoggle on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span>
-                  <div class="proof">
-                    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>12 visits done</span>
-                    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>12 of 12 posts on time</span>
-                  </div>
-                  <div class="quiet">9,400 followers · posts about 4 times a week</div>
-                  <div class="actions">
-                    <button class="btn ink flex">Book Nadia</button>
-                    <button class="btn ghost">Saved</button>
-                  </div>
-                </div>
-              </article>
-
-              <article class="tile">
-                <div class="photo creator-photo">
-                  <img src="assets/photos/sample-portrait-sofia.jpg" alt="Amara Osei">
-                  <div class="badges">
-                    <span class="badge dark"><svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z"/></svg>Top local</span>
-                    <span class="badge light">Founding creator</span>
-                  </div>
-                  <span class="savebtn saved"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 3.5h12V21l-6-4.2L6 21z"/></svg></span>
-                </div>
-                <div class="body">
-                  <h3>Amara Osei</h3>
-                  <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Logan Square · Beauty &amp; skincare</div>
-                  <div class="localrow">
-                    <div class="localnum">94<small>%</small></div>
-                    <div class="localcap">
-                      <div class="cap">of her followers live in Chicago</div>
-                      <div class="localbar"><i style="width:94%"></i></div>
-                    </div>
-                  </div>
-                  <div class="localcount">13,900 local followers</div>
-                  <div class="price"><span class="amt">$180</span><span class="per">per post</span></div>
-                  <span class="comptoggle off"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Paid only</span></span>
-                  <span class="comptoggle couptoggle off"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span>
-                  <div class="proof">
-                    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>19 visits done</span>
-                    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>19 of 19 posts on time</span>
-                  </div>
-                  <div class="quiet">14,800 followers · posts about 5 times a week</div>
-                  <div class="actions">
-                    <button class="btn ink flex">Book Amara</button>
-                    <button class="btn ghost">Saved</button>
-                  </div>
-                </div>
-              </article>
-
-              <article class="tile">
-                <div class="photo creator-photo">
-                  <img src="assets/photos/sample-portrait-marcus.jpg" alt="Dre Coleman">
-                  <span class="savebtn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M6 3.5h12V21l-6-4.2L6 21z"/></svg></span>
-                </div>
-                <div class="body">
-                  <h3>Dre Coleman</h3>
-                  <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>East Austin · Style &amp; barbershops</div>
-                  <div class="localrow">
-                    <div class="localnum">88<small>%</small></div>
-                    <div class="localcap">
-                      <div class="cap">of his followers live in Austin</div>
-                      <div class="localbar"><i style="width:88%"></i></div>
-                    </div>
-                  </div>
-                  <div class="localcount">5,500 local followers</div>
-                  <div class="price"><span class="amt">Comped visit</span><span class="free-note">No cash</span></div>
-                  <span class="comptoggle on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts comps</span></span>
-                  <span class="comptoggle couptoggle off"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span>
-                  <div class="proof">
-                    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>9 visits done</span>
-                    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>9 of 9 posts on time</span>
-                  </div>
-                  <div class="quiet">6,300 followers · you host the visit, he posts</div>
-                  <div class="actions">
-                    <button class="btn ink flex">Invite Dre</button>
-                    <button class="btn ghost">Save</button>
-                  </div>
-                </div>
-              </article>
-
-              <article class="tile">
-                <div class="photo creator-photo">
-                  <img src="assets/photos/sample-portrait-taylor.jpg" alt="Sadie Lindqvist">
-                  <div class="badges">
-                    <span class="badge light">Founding creator</span>
-                  </div>
-                  <span class="savebtn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M6 3.5h12V21l-6-4.2L6 21z"/></svg></span>
-                </div>
-                <div class="body">
-                  <h3>Sadie Lindqvist</h3>
-                  <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Cherry Creek · Fitness &amp; wellness</div>
-                  <div class="localrow">
-                    <div class="localnum">86<small>%</small></div>
-                    <div class="localcap">
-                      <div class="cap">of her followers live in Denver</div>
-                      <div class="localbar"><i style="width:86%"></i></div>
-                    </div>
-                  </div>
-                  <div class="localcount">5,100 local followers</div>
-                  <div class="price"><span class="amt">$85</span><span class="per">per post</span></div>
-                  <span class="comptoggle off"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Paid only</span></span>
-                  <span class="comptoggle couptoggle off"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span>
-                  <div class="proof">
-                    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>11 visits done</span>
-                    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>10 of 11 posts on time</span>
-                  </div>
-                  <div class="quiet">5,900 followers · posts about 3 times a week</div>
-                  <div class="actions">
-                    <button class="btn ink flex">Book Sadie</button>
-                    <button class="btn ghost">Save</button>
-                  </div>
-                </div>
-              </article>
-
-              <article class="tile">
-                <div class="photo creator-photo">
-                  <img src="assets/photos/sample-portrait-maya.jpg" alt="Hazel Brooks">
-                  <span class="savebtn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linejoin="round"><path d="M6 3.5h12V21l-6-4.2L6 21z"/></svg></span>
-                </div>
-                <div class="body">
-                  <h3>Hazel Brooks</h3>
-                  <div class="meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Ballard · Outdoors &amp; day trips</div>
-                  <div class="localrow">
-                    <div class="localnum">79<small>%</small></div>
-                    <div class="localcap">
-                      <div class="cap">of her followers live near Seattle</div>
-                      <div class="localbar"><i style="width:79%"></i></div>
-                    </div>
-                  </div>
-                  <div class="localcount">9,800 local followers</div>
-                  <div class="price"><span class="amt">Comped visit</span><span class="free-note">No cash</span></div>
-                  <span class="comptoggle on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts comps</span></span>
-                  <span class="comptoggle couptoggle on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span>
-                  <div class="proof">
-                    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>7 visits done</span>
-                    <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>7 of 7 posts on time</span>
-                  </div>
-                  <div class="quiet">12,400 followers · you host the visit, she posts</div>
-                  <div class="actions">
-                    <button class="btn ink flex">Invite Hazel</button>
-                    <button class="btn ghost">Save</button>
-                  </div>
-                </div>
-              </article>
-
-            </div>
-
-            <section class="tray">
-              <div class="eyebrow">Your shortlist</div>
-              <h2>Side by side</h2>
-              <p class="sub">Three creators you saved, lined up on the numbers that decide it.</p>
-              <div class="tray-grid">
-                <div class="tray-spacer"></div>
-                <div class="tray-head">
-                  <div class="who"><img src="assets/photos/sample-portrait-jordan.jpg" alt="June Calloway"><b>June<br>Calloway</b></div>
-                </div>
-                <div class="tray-head">
-                  <div class="who"><img src="assets/photos/sample-portrait-priya.jpg" alt="Nadia Rahman"><b>Nadia<br>Rahman</b></div>
-                </div>
-                <div class="tray-head tm">
-                  <span class="tmtag">Top match</span>
-                  <div class="who"><img src="assets/photos/sample-portrait-sofia.jpg" alt="Amara Osei"><b>Amara<br>Osei</b></div>
-                </div>
-
-                <div class="lab">Local audience</div>
-                <div class="cell big" data-lab="Local">93%<span class="tcount">10,400 local followers</span></div>
-                <div class="cell big" data-lab="Local">91%<span class="tcount">8,600 local followers</span></div>
-                <div class="cell big tm" data-lab="Local">94%<span class="tcount">13,900 local followers</span></div>
-
-                <div class="lab">Their rate</div>
-                <div class="cell" data-lab="Rate">$150<span class="dim">per post</span></div>
-                <div class="cell" data-lab="Rate">£120<span class="dim">per post</span></div>
-                <div class="cell tm" data-lab="Rate">$180<span class="dim">per post</span></div>
-
-                <div class="lab">Accepts comps</div>
-                <div class="cell" data-lab="Comps"><span class="comptoggle on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts comps</span></span></div>
-                <div class="cell" data-lab="Comps"><span class="comptoggle on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts comps</span></span></div>
-                <div class="cell tm" data-lab="Comps"><span class="comptoggle off"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Paid only</span></span></div>
-                <div class="lab">Accepts coupons</div>
-                <div class="cell" data-lab="Coupons"><span class="comptoggle couptoggle on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span></div>
-                <div class="cell" data-lab="Coupons"><span class="comptoggle couptoggle on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span></div>
-                <div class="cell tm" data-lab="Coupons"><span class="comptoggle couptoggle off"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Accepts coupons</span></span></div>
-
-                <div class="lab">Visits done</div>
-                <div class="cell" data-lab="Visits">16</div>
-                <div class="cell" data-lab="Visits">12</div>
-                <div class="cell tm" data-lab="Visits">19</div>
-
-                <div class="lab">Posts on time</div>
-                <div class="cell" data-lab="On time">16 of 16</div>
-                <div class="cell" data-lab="On time">12 of 12</div>
-                <div class="cell tm" data-lab="On time">19 of 19</div>
-
-                <div class="lab"></div>
-                <div class="cell"><button class="btn ghost sm">Book June</button></div>
-                <div class="cell"><button class="btn ghost sm">Book Nadia</button></div>
-                <div class="cell tm tmlast"><button class="btn grad sm">Book Amara</button></div>
-              </div>
-              <div class="tfoot">
-                <p>Saved creators wait here until you book them or take them off the list. Nobody else can see your shortlist.</p>
-              </div>
-            </section>
-          </div>
+        <div class="lk-feed">
+<article class="lk-card">
+  <div class="lk-photo"><img src="assets/photos/sample-portrait-jordan.jpg" alt="June Calloway">
+    <div class="lk-badge"><b>92</b><span>MATCH</span></div>
+    <div class="lk-mark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4"><path d="M6 3h12v18l-6-4-6 4z"/></svg></div></div>
+  <div class="lk-strip"><b>June Calloway</b><span>Cocktails &amp; rooftops &middot; <span class="lk-grad">East Nashville</span></span></div>
+  <div class="lk-price"><b>$150</b> &middot; her paid visit rate</div>
+  <div class="lk-chips"><span>93% local</span><span>10,400 local followers</span><span>11.2k total followers</span></div>
+  <div class="lk-checks"><span><i>&#10003;</i> Comped</span><span><i>&#10003;</i> Coupons</span><span><i>&#10003;</i> Paid</span></div>
+  <div class="lk-actions"><a class="lk-btn" href="#apply">Book June</a><a class="lk-link" href="#creator-page">See profile</a></div>
+</article>
+<article class="lk-card">
+  <div class="lk-photo"><img src="assets/photos/sample-portrait-sofia.jpg" alt="Amara Osei">
+    <div class="lk-badge"><b>91</b><span>MATCH</span></div>
+    <div class="lk-mark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4"><path d="M6 3h12v18l-6-4-6 4z"/></svg></div></div>
+  <div class="lk-strip"><b>Amara Osei</b><span>Beauty &amp; skincare &middot; <span class="lk-grad">Logan Square</span></span></div>
+  <div class="lk-price"><b>$180</b> &middot; her paid visit rate</div>
+  <div class="lk-chips"><span>94% local</span><span>13,900 local followers</span><span>14.8k total followers</span></div>
+  <div class="lk-checks"><span class="off"><i>-</i> Comped</span><span class="off"><i>-</i> Coupons</span><span><i>&#10003;</i> Paid</span></div>
+  <div class="lk-actions"><a class="lk-btn" href="#apply">Book Amara</a><a class="lk-link" href="#creator-page">See profile</a></div>
+</article>
+<article class="lk-card">
+  <div class="lk-photo"><img src="assets/photos/sample-portrait-taylor.jpg" alt="Sadie Lindqvist">
+    <div class="lk-badge"><b>86</b><span>MATCH</span></div>
+    <div class="lk-mark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4"><path d="M6 3h12v18l-6-4-6 4z"/></svg></div></div>
+  <div class="lk-strip"><b>Sadie Lindqvist</b><span>Fitness &amp; wellness &middot; <span class="lk-grad">Cherry Creek</span></span></div>
+  <div class="lk-price"><b>$85</b> &middot; her paid visit rate</div>
+  <div class="lk-chips"><span>86% local</span><span>5,100 local followers</span><span>5.9k total followers</span></div>
+  <div class="lk-checks"><span class="off"><i>-</i> Comped</span><span class="off"><i>-</i> Coupons</span><span><i>&#10003;</i> Paid</span></div>
+  <div class="lk-actions"><a class="lk-btn" href="#apply">Book Sadie</a><a class="lk-link" href="#creator-page">See profile</a></div>
+</article>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ================= THE PRODUCT PAGE ================= -->
-  <section class="sec">
+  <section class="sec" id="creator-page">
     <div class="sec-head">
       <div class="eyebrow">Inside the app · A creator's page</div>
       <h2>Then you open one up.</h2>
