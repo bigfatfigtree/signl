@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marketing Local para Creadores: Te Pagan Cuando Publicas, Te Quedas con el 97% | Magpie</title>
+<meta name="description" content="Marketing local para creadores pequeños: comidas y experiencias cortesía, o reservas pagadas a tu propia tarifa. Una publicación, una historia, sin revisiones eternas. Te quedas con el 97% y te pagan después de que tu publicación esté en vivo y verificada, dentro de 48 horas. Nunca a 90 días. Gratis para unirte, desde 500 seguidores en total entre tus plataformas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles-v2.css?v=14">
+<link rel="stylesheet" href="shop.css?v=14">
+<style>
+/* Locked-card refresh (2026-11-21, Jeff-approved proposals): the page top is
+   now the locked app language on white: kicker, plain headline, one big
+   photo-led card (white badge top-left on the photo, bookmark top-right,
+   name strip straddling the seam, gradient price shown once, fact chips,
+   Comped/Coupons/Paid checks, gradient action button). Classes are lk-
+   prefixed so nothing collides with the shared stylesheets. */
+.lk-top{background:#fff;padding:46px 0 10px}
+.lk-grid{display:grid;grid-template-columns:1fr;gap:28px}
+@media(min-width:960px){.lk-grid{grid-template-columns:1.02fr .98fr;gap:52px;align-items:start}}
+.lk-kicker{font-size:12px;font-weight:600;letter-spacing:.14em;color:#8a9199;text-transform:uppercase;margin-bottom:12px}
+.lk-h1{font-family:Inter,-apple-system,"Helvetica Neue",Arial,sans-serif;font-size:clamp(31px,4.4vw,54px);line-height:1.12;font-weight:600;letter-spacing:-.01em;color:#1c1e21;margin-bottom:14px}
+.lk-sub{font-size:17px;line-height:1.55;color:#5b636c;max-width:540px}
+.lk-intro .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.lk-cards{display:flex;flex-direction:column;gap:24px}
+.lk-card{background:#fff;border-radius:26px;box-shadow:0 10px 34px rgba(20,30,40,.14);overflow:hidden;padding-bottom:16px;font-family:Inter,-apple-system,"Helvetica Neue",Arial,sans-serif}
+.lk-photo{position:relative;height:300px}
+.lk-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.lk-photo.priya img{object-position:50% 22%}
+.lk-badge{position:absolute;top:14px;left:14px;width:58px;height:58px;background:#fff;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.lk-badge b{font-size:19px;line-height:1;background:linear-gradient(90deg,#006afc,#2fe07e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lk-badge span{font-size:7.5px;letter-spacing:.16em;color:#8a9199;font-weight:600;margin-top:2px}
+.lk-badge .lk-star{color:#f5a623;font-size:15px;line-height:1;letter-spacing:0;margin:0}
+.lk-badge .lk-rate{color:#1c1e21;font-size:16px;font-weight:600;letter-spacing:0;margin:0}
+.lk-mark{position:absolute;top:14px;right:14px;width:42px;height:42px;border-radius:50%;background:rgba(30,30,30,.55);display:flex;align-items:center;justify-content:center}
+.lk-strip{position:relative;margin:-34px 14px 0;background:rgba(255,255,255,.96);border-radius:16px;box-shadow:0 6px 20px rgba(20,30,40,.13);padding:11px 14px}
+.lk-strip b{font-size:18.5px;font-weight:600;display:block;color:#1c1e21}
+.lk-strip span{font-size:13px;color:#5b636c}
+.lk-grad{background:linear-gradient(90deg,#006afc,#03c9ab,#2fe07e);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600}
+.lk-price{padding:12px 16px 0;font-size:14px;color:#5b636c}
+.lk-price b{font-size:27px;background:linear-gradient(90deg,#006afc,#2fe07e);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lk-chips{display:flex;flex-wrap:wrap;gap:6px;padding:10px 16px 0}
+.lk-chips span{background:#f1f3f4;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:600;color:#3c434a}
+.lk-checks{display:flex;gap:16px;flex-wrap:wrap;border-top:1px solid #eef0f1;margin:12px 16px 0;padding:12px 0 0;font-size:13.5px;color:#1c1e21}
+.lk-checks i{font-style:normal;color:#159a6c;font-weight:700}
+.lk-checks .off{color:#a7adb4}
+.lk-checks .off i{color:#a7adb4}
+.lk-actions{display:flex;align-items:center;gap:16px;padding:14px 16px 0}
+.lk-btn{flex:1;text-align:center;background:linear-gradient(90deg,#006afc,#03c9ab,#2fe07e);color:#fff;font-weight:600;font-size:16.5px;padding:14px 10px;border-radius:14px;box-shadow:0 8px 20px rgba(0,140,200,.25)}
+.lk-link{font-size:14.5px;font-weight:600;color:#1c1e21;white-space:nowrap}
+.lk-cta-line{font-size:14.5px;color:#5b636c;text-align:center;padding:26px 0 16px}
+.lk-cta-line b{color:#1c1e21}
+.lk-feed{display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:860px){.lk-feed{grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}}
+.lk-feed .lk-photo{height:230px}
+</style>
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
+<link rel="canonical" href="https://magpielocal.com/creadores.html">
+<link rel="alternate" hreflang="es" href="https://magpielocal.com/creadores.html">
+<link rel="alternate" hreflang="en" href="https://magpielocal.com/creators.html">
+<link rel="alternate" hreflang="x-default" href="https://magpielocal.com/creators.html">
+<meta name="theme-color" content="#FAF7F1">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Magpie">
+<meta property="og:locale" content="es_US">
+<meta property="og:title" content="Marketing de Influencers Local para Creadores: Comidas Cortesía y Acuerdos con Marcas | Magpie">
+<meta property="og:description" content="Marketing de influencers local para creadores pequeños y microcreadores: recibe comidas y servicios cortesía en negocios locales a cambio de publicaciones honestas, con la meta de publicar dentro de las 48 horas de la visita. Magpie empieza en 500 seguidores en total entre tus plataformas, en cualquier ciudad. Las listas fundadoras se están formando en 45 mercados fundadores en 13 países. Regístrate ahora para ser un creador fundador en tu ciudad.">
+<meta property="og:url" content="https://magpielocal.com/creadores.html">
+<meta property="og:image" content="https://magpielocal.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Marketing de Influencers Local para Creadores: Comidas Cortesía y Acuerdos con Marcas | Magpie">
+<meta name="twitter:description" content="Marketing de influencers local para creadores pequeños y microcreadores: recibe comidas y servicios cortesía en negocios locales a cambio de publicaciones honestas, con la meta de publicar dentro de las 48 horas de la visita. Magpie empieza en 500 seguidores en total entre tus plataformas, en cualquier ciudad. Las listas fundadoras se están formando en 45 mercados fundadores en 13 países. Regístrate ahora para ser un creador fundador en tu ciudad.">
+<meta name="twitter:image" content="https://magpielocal.com/assets/og-image.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<script>if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver'in window){document.documentElement.classList.add('sx-on');}</script>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuesta algo unirse a Magpie como creador?", "acceptedAnswer": {"@type": "Answer", "text": "No. Magpie es gratis para los creadores. Siempre. Los negocios pagan la plataforma. Nunca pagas por unirte, por aparecer en la lista ni por que te reserven. En las visitas estándar, la cortesía misma es el pago."}}, {"@type": "Question", "name": "¿Qué cobra Magpie en las reservas pagadas?", "acceptedAnswer": {"@type": "Answer", "text": "Unirse y las visitas cortesía son gratis. En las reservas pagadas la comisión es del 6 por ciento en total, dividida en partes iguales, así que te quedas con el 97 por ciento. El pago se retiene hasta que la publicación esté en vivo, y se reembolsa por completo si la visita o la publicación nunca llegan."}}, {"@type": "Question", "name": "¿Cómo se les paga a los creadores en Magpie?", "acceptedAnswer": {"@type": "Answer", "text": "En las visitas estándar, la cortesía es el pago. Cualquier creador puede fijar una tarifa pagada, y cuando un negocio te reserva a esa tarifa, te quedas con el 97 por ciento. Los Headliners también pueden participar en campañas pagadas destacadas."}}, {"@type": "Question", "name": "¿Cuándo me pagan exactamente?", "acceptedAnswer": {"@type": "Answer", "text": "En una reserva pagada el negocio paga por adelantado, y a ti te pagan después de que tu publicación esté en vivo y verificada, dentro de 48 horas, una vez que configures tus datos de pago. Sin facturas, sin perseguir a nadie y sin plazos de 30, 60 o 90 días. Si la visita o la publicación nunca llegan, al negocio se le reembolsa por completo."}}, {"@type": "Question", "name": "¿Un negocio puede pedirme que revise mi publicación una y otra vez?", "acceptedAnswer": {"@type": "Answer", "text": "No. Cada visita tiene un entregable definido, acordado antes de que la reclames: 1 publicación o reel más 1 historia que comparte la publicación, con tu propia voz. Las instrucciones se escriben desde el principio, así que lo que se espera nunca es una sorpresa, y ningún negocio puede escribir tus palabras ni exigirte ediciones eternas."}}, {"@type": "Question", "name": "¿Tengo que publicar algo positivo?", "acceptedAnswer": {"@type": "Answer", "text": "Nunca. Solo publicaciones honestas. Los negocios no pueden exigir una publicación positiva, y cualquier negocio que presione a un creador sale de la plataforma."}}, {"@type": "Question", "name": "¿Qué tengo que publicar, y qué tan rápido?", "acceptedAnswer": {"@type": "Answer", "text": "La meta es 1 publicación o reel más 1 historia que comparte la publicación dentro de las 48 horas de tu visita, con divulgación de que fue cortesía, por ejemplo #gifted. La publicación se queda en vivo por lo menos 30 días. Hasta una semana como máximo todavía cuenta, pero cumplir la meta de 48 horas es lo que te suma Momentum. Si pasa la semana sin publicación, el negocio recibe una visita de reemplazo y tu posición se ve afectada."}}, {"@type": "Question", "name": "¿Qué pasa si no puedo ir a una visita que reclamé?", "acceptedAnswer": {"@type": "Answer", "text": "Avísanos en la app antes de que cierre tu ventana de visita. Una visita que reportas a tiempo se devuelve al negocio y no cuenta en tu contra. El silencio es lo que daña: no presentarte y no publicar afecta tu posición, y quienes lo repiten salen de la lista."}}, {"@type": "Question", "name": "¿Cuántos seguidores necesito para unirme a Magpie?", "acceptedAnswer": {"@type": "Answer", "text": "Magpie empieza en 500 seguidores en total entre tus plataformas. Tus cifras se suman entre Instagram, TikTok, Facebook, YouTube, X y LinkedIn. Los niveles son Neighbors de 500 a 2,000, Locals de 2,000 a 15,000 y Headliners desde 15,000. Una audiencia local pequeña vale más que una grande y dispersa."}}, {"@type": "Question", "name": "Mi ciudad no está en el lanzamiento. ¿Puedo unirme a Magpie de todos modos?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Las listas fundadoras se están formando en 45 mercados en 13 países. En cualquier otra ciudad, regístrate con tu ciudad y completa tu perfil. Cuando tu ciudad abra, estarás en su círculo fundador, y la primera opción va a los perfiles fundadores completados. Las ciudades se eligen por cantidad de registros, y cada perfil completado acerca su ciudad a la apertura."}}, {"@type": "Question", "name": "¿Cómo consigo comidas cortesía por publicar?", "acceptedAnswer": {"@type": "Answer", "text": "Solicita tu lugar en la lista de tu ciudad, gratis. Reclama las ofertas cortesía que quieras, visita como un cliente real y publica con honestidad y divulgación, con la meta de publicar dentro de las 48 horas de tu visita. La cortesía es el pago."}}, {"@type": "Question", "name": "¿Los creadores pequeños pueden conseguir acuerdos con marcas?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Los negocios locales buscan por ubicación de la audiencia, no por cantidad de seguidores. Los niveles empiezan en 500 seguidores en total entre tus plataformas, y 1,000 seguidores locales es exactamente lo que buscan."}}, {"@type": "Question", "name": "¿Cómo me convierto en creador local?", "acceptedAnswer": {"@type": "Answer", "text": "Solicita con tu ciudad y tu usuario, y completa tu perfil. Reclama ofertas, preséntate, y la meta es publicar dentro de las 48 horas de tu visita. Las publicaciones entregadas construyen el historial que hace que te elijan primero."}}, {"@type": "Question", "name": "¿Qué son los puntos Momentum?", "acceptedAnswer": {"@type": "Answer", "text": "Los puntos Momentum son tu historial, convertido en prioridad. Los ganas cumpliendo: una publicación a tiempo suma +20, las visitas completadas y las calificaciones suman más, y los creadores que se unen con tu enlace de invitación te suman +3 cuando se unen y +10 cuando son aprobados. Los puntos ordenan la lista que ven los negocios al elegir creadores, así que un historial fuerte hace que te elijan primero."}}, {"@type": "Question", "name": "¿De verdad los restaurantes regalan comida por publicaciones?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. El negocio ofrece una comida o un servicio gratis y tú publicas tu experiencia honesta, con divulgación de que fue cortesía, por ejemplo #gifted. Los negocios no pueden comprar una publicación positiva."}}, {"@type": "Question", "name": "¿Magpie es un programa de creadores UGC?", "acceptedAnswer": {"@type": "Answer", "text": "En parte. Publicas para tu propia audiencia, no en los canales de la marca. Las visitas cortesía son solo para compartir de forma nativa. Los derechos de republicación y de anuncios vienen solo con las visitas pagadas, como una licencia estándar de 90 días. Tu contenido es tuyo."}}, {"@type": "Question", "name": "¿Cuánto tarda la revisión?", "acceptedAnswer": {"@type": "Answer", "text": "Cada solicitud fundadora recibe una decisión o un estado claro dentro de 2 días hábiles, revisada por una persona en orden de registro."}}, {"@type": "Question", "name": "¿Qué recibo hoy, antes de que abra mi mercado?", "acceptedAnswer": {"@type": "Answer", "text": "Tres cosas, desde el día en que completes tu perfil. Tu página de creador está en vivo y en Google ese mismo día. Tu tarifa pagada y tu tarifa de licencia son públicas en tu página, así que los negocios ven tu precio antes de reservarte. Y tu orden fundador queda registrado: los creadores fundadores ven las ofertas nuevas primero cuando su mercado abre."}}, {"@type": "Question", "name": "¿Mis tarifas son públicas en Magpie?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. La tarifa pagada y la tarifa de licencia que fijes aparecen en tu página pública de creador, así que los negocios ven tu precio antes de reservarte. Cuando un negocio te reserva a tu tarifa, te quedas con el 97 por ciento."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "@id": "https://magpielocal.com/creadores.html#webpage", "url": "https://magpielocal.com/creadores.html", "name": "Marketing Local para Creadores: Te Pagan Cuando Publicas, Te Quedas con el 97% | Magpie", "inLanguage": "es", "isPartOf": {"@id": "https://magpielocal.com/#website"}, "about": {"@id": "https://magpielocal.com/#organization", "@type": "Organization", "alternateName": "Magpie Local", "legalName": "Extra Medium LLC", "slogan": "Plataforma de marketing de influencers local donde los negocios reservan a creadores cercanos según su alcance local.", "brand": {"@type": "Brand", "name": "Magpie", "logo": "https://magpielocal.com/assets/logo.png"}, "knowsAbout": ["Local influencer marketing", "Micro-influencer marketing", "Local creators", "Comped creator visits", "UGC marketing for local businesses"], "sameAs": ["https://www.linkedin.com/company/magpielocal", "https://www.instagram.com/magpielocal", "https://www.crunchbase.com/organization/magpie-bf7f", "https://wellfound.com/company/magpie-11", "https://www.f6s.com/magpie-local", "https://theorg.com/org/magpie-3", "https://www.producthunt.com/products/magpie-16", "https://www.facebook.com/magpielocal", "https://www.tiktok.com/@magpielocal", "https://www.pinterest.com/magpielocal", "https://www.owler.com/company/Magpielocal"], "name": "Magpie", "url": "https://magpielocal.com/", "logo": "https://magpielocal.com/assets/logo.png", "founder": {"@type": "Person", "name": "Jeff Rimmer"}, "parentOrganization": {"@type": "Organization", "name": "Extra Medium LLC"}}, "description": "Marketing local para creadores pequeños: comidas y experiencias cortesía, o reservas pagadas a tu propia tarifa. Una publicación, una historia, sin revisiones eternas. Te quedas con el 97% y te pagan después de que tu publicación esté en vivo y verificada, dentro de 48 horas. Nunca a 90 días. Gratis para unirte, desde 500 seguidores en total entre tus plataformas."}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://magpielocal.com/es.html"}, {"@type": "ListItem", "position": 2, "name": "Para creadores", "item": "https://magpielocal.com/creadores.html"}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Ir al contenido</a>
+<header class="site-head">
+  <div class="wrap head-in">
+    <a href="es.html" aria-label="Magpie inicio"><img class="logo-img" src="assets/logo.png" alt="Magpie"></a>
+    <nav class="main-nav">
+      <a href="creadores.html" aria-current="page">Para creadores</a>
+      <a href="negocios.html">Para negocios</a>
+      <a href="why-local.html">Por qué local</a>
+      <a href="cities.html">Mercados</a>
+      <a href="precios.html">Precios</a>
+      <a href="creator-faq.html">Preguntas frecuentes</a>
+      <a href="learn/">Aprende</a>
+      <a href="about.html">Nosotros</a>
+    </nav>
+    <div class="head-actions">
+      <a class="btn btn-small head-cta" href="https://app.magpielocal.com/claim?src=creators-v2">Únete ahora</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Abrir menú">
+        <svg class="nt-b" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="nt-x" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <button class="mn-profile" type="button" aria-label="Ask Maggie">
+      <img src="assets/maggie-logo/curious.jpg" alt="" width="54" height="54">
+      <span class="mn-profile-txt"><b>Maggie</b><i>Your Magpie guide · ask me anything</i></span>
+      <span class="mn-profile-go" aria-hidden="true">&rarr;</span>
+    </button>
+    <nav class="wrap" aria-label="Móvil">
+      <a class="mn-link" href="creadores.html">Creadores <span>&rarr;</span></a>
+      <a class="mn-link" href="negocios.html">Negocios <span>&rarr;</span></a>
+      <a class="mn-link" href="why-local.html">Por qué local <span>&rarr;</span></a>
+      <a class="mn-link" href="cities.html">Mercados <span>&rarr;</span></a>
+      <a class="mn-link" href="precios.html">Precios <span>&rarr;</span></a>
+      <a class="mn-link" href="creator-faq.html">Preguntas frecuentes <span>&rarr;</span></a>
+      <a class="mn-link" href="learn/">Aprende <span>&rarr;</span></a>
+      <a class="mn-link" href="about.html">Nosotros <span>&rarr;</span></a>
+        <a class="mn-link mn-signin" href="https://app.magpielocal.com">Iniciar sesión</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="shopx">
+
+
+  <!-- ================= TOP (locked refresh, 2026-11-21) ================= -->
+  <section class="lk-top">
+    <div class="wrap">
+      <div class="lk-grid">
+        <div class="lk-intro">
+          <div class="lk-kicker">Magpie para creadores</div>
+          <h1 class="lk-h1">Come, vive la experiencia, publica. Ese es el trabajo.</h1>
+          <p class="lk-sub">Visitas gratis y publicaciones pagadas cerca de ti. El valor, lo que piden y qué tan lejos está, en cada tarjeta, antes de que solicites.</p>
+          <div class="cta-row">
+            <a class="btn grad" href="#claim">Reclama tu página fundadora</a>
+            <a class="btn ghost" href="#offers">Ver visitas abiertas</a>
+          </div>
+        </div>
+        <div class="lk-cards">
+<article class="lk-card">
+  <div class="lk-photo"><img src="assets/photos/dining-room-busy.jpg" alt="El comedor de Juniper Table">
+    <div class="lk-badge"><span class="lk-star">&#9733;</span><span class="lk-rate">4.8</span></div>
+    <div class="lk-mark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4"><path d="M6 3h12v18l-6-4-6 4z"/></svg></div></div>
+  <div class="lk-strip"><b>Juniper Table</b><span>Barra del chef &middot; <span class="lk-grad">Midtown</span></span></div>
+  <div class="lk-price"><b>$85</b> &middot; valor de la visita</div>
+  <div class="lk-chips"><span>A 0.4 mi</span><span>Cena para dos</span><span>Publica en 48 horas</span></div>
+  <div class="lk-checks"><span><i>&#10003;</i> Cortesía</span><span><i>&#10003;</i> Cupones</span><span><i>&#10003;</i> Pagado</span></div>
+  <div class="lk-actions"><a class="lk-btn" href="https://app.magpielocal.com/claim?src=creators-v2">Solicitar</a><a class="lk-link" href="#offers">Ver la oferta completa</a></div>
+</article>
+<article class="lk-card">
+  <div class="lk-photo"><img src="assets/photos/salon-barber.jpg" alt="Golden Hour Salon">
+    <div class="lk-badge"><span class="lk-star">&#9733;</span><span class="lk-rate">4.9</span></div>
+    <div class="lk-mark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4"><path d="M6 3h12v18l-6-4-6 4z"/></svg></div></div>
+  <div class="lk-strip"><b>Golden Hour Salon</b><span>Salón de belleza &middot; <span class="lk-grad">East Nashville</span></span></div>
+  <div class="lk-price"><b>$120</b> &middot; valor de la visita</div>
+  <div class="lk-chips"><span>A 1.2 mi</span><span>Corte y peinado</span><span>Publica en 48 horas</span></div>
+  <div class="lk-checks"><span><i>&#10003;</i> Cortesía</span><span><i>&#10003;</i> Cupones</span><span><i>&#10003;</i> Pagado</span></div>
+  <div class="lk-actions"><a class="lk-btn" href="https://app.magpielocal.com/claim?src=creators-v2">Solicitar</a><a class="lk-link" href="#offers">Ver la oferta completa</a></div>
+</article>
+        </div>
+      </div>
+      <p class="lk-cta-line"><b>Gratis para creadores, siempre.</b> Tú fijas tu tarifa y te quedas con el 97%.</p>
+    </div>
+  </section>
+
+<div class="wrap">
+
+  <!-- ================= THE SHORT ANSWER ================= -->
+  <section class="sec" style="padding-top:10px;padding-bottom:0">
+    <style>
+.ans-box{background:var(--card);border:1px solid var(--line2);border-radius:20px;padding:26px 28px 22px;box-shadow:var(--sh-md);position:relative;overflow:hidden}
+.ans-box::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#006AFC,#019BFC,#03C9AB,#2FE07E)}
+.ans-box .eyebrow{color:#006AFC}
+.ans-box p{max-width:820px;font-size:1.06rem;line-height:1.65;margin:10px 0 4px}
+    </style>
+    <div class="ans-box">
+      <div class="eyebrow">La respuesta corta</div>
+      <p>Los negocios locales cerca de ti publican visitas: una comida, un servicio o una experiencia cortesía, o una reserva pagada a una tarifa que tú mismo fijas. Reclamas las que quieras, visitas y publicas con honestidad dentro de 48 horas. Magpie es gratis para los creadores, y te quedas con el 97 por ciento de cada reserva pagada.</p>
+    </div>
+  </section>
+
+  <!-- ================= THE MIRROR ================= -->
+  <section class="sec" style="padding-top:34px;" id="offers">
+    <div class="sec-head">
+      <div class="eyebrow">Dentro de la app · Encuentra ofertas</div>
+      <h2>Ofertas que se leen como etiquetas de precio.</h2>
+      <p class="example-note" style="font-size:13px;color:#5F7265;margin:8px 0 0"><strong>Ejemplo:</strong> los creadores, los negocios y los números de esta sección son inventados, para que veas cómo se ve la app. No son personas reales ni resultados reales.</p>
+      <p>Esta es tu pantalla principal cuando inicias sesión: <strong>visitas abiertas cerca de ti</strong>, cada una mostrando lo que recibes, lo que piden y qué tan lejos está. Si un negocio ya recibió creadores antes, su historial está ahí mismo también.</p>
+    </div>
+
+    <div class="appframe">
+      <div class="af-bar">
+        <span class="af-dot" style="background:#E5B7A6;"></span>
+        <span class="af-dot" style="background:#EBD9A0;"></span>
+        <span class="af-dot" style="background:#A9E8C9;"></span>
+        <span class="af-url">app.magpielocal.com</span>
+        <span class="af-role">Sesión iniciada · Creador</span>
+      </div>
+      <div class="af-body">
+        <div class="pagehead">
+          <div class="eyebrow">Visitas abiertas · Cerca de ti</div>
+          <h2>Lugares que quieren tenerte ahí.</h2>
+          <p class="lede">Lugares locales que ofrecen una visita gratis o una publicación pagada. <strong>Lo que ves es exactamente lo que recibes</strong>: la oferta, lo que piden y qué tan lejos está. Nada de promesas vagas de “exposición”.</p>
+        </div>
+
+        <div class="lk-feed">
+<article class="lk-card">
+  <div class="lk-photo"><img src="assets/photos/watch-fitness.jpg" alt="Sunroom Studio">
+    <div class="lk-badge"><span class="lk-star">&#9733;</span><span class="lk-rate">4.9</span></div>
+    <div class="lk-mark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4"><path d="M6 3h12v18l-6-4-6 4z"/></svg></div></div>
+  <div class="lk-strip"><b>Sunroom Studio</b><span>Estudio de fitness &middot; <span class="lk-grad">Logan Square</span></span></div>
+  <div class="lk-price"><b>$45</b> &middot; valor de la visita</div>
+  <div class="lk-chips"><span>A 1.4 mi</span><span>Pase de clase</span><span>Publica en 48 horas</span></div>
+  <div class="lk-checks"><span><i>&#10003;</i> Cortesía</span><span><i>&#10003;</i> Cupones</span><span><i>&#10003;</i> Pagado</span></div>
+  <div class="lk-actions"><a class="lk-btn" href="https://app.magpielocal.com/claim?src=creators-v2">Solicitar</a><a class="lk-link" href="#your-page">Ver la oferta completa</a></div>
+</article>
+<article class="lk-card">
+  <div class="lk-photo"><img src="assets/photos/cocktails-toast.jpg" alt="Neon Palms Rooftop">
+    <div class="lk-badge"><span class="lk-star">&#9733;</span><span class="lk-rate">4.7</span></div>
+    <div class="lk-mark"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.4"><path d="M6 3h12v18l-6-4-6 4z"/></svg></div></div>
+  <div class="lk-strip"><b>Neon Palms Rooftop</b><span>Bar en la azotea &middot; <span class="lk-grad">Capitol Hill</span></span></div>
+  <div class="lk-price"><b>$200</b> &middot; publicación pagada</div>
+  <div class="lk-chips"><span>A 2.1 mi</span><span>Horario al atardecer</span><span>Publica en 48 horas</span></div>
+  <div class="lk-checks"><span class="off"><i>-</i> Cortesía</span><span class="off"><i>-</i> Cupones</span><span><i>&#10003;</i> Pagado</span></div>
+  <div class="lk-actions"><a class="lk-btn" href="https://app.magpielocal.com/claim?src=creators-v2">Solicitar</a><a class="lk-link" href="#your-page">Ver la oferta completa</a></div>
+</article>
+        </div>
+
+            <div class="howto">
+              <div class="step"><div class="num">1</div><b>Elige una visita</b><p>Quédate con un lugar que encaje con tu contenido y tu barrio. La oferta de la tarjeta es el trato completo: nada escondido después.</p></div>
+              <div class="step"><div class="num">2</div><b>Llega y publica</b><p>Disfrútalo como un cliente normal, y luego publica tu opinión honesta dentro de 48 horas. Las publicaciones pagadas te pagan después de que tu publicación esté en vivo y verificada, dentro de 48 horas, una vez que configures tus datos de pago.</p></div>
+              <div class="step"><div class="num">3</div><b>Queda registrado</b><p>Tu publicación lleva tu código, así que el negocio ve exactamente quién entró por ti. Eso es lo que hace que te reserven de nuevo.</p></div>
+            </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= YOUR PAGE ================= -->
+  <section class="sec" id="your-page">
+    <div class="sec-head">
+      <div class="eyebrow">Tu página · Lo que ven los negocios</div>
+      <h2>Tu página vende por ti mientras duermes.</h2>
+      <p class="example-note" style="font-size:13px;color:#5F7265;margin:8px 0 0"><strong>Ejemplo:</strong> los creadores, los negocios y los números de esta sección son inventados, para que veas cómo se ve la app. No son personas reales ni resultados reales.</p>
+      <p>Cuando un negocio abre tu página, no ve una cantidad de seguidores y una oración. Ve <strong>qué parte de tu audiencia vive en su ciudad</strong>, qué le da una reserva contigo, y la prueba de tus visitas anteriores, contada, no solo afirmada.</p>
+    </div>
+
+    <div class="appframe">
+      <div class="af-bar">
+        <span class="af-dot" style="background:#E5B7A6;"></span>
+        <span class="af-dot" style="background:#EBD9A0;"></span>
+        <span class="af-dot" style="background:#A9E8C9;"></span>
+        <span class="af-url">app.magpielocal.com</span>
+        <span class="af-role">Vista de un negocio de tu página</span>
+      </div>
+      <div class="af-body">
+        <div class="crumbs">
+          <span>Encuentra creadores</span><span>›</span><span>Comida callejera y nocturna</span><span>›</span><b>Nadia Rahman</b>
+        </div>
+
+        <div class="pdp">
+          <div>
+            <div class="gallery">
+              <div class="main"><img src="assets/photos/priya-jeff-pick.jpg" alt="Nadia Rahman"></div>
+              <div class="thumbs">
+                <img class="on" src="assets/photos/priya-jeff-pick.jpg" alt="Nadia Rahman">
+                <img src="assets/photos/watch-food.jpg" alt="Un plato de una de las publicaciones recientes de Nadia">
+                <img src="assets/photos/table-phone-photo.jpg" alt="Nadia fotografiando una comida durante una visita">
+                <img src="assets/photos/cocktails-toast.jpg" alt="Amigos brindando con cócteles, de una de las publicaciones de Nadia">
+              </div>
+            </div>
+
+            <h2>Nadia Rahman</h2>
+            <div class="who-meta">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+              East Nashville · Comida callejera y comida nocturna
+            </div>
+            <div class="badge-row">
+              <span class="badge light">Creadora fundadora</span>
+              <span class="badge light"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>Responde en un día</span>
+              <span class="badge light">Publica unas 4 veces por semana</span>
+            </div>
+
+            <div class="hero-local">
+              <div class="localnum">91<small>%</small></div>
+              <div class="localcap">
+                <div class="cap">de los seguidores de Nadia viven en Nashville. <span>Son unos 8,600 seguidores locales que sí podrían cruzar tu puerta, no desconocidos a tres estados de distancia.</span></div>
+                <div class="localbar"><i style="width:91%"></i></div>
+              </div>
+            </div>
+
+            <div class="section">
+              <h2>Tu audiencia, de cerca</h2>
+              <div class="card">
+                <div class="spec-bar"><span>Nashville</span><div class="track"><i style="width:91%"></i></div><span class="val">91%</span></div>
+                <div class="spec-bar"><span>Franklin</span><div class="track"><i class="faint" style="width:5%"></i></div><span class="val">4%</span></div>
+                <div class="spec-bar"><span>Memphis</span><div class="track"><i class="faint" style="width:3%"></i></div><span class="val">2%</span></div>
+                <div class="spec-bar"><span>Todos los demás lugares</span><div class="track"><i class="faint" style="width:4%"></i></div><span class="val">3%</span></div>
+                <div class="spec-notes">
+                  <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>9,400 seguidores en total</span>
+                  <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>La mayoría de los seguidores tiene entre 25 y 40 años</span>
+                  <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>También publica: salidas por café, food trucks, mercados nocturnos</span>
+                </div>
+              </div>
+              <div class="momentum">
+                <div class="score">240</div>
+                <p><b>Momentum: tu puntuación de confiabilidad.</b> La ganas publicando a tiempo y logrando que te inviten de nuevo. Los negocios la ven en tu página, y te sube en la lista. Publica a tiempo y solo va en una dirección.</p>
+              </div>
+            </div>
+
+            <div class="section">
+              <h2>Cómo se cuenta la prueba. <span class="hint">Un ejemplo de cómo se ve tu historial en la app. Las visitas y los números de abajo son ejemplos, no resultados reales.</span></h2>
+              <div class="proof-stats">
+                <div class="proof-stat"><div class="n">12</div><div class="t">visitas completadas para negocios locales</div></div>
+                <div class="proof-stat"><div class="n">12 de 12</div><div class="t">publicaciones subieron a tiempo</div></div>
+                <div class="proof-stat"><div class="n">3</div><div class="t">negocios la invitaron a una segunda visita</div></div>
+              </div>
+              <div class="post-cards">
+                <div class="post-card">
+                  <img src="assets/photos/chef-flame.jpg" alt="Un chef cocinando sobre una llama abierta, de la publicación de visita de una creadora">
+                  <div class="pc-body">
+                    <b>Ember &amp; Oak · Germantown</b>
+                    <p>En este ejemplo, una publicación como esta va seguida de <strong>visitas contadas</strong> en las dos semanas después de que se publica, y la app muestra exactamente cuántas llegaron.</p>
+                  </div>
+                </div>
+                <div class="post-card">
+                  <img src="assets/photos/table-phone-photo.jpg" alt="Una creadora fotografiando su comida durante una visita">
+                  <div class="pc-body">
+                    <b>Juniper Coffee · Logan Square</b>
+                    <p>En este ejemplo, las visitas contadas son el número que el negocio vería en el recibo, listo para reservar de nuevo.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside>
+            <div class="ratecard">
+              <div class="bb-eyebrow">Tu tarjeta de tarifas</div>
+              <h3>Tú fijas el precio</h3>
+              <div class="rc-row"><span class="k">Tu tarifa publicada</span><span class="v">$120 <small>por publicación</small></span></div>
+              <div class="rc-row"><span class="k">Recibes en una reserva pagada</span><span class="v">$116.40</span></div>
+              <div class="rc-row"><span class="k">Magpie se queda</span><span class="v">3% <small>cubre las comisiones de tarjeta y transferencia</small></span></div>
+              <div class="rc-row"><span class="k">Pago</span><span class="v" style="font-size:16px;">Después de que tu publicación esté en vivo y verificada, dentro de 48 horas, una vez que configures tus datos de pago</span></div>
+              <div class="rc-row"><span class="k">Visitas cortesía</span><span class="v" style="font-size:16px;">Tú eliges cuáles aceptar</span></div>
+              <div class="rc-row rc-toggle-row"><span class="comptoggle mini on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Acepta cortesías</span></span><span class="comptoggle couptoggle mini on"><span class="ct-track"><span class="ct-knob"></span></span><span class="ct-lab">Acepta cupones</span></span></div>
+              <button class="btn grad">Reclama tu página</button>
+              <div class="bb-notes">
+                <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>500 seguidores entre tus plataformas bastan para unirte.</span>
+                <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>Cambia tu tarifa cuando quieras. Es tuya.</span>
+                <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>Tus videos de Instagram y TikTok también aparecen en tu página, así que nunca está vacía mientras tus publicaciones de Magpie crecen.</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TWO LANES ================= -->
+  <section class="sec">
+    <div class="sec-head">
+      <div class="eyebrow">Dos formas de que te reserven</div>
+      <h2>Cortesía o pagado. Tú eliges, siempre.</h2>
+    </div>
+    <div class="lanes">
+      <div class="lane">
+        <div class="lane-tag">Vía uno</div>
+        <h3>Visitas cortesía</h3>
+        <p>Un negocio te recibe: <strong>una comida, un servicio, una experiencia</strong>, y tú publicas tu opinión honesta. No cambia dinero de manos. Es como construyes prueba contada, rápido.</p>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>1 publicación + 1 historia, en vivo dentro de las 48 horas de la visita</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>Honesto y con divulgación: solo publicas lugares a los que volverías</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>Cada visita contada sube tu Momentum y tu lugar en la lista</li>
+        </ul>
+      </div>
+      <div class="lane ink">
+        <div class="lane-tag">Vía dos</div>
+        <h3>Reservas pagadas</h3>
+        <p>Los negocios te reservan a <strong>tu tarifa publicada</strong>, mínimo de $50, sin más techo que el tuyo. El dinero se retiene antes de tu visita y <strong>se paga después de que tu publicación esté en vivo y verificada, dentro de 48 horas, una vez que configures tus datos de pago.</strong></p>
+        <ul>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>Te quedas con el 97%: el 3% cubre las comisiones de tarjeta y transferencia</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>Sin facturas, sin pagos a 90 días, sin perseguir a nadie por tu dinero</li>
+          <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.5l5 5L20 6.5"/></svg>Las reservas pagadas incluyen una licencia de 90 días para que el negocio reutilice tu publicación</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ (depth) ================= -->
+  <section class="sec">
+    <div class="sec-head center">
+      <div class="eyebrow">Respuestas directas</div>
+      <h2>Preguntas frecuentes.</h2>
+    </div>
+    <div class="faqmore">
+      <details class="qa">
+        <summary>¿Cuesta algo unirse a Magpie como creador?</summary>
+        <p>No. Magpie es gratis para los creadores. Siempre. Los negocios pagan la plataforma. Nunca pagas por unirte, por aparecer en la lista ni por que te reserven. En las visitas estándar, la cortesía misma es el pago.</p>
+      </details>
+      <details class="qa">
+        <summary>¿Qué cobra Magpie en las reservas pagadas?</summary>
+        <p>Unirse y las visitas cortesía son gratis. En las reservas pagadas la comisión es del 6 por ciento en total, dividida en partes iguales, así que te quedas con el 97 por ciento. El pago se retiene hasta que la publicación esté en vivo, y se reembolsa por completo si la visita o la publicación nunca llegan.</p>
+      </details>
+      <details class="qa">
+        <summary>¿Cómo se les paga a los creadores en Magpie?</summary>
+        <p>En las visitas estándar, la cortesía es el pago. Cualquier creador puede fijar una tarifa pagada, y cuando un negocio te reserva a esa tarifa, te quedas con el 97 por ciento. Los Headliners también pueden participar en campañas pagadas destacadas.</p>
+      </details>
+      <details class="qa">
+        <summary>¿Cuándo me pagan exactamente?</summary>
+        <p>En una reserva pagada el negocio paga por adelantado, y a ti te pagan después de que tu publicación esté en vivo y verificada, dentro de 48 horas, una vez que configures tus datos de pago. Sin facturas, sin perseguir a nadie y sin plazos de 30, 60 o 90 días. Si la visita o la publicación nunca llegan, al negocio se le reembolsa por completo.</p>
+      </details>
+      <details class="qa">
+        <summary>¿Un negocio puede pedirme que revise mi publicación una y otra vez?</summary>
+        <p>No. Cada visita tiene un entregable definido, acordado antes de que la reclames: 1 publicación o reel más 1 historia que comparte la publicación, con tu propia voz. Las instrucciones se escriben desde el principio, así que lo que se espera nunca es una sorpresa, y ningún negocio puede escribir tus palabras ni exigirte ediciones eternas.</p>
+      </details>
+      <details class="qa">
+        <summary>¿Tengo que publicar algo positivo?</summary>
+        <p>Nunca. Solo publicaciones honestas. Los negocios no pueden exigir una publicación positiva, y cualquier negocio que presione a un creador sale de la plataforma.</p>
+      </details>
+      <details class="qa">
+        <summary>¿Qué tengo que publicar, y qué tan rápido?</summary>
+        <p>La meta es 1 publicación o reel más 1 historia que comparte la publicación dentro de las 48 horas de tu visita, con divulgación de que fue cortesía, por ejemplo #gifted. La publicación se queda en vivo por lo menos 30 días. Hasta una semana como máximo todavía cuenta, pero cumplir la meta de 48 horas es lo que te suma Momentum. Si pasa la semana sin publicación, el negocio recibe una visita de reemplazo y tu posición se ve afectada.</p>
+      </details>
+      <details class="qa">
+        <summary>¿Qué pasa si no puedo ir a una visita que reclamé?</summary>
+        <p>Avísanos en la app antes de que cierre tu ventana de visita. Una visita que reportas a tiempo se devuelve al negocio y no cuenta en tu contra. El silencio es lo que daña: no presentarte y no publicar afecta tu posición, y quienes lo repiten salen de la lista.</p>
+      </details>
+      <details class="qa">
+        <summary>¿Cuántos seguidores necesito para unirme a Magpie?</summary>
+        <p>Magpie empieza en 500 seguidores en total entre tus plataformas. Tus cifras se suman entre Instagram, TikTok, Facebook, YouTube, X y LinkedIn. Los niveles son Neighbors de 500 a 2,000, Locals de 2,000 a 15,000 y Headliners desde 15,000. Una audiencia local pequeña vale más que una grande y dispersa.</p>
+      </details>
+      <details class="qa">
+        <summary>Mi ciudad no está en el lanzamiento. ¿Puedo unirme a Magpie de todos modos?</summary>
+        <p>Sí. Las listas fundadoras se están formando en 45 mercados en 13 países. En cualquier otra ciudad, regístrate con tu ciudad y completa tu perfil. Cuando tu ciudad abra, estarás en su círculo fundador, y la primera opción va a los perfiles fundadores completados. Las ciudades se eligen por cantidad de registros, y cada perfil completado acerca su ciudad a la apertura.</p>
+      </details>
+      <details class="qa">
+        <summary>¿Cómo consigo comidas cortesía por publicar?</summary>
+        <p>Solicita tu lugar en la lista de tu ciudad, gratis. Reclama las ofertas cortesía que quieras, visita como un cliente real y publica con honestidad y divulgación, con la meta de publicar dentro de las 48 horas de tu visita. La cortesía es el pago.</p>
+      </details>
+      <details class="qa">
+        <summary>¿Los creadores pequeños pueden conseguir acuerdos con marcas?</summary>
+        <p>Sí. Los negocios locales buscan por ubicación de la audiencia, no por cantidad de seguidores. Los niveles empiezan en 500 seguidores en total entre tus plataformas, y 1,000 seguidores locales es exactamente lo que buscan.</p>
+      </details>
+      <details class="qa">
+        <summary>¿Cómo me convierto en creador local?</summary>
+        <p>Solicita con tu ciudad y tu usuario, y completa tu perfil. Reclama ofertas, preséntate, y la meta es publicar dentro de las 48 horas de tu visita. Las publicaciones entregadas construyen el historial que hace que te elijan primero.</p>
+      </details>
+      <details class="qa">
+        <summary>¿Qué son los puntos Momentum?</summary>
+        <p>Los puntos Momentum son tu historial, convertido en prioridad. Los ganas cumpliendo: una publicación a tiempo suma +20, las visitas completadas y las calificaciones suman más, y los creadores que se unen con tu enlace de invitación te suman +3 cuando se unen y +10 cuando son aprobados. Los puntos ordenan la lista que ven los negocios al elegir creadores, así que un historial fuerte hace que te elijan primero.</p>
+      </details>
+      <details class="qa">
+        <summary>¿De verdad los restaurantes regalan comida por publicaciones?</summary>
+        <p>Sí. El negocio ofrece una comida o un servicio gratis y tú publicas tu experiencia honesta, con divulgación de que fue cortesía, por ejemplo #gifted. Los negocios no pueden comprar una publicación positiva.</p>
+      </details>
+      <details class="qa">
+        <summary>¿Magpie es un programa de creadores UGC?</summary>
+        <p>En parte. Publicas para tu propia audiencia, no en los canales de la marca. Las visitas cortesía son solo para compartir de forma nativa. Los derechos de republicación y de anuncios vienen solo con las visitas pagadas, como una licencia estándar de 90 días. Tu contenido es tuyo.</p>
+      </details>
+      <details class="qa">
+        <summary>¿Cuánto tarda la revisión?</summary>
+        <p>Cada solicitud fundadora recibe una decisión o un estado claro dentro de 2 días hábiles, revisada por una persona en orden de registro.</p>
+      </details>
+      <details class="qa">
+        <summary>¿Qué recibo hoy, antes de que abra mi mercado?</summary>
+        <p>Tres cosas, desde el día en que completes tu perfil. Tu página de creador está en vivo y en Google ese mismo día. Tu tarifa pagada y tu tarifa de licencia son públicas en tu página, así que los negocios ven tu precio antes de reservarte. Y tu orden fundador queda registrado: los creadores fundadores ven las ofertas nuevas primero cuando su mercado abre.</p>
+      </details>
+      <details class="qa">
+        <summary>¿Mis tarifas son públicas en Magpie?</summary>
+        <p>Sí. La tarifa pagada y la tarifa de licencia que fijes aparecen en tu página pública de creador, así que los negocios ven tu precio antes de reservarte. Cuando un negocio te reserva a tu tarifa, te quedas con el 97 por ciento.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="ctaband" id="claim">
+    <div>
+      <h2>La lista fundadora de tu ciudad se está formando.</h2>
+      <p>Los creadores fundadores ven cada oferta primero cuando su ciudad abre, y los perfiles completados son los que los negocios ven primero. Reclama tu página y complétala antes de que lleguen los negocios de tu ciudad.</p>
+    </div>
+    <div class="cta-col">
+      <a class="btn grad" href="https://app.magpielocal.com/claim">Reclama tu página fundadora</a>
+      <a class="btn ghost" href="negocios.html">Ver el lado de los negocios</a>
+      <div class="fine">Gratis para creadores, siempre. 500 seguidores bastan.</div>
+    </div>
+  </section>
+</div>
+
+</div>
+<section class="block" id="your-city">
+    <div class="wrap" style="max-width:800px">
+      <span class="label">¿Tu ciudad no está en la lista?</span>
+      <h2 style="margin:16px 0 14px">¿No ves tu ciudad? <span class="grad-text">No te preocupes.</span></h2>
+      <p class="lede" style="margin-bottom:28px">Magpie se está expandiendo rápido, y las ciudades nuevas abren donde los creadores se juntan primero. Regístrate ahora y completa tu perfil: cuando tu ciudad abra, ya estarás en su círculo fundador, y la primera opción de sus primeros negocios va a los perfiles fundadores completados. Cada perfil completado acerca su ciudad.</p>
+      <p><a class="btn" href="https://app.magpielocal.com/claim?src=creators-v2">Reclama tu página fundadora</a></p>
+      <p style="margin-top:14px"><a href="cities.html" class="tx-link">Mira cómo se eligen las ciudades &rarr;</a></p>
+      <p style="margin-top:10px;color:var(--ink-dim)">Gratis para creadores, siempre. 500 seguidores bastan.</p>
+    </div>
+  </section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="es.html"><img class="logo-img" src="assets/logo.png" alt="Magpie"></a>
+        <p class="foot-tag">Marketing de creadores local, ciudad por ciudad. Gente real. Publicaciones reales. Clientes reales.</p>
+        <div class="social-bar">
+          <a href="https://www.instagram.com/magpielocal" target="_blank" rel="noopener" aria-label="Magpie on Instagram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></a>
+          <a href="https://www.threads.net/@magpielocal" target="_blank" rel="noopener" aria-label="Magpie on Threads"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44 1.5 15.586 1.472 12.01v-.017c.03-3.579.879-6.43 2.525-8.482C5.845 1.205 8.6.024 12.18 0h.014c2.746.02 5.043.725 6.826 2.098 1.677 1.29 2.858 3.13 3.509 5.467l-2.04.569c-1.104-3.96-3.898-5.984-8.304-6.015-2.91.022-5.11.936-6.54 2.717C4.307 6.504 3.616 8.914 3.589 12c.027 3.086.718 5.496 2.057 7.164 1.43 1.783 3.631 2.698 6.54 2.717 2.623-.02 4.358-.631 5.8-2.045 1.647-1.613 1.618-3.593 1.09-4.798-.31-.71-.873-1.3-1.634-1.75-.192 1.352-.622 2.446-1.284 3.272-.886 1.102-2.14 1.704-3.73 1.79-1.202.065-2.361-.218-3.259-.801-1.063-.689-1.685-1.74-1.752-2.964-.065-1.19.408-2.285 1.33-3.082.88-.76 2.119-1.207 3.583-1.291a13.853 13.853 0 0 1 3.02.142c-.126-.742-.375-1.332-.75-1.757-.513-.586-1.308-.883-2.359-.89h-.029c-.844 0-1.992.232-2.721 1.32L7.734 7.847c.98-1.454 2.568-2.256 4.478-2.256h.044c3.194.02 5.097 1.975 5.287 5.388.108.046.216.094.321.142 1.49.7 2.58 1.761 3.154 3.07.797 1.82.871 4.79-1.548 7.158-1.85 1.81-4.094 2.628-7.277 2.65Zm1.003-11.69c-.242 0-.487.007-.739.021-1.836.103-2.98.946-2.916 2.143.067 1.256 1.452 1.839 2.784 1.767 1.224-.065 2.818-.543 3.086-3.71a10.5 10.5 0 0 0-2.215-.221z"/></svg></a>
+          <a href="https://www.facebook.com/magpielocal" target="_blank" rel="noopener" aria-label="Magpie on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a>
+          <a href="https://www.linkedin.com/company/magpielocal" target="_blank" rel="noopener" aria-label="Magpie on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://www.tiktok.com/@magpielocal" target="_blank" rel="noopener" aria-label="Magpie on TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+          <a href="https://www.pinterest.com/magpielocal" target="_blank" rel="noopener" aria-label="Magpie on Pinterest"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.367 18.62.001 12.017.001L12.017 0z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <p class="foot-h">Plataforma</p>
+        <ul>
+          <li><a href="creadores.html">Para creadores</a></li>
+          <li><a href="for-service-providers.html">Para proveedores de servicios</a></li>
+          <li><a href="creator-terms.html">Términos del creador en palabras claras</a></li>
+          <li><a href="negocios.html">Para negocios</a></li>
+          <li><a href="why-local.html">Por qué creadores locales</a></li>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="alternatives.html">Comparación de plataformas</a></li>
+          <li><a href="learn/">Aprende: guías y tutoriales</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-h">Mercados fundadores</p>
+        <ul>
+          <li><a href="cities.html#united-states">Estados Unidos · 30 mercados</a></li>
+          <li><a href="cities.html#united-kingdom">Reino Unido · Londres, Manchester</a></li>
+          <li>Canadá · Toronto, Montreal</li>
+          <li>Francia · España · Portugal</li>
+          <li>Emiratos Árabes · Dubái</li>
+          <li><a href="cities.html">Los 45 mercados fundadores</a></li>
+          <li><a href="local-list.html">La Lista Local</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="foot-h">Contacto</p>
+        <ul>
+          <li><a href="mailto:hello@magpielocal.com">hello@magpielocal.com</a></li>
+          <li><a href="https://www.instagram.com/magpielocal" target="_blank" rel="noopener">Instagram · @magpielocal</a></li>
+          <li><a href="https://www.tiktok.com/@magpielocal" target="_blank" rel="noopener">TikTok · @magpielocal</a></li>
+          <li><a href="https://www.facebook.com/magpielocal" target="_blank" rel="noopener">Facebook · Magpie</a></li>
+          <li><a href="https://www.linkedin.com/company/magpielocal" target="_blank" rel="noopener">LinkedIn · Magpie</a></li>
+          <li><a href="https://www.pinterest.com/magpielocal" target="_blank" rel="noopener">Pinterest · @magpielocal</a></li>
+          <li><a href="privacy.html">Política de privacidad</a></li>
+          <li><a href="terms.html">Términos de uso</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; 2026 Magpie. Todos los derechos reservados.</span>
+      <span>A product of <a href="https://xmedium.co">Extra Medium</a></span>
+      <span><a href="creators.html">English</a> · <a href="creadores.html">Español</a></span>
+      <span><a href="privacy.html">Privacidad</a> · <a href="terms.html">Términos</a> · <a href="credits.html">Credits</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js?v=6"></script>
+<script>
+(function(){
+  var head = document.querySelector('.site-head.over-hero');
+  if (head) {
+    var onScrollHead = function(){ head.classList.toggle('scrolled', window.scrollY > 30); };
+    window.addEventListener('scroll', onScrollHead, { passive: true });
+    onScrollHead();
+  }
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if ('IntersectionObserver' in window) {
+    var rio = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); rio.unobserve(e.target); } });
+    }, { threshold: .18 });
+    document.querySelectorAll('.reveal').forEach(function(el){ rio.observe(el); });
+
+    if (!reduceMotion) {
+      /* iOS/WebKit hardening (2026-10-25): set the muted + inline PROPERTIES
+         (not just attributes) before every play; if play() is rejected (Low
+         Power Mode, data saver, gesture-gated policies), queue the video and
+         retry the on-screen ones on the first user gesture. Posters carry
+         the frame whenever playback stays blocked. */
+      var blockedVids = [];
+      var unlockArmed = false;
+      function vidInView(v){ var r = v.getBoundingClientRect(); return r.bottom > 0 && r.top < window.innerHeight && r.right > 0 && r.left < window.innerWidth; }
+      function armUnlock(){
+        if (unlockArmed) return; unlockArmed = true;
+        var unlock = function(){ blockedVids.slice().forEach(function(v){ if (vidInView(v)) { tryPlay(v); } }); };
+        ['pointerdown','touchstart','keydown'].forEach(function(ev){ document.addEventListener(ev, unlock, { passive: true }); });
+      }
+      function tryPlay(v){
+        if (!v) return;
+        v.muted = true; v.defaultMuted = true; v.playsInline = true;
+        var p = v.play();
+        if (p && p.catch) { p.catch(function(){ if (blockedVids.indexOf(v) < 0) { blockedVids.push(v); } armUnlock(); }); }
+      }
+      /* Govern EVERY .js-hero-video (hero + the creator story film), not
+         just the first one: play on screen, pause off screen. */
+      var heroVideos = document.querySelectorAll('.js-hero-video');
+      if (heroVideos.length) {
+        var hio = new IntersectionObserver(function(es){
+          es.forEach(function(e){
+            if (e.isIntersecting) { tryPlay(e.target); }
+            else { e.target.pause(); }
+          });
+        }, { threshold: .12 });
+        heroVideos.forEach(function(v){ hio.observe(v); });
+      }
+      var loaded = new WeakSet();
+      function loadVideo(video){
+        if (!video || loaded.has(video)) return;
+        var src = video.getAttribute('data-src');
+        if (src) { var s = document.createElement('source'); s.src = src; s.type = 'video/mp4'; video.appendChild(s); video.load(); }
+        loaded.add(video);
+        /* The autoplay attribute would start a freshly loaded video even
+           while its chapter is still off screen (iOS honors the
+           declarative path). Loading never starts playback: the pin
+           observer is the only place chapter playback begins. */
+        video.pause();
+      }
+      /* Chapter text animation + lazy activation only. Playback is NOT
+         decided here: it belongs to the pin observer below. */
+      var vio = new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          var chapter = e.target;
+          if (e.intersectionRatio >= .38) {
+            chapter.classList.add('on');
+            loadVideo(chapter.querySelector('.js-ch-video'));
+          } else {
+            chapter.classList.remove('on');
+          }
+        });
+      }, { threshold: [0, .38, .6] });
+      document.querySelectorAll('[data-chapter]').forEach(function(ch){ vio.observe(ch); });
+      var lio = new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          if (e.isIntersecting) {
+            loadVideo(e.target.querySelector('.js-ch-video'));
+            lio.unobserve(e.target);
+          }
+        });
+      }, { rootMargin: '120% 0px 120% 0px' });
+      document.querySelectorAll('[data-chapter]').forEach(function(ch){ lio.observe(ch); });
+      /* Playback governor (2026-10-28): a chapter video plays only while
+         its sticky pin fills at least half the screen, and starting one
+         pauses every other chapter video. Two chapter videos can never
+         be moving at once during the scroll handoff. */
+      var chVideos = document.querySelectorAll('.js-ch-video');
+      var pio = new IntersectionObserver(function(es){
+        es.forEach(function(e){
+          var video = e.target.querySelector('.js-ch-video');
+          if (!video) return;
+          if (e.intersectionRatio >= .5) {
+            loadVideo(video);
+            chVideos.forEach(function(other){ if (other !== video && !other.paused) { other.pause(); } });
+            tryPlay(video);
+          } else if (loaded.has(video)) {
+            video.pause();
+          }
+        });
+      }, { threshold: [0, .5] });
+      document.querySelectorAll('.chapter-pin').forEach(function(pin){ pio.observe(pin); });
+    } else {
+      document.querySelectorAll('[data-chapter]').forEach(function(ch){ ch.classList.add('on'); });
+    }
+  } else {
+    document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); });
+    document.querySelectorAll('[data-chapter]').forEach(function(ch){ ch.classList.add('on'); });
+  }
+})();
+</script>
+<script>(function(){var btn=document.querySelector('.f-clear');if(!btn)return;btn.addEventListener('click',function(){var scope=btn.closest('.shopx')||document;scope.querySelectorAll('.filters .f-group').forEach(function(g){var rows=g.querySelectorAll('.f-row');if(!rows.length)return;rows.forEach(function(r){r.classList.remove('sel');});rows[0].classList.add('sel');});scope.querySelectorAll('.chiprow .chip').forEach(function(c){c.classList.remove('sel');});});})();</script>
+
+</body>
+</html>
