@@ -38,7 +38,11 @@ Magpie is for local businesses customers physically visit. Business categories o
 - Fitness and wellness (gyms, fitness studios, wellness services)
 - Retail and boutiques
 - Events and experiences (attractions, venues, pop-ups)
-- Health and aesthetic services: med spas, vein clinics, dental practices, dermatology and aesthetics clinics, IV therapy and wellness clinics. For health and aesthetic services, creator posts are personal experiences only, with no treatment claims and full disclosure of the comp, and each practice stays responsible for its own medical advertising rules.
+- Health and aesthetic services: med spas, vein clinics, dental practices, dermatology and aesthetics clinics, IV therapy and wellness clinics. ### Product Brands
+
+CPG / consumer packaged goods brands, DTC / ecommerce brands. National product brands served one national page each, not a city matrix: CPG runs on local creators picking the product up off the shelf at local stores; DTC runs on product shipped to local creators who shoot and post from their own city.
+
+For health and aesthetic services, creator posts are personal experiences only, with no treatment claims and full disclosure of the comp, and each practice stays responsible for its own medical advertising rules.
 
 ## Business types Magpie serves
 
@@ -88,6 +92,10 @@ Grand opening, New menu / product launch, Happy hour relaunch, Seasonal / holida
 
 Auto detailing / ceramic coating, Premium car wash, Tattoo / piercing studio, Photographer, Videographer, Wedding venue / planner, Real estate listing showcase, Landscaping, Home cleaning / organizing
 
+### Product Brands
+
+CPG / consumer packaged goods brands, DTC / ecommerce brands. National product brands served one national page each, not a city matrix: CPG runs on local creators picking the product up off the shelf at local stores; DTC runs on product shipped to local creators who shoot and post from their own city.
+
 For health and aesthetic services, creator posts are personal experiences only, with no treatment claims and full disclosure of the comp, and each practice stays responsible for its own medical advertising rules.
 
 ### Business type pages
@@ -108,6 +116,8 @@ For health and aesthetic services, creator posts are personal experiences only, 
 - Pilates studio — influencer marketing for pilates studios — https://magpielocal.com/for-pilates-studio.html
 - Med spa — influencer marketing for med spas — https://magpielocal.com/for-med-spa.html
 - Grand opening — book local influencers for a grand opening — https://magpielocal.com/for-grand-opening.html
+- CPG brands — CPG influencer marketing — https://magpielocal.com/for-cpg-brands.html
+- DTC brands — influencer marketing for DTC brands — https://magpielocal.com/for-dtc-brands.html
 
 ## How it works
 
