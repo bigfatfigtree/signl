@@ -1396,5 +1396,10 @@
     "audience": "creators",
     "dek": "Four simple weeks: finish the profile, post like a local, deliver the first visit on time, and close the loop.",
     "topic": "finding-work"
+  },
+  "how-a-local-business-should-pick-its-first-five-creators.html": {
+    "audience": "businesses",
+    "dek": "Filter on local reach, category fit, and reliability, spread five creators across days and neighborhoods, and read the results together before you scale.",
+    "topic": "working-with-creators"
   }
 }
