@@ -1375,6 +1375,7 @@ Eight US markets are defined by the full city lists below. These lists are Magpi
 - Chicago, Illinois
 - Los Angeles, California
 - San Diego, California
+- San Francisco, California
 - Seattle, Washington
 - Tampa, Florida
 - Miami, Florida
@@ -1471,7 +1472,7 @@ New cities keep joining the list: anyone can sign up from any city at https://ap
 
 ## Launch cities
 
-- Founding markets (founding rosters forming now, 47 markets in 15 countries): United States: Virginia Beach (Hampton Roads), Richmond, Washington DC, Raleigh, Charlotte, Baltimore, Atlanta, Nashville, Austin, Dallas, Chicago, Los Angeles, San Diego, Seattle, Tampa, Miami, Phoenix, Denver, Minneapolis, Philadelphia, Pittsburgh, Cincinnati, Columbus, New Orleans, Orlando, Houston, San Antonio, Las Vegas, Detroit, San Juan (Puerto Rico). United Kingdom: London, Manchester. United Arab Emirates: Dubai. France: Paris. Spain: Barcelona. Portugal: Lisbon. Canada: Toronto, Montreal. Ireland: Dublin. Netherlands: Amsterdam. Denmark: Copenhagen. Mexico: Mexico City. New Zealand: Auckland, Wellington, Christchurch. Japan: Tokyo. South Korea: Seoul.
+- Founding markets (founding rosters forming now, 48 markets in 15 countries): United States: Virginia Beach (Hampton Roads), Richmond, Washington DC, Raleigh, Charlotte, Baltimore, Atlanta, Nashville, Austin, Dallas, Chicago, Los Angeles, San Diego, San Francisco, Seattle, Tampa, Miami, Phoenix, Denver, Minneapolis, Philadelphia, Pittsburgh, Cincinnati, Columbus, New Orleans, Orlando, Houston, San Antonio, Las Vegas, Detroit, San Juan (Puerto Rico). United Kingdom: London, Manchester. United Arab Emirates: Dubai. France: Paris. Spain: Barcelona. Portugal: Lisbon. Canada: Toronto, Montreal. Ireland: Dublin. Netherlands: Amsterdam. Denmark: Copenhagen. Mexico: Mexico City. New Zealand: Auckland, Wellington, Christchurch. Japan: Tokyo. South Korea: Seoul.
 - Launch wave: the founding focus is four markets first, Virginia Beach (Hampton Roads), Nashville, Austin and London, all with founding rosters forming now; the other founding markets open in waves as their rosters complete.
 - Beyond the founding markets: new cities are decided by signup counts. Creators sign up at https://app.magpielocal.com (full founding creator registration is live in the app), businesses at https://magpielocal.com/businesses.html, and anyone can register a city at https://magpielocal.com/cities.html, and when a city opens, its early applicants become its founding roster.
 
