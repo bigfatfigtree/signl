@@ -1406,5 +1406,10 @@
     "audience": "businesses",
     "dek": "Mid morning and early afternoon are unsold inventory: Raleigh coffee shops and bakeries fill their quiet weekday hours with Triangle creators picked by local reach.",
     "topic": "local-marketing"
+  },
+  "when-should-a-creator-raise-their-rate.html": {
+    "audience": "creators",
+    "dek": "Repeat bookings, a full calendar, stronger local reach, and a clean delivery record are the signals your rate is too low, and how to raise it in small steps without losing the brands you want.",
+    "topic": "rates-and-pay"
   }
 }
