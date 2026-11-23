@@ -1451,5 +1451,25 @@
     "audience": "businesses",
     "dek": "Insense orders creator content for online brands. Magpie books local creators for in-person visits, ranked by local reach. An honest comparison.",
     "topic": "working-with-creators"
+  },
+  "influencer-marketing-for-miami-boutiques.html": {
+    "audience": "businesses",
+    "topic": "working-with-creators",
+    "dek": "Miami boutiques book creators whose followers live here year round, ranked by local reach, not visitor reach."
+  },
+  "influencer-marketing-for-atlanta-boutiques.html": {
+    "audience": "businesses",
+    "topic": "working-with-creators",
+    "dek": "Atlanta boutiques win by neighborhood: creators whose followers live nearby, ranked by local reach."
+  },
+  "influencer-marketing-for-toronto-boutiques.html": {
+    "audience": "businesses",
+    "topic": "working-with-creators",
+    "dek": "Toronto boutiques book street-level creators ranked by Toronto reach, from Queen West to Leslieville."
+  },
+  "influencer-marketing-for-hampton-roads-boutiques.html": {
+    "audience": "businesses",
+    "topic": "working-with-creators",
+    "dek": "Hampton Roads boutiques book year-round local creators, from Ghent to the Oceanfront, ranked by local reach."
   }
 }
