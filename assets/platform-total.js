@@ -1,7 +1,9 @@
 /* Platform local-followers band (2026-11-23): 156 dots light in a
    scattered seeded order while the platform's local follower count
-   climbs, starting ONLY when the band scrolls into view, in about
-   2.5 seconds. The count's target is fetched live from the app's
+   climbs, starting ONLY when the band is scrolled substantially
+   into view (60% of the band visible, Jeff's fix 2026-11-23 17:42:
+   a sliver peeking in at the bottom of the first screen must NOT
+   start it), in about 2.5 seconds. The count's target is fetched live from the app's
    platform totals (GET /api/public/totals on the app, Jeff's
    per-platform counting method); the number printed in the HTML is
    the fallback if that fetch fails, and the final state no-JS and
@@ -86,6 +88,6 @@
       }
       requestAnimationFrame(frame);
     });
-  }, { threshold: 0.3 });
+  }, { threshold: 0.6 });
   io.observe(grid.parentNode && grid.closest ? (grid.closest('.lfband') || grid) : grid);
 })();
