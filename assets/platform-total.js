@@ -52,7 +52,7 @@
   var finished = false;
   try {
     var ctrl = ('AbortController' in window) ? new AbortController() : null;
-    var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 5000) : null;
+    var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 15000) : null;
     fetch('https://app.magpielocal.com/api/public/totals', ctrl ? { signal: ctrl.signal } : {})
       .then(function (r) { if (timer) clearTimeout(timer); if (!r.ok) throw new Error('bad'); return r.json(); })
       .then(function (data) {
