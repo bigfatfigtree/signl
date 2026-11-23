@@ -1,0 +1,51 @@
+/* "One visit, counted" — Gift Horse example sections (2026-11-23).
+   Blue-to-green language on white cards, ovc- prefixed so nothing collides
+   with styles-v2.css or shop.css. Used by businesses.html, index.html and
+   markets/*.html. The dot grid is the asset's own motif: unlit #eaecf0,
+   lit dots carry the blue-to-green gradient and pop as they light. */
+.ovc-grid{display:grid;grid-template-columns:1fr;gap:22px;margin-top:26px}
+@media(min-width:960px){.ovc-grid{grid-template-columns:.92fr 1.08fr;align-items:start}}
+.ovc-card{background:var(--card,#fff);border:1px solid var(--line2,#EAF2EA);border-radius:20px;box-shadow:var(--sh-md,0 2px 4px rgba(26,23,18,.04),0 20px 40px -16px rgba(26,23,18,.16));padding:22px}
+.ovc-media{padding:14px;margin:0}
+.ovc-media img{width:100%;height:auto;border-radius:14px;display:block}
+.ovc-media figcaption{font-size:13.5px;color:#5C564C;padding:12px 6px 4px;line-height:1.5}
+.ovc-side{display:flex;flex-direction:column;gap:22px}
+.ovc-label{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#93897B;margin-bottom:16px}
+.ovc-dotsrow{display:flex;gap:26px;align-items:center;flex-wrap:wrap}
+.dotgrid{display:grid;grid-template-columns:repeat(10,1fr);gap:5px;width:218px;max-width:58vw;flex:none}
+.dotgrid .dot{aspect-ratio:1;border-radius:50%;background:#eaecf0;display:block}
+.dotgrid .dot.lit{background:linear-gradient(135deg,#1e6ff2,#00b7d4 55%,#2fd67f);animation:ovcpop .38s ease}
+@keyframes ovcpop{0%{transform:scale(.55)}55%{transform:scale(1.3)}100%{transform:scale(1)}}
+.ovc-big{font-size:46px;font-weight:800;letter-spacing:-.03em;line-height:1.02;background:linear-gradient(92deg,#1e6ff2,#00b7d4 48%,#2fd67f);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ovc-cap{font-size:15px;color:#475467;margin-top:4px}
+.ovc-pct{font-size:16.5px;font-weight:700;margin-top:12px}
+.ovc-pct span{color:#93897B;font-weight:500;font-size:14.5px}
+.ovc-who{font-size:13.5px;color:#93897B;margin-top:6px}
+.ovc-receipt .r-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.ovc-receipt .r-title{font-size:16.5px;font-weight:700}
+.ovc-chip{font-size:11px;font-weight:700;letter-spacing:.1em;color:#0b7a55;background:rgba(47,214,127,.14);border:1px solid rgba(47,214,127,.45);padding:4px 10px;border-radius:999px;text-transform:uppercase;white-space:nowrap}
+.ovc-rrow{display:flex;align-items:baseline;padding:7px 0;font-size:15.5px}
+.ovc-rrow .k{color:#475467}
+.ovc-rrow .leader{flex:1;border-bottom:2px dotted #d0d5dd;margin:0 12px;transform:translateY(-4px)}
+.ovc-rrow .v{font-weight:700;min-width:64px;text-align:right}
+.ovc-rdash{border-top:1.5px dashed #d0d5dd;margin:8px 0 2px}
+.ovc-rbig{display:flex;align-items:center;gap:14px;padding-top:8px}
+.ovc-rbig .x{font-size:40px;font-weight:800;letter-spacing:-.03em;line-height:1;background:linear-gradient(92deg,#1e6ff2,#00b7d4 48%,#2fd67f);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ovc-rbig .xcap{font-size:14.5px;line-height:1.45;color:#475467}
+.ovc-rfoot{font-size:12.5px;color:#93897B;margin-top:10px}
+.ovc-steps{display:grid;grid-template-columns:1fr;gap:14px;margin-top:22px}
+@media(min-width:720px){.ovc-steps{grid-template-columns:1fr 1fr}}
+@media(min-width:1080px){.ovc-steps{grid-template-columns:repeat(4,1fr)}}
+.ovc-step{background:var(--card,#fff);border:1px solid var(--line2,#EAF2EA);border-radius:16px;padding:18px}
+.ovc-step .n{font-size:13px;font-weight:800;color:#006AFC;letter-spacing:.06em}
+.ovc-step h3{font-size:17px;font-weight:700;margin:8px 0 6px;letter-spacing:-.01em}
+.ovc-step p{font-size:14.5px;line-height:1.55;color:#5C564C}
+/* Homepage band: three-up mini dot reveals */
+.ovc-band{display:grid;grid-template-columns:1fr;gap:14px;margin:28px 0 4px;text-align:left}
+@media(min-width:860px){.ovc-band{grid-template-columns:repeat(3,1fr)}}
+.ovc-mini{background:var(--card,#fff);border:1px solid var(--line2,#EAF2EA);border-radius:18px;box-shadow:var(--sh-md,0 2px 4px rgba(26,23,18,.04),0 20px 40px -16px rgba(26,23,18,.16));padding:20px}
+.ovc-mini .who{font-weight:700;font-size:16.5px}
+.ovc-mini .dotgrid{width:172px;margin:14px 0 12px}
+.ovc-mini .ovc-big{font-size:32px}
+.ovc-mini .ovc-cap{font-size:14px}
+@media (prefers-reduced-motion: reduce){.dotgrid .dot.lit{animation:none}}
