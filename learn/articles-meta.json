@@ -1431,5 +1431,15 @@
   "audience": "businesses",
   "dek": "The fact sheet: what Magpie is, who runs it, how ranking works, what it costs, and how it differs from the other Magpies.",
   "topic": "local-marketing"
+ },
+ "how-to-read-a-brand-brief-in-five-minutes.html": {
+  "audience": "creators",
+  "dek": "Find the deliverable, the must-mentions, the deadline, and the line that changes the price, in five minutes, before you agree.",
+  "topic": "working-with-creators"
+ },
+ "charlotte-salons-gyms-and-studios-local-creators-for-slow-days.html": {
+  "audience": "businesses",
+  "dek": "Slow weekday chairs, classes, and slots are inventory: Charlotte salons, gyms, and studios fill them with creators picked by local reach.",
+  "topic": "local-marketing"
  }
 }
