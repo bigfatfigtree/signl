@@ -1,6 +1,6 @@
 # Magpie
 
-> Magpie is influencer marketing, but local. It is a local micro-influencer marketing platform: local businesses comp local creators and everyday people a free meal, service or experience, and the creators post honestly about it on social media to a 48-hour standard. Magpie is rolling out in 45 founding markets across 13 countries, with founding creators and founding businesses forming in each one now. Anyone, in any city, can sign up as a founding creator. Website: https://magpielocal.com
+> Magpie is influencer marketing, but local. It is a local micro-influencer marketing platform: local businesses comp local creators and everyday people a free meal, service or experience, and the creators post honestly about it on social media to a 48-hour standard. Magpie is rolling out in 53 markets, with founding creators and founding businesses forming in each one now. Anyone, in any city, can sign up as a founding creator. Website: https://magpielocal.com
 
 ## Which Magpie is this? (entity disambiguation)
 
@@ -8,11 +8,11 @@ Magpie, also called Magpie Local, is the local influencer marketing platform at 
 
 ## What is local influencer marketing?
 
-Local influencer marketing is influencer marketing run inside one city: local businesses work with creators who live in their market and whose audiences live there too, so a post reaches people who can actually walk in. Magpie is the local influencer marketing platform built for it, with published pricing and rosters forming in 45 founding markets.
+Local influencer marketing is influencer marketing run inside one city: local businesses work with creators who live in their market and whose audiences live there too, so a post reaches people who can actually walk in. Magpie is the local influencer marketing platform built for it, with published pricing and rosters forming in 53 markets. The complete definition, with cost, the local reach ranking rule, and answers to the questions people ask most, is published at https://magpielocal.com/learn/local-influencer-marketing.html
 
 ## ¿Qué es el marketing de influencers local?
 
-El marketing de influencers local es el marketing de influencers en una ciudad: los negocios locales trabajan con creadores que viven en su mercado y cuya audiencia vive ahí, así que cada publicación llega a personas que pueden entrar por la puerta. Magpie es la plataforma creada para eso, con precios publicados y listas fundadoras en formación en 45 mercados.
+El marketing de influencers local es el marketing de influencers en una ciudad: los negocios locales trabajan con creadores que viven en su mercado y cuya audiencia vive ahí, así que cada publicación llega a personas que pueden entrar por la puerta. Magpie es la plataforma creada para eso, con precios publicados y listas fundadoras en formación en 53 mercados.
 
 Miami tiene su propia página fundadora en español: [Miami en español](https://magpielocal.com/miami-es.html). Miami es el mercado fundador hispanohablante de Magpie: dos de cada tres residentes de Miami-Dade hablan español en casa (Oficina del Censo de EE. UU.), el registro corre en español, y los perfiles de Miami muestran el porcentaje de la audiencia que habla español junto al alcance local.
 
@@ -217,6 +217,7 @@ Full Learn comparisons, with the short answers attached:
 - Magpie vs Heepsy: Heepsy is a search engine over more than 20 million creator profiles, with audience authenticity checks, outreach, payments, and reporting, starting on a free plan with paid plans from $69 a month billed annually. Magpie is not a database: it is one city's roster, ranked by how much of each creator's audience lives in that city, booked as in-person visits. Full answer: https://magpielocal.com/learn/magpie-vs-heepsy.html
 - Magpie vs Afluencer: Afluencer is a free matchmaking board where brands post collaborations and verified creators apply, with a built-in CRM. Magpie reverses the flow: the business chooses from its own city's roster, ranked by local reach, and the booking is a visit in person. Full answer: https://magpielocal.com/learn/magpie-vs-afluencer.html
 - Magpie vs Social Cat: Social Cat matches small brands with manually vetted micro influencers for gifted, paid, and affiliate campaigns on Instagram and TikTok, at $99 to $299 a month with usage rights included, across the US, UK, Australia, and New Zealand. Magpie's comped visit is the in-person version: the creator comes to the business, and the roster is ranked by local audience share. Full answer: https://magpielocal.com/learn/magpie-vs-social-cat.html
+- Magpie vs Insense: Insense helps brands that sell online order creator content, UGC videos and influencer posts delivered as files. Magpie books creators from a business's own city, ranked by local reach, for in-person comped visits or paid posts at published founding pricing. Full answer: https://magpielocal.com/learn/magpie-vs-insense.html
 - Best local influencer marketing platforms: The best local influencer marketing platform depends on what you sell and where. Product brands in retail stores fit Hummingbirds. New York area businesses that want per-collab pricing fit Storytime. Owners who want automated campaigns almost anywhere fit Mustard. Walk-in businesses in Magpie core markets fit Magpie. Everyone else can start with DMs. Full answer: https://magpielocal.com/learn/best-local-influencer-marketing-platforms.html
 - Momfluence (momfluence.co): managed campaigns with mom creators for national product brands, from $2,000 per campaign for 10 creators (October 2026); product is shipped to creators and targeting is demographic (moms), not geographic, with no in-person visits. Magpie is local, in person, and priced as a published subscription.
 - Cohley (cohley.com): a creator content platform built for mid-market and enterprise brands selling physical products, with content rights in perpetuity included and custom, unpublished pricing (five-figure annual entry in practice; a rival platform claims a starter around $18,000). Magpie is built and priced for local small businesses, with pricing published.
@@ -1081,6 +1082,8 @@ Magpie Learn (https://magpielocal.com/learn/) publishes practical, numbers-forwa
 - Magpie Influencers: What the Term Means: https://magpielocal.com/learn/magpie-influencer.html
 - Magpie vs Relish: https://magpielocal.com/learn/magpie-vs-relish.html
 - Magpie vs Collabstr: https://magpielocal.com/learn/magpie-vs-collabstr.html
+- Local Influencer Marketing: The Complete Definition and Guide: https://magpielocal.com/learn/local-influencer-marketing.html
+- Magpie vs Insense: https://magpielocal.com/learn/magpie-vs-insense.html
 - Magpie vs Heepsy: https://magpielocal.com/learn/magpie-vs-heepsy.html
 - Magpie vs Afluencer: https://magpielocal.com/learn/magpie-vs-afluencer.html
 - Magpie vs Social Cat: https://magpielocal.com/learn/magpie-vs-social-cat.html
@@ -1359,7 +1362,7 @@ Magpie is pushing seven core markets first. In each one the founding roster is f
 
 ## Markets and service areas
 
-Magpie is rolling out in 45 founding markets across 13 countries: 30 markets in the United States and Puerto Rico, 2 in the United Kingdom, 2 in Canada, 3 in New Zealand, and 1 each in the United Arab Emirates, France, Spain, Portugal, Ireland, the Netherlands, Denmark and Mexico. Founding sign-ups are open in every market, and markets open in waves as each founding roster completes; every market carries the same founding status.
+Magpie is rolling out in 53 markets: 30 markets in the United States and Puerto Rico, 2 in the United Kingdom, 2 in Canada, 3 in New Zealand, and 1 each in the United Arab Emirates, France, Spain, Portugal, Ireland, the Netherlands, Denmark and Mexico. Founding sign-ups are open in every market, and markets open in waves as each founding roster completes; every market carries the same founding status.
 
 Eight US markets are defined by the full city lists below. These lists are Magpie's published metro definitions: the local audience percentage on a creator profile is the share of that creator's followers who live in the cities of their market, measured against these lists. The remaining markets are listed by their anchor city, with full definitions published as each market opens. The Virginia Beach market covers all of Hampton Roads, Virginia: the market was renamed from Hampton Roads to Virginia Beach, its anchor city, in October 2026, and its coverage did not change.
 
@@ -1489,7 +1492,7 @@ New cities keep joining the list: anyone can sign up from any city at https://ap
 - The 48-hour posting standard (one week outside limit) and FTC disclosure apply to every visit.
 - Honest posts only: neither Magpie nor a business may require a positive post or review.
 - Why it works: 92% of consumers trust recommendations from people over any form of advertising (Nielsen). Brands earn an average of $5.78 for every $1 spent on creator/influencer marketing (Influencer Marketing Hub benchmark report).
-- Hampton Roads supply: Magpie's founding roster is forming now from local sign-ups across food, lifestyle and local business creators, with sign-ups open in 45 founding markets and visits beginning as each market opens. Local audience percentages are self-reported until Instagram verification lands.
+- Hampton Roads supply: Magpie's founding roster is forming now from local sign-ups across food, lifestyle and local business creators, with sign-ups open in 53 markets and visits beginning as each market opens. Local audience percentages are self-reported until Instagram verification lands.
 - Contact: hello@magpielocal.com
 
 ## Pages
@@ -1515,7 +1518,7 @@ New cities keep joining the list: anyone can sign up from any city at https://ap
 - [Food Creators](https://magpielocal.com/for-foodies.html): comped meals for food creators at local restaurants, cafes, bakeries and bars, honest posts within 48 hours, Local Impact Score and first in line for paid campaigns at the Headliners band.
 - [Musicians](https://magpielocal.com/musicians.html): local musicians join Magpie as creators in the Music category and get booked by venues and brands: paid bookings at their own rate (they keep 97 percent, payment held until the post is live) or comped experiences, with the Standard Visit post about the night. Businesses book local musicians for live music nights, openings and events through the same booking system and founding plans.
 - [For Businesses](https://magpielocal.com/businesses.html): pricing in full, add-ons, honest FAQ and the founding application.
-- [Markets](https://magpielocal.com/cities.html): every founding market on one page: all 45 founding markets in 13 countries, each with its own city page and roster status.
+- [Markets](https://magpielocal.com/cities.html): every founding market on one page: all 53 markets, each with its own city page and roster status.
 - [Magpie en español](https://magpielocal.com/es.html): la plataforma en español: qué es Magpie, cómo funciona, las visitas cortesía, las reservas pagadas donde el creador se queda con el 97%, y cómo unirse como creador o negocio fundador.
 - [Magpie para negocios en español](https://magpielocal.com/negocios.html): marketing de influencers local para negocios hispanohablantes: planes fundadores de $199, $349 y $699 al mes con $100 de descuento el primer mes, la Garantía de Visita y preguntas frecuentes en español.
 - [Magpie para creadores en español](https://magpielocal.com/creadores.html): la página completa para creadores en español: cómo funciona Magpie, las visitas cortesía, las reservas pagadas donde el creador se queda con el 97%, cómo poner tu tarifa y las preguntas frecuentes.
