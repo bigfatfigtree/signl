@@ -1629,3 +1629,15 @@ body:has(.mobile-nav.open) .site-head{
    delete every .formerly-line span (marked data-bridge="formerly-signl"), unwrap .brand-lockup, drop this block) */
 .brand-lockup{display:inline-flex;flex-direction:column;align-items:flex-start;gap:5px;line-height:1}
 .formerly-line{font-size:11.5px;font-weight:700;letter-spacing:.18em;color:rgba(255,255,255,.88);white-space:nowrap;text-shadow:0 1px 10px rgba(0,0,0,.45)}
+
+/* ---------- App Store badge (2026-11-24: iOS app live on the App Store) ---------- */
+.app-badge{display:inline-block;line-height:0}
+.app-badge img{display:block;width:120px;height:40px}
+.foot-app{margin-top:26px}
+.foot-app-line{font-family:'Manrope',sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#8FD3AC;margin:0 0 12px}
+.appband{padding:40px 0 12px;text-align:center}
+.appband-line{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.12rem;letter-spacing:-.01em;color:var(--ink);margin:0 0 6px}
+.appband-sub{color:var(--ink2);font-size:.96rem;margin:0 0 18px}
+.appband .app-badge img{width:150px;height:50px}
+.cta-app{margin-top:6px;text-align:center}
+.cta-app-line{font-size:13px;color:#A79E8D;font-weight:600;margin:0 0 10px}
