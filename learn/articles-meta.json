@@ -1471,5 +1471,15 @@
     "audience": "businesses",
     "topic": "working-with-creators",
     "dek": "Hampton Roads boutiques book year-round local creators, from Ghent to the Oceanfront, ranked by local reach."
+  },
+  "how-to-say-no-to-a-brand-deal-that-is-not-a-fit.html": {
+    "audience": "creators",
+    "dek": "Fit, timing, and price are all valid reasons to pass. A short, kind no, sent fast and with a door left open, protects your audience and your next booking.",
+    "topic": "finding-work"
+  },
+  "how-to-find-micro-influencers-in-nashville.html": {
+    "audience": "businesses",
+    "dek": "Micro means small and local: Nashville creators by neighborhood and scene, filtered by local audience share, not follower count.",
+    "topic": "working-with-creators"
   }
 }
