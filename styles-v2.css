@@ -1481,6 +1481,7 @@ section.block.join{padding-top:0}
 .mobile-nav a.mn-link[href$="about.html"]::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B0D0C' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='8.8'/%3E%3Cpath d='M12 11v5.2'/%3E%3Ccircle cx='12' cy='7.9' r='.5' fill='%230B0D0C'/%3E%3C/svg%3E")}
 .mobile-nav a.mn-signin{margin-top:auto}
 .mobile-nav a.mn-signin::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B0D0C' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 4h5v16h-5'/%3E%3Cpath d='M3 12h11'/%3E%3Cpath d='M10.5 8 14.5 12l-4 4'/%3E%3C/svg%3E")}
+.mobile-nav a.mn-link[href^="https://apps.apple.com"]::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230B0D0C' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='7' y='2.8' width='10' height='18.4' rx='2.2'/%3E%3Cpath d='M12 7.5v6.5'/%3E%3Cpath d='M9.6 11.6 12 14l2.4-2.4'/%3E%3C/svg%3E")}
 .mobile-nav.open .mn-profile,.mobile-nav.open nav{animation:mn-panel .28s ease both}
 @keyframes mn-panel{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.mobile-nav.open .mn-profile,.mobile-nav.open nav{animation:none}}
