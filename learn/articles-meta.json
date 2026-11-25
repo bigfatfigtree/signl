@@ -1516,5 +1516,15 @@
   "audience": "businesses",
   "topic": "working-with-creators",
   "dek": "Hampton Roads bars stay busy past the summer season with creators whose followers live here year round."
+ },
+ "what-counts-as-a-deliverable.html": {
+  "audience": "both",
+  "dek": "One post can mean five different jobs. Naming the format, count, deadline, and usage in one written line prevents most disputes.",
+  "topic": "working-with-creators"
+ },
+ "how-to-find-micro-influencers-in-hampton-roads.html": {
+  "audience": "businesses",
+  "dek": "The 757 is seven cities, not one market: micro creators by city and category, filtered by local audience share, not follower count.",
+  "topic": "working-with-creators"
  }
 }
