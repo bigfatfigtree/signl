@@ -1640,5 +1640,11 @@ body:has(.mobile-nav.open) .site-head{
 .appband-line{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.12rem;letter-spacing:-.01em;color:var(--ink);margin:0 0 6px}
 .appband-sub{color:var(--ink2);font-size:.96rem;margin:0 0 18px}
 .appband .app-badge img{width:150px;height:50px}
+/* Google Play badge alongside (2026-11-28: Android app live). The official
+   Play PNG keeps its own 646x250 ratio, so it is height-matched to the
+   Apple badge beside it rather than forced to the Apple box. */
+.app-badge + .app-badge{margin-left:10px}
+.app-badge img.gp-img{width:103px;height:40px}
+.appband .app-badge img.gp-img{width:129px;height:50px}
 .cta-app{margin-top:6px;text-align:center}
 .cta-app-line{font-size:13px;color:#A79E8D;font-weight:600;margin:0 0 10px}
